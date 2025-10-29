@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Welcome to KarnaNetra</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: radial-gradient(circle at top left, #0f0f0f, #050505);
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            color: #00ffc8;
+            text-shadow: 0 0 10px #00ffc8aa;
+            margin-top: 2rem;
+        }
+
+        .shloka {
+            font-size: 1.2rem;
+            color: #ffcc00;
+            font-style: italic;
+            margin-top: 1rem;
+        }
+
+        .translation {
+            font-size: 0.95rem;
+            color: #cccccc;
+            margin-bottom: 2rem;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .card {
+            background: linear-gradient(135deg, #1a1a1a, #111);
+            border: 2px solid #00ffc8;
+            border-radius: 12px;
+            width: 280px;
+            padding: 1.5rem;
+            box-shadow: 0 0 20px #00ffc855;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px #00ffc8aa;
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #00ffc8;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-description {
+            font-size: 0.95rem;
+            color: #cccccc;
+            margin-bottom: 1rem;
+        }
+
+        .card-status {
+            font-size: 0.85rem;
+            color: #ffcc00;
+            font-style: italic;
+        }
+
+        .card-link {
+            text-decoration: none;
+            color: inherit;
+            display: inline-block;
+        }
+
+
+
+        .footer {
+            width: 100%;
+            text-align: center;
+            padding: 1rem 0;
+            font-size: 0.85rem;
+            color: #888;
+            border-top: 1px solid #222;
+            margin-top: auto;
+        }
+
+        .footer a {
+            color: #00ffc8;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer a::after {
+            content: " ✔";
+            color: #00ffcc;
+        }
+
+        .footer-credit {
+            position: fixed;
+            bottom: 10px;
+            right: 20px;
+            font-size: 0.9rem;
+            color: #00ffc8;
+            opacity: 0.7;
+            text-shadow: 0 0 8px #00ffc8aa;
+            font-family: 'Courier New', monospace;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .shloka {
+                font-size: 1rem;
+            }
+
+            .translation {
+                font-size: 0.85rem;
+            }
+
+            .card-link {
+                max-width: 90%;
+            }
+
+            .footer-credit {
+                font-size: 0.8rem;
+                right: 10px;
+                bottom: 8px;
+            }
+
+            .footer {
+                font-size: 0.75rem;
+                padding: 0.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to KarnaNetra</h1>
+    <div class="shloka">
+        कर्णनेत्रं जागरूकं, यन्त्रे स्थापय रक्षणाय।
+    </div>
+    <div class="translation">
+        "Install Karna’s vigilant eye in your system for protection."
+    </div>
+
+    <div class="card-container">
+        <!-- Password Security Analyzer -->
+        <a href="Password.html" class="card-link">
+            <div class="card">
+                <div class="card-icon">🔐</div>
+                <div class="card-title">Password Security Analyzer</div>
+                <div class="card-description">
+                    Analyze password strength, detect breaches, and get real-time feedback to secure your digital
+                    identity.
+                </div>
+                <div class="card-status">Available now</div>
+            </div>
+        </a>
+
+        <!-- GRC Tool -->
+        <a href="#" class="card-link">
+            <div class="card">
+                <div class="card-icon">🛡️</div>
+                <div class="card-title">GRC Dashboard</div>
+                <div class="card-description">
+                    Manage governance, assess risks, and ensure compliance with a unified, intuitive interface.
+                </div>
+                <div class="card-status">Coming soon!</div>
+            </div>
+        </a>
+
+        <!-- Learn Web Security -->
+        <a href="#" class="card-link">
+            <div class="card">
+                <div class="card-icon">🌐</div>
+                <div class="card-title">Learn Web Security</div>
+                <div class="card-description">
+                    Explore web security fundamentals, encryption, firewalls, and threat detection through interactive
+                    modules.
+                </div>
+                <div class="card-status">Coming soon!</div>
+            </div>
+        </a>
+
+        <!-- Cryptography -->
+        <a href="#" class="card-link">
+            <div class="card">
+                <div class="card-icon">🔒</div>
+                <div class="card-title">Cryptography</div>
+                <div class="card-description">
+                    Learn the art of encryption, hashing, and secure communication to protect sensitive data.
+                </div>
+                <div class="card-status">Coming soon!</div>
+            </div>
+        </a>
+
+        <!-- Reverse Engineering -->
+        <a href="#" class="card-link">
+            <div class="card">
+                <div class="card-icon">🧠</div>
+                <div class="card-title">Reverse Engineering</div>
+                <div class="card-description">
+                    Deconstruct software, analyze binaries, and uncover vulnerabilities with precision.
+                </div>
+                <div class="card-status">Coming soon!</div>
+            </div>
+        </a>
+
+        <!-- Pentesting -->
+        <a href="#" class="card-link">
+            <div class="card">
+                <div class="card-icon">🕵️‍♂️</div>
+                <div class="card-title">Pentesting</div>
+                <div class="card-description">
+                    Simulate cyberattacks, identify weaknesses, and strengthen your system’s defenses.
+                </div>
+                <div class="card-status">Coming soon!</div>
+            </div>
+        </a>
+
+        <!-- Android Security -->
+        <a href="#" class="card-link">
+            <div class="card">
+                <div class="card-icon">📱</div>
+                <div class="card-title">Android Security</div>
+                <div class="card-description">
+                    Secure mobile apps, detect malware, and implement best practices for Android platforms.
+                </div>
+                <div class="card-status">Coming soon!</div>
+            </div>
+        </a>
+    </div>
+
+
+
+    <div class="footer">
+        © 2025 · Developed by<a href="#"> Kapil Dev</a> · All rights reserved.
+    </div>
+
+</body>
+
+</html>

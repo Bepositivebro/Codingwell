@@ -1,0 +1,213 @@
+/* === Base Styling === */
+body {
+    font-family: 'Courier New', monospace;
+    background: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
+    color: #00ff99;
+    padding: 40px;
+}
+
+/* === Container === */
+.container {
+    max-width: 700px;
+    margin: auto;
+    background: #111;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 255, 153, 0.2);
+    border: 1px solid #00ff99;
+}
+
+/* === Headings === */
+h1 {
+    text-align: center;
+    font-size: 26px;
+    color: #00ff99;
+    text-shadow: 0 0 5px #00ff99;
+}
+
+/* === Input Fields === */
+input[type="password"],
+input[type="text"] {
+    width: 92%;
+    padding: 12px;
+    font-size: 16px;
+    background: #000;
+    color: #00ff99;
+    border: 2px solid #00ff99;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+input:focus {
+    box-shadow: 0 0 10px #00ff99;
+    outline: none;
+}
+
+#passwordInput::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* === Button === */
+button {
+    display: inline-block;
+    width: 95%;
+    padding: 14px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 114, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(to right, #0072ff, #00c6ff);
+    box-shadow: 0 6px 20px rgba(0, 114, 255, 0.5);
+    transform: scale(1.02);
+}
+
+button:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 10px rgba(0, 114, 255, 0.2);
+}
+
+//* Strength Meter Container */
+#strengthMeter {
+    margin-top: 20px;
+}
+
+/* Strength Label */
+#strengthText {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #00ff99;
+}
+
+/* Outer Bar */
+.bar {
+    width: 100%;
+    height: 14px;
+    background: #222;
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: inset 0 1px 3px rgba(0, 255, 153, 0.2);
+}
+
+/* Inner Strength Bar */
+#strengthBar {
+    height: 100%;
+    width: 0%;
+    background: red;
+    /* Default color */
+    border-radius: 7px;
+    transition: width 0.4s ease, background 0.4s ease;
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.4);
+}
+
+
+
+/* === Output Boxes === */
+#entropyOutput,
+#timeOutput,
+#breachOutput,
+#feedbackBox {
+    margin-top: 15px;
+    padding: 12px 16px;
+    font-size: 15px;
+    background: #000;
+    border-left: 4px solid #00ff99;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 255, 153, 0.1);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+#entropyOutput:hover,
+#timeOutput:hover,
+#feedbackBox:hover {
+    background: #111;
+    box-shadow: 0 4px 12px rgba(0, 255, 153, 0.15);
+}
+
+#feedbackBox>div {
+    margin-bottom: 10px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* === Canvas === */
+canvas {
+    margin-top: 20px;
+    background: #000;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #00ff99;
+}
+
+/* === Blinking Alerts === */
+@keyframes blinkRed {
+    0% {
+        background-color: #ff4d4d;
+    }
+
+    50% {
+        background-color: #000;
+    }
+
+    100% {
+        background-color: #ff4d4d;
+    }
+}
+
+@keyframes blinkRed2 {
+    0% {
+        background-color: #65ff4d;
+    }
+
+    50% {
+        background-color: #000;
+    }
+
+    100% {
+        background-color: #88ff4d;
+    }
+}
+
+.blink-warning {
+    animation: blinkRed 1s infinite;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #fff;
+    box-shadow: 0 0 10px #ff4d4d;
+}
+
+.blink-warning2 {
+    animation: blinkRed2 1s infinite;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #000;
+    box-shadow: 0 0 10px #65ff4d;
+}
+
+
+.shloka {
+    font-size: 1.5rem;
+    color: #00ff99;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.translation {
+    font-size: 1rem;
+    color: #cccccc;
+    text-align: center;
+    font-style: italic;
+}
