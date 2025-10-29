@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Boxes</title>
+    <style>
+        body {
+           
+            background-color: #e0e5ec;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .box {
+            background-color: #e0e5ec;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001, inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001, inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001;
+            position: relative;
+        }
+
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .icon {
+            font-size: 40px;
+            color: #ff6b6b;
+            margin-bottom: 10px;
+        }
+
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333333;
+        }
+
+        .description {
+            font-size: 14px;
+            color: #666666;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr 1fr; /* 2 columns for smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                grid-template-columns: 1fr; /* 1 column for mobile screens */
+            }
+
+            .icon {
+                font-size: 30px; /* Smaller icons for mobile */
+            }
+
+            .title {
+                font-size: 16px; /* Adjust font size for mobile */
+            }
+
+            .description {
+                font-size: 12px; /* Adjust description font size */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="box">
+            <div class="icon">📅</div>
+            <div class="title">Convertor</div>
+            <div class="description">Convert from one number system to another number system.</div>
+            <div class="description">Coming Soon.</div>
+        </a>
+        
+        <a href="#" class="box">
+            <div class="icon">☁️</div>
+            <div class="title">Weather</div>
+            <div class="description">Track your Weather details of your City.</div>
+            <div class="description">Coming Soon.</div>
+        </a>
+        
+        <div class="box">
+            <div class="icon">⏰</div>
+            <div class="title">Job Portal</div>
+            <div class="description">Coming soon</div>
+        </div>
+
+        <div class="box">
+            <div class="icon">📖</div>
+            <div class="title">Comprehensive Courses</div>
+            <div class="description">Coming Soon</div>
+        </div>
+
+        <div class="box">
+            <div class="icon">🌐</div>
+            <div class="title">Global Access</div>
+            <div class="description">Coming Soon</div>
+        </div>
+
+        <div class="box">
+            <div class="icon">🎯</div>
+            <div class="title">Focused Learning</div>
+            <div class="description">Coming Soon.</div>
+        </div>
+
+        <div class="box">
+            <div class="icon">📈</div>
+            <div class="title">Track Progress</div>
+            <div class="description">Coming Soon</div>
+        </div>
+
+        <a href="helpdesk.html" class="box">
+            <div class="icon">⏰</div>
+            <div class="title">24/7 Live Support</div>
+            <div class="description">Get round-the-clock assistance to ensure a smooth learning experience.</div>
+        </a>
+
+        <a href="community.html" class="box">
+            <div class="icon">🤝</div>
+            <div class="title">Community Support</div>
+            <div class="description">Engage with a community of learners and share insights.</div>
+        </a>
+    </div>
+</body>
+</html>

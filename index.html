@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="logo.png" type="image/x-icon">
+
+	<!--  *****   Link To Custom CSS Style Sheet   *****  -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<!--  *****   Link To Font Awsome Icons   *****  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+
+	<!--  *****   Link To Owl Carousel   *****  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>TheCodingwell</title>
+</head>
+<body>
+<!--   *** Website Container Starts ***   -->
+<div class="website-container">
+	
+<!--   *** Home Section Starts ***   -->
+<section class="home" id="home">
+	<!--   === Main Navbar Starts ===   -->
+	<nav class="main-navbar">
+		<a href="" class="logo">
+			<img src="h1 logo.png">
+		</a>
+		<ul class="nav-list">
+			<li><a href="#home">Home</a></li>
+			<li><a href="#services">Services</a></li>
+			<li><a href="#courses">Courses</a></li>
+			<li><a href="#categories">Categories</a></li>
+			<li><a href="#blog">Blog</a></li>
+			<li><a href="#testimonials">Feedback</a></li>
+		</ul>
+		<a href="https://www.youtube.com/@TheCodingWell" class="get-started-btn-container">
+			<button class="get-started-btn btn">Go Now</button>
+		</a>
+		<div class="menu-btn">
+			<span></span>
+		</div>
+	</nav>
+	<!--   === Main Navbar Ends ===   -->
+	<!--   === Banner Starts ===   -->
+	<div class="banner">
+		
+		<div class="banner-desc">
+			<h2> Start your Coding journey today - <span style="color: #1289a7;">Join</span> <span style="color: #e3a30d;">The Codingwell</span></h2>
+			<p>Start your journey today and transform your creativity into beautiful, professional programming that stand out </p>
+			
+			<form class="search-bar" onsubmit="handleSearch(); return false;">
+				<input type="search" id="searchInput" placeholder="Search Your Course">
+				<i class="fa-solid fa-search"></i>
+			</form>
+		
+			<script>
+				// Store the search query in localStorage
+				function handleSearch() {
+					const searchInput = document.getElementById('searchInput');
+					const query = searchInput.value.trim().toLowerCase();
+					if (query) {
+						localStorage.setItem('searchQuery', query); // Store the query in localStorage
+						window.location.href = 'search-results.html'; // Redirect to search results page
+					}
+				}
+			</script>
+			<div id="suggestionsList" style="display: none;">
+				<!-- Suggestions will appear here dynamically -->
+			</div>
+
+		</div>
+
+		<div class="banner-img">
+			<div class="banner-img-container">
+				<img src="Boy_Coding__Designing_With_PC-512.webp" alt="Banner Image" class="parallax-image" >
+
+				<div class="states">
+					<div class="total-courses">
+						<div class="icon">
+							<i class="fa-solid fa-users"></i>
+						</div>
+						<div class="desc">
+							<span>1K</span>
+							<span>Joined Students</span>
+						</div>
+					</div>
+
+					<div class="courses-ratings">
+						<span>4.7<i class="fa-solid fa-star"></i></span>
+						<span>Ratings (58k)</span>
+					</div>
+				</div>
+
+				<div class="pattern">
+					<img src="images/home/pattern.png">
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+	<!--   === Banner Ends ===   -->
+</section>
+<!--   *** Home Section Ends ***   -->
+
+<!--   *** Partners Section Starts ***   -->
+<section class="partners">
+	<h3>Our trusted partners around the world</h3>
+	<div class="owl-carousel owl-theme partners-slider">
+
+    	<div class="item brand-item">
+    		<img src="images/brand-logos/1.png">
+    	</div>
+    	<div class="item brand-item">
+    		<img src="images/brand-logos/2.png">
+    	</div>
+    	<div class="item brand-item">
+    		<img src="images/brand-logos/3.png">
+    	</div>
+    	<div class="item brand-item">
+    		<img src="images/brand-logos/4.png">
+    	</div>
+    	<div class="item brand-item">
+    		<img src="images/brand-logos/5.png">
+    	</div>
+    	<div class="item brand-item">
+    		<img src="images/brand-logos/6.png">
+    	</div>
+
+	</div>
+</section>
+<!--   *** Partners Section Ends ***   -->
+
+<!--   *** Services Section Starts ***   -->
+<section class="services" id="services">
+	<!--   *** Services Header Starts ***   -->
+	<header class="section-header">
+		<h1>Why Choose Us</h1>
+		<p>Discover unmatched flexibility, free resources, and round-the-clock support designed to empower your learning journey.</p>
+	</header>
+		
+	<!--   *** Services Header Ends ***   -->
+	<!--   *** Services Contents Starts ***   -->
+	<div class="services-contents">
+
+		
+			<div class="service-box">
+				<a href="article.html" target="_blank" rel="noopener noreferrer">
+				<div class="service-icon">
+				<i class="fa-solid fa-calendar"></i>
+			</div>
+			<div class="service-desc">
+				<h2>Get Tech Updates</h2>
+				<p>Stay updated with the latest advancements in technology. Empower yourself with cutting-edge news and trends daily!</p>
+			</div>
+		</div>
+	</a>
+	
+		<div class="service-box">
+			<a href="free_assert.html" target="_blank" rel="noopener noreferrer">
+			<div class="service-icon">
+				<i class="fa-solid fa-universal-access"></i>
+			</div>
+			<div class="service-desc">
+				<h2>Free Assets</h2>
+				<p>Access premium tools and resources at no cost, including templates, icons, and more, empowering your creativity without any additional expenses or limitations.</p>
+			</div>
+		</div></a>
+
+		<div class="service-box">
+			<a href="helpdesk.html" target="_blank" rel="noopener noreferrer">
+			<div class="service-icon">
+				<i class="fa-solid fa-clock"></i>
+			</div>
+			<div class="service-desc">
+				<h2>24/7 Live Support</h2>
+				<p>Our expert team is here round-the-clock to provide real-time assistance, ensuring your learning journey stays smooth and completely hassle-free every step.</p>
+			</div>
+		</div></a>
+
+	</div>
+	<!--   *** Services Contents Ends ***   -->
+</section>
+<!--   *** Services Section Ends ***   -->
+
+<!--   *** Courses Section Starts ***   -->
+<section class="courses" id="courses">
+	<!--   *** Courses Header Starts ***   -->
+	<header class="section-header">
+		<div class="header-text">
+			<h1>Choose Your Favourite Course</h1>
+			<p>Choosing your favourite course is an exciting journey to explore your interests and passion.</p>
+		</div>
+		<a href="courses.html" target="_blank" rel="noopener noreferrer"><button class="courses-btn btn">View All</button></a>
+	</header>
+	<!--   *** Courses Header Ends ***   -->
+	<!--   *** Courses Contents Starts ***   -->
+	<div class="course-contents">
+		<div class="course-card">
+			<a href="https://html.maxoncodes.com/" target="_blank" rel="noopener noreferrer">
+				<img src="images/courses/html.png"></a>
+			<div class="category">HTML</div>
+		</div>
+	
+		<div class="course-card">
+			<a href="https://css.maxoncodes.com/" target="_blank" rel="noopener noreferrer">
+				<img src="images/courses/css.png"></a>
+			<div class="category">CSS</div>
+		</div>
+	
+		<div class="course-card">
+			<a href="https://javascript.maxoncodes.com/" target="_blank" rel="noopener noreferrer">
+				<img src="images/courses/js.png"></a>
+			<div class="category">JavaScript</div>
+		</div>
+	
+		<div class="course-card">
+			<a href="https://php.maxoncodes.com/" target="_blank" rel="noopener noreferrer">
+				<img src="images/courses/php.png"></a>
+			<div class="category">PHP</div>
+		</div>
+		<div class="course-card">
+			<a href="https://python.maxoncodes.com/" target="_blank" rel="noopener noreferrer">
+				<img src="images/courses/pyton.png"></a>
+			<div class="category">PYTHON</div>
+		</div>
+	
+		<div class="course-card">
+			<a href="https://clanguage.maxoncodes.com/" target="_blank" rel="noopener noreferrer">
+				<img src="images/courses/c.png"></a>
+			<div class="category">C</div>
+		</div>
+
+		<div class="course-card">
+			<a href="https://cpp.maxoncodes.com/" target="_blank" rel="noopener noreferrer">
+				<img src="images/courses/C++.png"></a>
+			<div class="category">C++</div>
+		</div>
+	
+		<div class="course-card">
+			<a href="https://java.maxoncodes.com/" target="_blank" rel="noopener noreferrer">
+				<img src="images/courses/java.png"></a>
+			<div class="category">JAVA</div>
+		</div>
+	
+	</div>
+	<!--   *** Courses Contents Ends ***   -->
+</section>
+<!--   *** Courses Section Ends ***   -->
+
+<!--   *** Courses Categories Section Starts ***   -->
+<section class="categories" id="categories">
+	<!--   === Categories Section Header Starts ===   -->
+	<header class="section-header">
+		<h1>Select Courses That Spark Your Passion.</h1>
+		<p>Choose the Perfect Courses to Ignite Your Passion and Unlock Your Full Potential.</p>
+	</header>
+	<!--   === Categories Section Header Ends ===   -->
+	<!--   === Categories Section Contents Starts ===   -->
+	<div class="categories-contents">
+			<div class="category-item">				
+			<div class="category-icon">
+				<a href="#" target="_blank" rel="noopener noreferrer">
+				<i class="fa-solid fa-palette"></i>
+			</div>
+			<div class="category-desc">
+				<h3>Designing</h3>
+				<p>Web design combines creativity and functionality to create visually appealing, user-friendly websites that deliver seamless online experiences.</p>
+				<br>
+				<br>
+				<h4>Available soon!</h4>
+			</div>
+		</div></a>
+
+		<div class="category-item">
+			<div class="category-icon">
+				<a href="#" target="_blank" rel="noopener noreferrer">
+				<i class="fa-solid fa-code"></i>
+			</div>
+			<div class="category-desc">
+				<h3>Development</h3>
+				<p>Web development involves building, coding, and maintaining websites, ensuring they are functional, user-friendly, and optimized for performance.</p>
+			    <br>
+				<h4>Available soon!</h4>
+			</div>
+		</div></a>
+
+		<div class="category-item">
+			<div class="category-icon">
+				<a href="#" target="_blank" rel="noopener noreferrer">
+				<i class="fa-solid fa-bullhorn"></i>
+			</div>
+			<div class="category-desc">
+				<h3>Cyber Security</h3>
+				<p>Learn to protect systems, networks, and data from cyber threats and attacks with practical techniques in encryption, firewall management etc.</p>
+				<br>
+				<br>
+				<h4>Available soon!</h4>
+			</div>
+		</div></a>
+
+		<div class="category-item">
+			<div class="category-icon">
+				<a href="#" target="_blank" rel="noopener noreferrer">
+				<i class="fa-solid fa-camera"></i>
+			</div>
+			<div class="category-desc">
+				<h3>Data Science</h3>
+				<p> Explore the world of big data, machine learning, and statistical analysis to extract valuable insights and make data-driven decisions across industries.</p>
+			    <br>
+				<h4>Available soon!</h4>
+			</div>
+		</div></a>
+
+	</div>
+	<!--   === Categories Section Contents Ends ===   -->
+</section>
+<!--   *** Courses Categories Section Ends ***   -->
+
+<!--   *** Teacher Section Starts ***   -->
+<section class="courses" id="blog">
+	<!--   *** Courses Header Starts ***   -->
+	<header class="section-header">
+		<div class="header-text">
+			<h1>Latest Articles</h1>
+			<p>Get the latest tech news and insights with MaxonCodes, featuring expert analysis and trends.</p>
+		</div>
+		<a href="article.html" target="_blank" rel="noopener noreferrer"><button class="courses-btn btn">View All</button></a>
+	</header>
+	<div class="carousel-wrap">
+		<div class="owl-carousel">
+		  <a href="article1.html"><div class="item"><img src="article1.jpg"></div></a>
+		  <a href="article2.html"><div class="item"><img src="article2.jpg"></div></a>
+		  <a href="article3.html"><div class="item"><img src="article3.jpg"></div></a>
+		  <a href="article4.html"><div class="item"><img src="article4.jpeg"></div></a>
+		  <a href="article5.html"><div class="item"><img src="article5.png"></div></a>
+		  <a href="article.6.html"><div class="item"><img src="article6.jpg"></div></a>
+		 
+		  <!---repeat article ------------------------
+		  <a href=""><div class="item"><img src="images/posts/8.webp"></div></a>
+		  <a href=""><div class="item"><img src="images/posts/9.png"></div></a>
+		  <a href=""><div class="item"><img src="images/posts/10.webp"></div></a>
+		  <a href=""><div class="item"><img src="images/posts/11.webp"></div></a>
+		  <a href=""><div class="item"><img src="images/posts/12.webp"></div></a>   --->
+		</div>
+		<h3>Stay updated with the latest articles</h3>
+	  </div>
+	  
+</section>
+<!--   *** Teacher Section Ends ***   -->
+
+<!--   *** Testimonials Section Starts ***   -->
+<section class="testimonials" id="testimonials">
+	<!--   === Testimonials Section Header Starts ===   -->
+	<header class="section-header">
+		<h1>Client Feedback</h1>
+		<p>Client feedback provides valuable insights into experiences, helping improve services and ensuring customer satisfaction and business growth.</p>
+	</header>
+	<!--   === Testimonials Section Header Ends ===   -->
+	<!--   === Testimonials Contents Starts ===   -->
+	<div class="owl-carousel owl-theme testimonials-slider">
+
+    	<div class="item testimonials-item">
+    		<div class="profile">
+    			<div class="profile-image">
+    				<img src="images/testimonials/1.jpg">
+    			</div>
+    			<div class="profile-desc">
+    				<span>Sara D</span>
+    				<span>Description</span>
+    			</div>
+    		</div>
+    		<p>Clean code isn’t just a developer’s responsibility—it’s a gift to the future. Messy code creates technical debt, frustration, and wasted time. Write code that others (and your future self) can understand. It’s not about perfection but clarity and intention. Always aim for maintainability because good code isn’t written for machines; it’s written for humans.</p>
+    		<div class="quote">
+    			<i class="fa fa-quote-left"></i>
+    		</div>
+    		<div class="ratings">
+    			<i class="fa-solid fa-star"></i>
+    			<i class="fa-solid fa-star"></i>
+    			<i class="fa-solid fa-star"></i>
+    			<i class="fa-solid fa-star"></i>
+    			<i class="fa-solid fa-star"></i>
+    		</div>
+    	</div>
+
+    	<div class="item testimonials-item">
+    		<div class="profile">
+    			<div class="profile-image">
+    				<img src="images/testimonials/2.jpg">
+    			</div>
+    			<div class="profile-desc">
+    				<span>Nicolas</span>
+    				<span>Description</span>
+    			</div>
+    		</div>
+    		<p>Open source is the lifeblood of innovation. It fosters collaboration, sharing, and a collective drive for progress. The tools we take for granted are built by countless contributors worldwide. By engaging with open-source projects, you’re not just using technology—you’re becoming part of a movement. Give back when you can; even small contributions make a difference.</p>
+    		<div class="quote">
+    			<i class="fa fa-quote-left"></i>
+    		</div>
+    		<div class="ratings">
+    			<i class="fa-solid fa-star"></i>
+    			<i class="fa-solid fa-star"></i>
+    			<i class="fa-solid fa-star"></i>
+    			<i class="fa-solid fa-star"></i>
+    			<i class="fa-solid fa-star"></i>
+    		</div>
+    	</div>
+
+    	<div class="item testimonials-item">
+    		<div class="profile">
+    			<div class="profile-image">
+    				<img src="images/testimonials/3.jpg">
+    			</div>
+    			<div class="profile-desc">
+    				<span>Natalie</span>
+    				<span>Description</span>
+    			</div>
+    		</div>
+    		<p>Frameworks and tools will come and go, but the fundamentals remain timeless. Too often, developers chase trends instead of investing in core concepts. Deep understanding of algorithms, data structures, and problem-solving will always outshine fleeting trends. Learn the basics well, and you’ll adapt to any change in the tech landscape. Build a strong foundation first.</p>
+    		<div class="quote">
+    			<i class="fa fa-quote-left"></i>
+    		</div>
+    		<div class="ratings">
+    			<i class="fa-solid fa-star"></i>
+    			<i class="fa-solid fa-star"></i>
+    			<i class="fa-solid fa-star"></i>
+    			<i class="fa-solid fa-star"></i>
+    			<i class="fa-solid fa-star"></i>
+    		</div>
+    	</div>
+
+    	<div class="item testimonials-item">
+    		<div class="profile">
+    			<div class="profile-image">
+    				<img src="images/testimonials/4.jpg">
+    			</div>
+    			<div class="profile-desc">
+    				<span>Thomas</span>
+    				<span>Description</span>
+    			</div>
+    		</div>
+    		<p>Code reviews are more than a quality assurance step—they’re an opportunity to grow. They promote collaboration, ensure knowledge-sharing, and help catch issues early. Done right, they create a culture of trust and learning within teams. Embrace reviews as conversations, not critiques, and focus on improvement. Great code is a team effort, not an individual achievement.</p>
+    		<div class="quote">
+    			<i class="fa fa-quote-left"></i>
+    		</div>
+    		<div class="ratings">
+    			<i class="fa-solid fa-star"></i>
+    			<i class="fa-solid fa-star"></i>
+    			<i class="fa-solid fa-star"></i>
+    			<i class="fa-solid fa-star"></i>
+    			<i class="fa-solid fa-star"></i>
+    		</div>
+    	</div>
+
+    	<div class="item testimonials-item">
+    		<div class="profile">
+    			<div class="profile-image">
+    				<img src="images/testimonials/5.jpg">
+    			</div>
+    			<div class="profile-desc">
+    				<span>Broonie Carlla</span>
+    				<span>Description</span>
+    			</div>
+    		</div>
+    		<p>Technology evolves at lightning speed. Staying still means falling behind. Embrace a mindset of lifelong learning—pick up new skills, try unfamiliar tools, and challenge yourself with different projects. Staying curious is the key to staying relevant. The best developers aren’t the ones who know everything but the ones willing to learn anything.</p>
+    		<div class="quote">
+    			<i class="fa fa-quote-left"></i>
+    		</div>
+    		<div class="ratings">
+    			<i class="fa-solid fa-star"></i>
+    			<i class="fa-solid fa-star"></i>
+    			<i class="fa-solid fa-star"></i>
+    			<i class="fa-solid fa-star"></i>
+    			<i class="fa-solid fa-star"></i>
+    		</div>
+    	</div>
+
+	</div>
+	<!--   === Testimonials Contents Ends ===   -->
+</section>
+<!--   *** Testimonials Section Ends ***   -->
+
+<!--   *** Footer Section Starts ***   -->
+<section class="footer" id="footer">
+	
+	<!--   === Footer Contents Starts ===   -->
+	<div class="footer-contents">
+		
+		<div class="footer-col footer-col-1">
+			<div class="col-title">
+				<img src="h1 logo.png">
+			</div>
+			<div class="col-contents">
+				<p>TheCodingwell is your ultimate destination for mastering web design, Programming etc. With expertly curated courses, hands-on projects, and 24/7 support</p>
+				<p>Start your journey with us today and build the future, one line of code at a time.</p>
+			</div>
+		</div>
+
+		<div class="footer-col footer-col-2">
+			<div class="col-title">
+				<h3>Contact</h3>
+			</div>
+			<div class="col-contents">
+				<div class="contact-row">
+					<span>Address</span>
+					<span>207123 Kasganj - India</span>
+				</div>
+				<div class="contact-row">
+					<span>Phone</span>
+					<span>+91 9084994201</span>
+				</div>
+				<div class="contact-row">
+					<span>Email</span>
+					<span>codingwell.live@gmail.com</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer-col footer-col-3">
+			<div class="col-title">
+				<h3>Quick Links</h3>
+			</div>
+			<div class="col-contents">
+				<a href="index.html">Home</a>
+				<a href="services.html">Services</a>
+				<a href="courses.html">Courses</a>
+				<a href="categories.html">Categories</a>
+			</div>
+		</div>
+
+		<div class="footer-col footer-col-4">
+			<div class="col-title">
+				<h3>Newsletter</h3>
+			</div>
+			<div class="col-contents">
+				<form class="newsletter">
+					<input type="email" placeholder="Your Email">
+					<button class="newsletter-btn btn" type="submit">Subscribe</button>
+				</form>
+			</div>
+		</div>
+
+	</div>
+	<!--   === Footer Contents Ends ===   -->
+	<div class="copy-rights">
+		<p><b>The Codingwell</b> All Rights Reserved <b>2025</b></p>
+	</div>
+
+</section>
+<!--   *** Footer Section Ends ***   -->
+
+
+</div>
+<!--   *** Website Container Ends ***   -->
+
+
+
+<!--   *** Link To JQuery ***   -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+<!--   *** Link To Owl Carousel ***   -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<!--   *** Link To Curstom Script File ***   -->
+<script type="text/javascript" src="script.js"></script>
+<script>
+	// Redirect to search-results page with query as a URL parameter when user types
+	function syncSearch() {
+		const query = document.getElementById('searchInput').value;
+		if (query) {
+			// Redirect to the search-results page with the query as a parameter
+			window.location.href = 'search-results.html?query=' + encodeURIComponent(query);
+		}
+	}
+
+	window.onload = function () {
+		// Check if there’s a saved query in localStorage (for persistence between sessions)
+		const savedQuery = localStorage.getItem('searchQuery');
+		if (savedQuery) {
+			document.getElementById('searchInput').value = savedQuery;
+		}
+	};
+</script>
+</body>
+</html>

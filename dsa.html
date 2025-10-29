@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Course</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet1.css">
+    <style>
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <!-- Menu Button for Mobile View -->
+        <button class="menu-btn2" aria-label="Open menu">&#x27A1;</button>
+
+        <!-- Desktop Navbar -->
+        <div class="desktop-navbar">
+            <button><a href="python.html" style="color: white;">Python</a></button>
+            <button><a href="cpp.html" style="color: white;">C++</a></button>
+            <button><a href="c.html" style="color: white;">C</a></button>
+            <button><a href="html.html" style="color: white;">HTML</a></button>
+            <button><a href="css.html" style="color: white;">CSS</a></button>
+            <button><a href="javascript.html" style="color: white;">JS</a></button>
+            <button><a href="java.html" style="color: white;">Java</a></button>
+            <button><a href="php.html" style="color: white;">PHP</a></button>
+            <button><a href="dsa.html" style="color: white;">DSA</a></button>
+        </div>
+
+        <!-- Dropdown Menu for Mobile View -->
+        <div class="topic-buttons">
+            <a href="python.html"><button>Python</button></a>
+            <a href="cpp.html"><button>C++</button></a>
+            <a href="c.html"><button>C</button></a>
+            <a href="html.html"><button>HTML</button></a>
+            <a href="css.html"><button>CSS</button></a>
+            <a href="javascript.html"><button>JS</button></a>
+            <a href="java.html"><button>Java</button></a>
+            <a href="php.html"><button>PHP</button></a>
+            <a href="dsa.html"><button>DSA</button></a>
+        </div>
+
+        
+        <!-- Mobile menu button -->
+        <div class="menu-btn" id="menuBtn">
+            &#9776;
+        </div>
+
+
+    </div>
+
+    <div class="content">
+        <!-- Sidebar for DSA Topics -->
+        <div class="sidebar" id="sidebar">
+            <h2>Introduction</h2>
+            <ul>
+                <li><a href="#dsa-overview">What is DSA?</a></li>
+                <li><a href="#dsa-importance">Importance of DSA</a></li>
+                <li><a href="#dsa-setup">Setting Up Environment</a></li>
+            </ul>
+
+            <h2>Data Structures</h2>
+            <ul>
+                <li><a href="#arrays">Arrays</a></li>
+                <li><a href="#linked-lists">Linked Lists</a></li>
+                <li><a href="#stacks">Stacks</a></li>
+                <li><a href="#queues">Queues</a></li>
+                <li><a href="#trees">Trees</a></li>
+                <li><a href="#graphs">Graphs</a></li>
+                <li><a href="#hashing">Hashing</a></li>
+            </ul>
+
+            <h2>Algorithms</h2>
+            <ul>
+                <li><a href="#sorting">Sorting Algorithms</a></li>
+                <li><a href="#searching">Searching Algorithms</a></li>
+                <li><a href="#dynamic-programming">Dynamic Programming</a></li>
+                <li><a href="#greedy">Greedy Algorithms</a></li>
+                <li><a href="#backtracking">Backtracking</a></li>
+                <li><a href="#divide-conquer">Divide and Conquer</a></li>
+            </ul>
+
+            <h2>Advanced Topics</h2>
+            <ul>
+                <li><a href="#graph-algorithms">Graph Algorithms</a></li>
+                <li><a href="#network-flow">Network Flow Algorithms</a></li>
+                <li><a href="#string-matching">String Matching Algorithms</a></li>
+                <li><a href="#advanced-dp">Advanced Dynamic Programming</a></li>
+            </ul>
+
+            <h2>Complexity Analysis</h2>
+            <ul>
+                <li><a href="#time-space-complexity">Time and Space Complexity</a></li>
+                <li><a href="#big-o">Big O Notation</a></li>
+                <li><a href="#complexity-analysis">Analyzing Algorithm Complexity</a></li>
+            </ul>
+
+            <h2>Best Practices</h2>
+            <ul>
+                <li><a href="#code-readability">Code Readability</a></li>
+                <li><a href="#efficient-coding">Efficient Coding Practices</a></li>
+                <li><a href="#test-cases">Writing Test Cases</a></li>
+                <li><a href="#debugging">Debugging and Optimization</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main" id="dsa-overview">
+            <h1>What is DSA?</h1>
+            <h3>Definition</h3>
+            <p>
+                Data Structures and Algorithms (DSA) is a core concept in computer science and software engineering. It involves organizing and storing data in a way that allows efficient access and modification, as well as solving computational problems with optimized algorithms.
+            </p>
+            <h3>Why Study DSA?</h3>
+            <ul>
+                <li>Improves problem-solving and analytical thinking skills.</li>
+                <li>Helps in optimizing performance for large data sets and complex systems.</li>
+                <li>Essential for technical interviews in top tech companies.</li>
+                <li>Foundation for learning system design and advanced topics.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script1.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuBtn = document.getElementById("menuBtn");
+            const sidebar = document.getElementById("sidebar");
+    
+            menuBtn.addEventListener("click", () => {
+                sidebar.classList.toggle("active");
+            });
+    
+            const sidebarLinks = document.querySelectorAll(".sidebar ul li a");
+            const contentSections = document.querySelectorAll(".content .content");
+    
+            sidebarLinks.forEach(link => {
+                link.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute("href").substring(1);
+    
+                    // Hide all content sections and reset sidebar links
+                    contentSections.forEach(section => {
+                        section.classList.remove("active");
+                    });
+    
+                    // Show the selected content section
+                    document.getElementById(targetId).classList.add("active");
+    
+                    // Set active background on sidebar links
+                    sidebarLinks.forEach(link => {
+                        link.parentElement.classList.remove("active-bg");
+                    });
+    
+                    link.parentElement.classList.add("active-bg");
+                });
+            });
+    
+            // Initialize the first section as active
+            if (contentSections.length > 0) {
+                contentSections[0].classList.add("active");
+                sidebarLinks[0].parentElement.classList.add("active-bg");
+            }
+        });
+    
+    
+    
+        document.querySelector('.menu-btn2').addEventListener('click', function () {
+            const topicButtons = document.querySelector('.topic-buttons');
+            // Toggle the menu visibility by moving it on and off the screen
+            if (topicButtons.style.right === '0px') {
+                topicButtons.style.right = '-250px'; // Slide out
+            } else {
+                topicButtons.style.right = '0px'; // Slide in
+            }
+        });
+    
+    
+    
+    
+    
+    
+    
+    </script>
+    
+    </body>
+    
+    </html>

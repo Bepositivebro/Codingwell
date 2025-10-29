@@ -1,0 +1,2319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Course</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet1.css">
+    <style>
+
+
+
+    </style>
+</head>
+
+<body>
+    
+    <div class="navbar">
+        <!-----for desktop view------------>
+        <div class="logo">
+            <img src="logo.png" alt="Logo" style="height: 70px; width: auto; margin-left: 20px; ">
+        </div>
+        
+
+        <!--------------for mobile view---------------->
+        <div class="logo1">
+            <img src="logo1.png" alt="Logo" style="height: 30px; width: 130px; margin-left: 100px; margin-top: 14px;">
+        </div>
+        
+        
+        <!-- Menu Button for Mobile View -->
+        <button class="menu-btn2" aria-label="Open menu">&#x27A1;</button>
+
+        
+       
+        
+        <!-- Desktop Navbar -->
+        <div class="desktop-navbar">
+           
+            <button><a href="python.html" style="color: white;">Python</a></button>
+            <button><a href="cpp.html" style="color: white;">C++</a></button>
+            <button><a href="c.html" style="color: white;">C</a></button>
+            <button><a href="html.html" style="color: white;">HTML</a></button>
+            <button><a href="css.html" style="color: white;">CSS</a></button>
+            <button><a href="javascript.html" style="color: white;">JS</a></button>
+            <button><a href="java.html" style="color: white;">Java</a></button>
+            <button><a href="php.html" style="color: white;">PHP</a></button>
+            <button><a href="dsa.html" style="color: white;">DSA</a></button>
+            
+        </div>
+
+        <!-- Dropdown Menu for Mobile View -->
+        <div class="topic-buttons">
+            
+            <a href="python.html"><button>Python</button></a>
+            <a href="cpp.html"><button>C++</button></a>
+            <a href="c.html"><button>C</button></a>
+            <a href="html.html"><button>HTML</button></a>
+            <a href="css.html"><button>CSS</button></a>
+            <a href="javascript.html"><button>JS</button></a>
+            <a href="java.html"><button>Java</button></a>
+            <a href="php.html"><button>PHP</button></a>
+            <a href="dsa.html"><button>DSA</button></a>
+        </div>
+
+        
+        <!-- Mobile menu button -->
+        <div class="menu-btn" id="menuBtn">
+            &#9776;
+        </div>
+
+
+    </div>
+
+
+    <div class="content">
+        <!-- Sidebar for PHP Topics -->
+        <div class="sidebar" id="sidebar">
+            <h2>Introduction</h2>
+            <ul>
+                <li><a href="#php-overview">What is PHP?</a></li>
+                <li><a href="#php-history">History and Evolution</a></li>
+                <li><a href="#php-setup">Setting Up Environment</a></li>
+            </ul>
+
+            <h2>PHP Basics</h2>
+            <ul>
+                <li><a href="#syntax">Syntax and Structure</a></li>
+                <li><a href="#variables">Variables and Data Types</a></li>
+                <li><a href="#operators">Operators</a></li>
+                <li><a href="#control-flow">Control Flow Statements</a></li>
+                <li><a href="#arrays">Arrays</a></li>
+            </ul>
+
+            <h2>Advanced PHP</h2>
+            <ul>
+                <li><a href="#functions">Functions</a></li>
+                <li><a href="#oop">Object-Oriented Programming</a></li>
+                <li><a href="#exceptions">Exceptions and Error Handling</a></li>
+                <li><a href="#sessions">Sessions and Cookies</a></li>
+                <li><a href="#database">Working with Databases (MySQL)</a></li>
+            </ul>
+
+            <h2>PHP Frameworks</h2>
+            <ul>
+                <li><a href="#laravel">Laravel</a></li>
+                <li><a href="#symfony">Symfony</a></li>
+                <li><a href="#codeigniter">CodeIgniter</a></li>
+            </ul>
+
+            <h2>Best Practices</h2>
+            <ul>
+                <li><a href="#code-readability">Code Readability</a></li>
+                <li><a href="#security">Security Practices</a></li>
+                <li><a href="#performance">Performance Optimization</a></li>
+                <li><a href="#testing">Unit Testing</a></li>
+                <li><a href="#testing">Unit Testing</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main" id="php-overview">
+            <h1>What is PHP?</h1>
+            <h3>Definition</h3>
+            <p>
+                PHP (Hypertext Preprocessor) is a popular server-side scripting language used for web development. It can be embedded into HTML to create dynamic web pages and has a wide range of applications, from simple scripts to complex, content management systems.
+            </p>
+            <h3>Features of PHP</h3>
+            <ul>
+                <li><strong>Server-Side Scripting:</strong> PHP runs on the server, and the result is sent to the client's browser.</li>
+                <li><strong>Cross-Platform:</strong> PHP runs on all major operating systems, including Linux, Windows, and macOS.</li>
+                <li><strong>Database Integration:</strong> PHP can work with various databases, including MySQL, PostgreSQL, and SQLite.</li>
+                <li><strong>Open Source:</strong> PHP is free to use and has a large, supportive community.</li>
+            </ul>
+            <h3>Applications</h3>
+            <ul>
+                <li>Dynamic Web Pages</li>
+                <li>Content Management Systems (CMS) like WordPress</li>
+                <li>eCommerce Platforms</li>
+                <li>APIs and Web Services</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Main Content -->
+<div class="main" id="php-history">
+    <h1>History and Evolution</h1>
+    
+    <h3>Definition</h3>
+    <p>
+        PHP (Hypertext Preprocessor) is a widely-used server-side scripting language that has evolved significantly since its inception. It was created to handle web content dynamically and efficiently.
+    </p>
+    
+    <h3>Evolution of PHP</h3>
+    <ul>
+        <li><strong>1994 - PHP Creation:</strong> Rasmus Lerdorf developed PHP as a set of Common Gateway Interface (CGI) scripts to track visits to his online resume.</li>
+        <li><strong>1995 - PHP/FI:</strong> The first official version, PHP/FI (Personal Home Page / Forms Interpreter), was released, allowing basic database interaction and form handling.</li>
+        <li><strong>1997 - PHP 3:</strong> Zeev Suraski and Andi Gutmans rewrote the core, adding object-oriented features and significantly improving performance.</li>
+        <li><strong>2000 - PHP 4:</strong> Introduced the Zend Engine, boosting speed and scalability for larger applications.</li>
+        <li><strong>2004 - PHP 5:</strong> Brought enhanced object-oriented programming, exception handling, and improved MySQL support.</li>
+        <li><strong>2015 - PHP 7:</strong> Introduced significant performance improvements, scalar type declarations, and reduced memory consumption.</li>
+        <li><strong>2020 - PHP 8:</strong> Brought JIT compilation, attributes, named arguments, and better error handling.</li>
+    </ul>
+    
+    <h3>Key Features of PHP Evolution</h3>
+    <ul>
+        <li><strong>Performance Improvements:</strong> PHP has become faster and more efficient with each version.</li>
+        <li><strong>Better Error Handling:</strong> Modern versions provide improved debugging and exception handling.</li>
+        <li><strong>Security Enhancements:</strong> Continuous updates ensure PHP remains secure for web applications.</li>
+        <li><strong>OOP Support:</strong> PHP has evolved into a robust, object-oriented language, making it suitable for large applications.</li>
+    </ul>
+    
+    <h3>Applications</h3>
+    <ul>
+        <li>Web Development</li>
+        <li>Server-Side Scripting</li>
+        <li>Content Management Systems (WordPress, Drupal, Joomla)</li>
+        <li>eCommerce Platforms</li>
+    </ul>
+</div>
+
+
+<!-- Main Content -->
+<div class="main" id="php-setup">
+    <h1>Setting Up Environment</h1>
+    
+    <h3>Definition</h3>
+    <p>
+        To start developing with PHP, you need to set up a suitable environment, which includes installing a web server, PHP interpreter, and a database management system. This setup allows you to execute PHP scripts and develop dynamic web applications.
+    </p>
+    
+    <h3>Steps to Set Up PHP Environment</h3>
+    <ul>
+        <li><strong>Step 1: Install a Web Server</strong>  
+            <ul>
+                <li><strong>Apache (Recommended):</strong> Most commonly used web server for PHP.</li>
+                <li><strong>Nginx:</strong> An alternative to Apache, known for better performance.</li>
+            </ul>
+        </li>
+        <li><strong>Step 2: Install PHP</strong>  
+            <ul>
+                <li>Download PHP from the official website: <a href="https://www.php.net/downloads" target="_blank">php.net/downloads</a></li>
+                <li>Ensure you choose the correct version for your OS (Windows, macOS, Linux).</li>
+            </ul>
+        </li>
+        <li><strong>Step 3: Install a Database (Optional but Recommended)</strong>  
+            <ul>
+                <li><strong>MySQL:</strong> Most widely used with PHP applications.</li>
+                <li><strong>MariaDB:</strong> A fork of MySQL with additional features.</li>
+                <li><strong>PostgreSQL:</strong> A powerful alternative to MySQL.</li>
+            </ul>
+        </li>
+        <li><strong>Step 4: Install a Local Development Environment</strong>  
+            <ul>
+                <li><strong>XAMPP:</strong> A package that includes Apache, MySQL, PHP, and phpMyAdmin.</li>
+                <li><strong>WAMP:</strong> Windows-specific PHP development environment.</li>
+                <li><strong>MAMP:</strong> macOS and Windows alternative.</li>
+                <li><strong>LAMP:</strong> Linux equivalent of the above environments.</li>
+            </ul>
+        </li>
+        <li><strong>Step 5: Configure PHP</strong>  
+            <ul>
+                <li>Edit the <code>php.ini</code> file to enable required extensions.</li>
+                <li>Set error reporting levels for debugging.</li>
+            </ul>
+        </li>
+        <li><strong>Step 6: Verify Installation</strong>  
+            <ul>
+                <li>Run <code>php -v</code> in the terminal or command prompt to check the PHP version.</li>
+                <li>Create a PHP file (e.g., <code>info.php</code>) and add:
+                    <pre><code>&lt;?php phpinfo(); ?&gt;</code></pre>
+                </li>
+                <li>Place the file in the web server directory and access it via the browser.</li>
+            </ul>
+        </li>
+    </ul>
+    
+    <h3>Features of a Well-Configured Environment</h3>
+    <ul>
+        <li><strong>PHP Interpreter:</strong> Allows execution of PHP scripts.</li>
+        <li><strong>Database Connectivity:</strong> Enables interaction with databases.</li>
+        <li><strong>Debugging Tools:</strong> Helps identify and fix errors.</li>
+        <li><strong>Secure Configuration:</strong> Protects against vulnerabilities.</li>
+    </ul>
+    
+    <h3>Applications</h3>
+    <ul>
+        <li>Developing PHP-based Web Applications</li>
+        <li>Testing and Debugging PHP Scripts</li>
+        <li>Running Local Servers for Development</li>
+    </ul>
+</div>
+
+
+<!-- Main Content -->
+<div class="main" id="syntax">
+    <h1>Syntax and Structure</h1>
+    
+    <h3>Definition</h3>
+    <p>
+        PHP syntax defines the structure and rules for writing PHP code. It includes PHP tags, statements, comments, and script organization, which help in creating dynamic web applications.
+    </p>
+
+    <h3>Basic PHP Syntax</h3>
+    <ul>
+        <li><strong>PHP Opening and Closing Tags:</strong>  
+            <pre><code>&lt;?php
+    // PHP code goes here
+?&gt;</code></pre>
+            <p>All PHP code must be written inside <code>&lt;?php ?&gt;</code> tags.</p>
+        </li>
+
+        <li><strong>Echo Statement (Output):</strong>  
+            <pre><code>&lt;?php
+    echo "Hello, World!";
+?&gt;</code></pre>
+            <p>Used to display output in the browser.</p>
+        </li>
+
+        <li><strong>PHP Comments:</strong>  
+            <pre><code>&lt;?php
+    // This is a single-line comment
+    # This is another single-line comment
+    /*
+        This is a multi-line comment.
+    */
+?&gt;</code></pre>
+            <p>Comments are ignored by PHP and are used for code documentation.</p>
+        </li>
+
+        <li><strong>PHP Case Sensitivity:</strong>  
+            <p>PHP is case-sensitive for variable names but not for function and keyword names.</p>
+            <pre><code>&lt;?php
+    $name = "John"; // This is different from $NAME or $Name
+?&gt;</code></pre>
+        </li>
+    </ul>
+
+    <h3>PHP Code Structure</h3>
+    <ul>
+        <li><strong>Variables:</strong> Start with a <code>$</code> sign.
+            <pre><code>&lt;?php
+    $message = "Welcome to PHP!";
+?&gt;</code></pre>
+        </li>
+        <li><strong>Statements:</strong> Each statement ends with a semicolon <code>;</code>.
+            <pre><code>&lt;?php
+    echo "This is a statement.";
+?&gt;</code></pre>
+        </li>
+        <li><strong>Functions:</strong> Blocks of reusable code.
+            <pre><code>&lt;?php
+    function greet() {
+        echo "Hello!";
+    }
+?&gt;</code></pre>
+        </li>
+        <li><strong>Conditional Statements:</strong> Control the flow of execution.
+            <pre><code>&lt;?php
+    if ($x > 10) {
+        echo "X is greater than 10";
+    }
+?&gt;</code></pre>
+        </li>
+    </ul>
+
+    <h3>Features of PHP Syntax</h3>
+    <ul>
+        <li><strong>Easy to Learn:</strong> Simple syntax similar to C and JavaScript.</li>
+        <li><strong>Flexible:</strong> Can be embedded in HTML.</li>
+        <li><strong>Loosely Typed:</strong> No need to define variable types explicitly.</li>
+        <li><strong>Compatible:</strong> Works with all major databases and web servers.</li>
+    </ul>
+
+    <h3>Applications</h3>
+    <ul>
+        <li>Creating dynamic web pages</li>
+        <li>Handling user input</li>
+        <li>Processing form data</li>
+        <li>Generating web content dynamically</li>
+    </ul>
+</div>
+
+<!-- Main Content -->
+<div class="main" id="variables">
+    <h1>Variables and Data Types</h1>
+
+    <h3>Definition</h3>
+    <p>
+        Variables in PHP are used to store data, such as numbers, strings, and arrays. PHP is a loosely typed language, meaning you don't need to declare the data type of a variable explicitly.
+    </p>
+
+    <h3>Declaring Variables</h3>
+    <ul>
+        <li>Variables in PHP start with a <code>$</code> sign.</li>
+        <li>Variable names are case-sensitive.</li>
+        <li>Variable names must start with a letter or an underscore (_), followed by letters, numbers, or underscores.</li>
+        <li>Example:</li>
+        <pre><code>&lt;?php
+    $name = "John";  // String
+    $age = 25;       // Integer
+    $price = 9.99;   // Float
+    $isAvailable = true;  // Boolean
+?&gt;</code></pre>
+    </ul>
+
+    <h3>PHP Data Types</h3>
+    <p>PHP supports different types of data that can be stored in variables:</p>
+
+    <ul>
+        <li><strong>String:</strong> A sequence of characters.</li>
+        <pre><code>&lt;?php
+    $text = "Hello, PHP!";
+    echo $text;
+?&gt;</code></pre>
+
+        <li><strong>Integer:</strong> Whole numbers, positive or negative.</li>
+        <pre><code>&lt;?php
+    $num = 100;
+    echo $num;
+?&gt;</code></pre>
+
+        <li><strong>Float (Double):</strong> Decimal numbers.</li>
+        <pre><code>&lt;?php
+    $price = 99.99;
+    echo $price;
+?&gt;</code></pre>
+
+        <li><strong>Boolean:</strong> Represents <code>true</code> or <code>false</code>.</li>
+        <pre><code>&lt;?php
+    $is_logged_in = true;
+    echo $is_logged_in; // Outputs 1 (true)
+?&gt;</code></pre>
+
+        <li><strong>Array:</strong> A collection of values.</li>
+        <pre><code>&lt;?php
+    $colors = array("Red", "Green", "Blue");
+    echo $colors[0]; // Outputs "Red"
+?&gt;</code></pre>
+
+        <li><strong>Object:</strong> An instance of a class.</li>
+        <pre><code>&lt;?php
+    class Car {
+        public $brand = "Toyota";
+    }
+
+    $myCar = new Car();
+    echo $myCar->brand; // Outputs "Toyota"
+?&gt;</code></pre>
+
+        <li><strong>NULL:</strong> A variable with no value.</li>
+        <pre><code>&lt;?php
+    $var = null;
+?&gt;</code></pre>
+
+    </ul>
+
+    <h3>Features of PHP Variables</h3>
+    <ul>
+        <li><strong>Loosely Typed:</strong> No need to declare variable types explicitly.</li>
+        <li><strong>Dynamic:</strong> Variables can change type based on assigned values.</li>
+        <li><strong>Global and Local Scope:</strong> Variables can have different scopes.</li>
+        <li><strong>Superglobals:</strong> Predefined variables like <code>$_GET</code>, <code>$_POST</code>, and <code>$_SESSION</code>.</li>
+    </ul>
+
+    <h3>Applications</h3>
+    <ul>
+        <li>Storing user data and inputs</li>
+        <li>Managing session and cookie values</li>
+        <li>Handling form data</li>
+        <li>Performing arithmetic and logical operations</li>
+    </ul>
+</div>
+
+
+<!-- Main Content -->
+<div class="main" id="operators">
+    <h1>Operators</h1>
+
+    <h3>Definition</h3>
+    <p>
+        Operators in PHP are symbols used to perform operations on variables and values. PHP provides different types of operators, including arithmetic, assignment, comparison, logical, and more.
+    </p>
+
+    <h3>Types of Operators in PHP</h3>
+
+    <h4>1. Arithmetic Operators</h4>
+    <p>Used to perform mathematical operations.</p>
+    <ul>
+        <li><strong>Addition (+):</strong> Adds two values.</li>
+        <li><strong>Subtraction (-):</strong> Subtracts one value from another.</li>
+        <li><strong>Multiplication (*):</strong> Multiplies two values.</li>
+        <li><strong>Division (/):</strong> Divides one value by another.</li>
+        <li><strong>Modulus (%):</strong> Returns the remainder of a division.</li>
+    </ul>
+    <pre><code>&lt;?php
+    $a = 10;
+    $b = 5;
+    echo $a + $b; // Outputs 15
+?&gt;</code></pre>
+
+    <h4>2. Assignment Operators</h4>
+    <p>Used to assign values to variables.</p>
+    <ul>
+        <li><strong>=</strong> Assigns a value.</li>
+        <li><strong>+=</strong> Adds and assigns.</li>
+        <li><strong>-=</strong> Subtracts and assigns.</li>
+        <li><strong>*=</strong> Multiplies and assigns.</li>
+        <li><strong>/=</strong> Divides and assigns.</li>
+        <li><strong>%=</strong> Modulus and assigns.</li>
+    </ul>
+    <pre><code>&lt;?php
+    $x = 10;
+    $x += 5; // Equivalent to $x = $x + 5
+    echo $x; // Outputs 15
+?&gt;</code></pre>
+
+    <h4>3. Comparison Operators</h4>
+    <p>Used to compare two values.</p>
+    <ul>
+        <li><strong>==</strong> Equal to.</li>
+        <li><strong>!=</strong> Not equal to.</li>
+        <li><strong>===</strong> Identical (equal and same data type).</li>
+        <li><strong>!==</strong> Not identical.</li>
+        <li><strong>&gt;</strong> Greater than.</li>
+        <li><strong>&lt;</strong> Less than.</li>
+        <li><strong>&gt;=</strong> Greater than or equal to.</li>
+        <li><strong>&lt;=</strong> Less than or equal to.</li>
+    </ul>
+    <pre><code>&lt;?php
+    $a = 10;
+    $b = "10";
+    var_dump($a == $b);  // Outputs true
+    var_dump($a === $b); // Outputs false
+?&gt;</code></pre>
+
+    <h4>4. Logical Operators</h4>
+    <p>Used to combine conditional statements.</p>
+    <ul>
+        <li><strong>AND (&& or and):</strong> True if both conditions are true.</li>
+        <li><strong>OR (|| or or):</strong> True if at least one condition is true.</li>
+        <li><strong>NOT (!):</strong> Reverses the condition.</li>
+    </ul>
+    <pre><code>&lt;?php
+    $x = 10;
+    $y = 5;
+    if ($x > 5 && $y < 10) {
+        echo "Both conditions are true!";
+    }
+?&gt;</code></pre>
+
+    <h4>5. Increment and Decrement Operators</h4>
+    <p>Used to increase or decrease a variable's value.</p>
+    <ul>
+        <li><strong>++$x:</strong> Pre-increment.</li>
+        <li><strong>$x++:</strong> Post-increment.</li>
+        <li><strong>--$x:</strong> Pre-decrement.</li>
+        <li><strong>$x--:</strong> Post-decrement.</li>
+    </ul>
+    <pre><code>&lt;?php
+    $x = 5;
+    echo ++$x; // Outputs 6
+    echo $x--; // Outputs 6, then decreases to 5
+?&gt;</code></pre>
+
+    <h4>6. String Operators</h4>
+    <p>Used for string manipulation.</p>
+    <ul>
+        <li><strong>.</strong> Concatenation operator (joins strings).</li>
+        <li><strong>.=</strong> Concatenation assignment.</li>
+    </ul>
+    <pre><code>&lt;?php
+    $text1 = "Hello";
+    $text2 = " World!";
+    echo $text1 . $text2; // Outputs "Hello World!"
+?&gt;</code></pre>
+
+    <h4>7. Ternary Operator</h4>
+    <p>Shortcut for <code>if-else</code> statements.</p>
+    <pre><code>&lt;?php
+    $age = 20;
+    $status = ($age >= 18) ? "Adult" : "Minor";
+    echo $status; // Outputs "Adult"
+?&gt;</code></pre>
+
+    <h4>8. Null Coalescing Operator</h4>
+    <p>Used to check if a value exists, otherwise returns a default value.</p>
+    <pre><code>&lt;?php
+    $username = $_GET["user"] ?? "Guest";
+    echo $username; // Outputs "Guest" if no user parameter is passed
+?&gt;</code></pre>
+
+    <h3>Features of PHP Operators</h3>
+    <ul>
+        <li><strong>Wide Range of Operators:</strong> Supports arithmetic, comparison, logical, and more.</li>
+        <li><strong>Simple and Readable:</strong> Easy to use in expressions.</li>
+        <li><strong>Supports Shortcuts:</strong> Includes ternary and null coalescing operators.</li>
+        <li><strong>Works with All Data Types:</strong> Can be used with numbers, strings, and arrays.</li>
+    </ul>
+
+    <h3>Applications</h3>
+    <ul>
+        <li>Performing mathematical calculations</li>
+        <li>Comparing values in conditions</li>
+        <li>Building logical conditions in programs</li>
+        <li>Manipulating strings and data efficiently</li>
+    </ul>
+</div>
+
+
+<!-- Main Content -->
+<div class="main" id="control-flow">
+    <h1>Control Flow Statements</h1>
+
+    <h3>Definition</h3>
+    <p>
+        Control flow statements in PHP determine the execution flow of a script based on conditions, loops, and branching structures. These statements allow for decision-making and repeated execution of code blocks.
+    </p>
+
+    <h3>Types of Control Flow Statements</h3>
+
+    <h4>1. Conditional Statements</h4>
+    <p>Used to execute different code blocks based on conditions.</p>
+
+    <h5>if Statement</h5>
+    <p>Executes a block of code if a condition is true.</p>
+    <pre><code>&lt;?php
+    $age = 18;
+    if ($age >= 18) {
+        echo "You are eligible to vote.";
+    }
+?&gt;</code></pre>
+
+    <h5>if-else Statement</h5>
+    <p>Executes one block of code if the condition is true and another if it's false.</p>
+    <pre><code>&lt;?php
+    $age = 16;
+    if ($age >= 18) {
+        echo "You can vote.";
+    } else {
+        echo "You cannot vote.";
+    }
+?&gt;</code></pre>
+
+    <h5>if-elseif-else Statement</h5>
+    <p>Checks multiple conditions.</p>
+    <pre><code>&lt;?php
+    $score = 85;
+    if ($score >= 90) {
+        echo "Grade: A";
+    } elseif ($score >= 75) {
+        echo "Grade: B";
+    } else {
+        echo "Grade: C";
+    }
+?&gt;</code></pre>
+
+    <h5>Switch Statement</h5>
+    <p>Used when multiple conditions are based on the same variable.</p>
+    <pre><code>&lt;?php
+    $day = "Monday";
+    switch ($day) {
+        case "Monday":
+            echo "Start of the work week!";
+            break;
+        case "Friday":
+            echo "Weekend is near!";
+            break;
+        default:
+            echo "It's a regular day.";
+    }
+?&gt;</code></pre>
+
+    <h4>2. Looping Statements</h4>
+    <p>Used to execute a block of code multiple times.</p>
+
+    <h5>while Loop</h5>
+    <p>Executes the code while the condition is true.</p>
+    <pre><code>&lt;?php
+    $count = 1;
+    while ($count <= 5) {
+        echo "Count: $count &lt;br&gt;";
+        $count++;
+    }
+?&gt;</code></pre>
+
+    <h5>do-while Loop</h5>
+    <p>Executes the code at least once before checking the condition.</p>
+    <pre><code>&lt;?php
+    $count = 1;
+    do {
+        echo "Count: $count &lt;br&gt;";
+        $count++;
+    } while ($count <= 5);
+?&gt;</code></pre>
+
+    <h5>for Loop</h5>
+    <p>Executes the code a fixed number of times.</p>
+    <pre><code>&lt;?php
+    for ($i = 1; $i <= 5; $i++) {
+        echo "Iteration: $i &lt;br&gt;";
+    }
+?&gt;</code></pre>
+
+    <h5>foreach Loop</h5>
+    <p>Used for iterating over arrays.</p>
+    <pre><code>&lt;?php
+    $colors = array("Red", "Green", "Blue");
+    foreach ($colors as $color) {
+        echo "Color: $color &lt;br&gt;";
+    }
+?&gt;</code></pre>
+
+    <h4>3. Jump Statements</h4>
+    <p>Used to control the flow within loops.</p>
+
+    <h5>break Statement</h5>
+    <p>Exits a loop or switch statement.</p>
+    <pre><code>&lt;?php
+    for ($i = 1; $i <= 10; $i++) {
+        if ($i == 5) break;
+        echo "Number: $i &lt;br&gt;";
+    }
+?&gt;</code></pre>
+
+    <h5>continue Statement</h5>
+    <p>Skips the current iteration and moves to the next.</p>
+    <pre><code>&lt;?php
+    for ($i = 1; $i <= 5; $i++) {
+        if ($i == 3) continue;
+        echo "Number: $i &lt;br&gt;";
+    }
+?&gt;</code></pre>
+
+    <h3>Features of PHP Control Flow Statements</h3>
+    <ul>
+        <li><strong>Conditional Execution:</strong> Runs different code based on conditions.</li>
+        <li><strong>Looping Support:</strong> Efficiently repeats code execution.</li>
+        <li><strong>Jump Statements:</strong> Allows breaking and skipping iterations.</li>
+        <li><strong>Flexible and Powerful:</strong> Works with various data structures.</li>
+    </ul>
+
+    <h3>Applications</h3>
+    <ul>
+        <li>Decision-making in programs</li>
+        <li>Processing user inputs and form validation</li>
+        <li>Generating dynamic content</li>
+        <li>Iterating through data structures like arrays</li>
+    </ul>
+</div>
+
+
+<!-- Main Content -->
+<div class="main" id="arrays">
+    <h1>Arrays</h1>
+
+    <h3>Definition</h3>
+    <p>
+        An array in PHP is a data structure that stores multiple values in a single variable. Arrays can hold different types of values, including numbers, strings, and even other arrays.
+    </p>
+
+    <h3>Types of Arrays in PHP</h3>
+
+    <h4>1. Indexed Arrays</h4>
+    <p>These arrays use numeric indexes to store values.</p>
+    <pre><code>&lt;?php
+    $fruits = array("Apple", "Banana", "Cherry");
+    echo $fruits[0]; // Outputs "Apple"
+?&gt;</code></pre>
+
+    <h4>2. Associative Arrays</h4>
+    <p>These arrays use named keys instead of numeric indexes.</p>
+    <pre><code>&lt;?php
+    $person = array("name" => "John", "age" => 25, "city" => "New York");
+    echo $person["name"]; // Outputs "John"
+?&gt;</code></pre>
+
+    <h4>3. Multidimensional Arrays</h4>
+    <p>These arrays contain other arrays as elements.</p>
+    <pre><code>&lt;?php
+    $students = array(
+        array("John", 25, "A"),
+        array("Jane", 22, "B"),
+        array("Mike", 24, "C")
+    );
+    echo $students[0][0]; // Outputs "John"
+?&gt;</code></pre>
+
+    <h3>Array Functions in PHP</h3>
+
+    <h4>1. count()</h4>
+    <p>Returns the number of elements in an array.</p>
+    <pre><code>&lt;?php
+    $colors = array("Red", "Green", "Blue");
+    echo count($colors); // Outputs 3
+?&gt;</code></pre>
+
+    <h4>2. array_push()</h4>
+    <p>Adds elements to the end of an array.</p>
+    <pre><code>&lt;?php
+    $cars = array("Toyota", "BMW");
+    array_push($cars, "Mercedes");
+    print_r($cars); // Outputs ["Toyota", "BMW", "Mercedes"]
+?&gt;</code></pre>
+
+    <h4>3. array_pop()</h4>
+    <p>Removes the last element of an array.</p>
+    <pre><code>&lt;?php
+    $cars = array("Toyota", "BMW", "Mercedes");
+    array_pop($cars);
+    print_r($cars); // Outputs ["Toyota", "BMW"]
+?&gt;</code></pre>
+
+    <h4>4. array_merge()</h4>
+    <p>Merges two or more arrays.</p>
+    <pre><code>&lt;?php
+    $array1 = array("a", "b", "c");
+    $array2 = array("d", "e");
+    $result = array_merge($array1, $array2);
+    print_r($result); // Outputs ["a", "b", "c", "d", "e"]
+?&gt;</code></pre>
+
+    <h4>5. array_search()</h4>
+    <p>Searches for a value and returns its index/key.</p>
+    <pre><code>&lt;?php
+    $fruits = array("Apple", "Banana", "Cherry");
+    echo array_search("Banana", $fruits); // Outputs 1
+?&gt;</code></pre>
+
+    <h4>6. sort() and rsort()</h4>
+    <p>Sorts an array in ascending and descending order.</p>
+    <pre><code>&lt;?php
+    $numbers = array(3, 1, 4, 1, 5);
+    sort($numbers);
+    print_r($numbers); // Outputs [1, 1, 3, 4, 5]
+?&gt;</code></pre>
+
+    <h3>Features of PHP Arrays</h3>
+    <ul>
+        <li><strong>Flexible Data Storage:</strong> Holds multiple values in a single variable.</li>
+        <li><strong>Indexed, Associative, and Multidimensional:</strong> Different types for different use cases.</li>
+        <li><strong>Built-in Functions:</strong> Many functions for sorting, searching, and modifying arrays.</li>
+        <li><strong>Efficient and Easy to Use:</strong> Simple syntax and performance-optimized.</li>
+    </ul>
+
+    <h3>Applications</h3>
+    <ul>
+        <li>Storing and manipulating collections of data</li>
+        <li>Processing form inputs and user data</li>
+        <li>Handling database query results</li>
+        <li>Creating dynamic menus and UI elements</li>
+    </ul>
+</div>
+
+
+<!-- Main Content -->
+<div class="main" id="functions">
+    <h1>Functions</h1>
+
+    <h3>Definition</h3>
+    <p>
+        A function in PHP is a reusable block of code that performs a specific task. Functions help in modularizing code, improving readability, and reducing redundancy.
+    </p>
+
+    <h3>Types of Functions in PHP</h3>
+
+    <h4>1. Built-in Functions</h4>
+    <p>PHP provides many built-in functions for performing common tasks such as string manipulation, mathematical operations, and working with arrays.</p>
+
+    <h5>Example: strlen() - Get string length</h5>
+    <pre><code>&lt;?php
+    echo strlen("Hello World"); // Outputs: 11
+?&gt;</code></pre>
+
+    <h5>Example: rand() - Generate a random number</h5>
+    <pre><code>&lt;?php
+    echo rand(1, 100); // Outputs a random number between 1 and 100
+?&gt;</code></pre>
+
+    <h4>2. User-Defined Functions</h4>
+    <p>Developers can create their own custom functions using the <code>function</code> keyword.</p>
+
+    <h5>Example: Simple Function</h5>
+    <pre><code>&lt;?php
+    function greet() {
+        echo "Hello, welcome to PHP!";
+    }
+    greet();
+?&gt;</code></pre>
+
+    <h5>Example: Function with Parameters</h5>
+    <p>Functions can accept arguments to work with dynamic values.</p>
+    <pre><code>&lt;?php
+    function add($a, $b) {
+        return $a + $b;
+    }
+    echo add(5, 10); // Outputs: 15
+?&gt;</code></pre>
+
+    <h5>Example: Function with Default Parameter</h5>
+    <p>If no argument is passed, the function uses the default value.</p>
+    <pre><code>&lt;?php
+    function greetUser($name = "Guest") {
+        echo "Hello, $name!";
+    }
+    greetUser(); // Outputs: Hello, Guest!
+    greetUser("John"); // Outputs: Hello, John!
+?&gt;</code></pre>
+
+    <h4>3. Returning Values from Functions</h4>
+    <p>Functions can return values using the <code>return</code> keyword.</p>
+
+    <h5>Example: Returning a Value</h5>
+    <pre><code>&lt;?php
+    function multiply($x, $y) {
+        return $x * $y;
+    }
+    echo multiply(4, 3); // Outputs: 12
+?&gt;</code></pre>
+
+    <h4>4. Variable Scope</h4>
+    <p>PHP variables have different scopes: global, local, and static.</p>
+
+    <h5>Example: Global Scope</h5>
+    <p>Variables declared outside a function cannot be accessed inside it unless declared as <code>global</code>.</p>
+    <pre><code>&lt;?php
+    $message = "Hello World";
+    function displayMessage() {
+        global $message;
+        echo $message;
+    }
+    displayMessage(); // Outputs: Hello World
+?&gt;</code></pre>
+
+    <h5>Example: Static Variables</h5>
+    <p>Static variables retain their value across multiple function calls.</p>
+    <pre><code>&lt;?php
+    function counter() {
+        static $count = 0;
+        $count++;
+        echo $count;
+    }
+    counter(); // Outputs: 1
+    counter(); // Outputs: 2
+    counter(); // Outputs: 3
+?&gt;</code></pre>
+
+    <h3>Features of PHP Functions</h3>
+    <ul>
+        <li><strong>Code Reusability:</strong> Functions help avoid redundant code.</li>
+        <li><strong>Modularity:</strong> Breaks complex programs into smaller, manageable parts.</li>
+        <li><strong>Scalability:</strong> Functions make code easier to update and expand.</li>
+        <li><strong>Parameterization:</strong> Functions can accept parameters for dynamic execution.</li>
+        <li><strong>Return Values:</strong> Functions can return computed results.</li>
+    </ul>
+
+    <h3>Applications</h3>
+    <ul>
+        <li>Reusing logic in different parts of a project</li>
+        <li>Performing mathematical calculations</li>
+        <li>Processing user input and validating data</li>
+        <li>Reducing code duplication and improving maintainability</li>
+    </ul>
+</div>
+
+
+<!-- Main Content -->
+<div class="main" id="oop">
+    <h1>Object-Oriented Programming (OOP) in PHP</h1>
+
+    <h3>Definition</h3>
+    <p>
+        Object-Oriented Programming (OOP) in PHP is a programming paradigm that uses objects and classes to organize code into reusable and modular components. It helps in writing scalable, maintainable, and efficient applications.
+    </p>
+
+    <h3>Key OOP Concepts in PHP</h3>
+
+    <h4>1. Classes and Objects</h4>
+    <p>A class is a blueprint for creating objects, and an object is an instance of a class.</p>
+
+    <h5>Example: Creating a Class and an Object</h5>
+    <pre><code>&lt;?php
+    class Car {
+        public $brand;
+        
+        function setBrand($brand) {
+            $this->brand = $brand;
+        }
+        
+        function getBrand() {
+            return $this->brand;
+        }
+    }
+
+    $myCar = new Car();
+    $myCar->setBrand("Toyota");
+    echo $myCar->getBrand(); // Outputs: Toyota
+?&gt;</code></pre>
+
+    <h4>2. Properties and Methods</h4>
+    <p>Properties are variables inside a class, and methods are functions inside a class.</p>
+
+    <h5>Example: Using Properties and Methods</h5>
+    <pre><code>&lt;?php
+    class Person {
+        public $name;
+        
+        function sayHello() {
+            return "Hello, my name is " . $this->name;
+        }
+    }
+
+    $user = new Person();
+    $user->name = "Alice";
+    echo $user->sayHello(); // Outputs: Hello, my name is Alice
+?&gt;</code></pre>
+
+    <h4>3. Constructor and Destructor</h4>
+    <p>The constructor method (<code>__construct()</code>) is executed when an object is created. The destructor (<code>__destruct()</code>) is called when an object is destroyed.</p>
+
+    <h5>Example: Constructor and Destructor</h5>
+    <pre><code>&lt;?php
+    class Animal {
+        public function __construct() {
+            echo "An animal has been created.";
+        }
+
+        public function __destruct() {
+            echo "An animal has been destroyed.";
+        }
+    }
+
+    $dog = new Animal(); // Outputs: An animal has been created.
+?&gt;</code></pre>
+
+    <h4>4. Inheritance</h4>
+    <p>Inheritance allows a class to extend another class and inherit its properties and methods.</p>
+
+    <h5>Example: Class Inheritance</h5>
+    <pre><code>&lt;?php
+    class ParentClass {
+        public function greet() {
+            return "Hello from the parent class!";
+        }
+    }
+
+    class ChildClass extends ParentClass {
+        public function greetChild() {
+            return "Hello from the child class!";
+        }
+    }
+
+    $child = new ChildClass();
+    echo $child->greet(); // Outputs: Hello from the parent class!
+?&gt;</code></pre>
+
+    <h4>5. Access Modifiers</h4>
+    <p>Access modifiers define the visibility of properties and methods.</p>
+    <ul>
+        <li><strong>public</strong> - Accessible from anywhere.</li>
+        <li><strong>private</strong> - Accessible only within the class.</li>
+        <li><strong>protected</strong> - Accessible within the class and its subclasses.</li>
+    </ul>
+
+    <h5>Example: Using Access Modifiers</h5>
+    <pre><code>&lt;?php
+    class User {
+        public $name = "Alice"; // Can be accessed anywhere
+        private $password = "secret"; // Can only be accessed inside the class
+
+        public function getPassword() {
+            return $this->password;
+        }
+    }
+
+    $person = new User();
+    echo $person->name; // Outputs: Alice
+    echo $person->getPassword(); // Outputs: secret
+?&gt;</code></pre>
+
+    <h4>6. Polymorphism</h4>
+    <p>Polymorphism allows objects to be treated as instances of their parent class while having different behaviors.</p>
+
+    <h5>Example: Method Overriding</h5>
+    <pre><code>&lt;?php
+    class Animal {
+        public function makeSound() {
+            return "Some sound";
+        }
+    }
+
+    class Dog extends Animal {
+        public function makeSound() {
+            return "Bark";
+        }
+    }
+
+    $dog = new Dog();
+    echo $dog->makeSound(); // Outputs: Bark
+?&gt;</code></pre>
+
+    <h4>7. Interfaces</h4>
+    <p>An interface defines methods that a class must implement.</p>
+
+    <h5>Example: Implementing an Interface</h5>
+    <pre><code>&lt;?php
+    interface Animal {
+        public function makeSound();
+    }
+
+    class Cat implements Animal {
+        public function makeSound() {
+            return "Meow";
+        }
+    }
+
+    $cat = new Cat();
+    echo $cat->makeSound(); // Outputs: Meow
+?&gt;</code></pre>
+
+    <h4>8. Abstract Classes</h4>
+    <p>An abstract class cannot be instantiated and must be extended by other classes.</p>
+
+    <h5>Example: Abstract Class</h5>
+    <pre><code>&lt;?php
+    abstract class Vehicle {
+        abstract public function move();
+    }
+
+    class Car extends Vehicle {
+        public function move() {
+            return "Car is moving";
+        }
+    }
+
+    $car = new Car();
+    echo $car->move(); // Outputs: Car is moving
+?&gt;</code></pre>
+
+    <h3>Features of PHP OOP</h3>
+    <ul>
+        <li><strong>Encapsulation:</strong> Data hiding using access modifiers.</li>
+        <li><strong>Inheritance:</strong> Code reusability by extending classes.</li>
+        <li><strong>Polymorphism:</strong> One interface, multiple implementations.</li>
+        <li><strong>Abstraction:</strong> Hides complex implementation details.</li>
+        <li><strong>Code Organization:</strong> Improves modularity and reusability.</li>
+    </ul>
+
+    <h3>Applications</h3>
+    <ul>
+        <li>Building complex web applications</li>
+        <li>Developing reusable and modular code</li>
+        <li>Creating frameworks and libraries</li>
+        <li>Implementing design patterns like MVC</li>
+    </ul>
+</div>
+
+
+<!-- Main Content -->
+<div class="main" id="exceptions">
+    <h1>Exceptions and Error Handling in PHP</h1>
+
+    <h3>Definition</h3>
+    <p>
+        Error handling in PHP refers to the process of managing runtime errors that may occur during script execution. PHP provides several mechanisms, including error handling functions and exception handling, to catch and manage errors efficiently.
+    </p>
+
+    <h3>Types of Errors in PHP</h3>
+    <ul>
+        <li><strong>Notice Errors:</strong> Minor errors that do not stop script execution (e.g., using an undefined variable).</li>
+        <li><strong>Warning Errors:</strong> More serious than notices but do not halt execution (e.g., including a missing file).</li>
+        <li><strong>Fatal Errors:</strong> Critical errors that terminate script execution (e.g., calling a nonexistent function).</li>
+        <li><strong>Parse Errors:</strong> Errors due to syntax mistakes (e.g., missing a semicolon).</li>
+    </ul>
+
+    <h3>Error Handling in PHP</h3>
+
+    <h4>1. Using die() Function</h4>
+    <p>The <code>die()</code> function stops script execution and displays a message.</p>
+    <pre><code>&lt;?php
+    $file = fopen("test.txt", "r") or die("Unable to open file!");
+?&gt;</code></pre>
+
+    <h4>2. Using error_reporting()</h4>
+    <p>The <code>error_reporting()</code> function controls which error messages are displayed.</p>
+    <pre><code>&lt;?php
+    error_reporting(E_ALL); // Show all errors
+    echo $undefinedVar; // Notice: Undefined variable
+?&gt;</code></pre>
+
+    <h4>3. Custom Error Handler</h4>
+    <p>PHP allows defining a custom error-handling function using <code>set_error_handler()</code>.</p>
+
+    <h5>Example: Custom Error Handler</h5>
+    <pre><code>&lt;?php
+    function customError($errno, $errstr) {
+        echo "Error [$errno]: $errstr";
+    }
+
+    set_error_handler("customError");
+    echo 10 / 0; // Triggers an error
+?&gt;</code></pre>
+
+    <h3>Exception Handling in PHP</h3>
+
+    <h4>1. The try-catch Block</h4>
+    <p>PHP provides the <code>try</code> and <code>catch</code> blocks to handle exceptions.</p>
+
+    <h5>Example: Handling Exceptions</h5>
+    <pre><code>&lt;?php
+    function divide($a, $b) {
+        if ($b == 0) {
+            throw new Exception("Division by zero is not allowed.");
+        }
+        return $a / $b;
+    }
+
+    try {
+        echo divide(10, 0);
+    } catch (Exception $e) {
+        echo "Error: " . $e->getMessage();
+    }
+?&gt;</code></pre>
+
+    <h4>2. Using Multiple Catch Blocks</h4>
+    <p>Multiple <code>catch</code> blocks can be used to handle different types of exceptions.</p>
+
+    <h5>Example: Multiple Exception Handling</h5>
+    <pre><code>&lt;?php
+    class CustomException extends Exception {}
+    
+    try {
+        throw new CustomException("This is a custom exception.");
+    } catch (CustomException $e) {
+        echo "Caught custom exception: " . $e->getMessage();
+    } catch (Exception $e) {
+        echo "Caught general exception: " . $e->getMessage();
+    }
+?&gt;</code></pre>
+
+    <h4>3. The finally Block</h4>
+    <p>The <code>finally</code> block is always executed, whether an exception is thrown or not.</p>
+
+    <h5>Example: Using finally</h5>
+    <pre><code>&lt;?php
+    try {
+        echo divide(10, 2);
+    } catch (Exception $e) {
+        echo "Error: " . $e->getMessage();
+    } finally {
+        echo "Execution completed.";
+    }
+?&gt;</code></pre>
+
+    <h4>4. Creating Custom Exceptions</h4>
+    <p>PHP allows developers to create their own exception classes by extending the built-in <code>Exception</code> class.</p>
+
+    <h5>Example: Custom Exception</h5>
+    <pre><code>&lt;?php
+    class MyException extends Exception {
+        public function errorMessage() {
+            return "Error: " . $this->getMessage();
+        }
+    }
+
+    try {
+        throw new MyException("Something went wrong!");
+    } catch (MyException $e) {
+        echo $e->errorMessage();
+    }
+?&gt;</code></pre>
+
+    <h3>Features of PHP Error Handling</h3>
+    <ul>
+        <li><strong>Graceful Error Management:</strong> Prevents abrupt script termination.</li>
+        <li><strong>Custom Error Handlers:</strong> Allows defining custom error-handling functions.</li>
+        <li><strong>Exception Handling:</strong> Structured error handling using try-catch blocks.</li>
+        <li><strong>Logging:</strong> Errors can be logged for debugging.</li>
+        <li><strong>Control Over Error Display:</strong> Enables hiding sensitive error details from users.</li>
+    </ul>
+
+    <h3>Applications</h3>
+    <ul>
+        <li>Handling form validation errors.</li>
+        <li>Managing database connection failures.</li>
+        <li>Logging errors for debugging and monitoring.</li>
+        <li>Ensuring application stability by preventing fatal crashes.</li>
+    </ul>
+</div>
+
+<!-- Main Content -->
+<div class="main" id="sessions">
+    <h1>Sessions and Cookies in PHP</h1>
+
+    <h3>Definition</h3>
+    <p>
+        Sessions and cookies are used in PHP to store and manage user data across multiple pages of a website. 
+        A <strong>session</strong> stores user data on the server, while a <strong>cookie</strong> stores data on the user's browser.
+    </p>
+
+    <h3>1. Sessions in PHP</h3>
+    <p>
+        A session allows user data to be stored on the server and accessed across multiple pages during a user visit.
+        Unlike cookies, session data is not stored on the client’s browser, making it more secure.
+    </p>
+
+    <h4>Starting a Session</h4>
+    <p>To start a session, use the <code>session_start()</code> function at the beginning of a script.</p>
+    <pre><code>&lt;?php
+    session_start();
+    $_SESSION["username"] = "JohnDoe";
+    echo "Session variable set.";
+?&gt;</code></pre>
+
+    <h4>Accessing Session Data</h4>
+    <p>Session variables can be accessed on any page after starting the session.</p>
+    <pre><code>&lt;?php
+    session_start();
+    echo "Welcome, " . $_SESSION["username"];
+?&gt;</code></pre>
+
+    <h4>Destroying a Session</h4>
+    <p>To remove all session variables and destroy a session, use <code>session_unset()</code> and <code>session_destroy()</code>.</p>
+    <pre><code>&lt;?php
+    session_start();
+    session_unset();
+    session_destroy();
+    echo "Session destroyed.";
+?&gt;</code></pre>
+
+    <h3>2. Cookies in PHP</h3>
+    <p>
+        A cookie is a small piece of data stored in the user's browser. Cookies can be used to remember login details, user preferences, and more.
+    </p>
+
+    <h4>Setting a Cookie</h4>
+    <p>Use the <code>setcookie()</code> function to create a cookie.</p>
+    <pre><code>&lt;?php
+    setcookie("user", "JohnDoe", time() + (86400 * 30), "/"); // 30-day expiration
+    echo "Cookie set.";
+?&gt;</code></pre>
+
+    <h4>Accessing a Cookie</h4>
+    <p>Cookies can be accessed using the <code>$_COOKIE</code> superglobal.</p>
+    <pre><code>&lt;?php
+    if(isset($_COOKIE["user"])) {
+        echo "Welcome back, " . $_COOKIE["user"];
+    } else {
+        echo "Cookie not set.";
+    }
+?&gt;</code></pre>
+
+    <h4>Deleting a Cookie</h4>
+    <p>To delete a cookie, set its expiration time to a past timestamp.</p>
+    <pre><code>&lt;?php
+    setcookie("user", "", time() - 3600, "/");
+    echo "Cookie deleted.";
+?&gt;</code></pre>
+
+    <h3>Key Differences Between Sessions and Cookies</h3>
+    <table border="1">
+        <tr>
+            <th>Feature</th>
+            <th>Sessions</th>
+            <th>Cookies</th>
+        </tr>
+        <tr>
+            <td>Storage</td>
+            <td>Stored on the server</td>
+            <td>Stored on the user's browser</td>
+        </tr>
+        <tr>
+            <td>Security</td>
+            <td>More secure (data not exposed to the user)</td>
+            <td>Less secure (data stored on the client-side)</td>
+        </tr>
+        <tr>
+            <td>Size Limit</td>
+            <td>No size limit</td>
+            <td>Limited (usually 4KB per cookie)</td>
+        </tr>
+        <tr>
+            <td>Expiration</td>
+            <td>Ends when the browser is closed (unless manually destroyed)</td>
+            <td>Expires based on the set time</td>
+        </tr>
+    </table>
+
+    <h3>Features of PHP Sessions and Cookies</h3>
+    <ul>
+        <li><strong>Persistent Data Storage:</strong> Maintain user data across multiple pages.</li>
+        <li><strong>Security:</strong> Sessions offer higher security as data is stored on the server.</li>
+        <li><strong>Custom Expiration:</strong> Cookies allow setting expiration times for user preferences.</li>
+        <li><strong>User Authentication:</strong> Used for login systems and remembering user sessions.</li>
+    </ul>
+
+    <h3>Applications</h3>
+    <ul>
+        <li>User authentication (login/logout systems)</li>
+        <li>Remembering user preferences and settings</li>
+        <li>Shopping cart functionality in eCommerce websites</li>
+        <li>Tracking user activity for analytics</li>
+    </ul>
+</div>
+
+
+<!-- Main Content -->
+<div class="main" id="database">
+    <h1>Working with Databases in PHP (MySQL)</h1>
+
+    <h3>Definition</h3>
+    <p>
+        PHP can interact with databases using various extensions such as MySQLi (MySQL Improved) and PDO (PHP Data Objects). 
+        MySQL is a popular relational database used to store and manage data in web applications.
+    </p>
+
+    <h3>Connecting to a MySQL Database</h3>
+
+    <h4>1. Using MySQLi (Procedural)</h4>
+    <p>MySQLi provides a procedural way to connect to a database.</p>
+    <pre><code>&lt;?php
+    $conn = mysqli_connect("localhost", "root", "", "test_db");
+
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+    echo "Connected successfully";
+    ?&gt;</code></pre>
+
+    <h4>2. Using MySQLi (Object-Oriented)</h4>
+    <p>MySQLi also supports an object-oriented approach.</p>
+    <pre><code>&lt;?php
+    $conn = new mysqli("localhost", "root", "", "test_db");
+
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    echo "Connected successfully";
+    ?&gt;</code></pre>
+
+    <h4>3. Using PDO (PHP Data Objects)</h4>
+    <p>PDO is a database abstraction layer that works with multiple database systems.</p>
+    <pre><code>&lt;?php
+    try {
+        $conn = new PDO("mysql:host=localhost;dbname=test_db", "root", "");
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        echo "Connected successfully";
+    } catch (PDOException $e) {
+        echo "Connection failed: " . $e->getMessage();
+    }
+    ?&gt;</code></pre>
+
+    <h3>Executing SQL Queries</h3>
+
+    <h4>1. Creating a Table</h4>
+    <p>Use SQL queries in PHP to create tables in a MySQL database.</p>
+    <pre><code>&lt;?php
+    $sql = "CREATE TABLE users (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        username VARCHAR(50) NOT NULL,
+        email VARCHAR(100) NOT NULL
+    )";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Table created successfully";
+    } else {
+        echo "Error creating table: " . $conn->error;
+    }
+    ?&gt;</code></pre>
+
+    <h4>2. Inserting Data</h4>
+    <p>Data can be inserted into a table using SQL INSERT statements.</p>
+    <pre><code>&lt;?php
+    $sql = "INSERT INTO users (username, email) VALUES ('JohnDoe', 'john@example.com')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "New record inserted successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+    ?&gt;</code></pre>
+
+    <h4>3. Retrieving Data</h4>
+    <p>Data can be fetched using the SQL SELECT statement.</p>
+    <pre><code>&lt;?php
+    $sql = "SELECT id, username, email FROM users";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            echo "ID: " . $row["id"] . " - Name: " . $row["username"] . " - Email: " . $row["email"] . "&lt;br&gt;";
+        }
+    } else {
+        echo "0 results";
+    }
+    ?&gt;</code></pre>
+
+    <h4>4. Updating Data</h4>
+    <p>The UPDATE statement modifies existing records.</p>
+    <pre><code>&lt;?php
+    $sql = "UPDATE users SET email='newemail@example.com' WHERE username='JohnDoe'";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Record updated successfully";
+    } else {
+        echo "Error updating record: " . $conn->error;
+    }
+    ?&gt;</code></pre>
+
+    <h4>5. Deleting Data</h4>
+    <p>The DELETE statement removes records from a table.</p>
+    <pre><code>&lt;?php
+    $sql = "DELETE FROM users WHERE username='JohnDoe'";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Record deleted successfully";
+    } else {
+        echo "Error deleting record: " . $conn->error;
+    }
+    ?&gt;</code></pre>
+
+    <h3>Using Prepared Statements</h3>
+    <p>Prepared statements prevent SQL injection and improve security.</p>
+    <pre><code>&lt;?php
+    $stmt = $conn->prepare("INSERT INTO users (username, email) VALUES (?, ?)");
+    $stmt->bind_param("ss", $username, $email);
+
+    $username = "JaneDoe";
+    $email = "jane@example.com";
+    $stmt->execute();
+
+    echo "Record inserted successfully";
+    $stmt->close();
+    ?&gt;</code></pre>
+
+    <h3>Closing the Database Connection</h3>
+    <p>It's important to close the connection after completing database operations.</p>
+    <pre><code>&lt;?php
+    $conn->close();
+    ?&gt;</code></pre>
+
+    <h3>Features of PHP Database Connectivity</h3>
+    <ul>
+        <li><strong>Supports Multiple Databases:</strong> Works with MySQL, PostgreSQL, SQLite, etc.</li>
+        <li><strong>Secure Data Handling:</strong> Uses prepared statements to prevent SQL injection.</li>
+        <li><strong>Scalability:</strong> Handles large datasets efficiently.</li>
+        <li><strong>Flexible Query Execution:</strong> Supports raw SQL and ORM-based approaches.</li>
+    </ul>
+
+    <h3>Applications</h3>
+    <ul>
+        <li>User authentication systems</li>
+        <li>Content management systems (CMS)</li>
+        <li>eCommerce platforms for managing products and orders</li>
+        <li>Data-driven web applications</li>
+    </ul>
+</div>
+
+
+<!-- Main Content -->
+<div class="main" id="laravel">
+    <h1>Laravel Framework</h1>
+
+    <h3>Definition</h3>
+    <p>
+        Laravel is a powerful and popular PHP framework used for building modern web applications. 
+        It follows the Model-View-Controller (MVC) architecture and provides a clean, elegant syntax 
+        to simplify complex web development tasks.
+    </p>
+
+    <h3>Key Features of Laravel</h3>
+    <ul>
+        <li><strong>MVC Architecture:</strong> Separates business logic, presentation, and data handling for organized development.</li>
+        <li><strong>Blade Templating Engine:</strong> Provides simple yet powerful templates for views.</li>
+        <li><strong>Database Migration:</strong> Allows version control for database changes.</li>
+        <li><strong>Eloquent ORM:</strong> Simplifies database interactions using an object-oriented approach.</li>
+        <li><strong>Routing System:</strong> Offers easy-to-use routes to define application endpoints.</li>
+        <li><strong>Security:</strong> Includes authentication, encryption, and protection against SQL injection & CSRF attacks.</li>
+        <li><strong>Task Scheduling:</strong> Automates tasks using Laravel’s built-in scheduler.</li>
+        <li><strong>RESTful API Support:</strong> Provides built-in tools to create RESTful APIs efficiently.</li>
+    </ul>
+
+    <h3>Setting Up Laravel</h3>
+
+    <h4>1. Installing Laravel</h4>
+    <p>Use Composer to install Laravel.</p>
+    <pre><code>composer create-project --prefer-dist laravel/laravel myLaravelApp</code></pre>
+
+    <h4>2. Running Laravel</h4>
+    <p>Navigate to the project directory and start the development server.</p>
+    <pre><code>cd myLaravelApp
+php artisan serve</code></pre>
+    <p>By default, Laravel runs on <code>http://127.0.0.1:8000</code></p>
+
+    <h3>Laravel MVC Structure</h3>
+
+    <h4>1. Models</h4>
+    <p>Models interact with the database using Eloquent ORM.</p>
+    <pre><code>php artisan make:model Post</code></pre>
+
+    <h4>2. Views</h4>
+    <p>Views handle the presentation using Blade templates (<code>resources/views</code>).</p>
+    <pre><code>&lt;!-- resources/views/welcome.blade.php --&gt;
+&lt;h1&gt;Welcome to Laravel&lt;/h1&gt;</code></pre>
+
+    <h4>3. Controllers</h4>
+    <p>Controllers process business logic and handle HTTP requests.</p>
+    <pre><code>php artisan make:controller PostController</code></pre>
+
+    <h3>Routing in Laravel</h3>
+    <p>Routes define application endpoints in <code>routes/web.php</code>.</p>
+    <pre><code>Route::get('/home', function () {
+    return view('home');
+});</code></pre>
+
+    <h3>Database Migration</h3>
+    <p>Laravel uses migrations for database version control.</p>
+    <pre><code>php artisan make:migration create_posts_table</code></pre>
+    <p>Apply the migration:</p>
+    <pre><code>php artisan migrate</code></pre>
+
+    <h3>Eloquent ORM</h3>
+    <p>Laravel provides Eloquent ORM for easy database management.</p>
+    <pre><code>&lt;?php
+namespace App\Models;
+use Illuminate\Database\Eloquent\Model;
+
+class Post extends Model {
+    protected $fillable = ['title', 'content'];
+}
+?&gt;</code></pre>
+
+    <h3>Authentication in Laravel</h3>
+    <p>Laravel provides built-in authentication scaffolding.</p>
+    <pre><code>composer require laravel/ui
+php artisan ui bootstrap --auth
+npm install && npm run dev
+php artisan migrate</code></pre>
+
+    <h3>Features of Laravel</h3>
+    <ul>
+        <li><strong>Modular and Scalable:</strong> Easily extendable architecture.</li>
+        <li><strong>Robust Security:</strong> Protects against SQL injection, XSS, and CSRF attacks.</li>
+        <li><strong>Automated Testing:</strong> Built-in support for PHPUnit.</li>
+        <li><strong>Built-in Task Scheduler:</strong> Automates cron jobs.</li>
+    </ul>
+
+    <h3>Applications</h3>
+    <ul>
+        <li>Web applications with advanced authentication</li>
+        <li>RESTful API development</li>
+        <li>eCommerce websites</li>
+        <li>Enterprise applications</li>
+    </ul>
+</div>
+
+
+<!-- Main Content -->
+<div class="main" id="symfony">
+    <h1>Symfony Framework</h1>
+
+    <h3>Definition</h3>
+    <p>
+        Symfony is a high-performance PHP framework designed for building complex and scalable web applications. 
+        It follows the Model-View-Controller (MVC) architecture and provides reusable components for rapid development.
+    </p>
+
+    <h3>Key Features of Symfony</h3>
+    <ul>
+        <li><strong>MVC Architecture:</strong> Separates application logic from presentation and data management.</li>
+        <li><strong>Modular Components:</strong> Offers over 50 reusable PHP components for various functionalities.</li>
+        <li><strong>Flexibility:</strong> Allows developers to use specific Symfony components without the full framework.</li>
+        <li><strong>Routing System:</strong> Provides a powerful routing mechanism to define application URLs.</li>
+        <li><strong>Built-in Security:</strong> Includes authentication, authorization, and protection against common vulnerabilities.</li>
+        <li><strong>Doctrine ORM:</strong> Simplifies database management with an object-relational mapper.</li>
+        <li><strong>Debugging Tools:</strong> Comes with a web profiler and debugging toolbar.</li>
+        <li><strong>Internationalization:</strong> Supports multiple languages and locales.</li>
+    </ul>
+
+    <h3>Setting Up Symfony</h3>
+
+    <h4>1. Installing Symfony</h4>
+    <p>Use Composer to install Symfony:</p>
+    <pre><code>composer create-project symfony/skeleton mySymfonyApp</code></pre>
+
+    <h4>2. Running Symfony</h4>
+    <p>Navigate to the project directory and start the development server:</p>
+    <pre><code>cd mySymfonyApp
+symfony server:start</code></pre>
+    <p>The application runs by default on <code>http://127.0.0.1:8000</code></p>
+
+    <h3>Symfony MVC Structure</h3>
+
+    <h4>1. Controllers</h4>
+    <p>Controllers handle user requests and return responses.</p>
+    <pre><code>php bin/console make:controller HomeController</code></pre>
+    <p>Example controller (<code>src/Controller/HomeController.php</code>):</p>
+    <pre><code>&lt;?php
+namespace App\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
+
+class HomeController extends AbstractController {
+    #[Route('/home', name: 'home')]
+    public function index(): Response {
+        return $this->render('home/index.html.twig', [
+            'message' => 'Welcome to Symfony!',
+        ]);
+    }
+}
+?&gt;</code></pre>
+
+    <h4>2. Views</h4>
+    <p>Symfony uses the Twig templating engine for views.</p>
+    <pre><code>&lt;!-- templates/home/index.html.twig --&gt;
+&lt;h1&gt;{{ message }}&lt;/h1&gt;</code></pre>
+
+    <h4>3. Routing</h4>
+    <p>Routes are defined in <code>config/routes.yaml</code> or using annotations in controllers.</p>
+    <pre><code>home:
+    path: /home
+    controller: App\Controller\HomeController::index</code></pre>
+
+    <h3>Database Integration</h3>
+
+    <h4>1. Configuring the Database</h4>
+    <p>Update the <code>.env</code> file to configure the database connection:</p>
+    <pre><code>DATABASE_URL="mysql://root:@127.0.0.1:3306/my_database"</code></pre>
+
+    <h4>2. Creating a Database Entity</h4>
+    <p>Generate a database model using Doctrine ORM:</p>
+    <pre><code>php bin/console make:entity Post</code></pre>
+    <p>Add fields to the entity in <code>src/Entity/Post.php</code>:</p>
+    <pre><code>&lt;?php
+namespace App\Entity;
+use Doctrine\ORM\Mapping as ORM;
+
+#[ORM\Entity]
+class Post {
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column(type: 'integer')]
+    private $id;
+
+    #[ORM\Column(type: 'string', length: 255)]
+    private $title;
+}
+?&gt;</code></pre>
+
+    <h4>3. Running Migrations</h4>
+    <p>Apply the database changes:</p>
+    <pre><code>php bin/console doctrine:migrations:migrate</code></pre>
+
+    <h4>4. Querying the Database</h4>
+    <p>Fetch records using Doctrine’s repository pattern:</p>
+    <pre><code>$posts = $entityManager->getRepository(Post::class)->findAll();</code></pre>
+
+    <h3>Authentication in Symfony</h3>
+    <p>Symfony provides built-in authentication with Symfony Security:</p>
+    <pre><code>php bin/console make:user</code></pre>
+
+    <h3>Features of Symfony</h3>
+    <ul>
+        <li><strong>High Performance:</strong> Optimized for speed and scalability.</li>
+        <li><strong>Modular Components:</strong> Can be used independently in other projects.</li>
+        <li><strong>Strong Community Support:</strong> Large and active developer community.</li>
+        <li><strong>Comprehensive Debugging Tools:</strong> Web profiler and debugging toolbar.</li>
+    </ul>
+
+    <h3>Applications</h3>
+    <ul>
+        <li>Enterprise web applications</li>
+        <li>Large-scale content management systems (CMS)</li>
+        <li>RESTful APIs for web services</li>
+        <li>eCommerce platforms</li>
+    </ul>
+</div>
+
+
+<!-- Main Content -->
+<div class="main" id="codeigniter">
+    <h1>CodeIgniter Framework</h1>
+
+    <h3>Definition</h3>
+    <p>
+        CodeIgniter is a lightweight and powerful PHP framework designed for building dynamic web applications quickly. 
+        It follows the Model-View-Controller (MVC) architecture and is known for its small footprint, high performance, and ease of use.
+    </p>
+
+    <h3>Key Features of CodeIgniter</h3>
+    <ul>
+        <li><strong>Lightweight Framework:</strong> CodeIgniter is small in size (~2MB), making it fast and efficient.</li>
+        <li><strong>MVC Architecture:</strong> Ensures separation of concerns, improving code organization.</li>
+        <li><strong>Built-in Security:</strong> Provides protection against CSRF, XSS, and SQL injection.</li>
+        <li><strong>Database Support:</strong> Works with MySQL, PostgreSQL, SQLite, and more.</li>
+        <li><strong>Routing System:</strong> Flexible routing to handle URLs efficiently.</li>
+        <li><strong>Form Validation:</strong> Built-in validation rules for user input.</li>
+        <li><strong>Session and Cookie Management:</strong> Simplifies handling user sessions and cookies.</li>
+    </ul>
+
+    <h3>Setting Up CodeIgniter</h3>
+
+    <h4>1. Downloading CodeIgniter</h4>
+    <p>Download CodeIgniter from the official website or use Composer:</p>
+    <pre><code>composer create-project codeigniter4/appstarter myCodeIgniterApp</code></pre>
+
+    <h4>2. Running CodeIgniter</h4>
+    <p>Navigate to the project directory and start the built-in PHP server:</p>
+    <pre><code>cd myCodeIgniterApp
+php spark serve</code></pre>
+    <p>The application runs on <code>http://localhost:8080</code></p>
+
+    <h3>CodeIgniter MVC Structure</h3>
+
+    <h4>1. Controllers</h4>
+    <p>Controllers handle HTTP requests and return responses. Create a new controller:</p>
+    <pre><code>php spark make:controller Home</code></pre>
+    <p>Example Controller (<code>app/Controllers/Home.php</code>):</p>
+    <pre><code>&lt;?php
+namespace App\Controllers;
+use CodeIgniter\Controller;
+
+class Home extends Controller {
+    public function index() {
+        return view('welcome_message');
+    }
+}
+?&gt;</code></pre>
+
+    <h4>2. Views</h4>
+    <p>Views handle the presentation layer. Create a new view file:</p>
+    <pre><code>&lt;!-- app/Views/home.php --&gt;
+&lt;h1&gt;Welcome to CodeIgniter!&lt;/h1&gt;</code></pre>
+
+    <h4>3. Routing</h4>
+    <p>Routes are defined in <code>app/Config/Routes.php</code>.</p>
+    <pre><code>$routes->get('/home', 'Home::index');</code></pre>
+
+    <h3>Database Integration</h3>
+
+    <h4>1. Configuring the Database</h4>
+    <p>Update <code>.env</code> file to set database credentials:</p>
+    <pre><code>database.default.hostname = localhost
+database.default.database = my_database
+database.default.username = root
+database.default.password = 
+database.default.DBDriver = MySQLi</code></pre>
+
+    <h4>2. Creating a Model</h4>
+    <p>Generate a new model:</p>
+    <pre><code>php spark make:model Post</code></pre>
+    <p>Edit <code>app/Models/PostModel.php</code>:</p>
+    <pre><code>&lt;?php
+namespace App\Models;
+use CodeIgniter\Model;
+
+class PostModel extends Model {
+    protected $table = 'posts';
+    protected $allowedFields = ['title', 'content'];
+}
+?&gt;</code></pre>
+
+    <h4>3. Running Migrations</h4>
+    <p>Generate and run database migrations:</p>
+    <pre><code>php spark migrate</code></pre>
+
+    <h4>4. Querying the Database</h4>
+    <p>Fetching records in a controller:</p>
+    <pre><code>$postModel = new \App\Models\PostModel();
+$posts = $postModel->findAll();</code></pre>
+
+    <h3>Session and Authentication</h3>
+    <p>CodeIgniter provides session handling with built-in support.</p>
+    <pre><code>$session = session();
+$session->set('user_id', 1);
+echo $session->get('user_id');</code></pre>
+
+    <h3>Features of CodeIgniter</h3>
+    <ul>
+        <li><strong>Lightweight and Fast:</strong> Optimized for high-speed performance.</li>
+        <li><strong>Minimal Configuration:</strong> Works out of the box with minimal setup.</li>
+        <li><strong>Good Documentation:</strong> Extensive guides for developers.</li>
+        <li><strong>Built-in Error Handling:</strong> Provides detailed debugging messages.</li>
+    </ul>
+
+    <h3>Applications</h3>
+    <ul>
+        <li>Small to medium web applications</li>
+        <li>RESTful API development</li>
+        <li>CMS and blogging platforms</li>
+        <li>eCommerce websites</li>
+    </ul>
+</div>
+
+
+<!-- Main Content -->
+<div class="main" id="code-readability">
+    <h1>Code Readability in PHP</h1>
+
+    <h3>Definition</h3>
+    <p>
+        Code readability refers to the ease with which other developers (or even your future self) can understand and modify the code. 
+        Writing clean, well-structured, and readable PHP code improves maintainability, reduces bugs, and enhances collaboration in teams.
+    </p>
+
+    <h3>Best Practices for Code Readability</h3>
+    <ul>
+        <li><strong>Use Meaningful Variable and Function Names:</strong> Choose descriptive names that convey their purpose.</li>
+        <li><strong>Follow PSR Coding Standards:</strong> Adopt PHP Standards Recommendations (PSR-1, PSR-2, PSR-12) for consistency.</li>
+        <li><strong>Use Proper Indentation:</strong> Maintain a consistent indentation style for better structure.</li>
+        <li><strong>Keep Functions and Methods Short:</strong> Each function should have a single responsibility and be easy to understand.</li>
+        <li><strong>Add Comments and Documentation:</strong> Use inline comments and PHPDoc to explain complex logic.</li>
+        <li><strong>Avoid Deep Nesting:</strong> Excessive nesting makes code harder to follow; use early returns instead.</li>
+        <li><strong>Use Consistent Formatting:</strong> Stick to a consistent coding style throughout the project.</li>
+        <li><strong>Limit the Use of Magic Numbers:</strong> Define constants instead of using arbitrary values.</li>
+    </ul>
+
+    <h3>Examples of Readable vs. Unreadable Code</h3>
+
+    <h4>1. Using Meaningful Variable Names</h4>
+    <p><strong>Bad Example:</strong></p>
+    <pre><code>$x = "John";
+$y = "Doe";
+echo $x . " " . $y;</code></pre>
+
+    <p><strong>Good Example:</strong></p>
+    <pre><code>$firstName = "John";
+$lastName = "Doe";
+echo $firstName . " " . $lastName;</code></pre>
+
+    <h4>2. Following Proper Indentation</h4>
+    <p><strong>Bad Example:</strong></p>
+    <pre><code>function checkAge($age){if($age>=18){echo "Adult";}else{echo "Minor";}}</code></pre>
+
+    <p><strong>Good Example:</strong></p>
+    <pre><code>function checkAge($age) {
+    if ($age >= 18) {
+        echo "Adult";
+    } else {
+        echo "Minor";
+    }
+}</code></pre>
+
+    <h4>3. Using Comments Effectively</h4>
+    <p><strong>Bad Example:</strong></p>
+    <pre><code>// Process user input
+$a = $_POST['username'];
+$b = $_POST['password'];
+// Do login check
+if ($a == "admin" && $b == "1234") { echo "Login Successful"; }</code></pre>
+
+    <p><strong>Good Example:</strong></p>
+    <pre><code>// Get user input from the login form
+$username = $_POST['username'];
+$password = $_POST['password'];
+
+// Check if username and password match predefined credentials
+if ($username === "admin" && $password === "1234") {
+    echo "Login Successful";
+}</code></pre>
+
+    <h4>4. Avoiding Deep Nesting</h4>
+    <p><strong>Bad Example:</strong></p>
+    <pre><code>function checkUserStatus($user) {
+    if ($user) {
+        if ($user->isActive()) {
+            if ($user->hasPermission()) {
+                return "Access Granted";
+            } else {
+                return "No Permission";
+            }
+        } else {
+            return "User Inactive";
+        }
+    } else {
+        return "No User Found";
+    }
+}</code></pre>
+
+    <p><strong>Good Example:</strong></p>
+    <pre><code>function checkUserStatus($user) {
+    if (!$user) {
+        return "No User Found";
+    }
+
+    if (!$user->isActive()) {
+        return "User Inactive";
+    }
+
+    return $user->hasPermission() ? "Access Granted" : "No Permission";
+}</code></pre>
+
+    <h3>Benefits of Code Readability</h3>
+    <ul>
+        <li><strong>Faster Debugging:</strong> Easily identify and fix issues.</li>
+        <li><strong>Improved Collaboration:</strong> Team members can understand and contribute efficiently.</li>
+        <li><strong>Enhanced Maintainability:</strong> Code is easier to update and refactor.</li>
+        <li><strong>Reduced Errors:</strong> Clear code reduces mistakes and logical errors.</li>
+    </ul>
+
+    <h3>Tools for Enforcing Readable Code</h3>
+    <ul>
+        <li><strong>PHP CodeSniffer (PHPCS):</strong> Helps detect coding standard violations.</li>
+        <li><strong>PHPStan and Psalm:</strong> Static analysis tools to catch potential issues.</li>
+        <li><strong>EditorConfig:</strong> Maintains consistent coding styles across teams.</li>
+        <li><strong>PHP-CS-Fixer:</strong> Automatically formats PHP code to follow standards.</li>
+    </ul>
+
+</div>
+
+
+<!-- Main Content -->
+<div class="main" id="security">
+    <h1>Security Practices in PHP</h1>
+
+    <h3>Definition</h3>
+    <p>
+        Security in PHP refers to the best practices and techniques used to protect web applications from vulnerabilities such as SQL injection, XSS (Cross-Site Scripting), CSRF (Cross-Site Request Forgery), and unauthorized access. Implementing proper security measures is essential to safeguard user data and prevent attacks.
+    </p>
+
+    <h3>Common Security Threats and Solutions</h3>
+
+    <h4>1. SQL Injection</h4>
+    <p><strong>Threat:</strong> Attackers can manipulate SQL queries to gain unauthorized access to the database.</p>
+    <p><strong>Solution:</strong> Use prepared statements and parameterized queries.</p>
+    <pre><code>// Using MySQLi with Prepared Statements
+$conn = new mysqli("localhost", "username", "password", "database");
+
+$stmt = $conn->prepare("SELECT * FROM users WHERE email = ?");
+$stmt->bind_param("s", $email);
+$stmt->execute();
+$result = $stmt->get_result();</code></pre>
+
+    <h4>2. Cross-Site Scripting (XSS)</h4>
+    <p><strong>Threat:</strong> Injecting malicious scripts into web pages that can steal user information.</p>
+    <p><strong>Solution:</strong> Sanitize user input and escape output.</p>
+    <pre><code>$safe_input = htmlspecialchars($_POST['name'], ENT_QUOTES, 'UTF-8');
+echo $safe_input; // Prevents execution of malicious scripts</code></pre>
+
+    <h4>3. Cross-Site Request Forgery (CSRF)</h4>
+    <p><strong>Threat:</strong> Forcing a user to execute unwanted actions on a website.</p>
+    <p><strong>Solution:</strong> Use CSRF tokens in forms.</p>
+    <pre><code>// Generate CSRF token
+session_start();
+$_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+?>
+&lt;input type="hidden" name="csrf_token" value="&lt;?php echo $_SESSION['csrf_token']; ?&gt;"&gt;</code></pre>
+
+    <h4>4. Insecure File Uploads</h4>
+    <p><strong>Threat:</strong> Attackers upload malicious files to gain control over the server.</p>
+    <p><strong>Solution:</strong> Validate file types and store files securely.</p>
+    <pre><code>if (isset($_FILES['file'])) {
+    $allowed_types = ['jpg', 'png', 'pdf'];
+    $file_ext = pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION);
+
+    if (!in_array($file_ext, $allowed_types)) {
+        die("Invalid file type.");
+    }
+    move_uploaded_file($_FILES['file']['tmp_name'], "uploads/" . basename($_FILES['file']['name']));
+}</code></pre>
+
+    <h4>5. Password Hashing</h4>
+    <p><strong>Threat:</strong> Storing plain-text passwords makes them vulnerable to leaks.</p>
+    <p><strong>Solution:</strong> Use password hashing functions.</p>
+    <pre><code>// Hashing password before storing
+$hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+// Verifying password
+if (password_verify($entered_password, $hashed_password)) {
+    echo "Login Successful";
+}</code></pre>
+
+    <h4>6. Secure Session Management</h4>
+    <p><strong>Threat:</strong> Session hijacking or fixation can lead to unauthorized access.</p>
+    <p><strong>Solution:</strong> Use secure session management.</p>
+    <pre><code>session_start();
+session_regenerate_id(true); // Prevents session fixation
+ini_set('session.cookie_httponly', 1); // Prevents JavaScript access
+ini_set('session.cookie_secure', 1); // Ensures cookies are only sent over HTTPS</code></pre>
+
+    <h3>Additional Security Best Practices</h3>
+    <ul>
+        <li><strong>Use HTTPS:</strong> Encrypt data using SSL/TLS.</li>
+        <li><strong>Limit Error Reporting:</strong> Hide sensitive error messages from users.</li>
+        <li><strong>Restrict User Privileges:</strong> Follow the principle of least privilege.</li>
+        <li><strong>Validate Input:</strong> Always validate and sanitize user input.</li>
+        <li><strong>Implement a Web Application Firewall (WAF):</strong> Protect against common threats.</li>
+    </ul>
+
+    <h3>Security Tools for PHP</h3>
+    <ul>
+        <li><strong>OWASP ZAP:</strong> Identifies security vulnerabilities in PHP applications.</li>
+        <li><strong>PHP Security Checker:</strong> Scans PHP dependencies for known vulnerabilities.</li>
+        <li><strong>Snuffleupagus:</strong> Enhances PHP security by mitigating exploits.</li>
+    </ul>
+
+</div>
+
+
+<!-- Main Content -->
+<div class="main" id="performance">
+    <h1>Performance Optimization in PHP</h1>
+
+    <h3>Definition</h3>
+    <p>
+        Performance optimization in PHP involves techniques and best practices that enhance the speed, efficiency, and scalability of web applications. Efficient code execution, optimized database queries, caching mechanisms, and proper server configurations play a crucial role in improving PHP performance.
+    </p>
+
+    <h3>Best Practices for PHP Performance Optimization</h3>
+
+    <h4>1. Optimize Database Queries</h4>
+    <p><strong>Problem:</strong> Unoptimized database queries slow down the application.</p>
+    <p><strong>Solution:</strong> Use indexes, prepared statements, and avoid unnecessary queries.</p>
+    <pre><code>// Using Prepared Statements (MySQLi)
+$stmt = $conn->prepare("SELECT * FROM users WHERE email = ?");
+$stmt->bind_param("s", $email);
+$stmt->execute();
+$result = $stmt->get_result();</code></pre>
+
+    <h4>2. Use Caching</h4>
+    <p><strong>Problem:</strong> Repeated database queries and expensive computations slow down performance.</p>
+    <p><strong>Solution:</strong> Implement caching mechanisms like APCu, Memcached, or Redis.</p>
+    <pre><code>// Using APCu Cache
+$cacheKey = "user_list";
+if (apcu_exists($cacheKey)) {
+    $users = apcu_fetch($cacheKey);
+} else {
+    $users = getUsersFromDatabase();
+    apcu_store($cacheKey, $users, 300); // Cache for 5 minutes
+}</code></pre>
+
+    <h4>3. Use Opcode Caching</h4>
+    <p><strong>Problem:</strong> PHP scripts are compiled every time they are executed.</p>
+    <p><strong>Solution:</strong> Use OPcache to store precompiled script bytecode.</p>
+    <pre><code>// Enable OPcache in php.ini
+opcache.enable=1
+opcache.memory_consumption=128
+opcache.max_accelerated_files=4000</code></pre>
+
+    <h4>4. Minimize Memory Usage</h4>
+    <p><strong>Problem:</strong> Excessive memory allocation slows down execution.</p>
+    <p><strong>Solution:</strong> Unset unused variables and optimize loops.</p>
+    <pre><code>$data = getData();
+processData($data);
+unset($data); // Free up memory</code></pre>
+
+    <h4>5. Reduce Number of Included Files</h4>
+    <p><strong>Problem:</strong> Including unnecessary files increases execution time.</p>
+    <p><strong>Solution:</strong> Use autoloading and require files only when needed.</p>
+    <pre><code>// Using Autoloading
+spl_autoload_register(function ($className) {
+    include "classes/" . $className . ".php";
+});</code></pre>
+
+    <h4>6. Avoid Using Too Many Loops</h4>
+    <p><strong>Problem:</strong> Large nested loops increase execution time.</p>
+    <p><strong>Solution:</strong> Optimize loops by reducing iterations.</p>
+    <pre><code>// Bad Example
+foreach ($users as $user) {
+    foreach ($orders as $order) {
+        if ($order['user_id'] == $user['id']) {
+            processOrder($order);
+        }
+    }
+}
+
+// Optimized Example
+$userOrders = [];
+foreach ($orders as $order) {
+    $userOrders[$order['user_id']][] = $order;
+}
+
+foreach ($users as $user) {
+    if (isset($userOrders[$user['id']])) {
+        foreach ($userOrders[$user['id']] as $order) {
+            processOrder($order);
+        }
+    }
+}</code></pre>
+
+    <h4>7. Use JSON Instead of XML</h4>
+    <p><strong>Problem:</strong> XML processing is slower compared to JSON.</p>
+    <p><strong>Solution:</strong> Use JSON for faster data exchange.</p>
+    <pre><code>// JSON Encoding
+$data = ["name" => "John", "age" => 25];
+$jsonData = json_encode($data);
+
+// JSON Decoding
+$decodedData = json_decode($jsonData, true);</code></pre>
+
+    <h4>8. Optimize Sessions</h4>
+    <p><strong>Problem:</strong> Storing sessions in files can slow down performance.</p>
+    <p><strong>Solution:</strong> Use database or Redis for session storage.</p>
+    <pre><code>// Store sessions in Redis
+ini_set('session.save_handler', 'redis');
+ini_set('session.save_path', 'tcp://127.0.0.1:6379');</code></pre>
+
+    <h3>Additional Optimization Techniques</h3>
+    <ul>
+        <li><strong>Enable Gzip Compression:</strong> Compress responses to reduce load time.</li>
+        <li><strong>Use Asynchronous Processing:</strong> Offload tasks like email sending to background processes.</li>
+        <li><strong>Optimize Frontend Assets:</strong> Minify CSS/JS and use CDNs for static resources.</li>
+        <li><strong>Use Lazy Loading:</strong> Load images and resources only when needed.</li>
+    </ul>
+
+    <h3>Performance Monitoring Tools</h3>
+    <ul>
+        <li><strong>Xdebug:</strong> Helps with profiling and debugging.</li>
+        <li><strong>Blackfire:</strong> Analyzes PHP performance and provides recommendations.</li>
+        <li><strong>New Relic:</strong> Monitors PHP applications in real-time.</li>
+        <li><strong>MySQL Slow Query Log:</strong> Identifies slow database queries.</li>
+    </ul>
+
+</div>
+
+<!-- Main Content -->
+<div class="main" id="testing">
+    <h1>Unit Testing in PHP</h1>
+
+    <h3>Definition</h3>
+    <p>
+        Unit testing in PHP is the process of testing individual components (functions, methods, or classes) of an application to ensure they work as expected. It helps in identifying bugs early in the development cycle and improves code reliability.
+    </p>
+
+    <h3>Why Use Unit Testing?</h3>
+    <ul>
+        <li><strong>Detects Bugs Early:</strong> Identifies issues before deployment.</li>
+        <li><strong>Ensures Code Quality:</strong> Helps maintain reliable and stable applications.</li>
+        <li><strong>Facilitates Refactoring:</strong> Allows changes to code with confidence.</li>
+        <li><strong>Improves Collaboration:</strong> Makes teamwork more efficient with testable code.</li>
+    </ul>
+
+    <h3>Popular PHP Unit Testing Frameworks</h3>
+    <ul>
+        <li><strong>PHPUnit:</strong> The most widely used unit testing framework.</li>
+        <li><strong>Codeception:</strong> Supports unit, functional, and acceptance testing.</li>
+        <li><strong>Behat:</strong> Used for behavior-driven development (BDD).</li>
+        <li><strong>PHPSpec:</strong> Focuses on specification-based testing.</li>
+    </ul>
+
+    <h3>Setting Up PHPUnit</h3>
+    <p>To install PHPUnit using Composer, run:</p>
+    <pre><code>composer require --dev phpunit/phpunit</code></pre>
+
+    <h3>Writing a Basic PHPUnit Test</h3>
+    <p>Here's an example of a simple unit test using PHPUnit:</p>
+    <pre><code>// ExampleTest.php
+use PHPUnit\Framework\TestCase;
+
+class ExampleTest extends TestCase {
+    public function testAddition() {
+        $result = 2 + 3;
+        $this->assertEquals(5, $result);
+    }
+}</code></pre>
+
+    <h3>Running PHPUnit Tests</h3>
+    <p>To execute tests, run the following command:</p>
+    <pre><code>vendor/bin/phpunit tests</code></pre>
+
+    <h3>Mocking in Unit Tests</h3>
+    <p>Mocking allows testing functions that depend on external dependencies.</p>
+    <pre><code>// Using Mock Objects
+$mock = $this->createMock(Database::class);
+$mock->method('getUser')->willReturn(['id' => 1, 'name' => 'John']);
+$this->assertEquals('John', $mock->getUser()['name']);</code></pre>
+
+    <h3>Best Practices for Unit Testing</h3>
+    <ul>
+        <li><strong>Write Independent Tests:</strong> Each test should run independently.</li>
+        <li><strong>Use Meaningful Test Names:</strong> Clearly describe the purpose of the test.</li>
+        <li><strong>Test Edge Cases:</strong> Cover a range of inputs, including invalid values.</li>
+        <li><strong>Keep Tests Short:</strong> Focus on a single functionality per test.</li>
+        <li><strong>Automate Testing:</strong> Integrate with CI/CD pipelines for continuous testing.</li>
+    </ul>
+
+    <h3>Tools for Automated Testing</h3>
+    <ul>
+        <li><strong>Jenkins:</strong> Automates running PHPUnit tests.</li>
+        <li><strong>GitHub Actions:</strong> Runs tests automatically in GitHub repositories.</li>
+        <li><strong>Travis CI:</strong> Used for continuous integration and testing.</li>
+    </ul>
+
+</div>
+
+
+
+
+
+    <script src="script1.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuBtn = document.getElementById("menuBtn");
+            const sidebar = document.getElementById("sidebar");
+    
+            menuBtn.addEventListener("click", () => {
+                sidebar.classList.toggle("active");
+            });
+    
+            const sidebarLinks = document.querySelectorAll(".sidebar ul li a");
+            const contentSections = document.querySelectorAll(".content .content");
+    
+            sidebarLinks.forEach(link => {
+                link.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute("href").substring(1);
+    
+                    // Hide all content sections and reset sidebar links
+                    contentSections.forEach(section => {
+                        section.classList.remove("active");
+                    });
+    
+                    // Show the selected content section
+                    document.getElementById(targetId).classList.add("active");
+    
+                    // Set active background on sidebar links
+                    sidebarLinks.forEach(link => {
+                        link.parentElement.classList.remove("active-bg");
+                    });
+    
+                    link.parentElement.classList.add("active-bg");
+                });
+            });
+    
+            // Initialize the first section as active
+            if (contentSections.length > 0) {
+                contentSections[0].classList.add("active");
+                sidebarLinks[0].parentElement.classList.add("active-bg");
+            }
+        });
+    
+    
+    
+        document.querySelector('.menu-btn2').addEventListener('click', function () {
+            const topicButtons = document.querySelector('.topic-buttons');
+            // Toggle the menu visibility by moving it on and off the screen
+            if (topicButtons.style.right === '0px') {
+                topicButtons.style.right = '-250px'; // Slide out
+            } else {
+                topicButtons.style.right = '0px'; // Slide in
+            }
+        });
+    
+    
+    
+    
+    
+    
+    
+    </script>
+    
+    </body>
+    
+    </html>

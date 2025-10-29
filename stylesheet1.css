@@ -1,0 +1,415 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e0e5ec;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    
+    z-index: 1;
+    position: fixed;
+    display: flex;
+    
+    background-color: #1289a7;
+    color: white;
+    padding: 10px 20px;
+    width: 100%;
+    height: 60px;
+    text-decoration: none;
+}
+
+/* Menu Button (for mobile view) */
+.menu-btn2 {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    display: none; /* Hidden by default, only visible in mobile view */
+}
+
+/* Desktop View Navbar (Horizontal Navigation) */
+.desktop-navbar {
+    
+    margin-left: 9%;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    text-decoration: none;
+}
+
+.logo1{
+    display: none;
+}
+
+.desktop-navbar button {
+    
+    padding: 12px 20px;
+    background-color: #0b5262;
+    box-shadow:   7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001, inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001, inset 0px 0px 0px 0px #0001;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.desktop-navbar button a{
+    text-decoration: none;
+}
+
+.desktop-navbar button:hover {
+    background-color: #555;
+}
+
+/* Mobile View - Dropdown Menu */
+.topic-buttons {
+   border-radius: 5px;
+    position: fixed;
+    top: 25px;
+    right: -360px; /* Initially hidden off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: #e7e7e7;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: right 0.3s ease;
+    
+    
+    
+}
+
+.topic-buttons button a {
+    text-decoration: none;
+}
+
+.topic-buttons button {
+    width: 100%;
+    
+    border-radius: 5px;
+    padding: 12px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.topic-buttons button:hover {
+    background-color: #444;
+}
+
+/* Main Content Layout */
+.content {
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sidebar {
+
+    position: fixed;
+    flex: 1 1 25%;
+    background-color: #e7e7e7;
+    text-shadow: 3px 3px 6px #a5b9a9, -3px -3px 6px #fff;
+    padding: 15px;
+    box-sizing: border-box;
+    min-width: 200px;
+    height: 100vh;
+    margin-top: 75px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #008cba #f4f4f4;
+    z-index: 1;
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 8px;
+    position: fixed;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: #008cba;
+    border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: #4e4c4c;
+}
+
+
+h2 {
+    font-size: 18px;
+    color: #2c2525;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #008cba;
+}
+
+ul li a:hover {
+    text-decoration: none;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar > ul > li {
+    padding: 8px;
+}
+
+.dropdown {
+    display: none;
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.sidebar > ul > li:hover .dropdown {
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown li {
+    padding: 5px 0;
+}
+
+.dropdown li a {
+    text-decoration: none;
+}
+
+.sidebar ul li.active-bg {
+    background-color: #9ba8e7; /* Replace with your desired color */
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001, inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001, inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001;
+}
+
+.main {
+    flex: 1 1 70%;
+    padding: 90px;
+    box-sizing: border-box;
+    margin-left: 300px;
+    
+}
+
+.main h1{
+    color: rgb(165, 77, 77);
+}
+
+.main .content {
+    display: none;
+}
+
+.main .content.active {
+    display: block;
+}
+
+.menu-btn {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 3;
+}
+
+pre {
+    background-color: #979393;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    position: relative;
+    font-family: 'Courier New', Courier, monospace;
+    overflow: auto;
+  
+    
+}
+
+.copy-code-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #2c3034;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+.copy-code-btn:hover {
+    background-color: #0056b3;
+}
+
+.copied {
+    background-color: #28a745;
+}
+
+
+
+
+/* Responsive Adjustments */
+
+/* Tablet and Mobile Layout */
+@media (max-width: 768px) {
+
+
+    .logo1{
+        display: block;
+        height: 30px; 
+        width: 130px;
+         margin-left: 10px;
+        margin-top: 5px;
+    }
+
+    .logo {
+        display: none;
+    }
+    /* Sidebar adjustment */
+    .sidebar {
+        position: fixed;
+        width: 250px;
+        height: 100%;
+        top: 5px;
+        left: -250px;
+        background-color: #e7e7e7;
+        padding: 15px;
+        z-index: 1;
+        transition: left 0.3s ease;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    /* Adjust main content layout */
+    .main {
+        flex: 1 1 100%; /* Make the main content take full width */
+        padding: 50px; /* Reduce padding to conserve space */
+        margin-left: 0; /* Remove left margin for smaller screens */
+    }
+    .main h1{
+        font-size: 18px;
+        color: red;
+    }
+    .main h3{
+        font-size: 15px;
+    }
+    .main p{
+        font-size: 12px;
+    }
+
+    .main ul li{
+        font-size: 13px;
+    }
+
+    /* Show the mobile menu button */
+    .menu-btn {
+        display: block;
+        margin-top: -8px;
+
+    }
+
+    /* Hide desktop navbar */
+    .desktop-navbar {
+        display: none;
+    }
+
+    /* Mobile menu button */
+    .menu-btn2 {
+        display: block;
+        margin-left: 330px;
+    }
+
+    /* Mobile sliding menu */
+    .topic-buttons {
+        width: 200px;
+        margin-top: 54px;
+    }
+
+    pre {
+        font-size: 14px; /* Adjust font size for smaller screens */
+        padding: 8px; /* Reduce padding */
+        width: 300px;
+    }
+
+   
+    .copy-code-btn {
+        font-size: 10px; /* Reduce button font size */
+        padding: 4px 8px; /* Adjust button padding */
+    }
+
+    /* Adjustments for smaller mobile screens */
+    @media (max-width: 468px) {
+
+        .main {
+            flex: 1 1 100%; /* Full width for very small screens */
+            margin-top: 50px;
+            padding: 20px; /* Further reduce padding for compact layout */
+            margin-left: 0; /* No left margin */
+        }
+
+        
+        .menu-btn2 {
+            margin-left: 160px;
+        }
+    
+        pre {
+            font-size: 12px; /* Further reduce font size for very small screens */
+            padding: 6px; /* Adjust padding */
+        }
+    
+        code {
+            font-size: 9px; /* Smaller font size for code */
+        }
+    
+        .copy-code-btn {
+            font-size: 9px; /* Smaller font size for the button */
+            padding: 3px 6px; /* Smaller button padding */
+            
+        }
+    }
+    
+/* Mobile Layout for Smaller Screens */
+@media (max-width: 320px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+    }
+
+    .desktop-navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .desktop-navbar button {
+        width: 100%;
+        padding: 10px;
+    }
+}
+}

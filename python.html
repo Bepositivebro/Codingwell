@@ -1,0 +1,2798 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Course</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet1.css">
+    <style>
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+ <!-----for desktop view------------>
+ <div class="logo">
+    <img src="logo.png" alt="Logo" style="height: 70px; width: auto; margin-left: 20px; ">
+</div>
+
+
+<!--------------for mobile view---------------->
+<div class="logo1">
+    <img src="logo1.png" alt="Logo" style="height: 30px; width: 130px; margin-left: 100px; margin-top: 14px;">
+</div>
+        
+
+        <!-- Menu Button for Mobile View -->
+        <button class="menu-btn2" aria-label="Open menu">&#x27A1;</button>
+
+        <!-- Desktop Navbar -->
+        <div class="desktop-navbar">
+            <button><a href="python.html" style="color: white;">Python</a></button>
+            <button><a href="cpp.html" style="color: white;">C++</a></button>
+            <button><a href="c.html" style="color: white;">C</a></button>
+            <button><a href="html.html" style="color: white;">HTML</a></button>
+            <button><a href="css.html" style="color: white;">CSS</a></button>
+            <button><a href="javascript.html" style="color: white;">JS</a></button>
+            <button><a href="java.html" style="color: white;">Java</a></button>
+            <button><a href="php.html" style="color: white;">PHP</a></button>
+            <button><a href="dsa.html" style="color: white;">DSA</a></button>
+        </div>
+
+        <!-- Dropdown Menu for Mobile View -->
+        <div class="topic-buttons">
+            <a href="python.html"><button>Python</button></a>
+            <a href="cpp.html"><button>C++</button></a>
+            <a href="c.html"><button>C</button></a>
+            <a href="html.html"><button>HTML</button></a>
+            <a href="css.html"><button>CSS</button></a>
+            <a href="javascript.html"><button>JS</button></a>
+            <a href="java.html"><button>Java</button></a>
+            <a href="php.html"><button>PHP</button></a>
+            <a href="dsa.html"><button>DSA</button></a>
+        </div>
+
+        
+        <!-- Mobile menu button -->
+        <div class="menu-btn" id="menuBtn">
+            &#9776;
+        </div>
+
+
+    </div>
+
+
+
+    <div class="content">
+        <!-- Sidebar Navigation -->
+        <div class="sidebar" id="sidebar">
+            <h2>Introduction</h2>
+            <ul>
+                <li><a href="#overview">Python Overview</a></li>
+                <li><a href="#installation-and-getting-started">Installation & Getting Started</a></li>
+                <li><a href="#syntax">Python Syntax</a></li>
+                <li><a href="#comments">Python Comments</a></li>
+                <li><a href="#variables">Python Variables</a></li>
+            </ul>
+
+            <h2>Data Types</h2>
+            <ul>
+                <li><a href="#numbers">Numbers</a></li>
+                <li><a href="#strings">Strings</a></li>
+                <li><a href="#lists">Lists</a></li>
+                <li><a href="#tuples">Tuples</a></li>
+                <li><a href="#sets">Sets</a></li>
+                <li><a href="#dictionaries">Dictionaries</a></li>
+            </ul>
+
+            <h2>Control Flow</h2>
+            <ul>
+                <li><a href="#if-statements">If Statements</a></li>
+                <li><a href="#for-loops">For Loops</a></li>
+                <li><a href="#while-loops">While Loops</a></li>
+                <li><a href="#break-and-continue">Break and Continue</a></li>
+                <li><a href="#pass-statement">Pass Statement</a></li>
+            </ul>
+
+            <h2>Functions</h2>
+            <ul>
+                <li><a href="#defining-functions">Defining Functions</a></li>
+                <li><a href="#arguments-and-parameters">Arguments and Parameters</a></li>
+                <li><a href="#return-statement">Return Statement</a></li>
+                <li><a href="#lambda-functions">Lambda Functions</a></li>
+            </ul>
+
+            <h2>Object-Oriented Programming</h2>
+            <ul>
+                <li><a href="#classes-and-objects">Classes and Objects</a></li>
+                <li><a href="#constructors">Constructors</a></li>
+                <li><a href="#inheritance">Inheritance</a></li>
+                <li><a href="#polymorphism">Polymorphism</a></li>
+                <li><a href="#encapsulation">Encapsulation</a></li>
+            </ul>
+
+            <h2>Modules and Packages</h2>
+            <ul>
+                <li><a href="#modules">Modules</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="#importing-modules">Importing Modules</a></li>
+                <li><a href="#standard-library">Python Standard Library</a></li>
+            </ul>
+
+            <h2>File Handling</h2>
+            <ul>
+                <li><a href="#reading-files">Reading Files</a></li>
+                <li><a href="#writing-files">Writing Files</a></li>
+                <li><a href="#file-modes">File Modes</a></li>
+                <li><a href="#working-with-files">Working with Files</a></li>
+            </ul>
+
+            <h2>Error and Exception Handling</h2>
+            <ul>
+                <li><a href="#syntax-errors">Syntax Errors</a></li>
+                <li><a href="#exceptions">Exceptions</a></li>
+                <li><a href="#try-and-except">Try and Except</a></li>
+                <li><a href="#finally">Finally Block</a></li>
+                <li><a href="#raising-exceptions">Raising Exceptions</a></li>
+            </ul>
+
+            <h2>Advanced Topics</h2>
+            <ul>
+                <li><a href="#list-comprehensions">List Comprehensions</a></li>
+                <li><a href="#generators">Generators</a></li>
+                <li><a href="#decorators">Decorators</a></li>
+                <li><a href="#context-managers">Context Managers</a></li>
+            </ul>
+
+            <h2>Data Science and Libraries</h2>
+            <ul>
+                <li><a href="#numpy-introduction">NumPy Introduction</a></li>
+                <li><a href="#pandas-introduction">Pandas Introduction</a></li>
+                <li><a href="#matplotlib-introduction">Matplotlib Introduction</a></li>
+                <li><a href="#scikit-learn-introduction">Scikit-learn Introduction</a></li>
+                
+            </ul>
+
+            <h2>Miscellaneous</h2>
+            <ul>
+                <li><a href="#virtual-environments">Virtual Environments</a></li>
+                <li><a href="#pip-and-package-management">Pip and Package Management</a></li>
+                <li><a href="#debugging-techniques">Debugging Techniques</a></li>
+                <li><a href="#debugging-techniques">Debugging Techniques</a></li>
+                
+            </ul>
+        </div>
+
+
+
+
+
+
+
+        <!-- Main Content Area -->
+        <!-- Main Content Area -->
+        <div class="main" id="overview">
+            <h1>Python Overview</h1>
+
+            <h3>What is Python?</h3>
+            <p>Python is a <strong>dynamically typed</strong>, <strong>high-level</strong>, and <strong>general-purpose
+                    programming language</strong>.</p>
+            <p>It supports multiple programming paradigms, such as:</p>
+            <ul>
+                <li><strong>Object-Oriented Programming</strong></li>
+                <li><strong>Functional Programming</strong></li>
+                <li><strong>Procedural Programming</strong></li>
+            </ul>
+            <p>Python was created by <strong>Guido van Rossum</strong> in 1989 and officially released in 1991.</p>
+
+            <h3>Key Features of Python</h3>
+            <ul>
+                <li>
+                    <strong>Easy to Learn and Use:</strong> Python has a simple and intuitive syntax, making it
+                    beginner-friendly.
+                    <pre>
+                <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+                # Example
+                print("Hello, World!")
+            </pre>
+                </li>
+                <li>
+                    <strong>Interpreted Language:</strong> Python code is executed line by line, making debugging
+                    easier.
+                </li>
+                <li>
+                    <strong>Dynamically Typed:</strong> No need to declare variable types explicitly. Python determines
+                    the type at runtime.
+                    <pre>
+                <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+                # Example
+                x = 10        # Integer
+                x = "Python"  # Now it's a string
+            </pre>
+                </li>
+                <li>
+                    <strong>Platform-Independent:</strong> Python programs can run on different platforms (Windows,
+                    macOS, Linux) without modification.
+                </li>
+                <li>
+                    <strong>Extensive Libraries and Frameworks:</strong> Python has libraries for web development, data
+                    science, AI, and more:
+                    <ul>
+                        <li><strong>Web Development:</strong> Django, Flask</li>
+                        <li><strong>Data Science:</strong> NumPy, Pandas, Matplotlib</li>
+                        <li><strong>Machine Learning:</strong> TensorFlow, PyTorch</li>
+                        <li><strong>Automation:</strong> Selenium, Scrapy</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Community Support:</strong> Python has a large and active community that contributes to its
+                    ecosystem.
+                </li>
+            </ul>
+
+            <h3>Why Use Python?</h3>
+            <p>Python is versatile and can be used in various fields, such as:</p>
+            <ul>
+                <li><strong>Web Development:</strong> Example Frameworks: Flask, Django</li>
+                <li><strong>Data Science and Analytics:</strong> Libraries: NumPy, Pandas</li>
+                <li><strong>Artificial Intelligence (AI) and Machine Learning (ML):</strong> Libraries: TensorFlow,
+                    scikit-learn</li>
+                <li><strong>Automation/Scripting:</strong> Automate repetitive tasks using Python scripts.</li>
+                <li><strong>Game Development:</strong> Libraries: Pygame</li>
+                <li><strong>IoT and Robotics:</strong> MicroPython and Raspberry Pi</li>
+            </ul>
+        </div>
+
+
+
+
+        <!-------------------installation and getting started----------------------->
+
+        <div class="main" id="installation-and-getting-started">
+            <h1>Installation & Getting Started</h1>
+            <p>Python is easy to install and use. Here are the steps to get started with Python:</p>
+
+            <h3>Step 1: Download Python</h3>
+            <p>Go to the official Python website at <a href="https://www.python.org/downloads/"
+                    target="_blank">https://www.python.org/downloads/</a> and download the latest version of Python for
+                your operating system (Windows, macOS, or Linux).</p>
+            <p>For Windows, you will typically download an installer, and for macOS/Linux, you can use the package
+                manager to install Python.</p>
+
+            <h3>Step 2: Install Python</h3>
+            <ul>
+                <li>
+                    For **Windows**:
+                    <ol>
+                        <li>Run the downloaded installer.</li>
+                        <li>Make sure to check the box that says "Add Python to PATH" before clicking "Install Now".
+                        </li>
+                        <li>Once installed, open a Command Prompt and type <code>python --version</code> to confirm
+                            installation.</li>
+                    </ol>
+                </li>
+                <li>
+                    For **macOS/Linux**:
+                    <ol>
+                        <li>macOS typically comes with Python pre-installed. However, you can install a newer version
+                            using Homebrew on macOS with: <code>brew install python</code>.</li>
+                        <li>For Linux, use your package manager. For example, on Ubuntu:
+                            <code>sudo apt-get install python3</code>.</li>
+                        <li>Check your installation by typing <code>python3 --version</code> or
+                            <code>python --version</code> in the terminal.</li>
+                    </ol>
+                </li>
+            </ul>
+
+            <h3>Step 3: Verify Installation</h3>
+            <p>After installation, it’s important to verify that Python is working correctly. Open the command
+                line/terminal and type:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>python --version</code>
+    </pre>
+            <p>If the installation was successful, it will show the installed version of Python, such as:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>Python 3.9.1</code>
+    </pre>
+
+            <h3>Step 4: Install a Code Editor</h3>
+            <p>To write Python code, you need a code editor. Some popular options include:</p>
+            <ul>
+                <li><strong>VS Code</strong>: A lightweight code editor that supports Python. Download it from <a
+                        href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>.</li>
+                <li><strong>PyCharm</strong>: A full-featured IDE specifically for Python. Download it from <a
+                        href="https://www.jetbrains.com/pycharm/" target="_blank">PyCharm</a>.</li>
+                <li><strong>Sublime Text</strong>: Another lightweight editor. Download it from <a
+                        href="https://www.sublimetext.com/" target="_blank">Sublime Text</a>.</li>
+            </ul>
+
+            <h3>Step 5: Run Your First Python Program</h3>
+            <p>Once Python is installed and your code editor is set up, you can write and run your first Python program:
+            </p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code># Example of a simple Python program
+print("Hello, World!")</code>
+    </pre>
+            <p>To run the program:</p>
+            <ul>
+                <li>If you’re using an editor like VS Code or PyCharm, you can directly run the program from the editor.
+                </li>
+                <li>If you prefer the command line, save your file as <code>hello.py</code> and run it using:
+                    <code>python hello.py</code>.</li>
+            </ul>
+
+            <h3>Step 6: Install Python Packages</h3>
+            <p>Python comes with a package manager called <strong>pip</strong>, which allows you to install additional
+                libraries. For example, to install a popular library like NumPy, you can run:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>pip install numpy</code>
+    </pre>
+            <p>Make sure to use <code>pip3</code> if you’re using Python 3.x:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>pip3 install numpy</code>
+    </pre>
+
+            <h3>Step 7: Troubleshooting</h3>
+            <p>If you encounter issues during installation, here are some common problems:</p>
+            <ul>
+                <li><strong>Python not recognized as a command</strong>: This usually happens if Python is not added to
+                    your system's PATH. Re-run the installer and check the "Add Python to PATH" option.</li>
+                <li><strong>Permission issues on macOS/Linux</strong>: You might need to use <code>sudo</code> for
+                    certain installations, like <code>sudo apt-get install python3</code>.</li>
+            </ul>
+        </div>
+
+
+        <!-------------------------syntax---------------------->
+
+        <!-------------------python syntax----------------------->
+
+        <div class="main" id="syntax">
+            <h1>Python Syntax</h1>
+            <p>Python has a simple and easy-to-understand syntax, making it great for beginners. Let’s go through some
+                basic syntax rules:</p>
+
+            <h3>1. Indentation</h3>
+            <p>Python relies on indentation to define the structure of the code. Unlike other programming languages that
+                use curly braces, Python uses indentation (spaces or tabs) to group statements.</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>if condition:
+    print("Condition is True")</code>
+    </pre>
+
+            <h3>2. Variables and Data Types</h3>
+            <p>In Python, variables do not need to be explicitly declared before use. You can assign a value to a
+                variable directly, and Python will infer its data type.</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>name = "John"  # String
+age = 25  # Integer
+height = 5.9  # Float</code>
+    </pre>
+
+            <h3>3. Case Sensitivity</h3>
+            <p>Python is case-sensitive, which means that variable names such as <code>variable</code>,
+                <code>Variable</code>, and <code>VARIABLE</code> are considered different.</p>
+
+            <h3>4. Comments</h3>
+            <p>In Python, comments are used to explain the code and are ignored by the interpreter. Single-line comments
+                are created using a hash sign (#), and multi-line comments are enclosed in triple quotes (''' or """).
+            </p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code># This is a single-line comment
+
+'''
+This is a multi-line
+comment
+'''
+</code>
+    </pre>
+
+            <h3>5. Semicolons</h3>
+            <p>Unlike many other languages, Python does not require a semicolon to end a statement. However, it can be
+                used to write multiple statements on the same line:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>x = 5; y = 10</code>
+    </pre>
+
+            <h3>6. Print Statement</h3>
+            <p>To print output to the screen, you use the <code>print()</code> function. The content you want to print
+                should be inside the parentheses.</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>print("Hello, Python!")</code>
+    </pre>
+
+            <h3>7. Input Function</h3>
+            <p>The <code>input()</code> function allows you to take input from the user. The value is returned as a
+                string by default.</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>name = input("Enter your name: ")
+print("Hello, " + name)</code>
+    </pre>
+
+            <h3>8. Whitespace in Python</h3>
+            <p>Whitespace is important in Python. You cannot omit necessary spaces or indentations, as it will lead to
+                an error. It helps define code blocks (such as loops or conditionals).</p>
+
+            <h3>9. Multi-line Statements</h3>
+            <p>If you have a statement that is too long, you can break it into multiple lines by using a backslash (\)
+                at the end of the line:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>long_string = "This is a very long string " \
+that spans two lines."</code>
+    </pre>
+
+            <h3>10. Expressions and Operators</h3>
+            <p>Python supports various operators such as arithmetic, comparison, and logical operators. Here’s an
+                example of an arithmetic expression:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>sum = 5 + 3
+difference = 10 - 2
+product = 4 * 6</code>
+    </pre>
+
+        </div>
+
+
+
+
+
+
+        <!-------------------python comments----------------------->
+
+        <div class="main" id="comments">
+            <h1>Python Comments</h1>
+            <p>Comments are an essential part of any program, as they help explain the code and make it more
+                understandable. In Python, comments are ignored during execution, and they are used only for
+                documentation purposes.</p>
+
+            <h3>1. Single-Line Comments</h3>
+            <p>Single-line comments begin with the hash symbol (#). Anything following the # on that line will be
+                ignored by Python.</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code># This is a single-line comment</code>
+    </pre>
+            <p>Single-line comments can be placed at the end of a line of code as well:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>x = 10  # Assign 10 to variable x</code>
+    </pre>
+
+            <h3>2. Multi-Line Comments</h3>
+            <p>Python does not have a specific syntax for multi-line comments. However, you can use triple quotes
+                (single or double) to create multi-line comments.</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>'''
+This is a multi-line comment.
+It spans multiple lines.
+'''</code>
+    </pre>
+            <p>Alternatively, you can use multiple single-line comments:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code># This is a multi-line comment
+# that spans multiple lines
+# using single-line comments.</code>
+    </pre>
+
+            <h3>3. Docstrings</h3>
+            <p>Docstrings are a special type of comment used for documenting functions, classes, and modules. They are
+                enclosed in triple quotes (either single or double) and are usually placed immediately after the
+                function or class definition.</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>def greet(name):
+    """
+    This function greets the person passed in as an argument.
+    """
+    print("Hello, " + name)</code>
+    </pre>
+
+            <h3>4. Why Use Comments?</h3>
+            <p>Comments help others (and yourself) understand your code. They can be used to:</p>
+            <ul>
+                <li>Explain what a specific piece of code is doing.</li>
+                <li>Provide context for complex logic or algorithms.</li>
+                <li>Describe the expected inputs and outputs for functions or methods.</li>
+                <li>Document any limitations or assumptions made while writing the code.</li>
+            </ul>
+        </div>
+
+
+
+
+        <!-------------------python variables----------------------->
+
+        <div class="main" id="variables">
+            <h1>Python Variables</h1>
+            <p>In Python, variables are used to store data values. A variable in Python is created when you assign a
+                value to it. Python does not require explicit declaration of variable types, as it is a dynamically
+                typed language.</p>
+
+            <h3>1. Assigning Values to Variables</h3>
+            <p>To assign a value to a variable, use the assignment operator <code>=</code>.</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>x = 5  # Assigning the value 5 to the variable x</code>
+    </pre>
+            <p>You can also assign multiple variables in one line:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>a, b, c = 10, 20, 30  # Assign values to a, b, and c</code>
+    </pre>
+
+            <h3>2. Variable Naming Rules</h3>
+            <p>When naming variables in Python, the following rules apply:</p>
+            <ul>
+                <li>The name must start with a letter (a-z, A-Z) or an underscore (_).</li>
+                <li>The name can contain letters, numbers (0-9), and underscores.</li>
+                <li>The name cannot be a reserved keyword (e.g., <code>if</code>, <code>else</code>, <code>class</code>,
+                    etc.).</li>
+                <li>Variable names are case-sensitive (e.g., <code>myVar</code> and <code>myvar</code> are different).
+                </li>
+            </ul>
+
+            <h3>3. Types of Variables</h3>
+            <p>Variables can store data of various types. Common types include:</p>
+            <ul>
+                <li><strong>Integer:</strong> Stores whole numbers (e.g., <code>x = 5</code>).</li>
+                <li><strong>Float:</strong> Stores decimal numbers (e.g., <code>y = 3.14</code>).</li>
+                <li><strong>String:</strong> Stores text (e.g., <code>name = "John"</code>).</li>
+                <li><strong>Boolean:</strong> Stores True or False values (e.g., <code>is_valid = True</code>).</li>
+                <li><strong>List, Tuple, Set, Dictionary:</strong> More complex data types to store collections of
+                    items.</li>
+            </ul>
+
+            <h3>4. Dynamic Typing</h3>
+            <p>Python is dynamically typed, which means that you don’t need to explicitly declare a variable’s type. The
+                type is inferred when the value is assigned to the variable.</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>x = 5  # x is an integer
+x = "Hello"  # Now x is a string</code>
+    </pre>
+
+            <h3>5. Reassigning Variables</h3>
+            <p>Since Python is dynamically typed, you can reassign a variable to a different type at any time:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>x = 10  # x is an integer
+x = "Changed"  # x is now a string</code>
+    </pre>
+
+            <h3>6. Constants in Python</h3>
+            <p>Python does not have a built-in way to create constants. However, by convention, variables written in all
+                uppercase letters are considered constants.</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>PI = 3.14159  # This is considered a constant</code>
+    </pre>
+
+            <h3>7. Global and Local Variables</h3>
+            <p>Variables can be classified into two categories:</p>
+            <ul>
+                <li><strong>Global variables:</strong> Declared outside functions and accessible throughout the program.
+                </li>
+                <li><strong>Local variables:</strong> Declared inside functions and accessible only within those
+                    functions.</li>
+            </ul>
+        </div>
+
+
+
+
+        <!---------------------Datatypes-------------------->
+
+        <!-------------------numbers----------------------->
+
+        <div class="main" id="numbers">
+            <h1>Python Numbers</h1>
+            <p>In Python, numbers are of three types: integers, floating-point numbers, and complex numbers. Python
+                provides a variety of functions to work with numbers.</p>
+
+            <h3>1. Integer Numbers</h3>
+            <p>An integer is a whole number without a decimal point. You can define an integer by simply writing the
+                number:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>num1 = 10  # Integer</code>
+    </pre>
+            <p>Python supports both positive and negative integers:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>num2 = -5  # Negative Integer</code>
+    </pre>
+
+            <h3>2. Floating-Point Numbers</h3>
+            <p>A floating-point number, also known as a float, is a number that has a decimal point. Here’s how to
+                define a floating-point number:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>num3 = 3.14  # Float</code>
+    </pre>
+            <p>Python automatically recognizes a number with a decimal point as a float.</p>
+
+            <h3>3. Complex Numbers</h3>
+            <p>A complex number has a real part and an imaginary part, represented by <code>j</code>. For example:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>num4 = 4 + 5j  # Complex Number</code>
+    </pre>
+            <p>The real part is 4, and the imaginary part is 5.</p>
+
+            <h3>4. Type Conversion</h3>
+            <p>You can convert between different number types using Python’s built-in functions. For example, converting
+                an integer to a float or a float to an integer:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>num5 = 10
+num6 = float(num5)  # Converts 10 to 10.0 (float)
+
+num7 = 10.99
+num8 = int(num7)  # Converts 10.99 to 10 (integer)</code>
+    </pre>
+
+            <h3>5. Mathematical Operations</h3>
+            <p>Python supports all basic mathematical operations on numbers, including addition, subtraction,
+                multiplication, division, and more:</p>
+            <ul>
+                <li><code>+</code>: Addition</li>
+                <li><code>-</code>: Subtraction</li>
+                <li><code>*</code>: Multiplication</li>
+                <li><code>/</code>: Division (results in float)</li>
+                <li><code>//</code>: Floor Division (rounds down to the nearest integer)</li>
+                <li><code>%</code>: Modulus (remainder of division)</li>
+                <li><code>**</code>: Exponentiation (power)</li>
+            </ul>
+            <p>Example:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>a = 10
+b = 3
+add = a + b  # 13
+sub = a - b  # 7
+mul = a * b  # 30
+div = a / b  # 3.3333...
+floor_div = a // b  # 3
+mod = a % b  # 1
+exp = a ** b  # 1000 (10 raised to the power 3)</code>
+    </pre>
+
+            <h3>6. Using the Math Module</h3>
+            <p>Python provides a built-in <code>math</code> module that allows you to perform more advanced mathematical
+                operations:</p>
+            <ul>
+                <li><code>math.sqrt(x)</code>: Returns the square root of x</li>
+                <li><code>math.pow(x, y)</code>: Returns x raised to the power of y</li>
+                <li><code>math.pi</code>: Represents the mathematical constant π</li>
+                <li><code>math.e</code>: Represents Euler’s number</li>
+            </ul>
+            <p>Example:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>import math
+sqrt_val = math.sqrt(16)  # 4.0
+power_val = math.pow(2, 3)  # 8.0
+pi_value = math.pi  # 3.14159...</code>
+    </pre>
+
+            <h3>7. Random Numbers</h3>
+            <p>You can generate random numbers using the
+            <p>random</code> module:</p>
+            <ul>
+                <li><code>random.randint(a, b)</code>: Returns a random integer between a and b (inclusive)</li>
+                <li><code>random.random()</code>: Returns a random float between 0.0 and 1.0</li>
+            </ul>
+            <p>Example:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>import random
+rand_int = random.randint(1, 10)  # Random integer between 1 and 10
+rand_float = random.random()  # Random float between 0 and 1</code>
+    </pre>
+        </div>
+
+
+
+
+        <!-------------------strings----------------------->
+
+        <div class="main" id="strings">
+            <h1>Python Strings</h1>
+
+            <h3>Creating Strings</h3>
+            <p>Strings are created with single or double quotes:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>str1 = 'Hello'</code>
+    </pre>
+
+            <h3>Accessing Characters</h3>
+            <p>Access characters using indexing:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>first_char = str1[0]  # 'H'</code>
+    </pre>
+
+            <h3>String Slicing</h3>
+            <p>Extract parts of a string using slicing:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>substring = str1[0:3]  # 'Hel'</code>
+    </pre>
+
+            <h3>String Length</h3>
+            <p>Get the length of a string:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>length = len(str1)  # 5</code>
+    </pre>
+
+            <h3>String Methods</h3>
+            <p>Common string methods:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>str1.upper()  # 'HELLO'</code>
+    </pre>
+
+            <h3>Concatenation</h3>
+            <p>Combine strings using <code>+</code>:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>greeting = str1 + ' World'  # 'Hello World'</code>
+    </pre>
+
+            <h3>F-Strings</h3>
+            <p>Embed variables inside strings:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>name = 'Alice'
+greeting = f'Hello, {name}'  # 'Hello, Alice'</code>
+    </pre>
+        </div>
+
+
+
+
+        <!-------------------lists----------------------->
+
+        <div class="main" id="lists">
+            <h1>Python Lists</h1>
+
+            <h3>Creating a List</h3>
+            <p>Lists are created using square brackets, and they can hold multiple items:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>my_list = [1, 2, 3, 4, 5]</code>
+    </pre>
+
+            <h3>Accessing List Elements</h3>
+            <p>Access elements using indexing:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>first_element = my_list[0]  # 1</code>
+    </pre>
+
+            <h3>Modifying List Elements</h3>
+            <p>Change an element by assigning a new value:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>my_list[2] = 10  # [1, 2, 10, 4, 5]</code>
+    </pre>
+
+            <h3>List Slicing</h3>
+            <p>Extract part of the list using slicing:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>subset = my_list[1:4]  # [2, 10, 4]</code>
+    </pre>
+
+            <h3>Adding Elements to a List</h3>
+            <p>Use <code>append()</code> or <code>insert()</code> to add elements:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>my_list.append(6)  # [1, 2, 10, 4, 5, 6]</code>
+    </pre>
+
+            <h3>Removing Elements from a List</h3>
+            <p>Use <code>remove()</code>, <code>pop()</code>, or <code>del</code>:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>my_list.remove(10)  # [1, 2, 4, 5, 6]</code>
+    </pre>
+
+            <h3>List Length</h3>
+            <p>Get the length of a list using <code>len()</code>:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>length = len(my_list)  # 5</code>
+    </pre>
+
+            <h3>List Comprehensions</h3>
+            <p>Create a new list by applying an expression to each element:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>squared = [x**2 for x in my_list]  # [1, 4, 16, 25, 36]</code>
+    </pre>
+        </div>
+
+
+
+
+        <!-------------------tuples----------------------->
+
+        <div class="main" id="tuples">
+            <h1>Python Tuples</h1>
+
+            <h3>Creating a Tuple</h3>
+            <p>Tuples are similar to lists but are immutable (cannot be changed). They are created using parentheses:
+            </p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>my_tuple = (1, 2, 3, 4, 5)</code>
+    </pre>
+
+            <h3>Accessing Tuple Elements</h3>
+            <p>Access elements using indexing (same as lists):</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>first_element = my_tuple[0]  # 1</code>
+    </pre>
+
+            <h3>Tuple Length</h3>
+            <p>Get the length of a tuple using <code>len()</code>:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>length = len(my_tuple)  # 5</code>
+    </pre>
+
+            <h3>Tuples with One Element</h3>
+            <p>To create a tuple with a single element, add a trailing comma:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>single_element_tuple = (1,)</code>
+    </pre>
+
+            <h3>Concatenating Tuples</h3>
+            <p>Combine two tuples using the <code>+</code> operator:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>combined_tuple = my_tuple + (6, 7)  # (1, 2, 3, 4, 5)</code>
+    </pre>
+
+            <h3>Tuple Packing and Unpacking</h3>
+            <p>Pack values into a tuple and unpack them into variables:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>a, b, c = my_tuple  # a=1, b=2, c=3</code>
+    </pre>
+
+            <h3>Immutability of Tuples</h3>
+            <p>Once created, the elements of a tuple cannot be modified:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>my_tuple[0] = 10  # This will raise a TypeError</code>
+    </pre>
+        </div>
+
+
+
+<!----------------python set ------------>
+
+
+        <div class="main" id="sets">
+            <h1>Python Sets</h1>
+
+            <h3>Creating a Set</h3>
+            <p>Sets are unordered collections of unique elements. They are created using curly braces:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>my_set = {1, 2, 3, 4, 5}</code>
+    </pre>
+
+            <h3>Accessing Set Elements</h3>
+            <p>Since sets are unordered, you cannot access elements by index. However, you can iterate over a set:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>for element in my_set: 
+    print(element)</code>
+    </pre>
+
+            <h3>Adding Elements to a Set</h3>
+            <p>Use <code>add()</code> to add a single element to a set:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>my_set.add(6)  # Adds 6 to the set</code>
+    </pre>
+
+            <h3>Removing Elements from a Set</h3>
+            <p>Use <code>remove()</code> or <code>discard()</code> to remove elements:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>my_set.remove(4)  # Removes 4 from the set</code>
+    </pre>
+
+            <h3>Set Operations</h3>
+            <p>You can perform various set operations like union, intersection, and difference:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+
+union_set = set1 | set2  # Union of set1 and set2
+intersection_set = set1 & set2  # Intersection of set1 and set2
+difference_set = set1 - set2  # Difference of set1 and set2</code>
+    </pre>
+
+            <h3>Checking Membership in a Set</h3>
+            <p>Check if an element exists in a set using the <code>in</code> keyword:</p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>3 in my_set  # Returns True</code>
+    </pre>
+
+            <h3>Set Immutability</h3>
+            <p>Sets are mutable, but their elements must be immutable (e.g., you can’t have a list as a set element):
+            </p>
+            <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+        <code>my_set.add([7, 8])  # This will raise a TypeError</code>
+    </pre>
+        </div>
+
+
+
+
+        <!-------------------dictionaries----------------------->
+
+        <div class="main" id="dictionaries">
+            <h1>Dictionaries</h1>
+            <p>A dictionary in Python is an unordered collection of data in a key-value pair form. Each key is
+                unique, and values are associated with keys. Dictionaries are mutable, meaning you can change their
+                contents.</p>
+
+            <h3>Creating a Dictionary</h3>
+            <p>You can create a dictionary using curly braces <code>{}</code> and separating key-value pairs with a
+                colon <code>:</code>.</p>
+            <pre>
+    <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+    <code>my_dict = {"name": "John", "age": 30, "city": "New York"}</code>
+</pre>
+
+            <h3>Accessing Dictionary Values</h3>
+            <p>You can access dictionary values using their keys.</p>
+            <pre>
+    <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+    <code>print(my_dict["name"])  # Output: John</code>
+</pre>
+
+            <h3>Adding or Modifying Items</h3>
+            <p>You can add new key-value pairs or modify existing values in a dictionary.</p>
+            <pre>
+    <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+    <code>my_dict["email"] = "john@example.com"</code>
+</pre>
+            <p>Now the dictionary will contain an email key:</p>
+            <pre>
+    <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+    <code>print(my_dict["email"])  # Output: john@example.com</code>
+</pre>
+
+            <h3>Removing Items</h3>
+            <p>You can remove items from a dictionary using the <code>del</code> keyword or the <code>pop()</code>
+                method.</p>
+            <pre>
+    <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+    <code>del my_dict["age"]</code>
+</pre>
+
+            <h3>Methods for Dictionaries</h3>
+            <ul>
+                <li><strong>get()</strong>: Returns the value for the given key.</li>
+                <li><strong>keys()</strong>: Returns all keys in the dictionary.</li>
+                <li><strong>values()</strong>: Returns all values in the dictionary.</li>
+                <li><strong>items()</strong>: Returns all key-value pairs in the dictionary.</li>
+            </ul>
+
+            <h3>Example:</h3>
+            <pre>
+    <button class="copy-code-btn" onclick="copyCode(this)">Copy </button>
+    <code>print(my_dict.get("name"))  # Output: John</code>
+</pre>
+        </div>
+
+
+
+
+        <!-----------------------Control Flow ---------------------->
+
+    <!-------------------if statement----------------------->
+
+<div class="main" id="if-statements">
+    <h1>If Statement</h1>
+    <p>The <code>if</code> statement is used to test a condition. If the condition evaluates to <strong>True</strong>, the code block inside the <code>if</code> statement is executed.</p>
+
+    <h3>Syntax</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+if condition:
+    # Code block to execute if the condition is True
+        </code>
+    </pre>
+
+    <h3>Example</h3>
+    <p>Here’s a simple example to demonstrate the usage of the <code>if</code> statement:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+# Example of an if statement
+x = 10
+if x > 5:
+    print("x is greater than 5")
+        </code>
+    </pre>
+    <p>In this example, the condition <code>x > 5</code> is checked. Since <code>x</code> is 10, which is greater than 5, the message <strong>"x is greater than 5"</strong> is printed.</p>
+
+    <h3>Key Points</h3>
+    <ul>
+        <li>The <code>if</code> statement uses indentation to define the code block to execute.</li>
+        <li>Conditions use comparison operators like <code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code>.</li>
+        <li>The code block inside the <code>if</code> statement only runs when the condition is <strong>True</strong>.</li>
+    </ul>
+</div>
+
+    
+
+
+<!-------------------For Loops----------------------->
+
+<div class="main" id="for-loops">
+    <h1>For Loops</h1>
+    <p>The <code>for</code> loop in Python is used to iterate over a sequence (such as a list, tuple, dictionary, set, or string) and execute a block of code for each element in the sequence.</p>
+
+    <h3>Syntax</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+for element in sequence:
+    # Code block to execute for each element
+        </code>
+    </pre>
+
+    <h3>Example</h3>
+    <p>Here’s an example of iterating over a list:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+# Example of a for loop
+numbers = [1, 2, 3, 4, 5]
+for num in numbers:
+    print(num)
+        </code>
+    </pre>
+    <p>In this example, the <code>for</code> loop iterates through each element in the <code>numbers</code> list and prints it.</p>
+
+    <h3>Using the Range Function</h3>
+    <p>The <code>range()</code> function is often used with <code>for</code> loops to generate a sequence of numbers:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+# Using range() in a for loop
+for i in range(5):
+    print(i)
+        </code>
+    </pre>
+    <p>This will print numbers from 0 to 4 (inclusive).</p>
+
+    <h3>Iterating Over Strings</h3>
+    <p>You can also use a <code>for</code> loop to iterate over the characters of a string:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+# Iterating over a string
+for char in "Python":
+    print(char)
+        </code>
+    </pre>
+
+    <h3>Key Points</h3>
+    <ul>
+        <li>The <code>for</code> loop works with any iterable, including lists, tuples, strings, and dictionaries.</li>
+        <li>Use <code>range(start, stop, step)</code> to generate sequences with specific start, stop, and step values.</li>
+        <li>Loop variables are temporary and used only within the loop.</li>
+    </ul>
+</div>
+
+
+
+
+<!-------------------While Loops----------------------->
+
+<div class="main" id="while-loops">
+    <h1>While Loops</h1>
+    <p>The <code>while</code> loop in Python is used to repeatedly execute a block of code as long as a specified condition is true.</p>
+
+    <h3>Syntax</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+while condition:
+    # Code block to execute while the condition is true
+        </code>
+    </pre>
+
+    <h3>Example</h3>
+    <p>Here’s an example of a <code>while</code> loop:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+# Example of a while loop
+count = 0
+while count < 5:
+    print(count)
+    count += 1
+        </code>
+    </pre>
+    <p>In this example, the loop will print the value of <code>count</code> and increment it by 1 until <code>count</code> reaches 5.</p>
+
+    <h3>Using a Break Statement</h3>
+    <p>You can use the <code>break</code> statement to exit a <code>while</code> loop prematurely:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+# Using break in a while loop
+i = 0
+while True:
+    if i == 3:
+        break
+    print(i)
+    i += 1
+        </code>
+    </pre>
+    <p>This will print <code>0, 1, 2</code> and then exit the loop when <code>i</code> equals 3.</p>
+
+    <h3>Infinite Loops</h3>
+    <p>If the condition in a <code>while</code> loop never becomes false, the loop will run indefinitely. Make sure to include a condition that eventually stops the loop:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+# Example of an infinite loop
+while True:
+    print("This will run forever unless stopped!")
+        </code>
+    </pre>
+
+    <h3>Key Points</h3>
+    <ul>
+        <li>The condition in a <code>while</code> loop is evaluated before each iteration.</li>
+        <li>Make sure the condition will eventually become false to avoid infinite loops.</li>
+        <li>The <code>break</code> and <code>continue</code> statements can be used to control the flow inside the loop.</li>
+    </ul>
+</div>
+
+
+
+<!-------------------Break and Continue----------------------->
+
+<div class="main" id="break-and-continue">
+    <h1>Break and Continue</h1>
+    <p>The <code>break</code> and <code>continue</code> statements are used to control the flow of loops in Python.</p>
+
+    <h3>Break Statement</h3>
+    <p>The <code>break</code> statement is used to exit a loop prematurely when a certain condition is met. It terminates the loop entirely.</p>
+
+    <h4>Example:</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+# Example of break in a for loop
+for num in range(10):
+    if num == 5:
+        break
+    print(num)
+        </code>
+    </pre>
+    <p>In this example, the loop will stop when <code>num</code> equals 5, and numbers <code>0, 1, 2, 3, 4</code> will be printed.</p>
+
+    <h3>Continue Statement</h3>
+    <p>The <code>continue</code> statement skips the rest of the code in the current iteration and moves to the next iteration of the loop.</p>
+
+    <h4>Example:</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+# Example of continue in a for loop
+for num in range(10):
+    if num % 2 == 0:
+        continue
+    print(num)
+        </code>
+    </pre>
+    <p>In this example, the loop will skip even numbers and print only odd numbers.</p>
+
+    <h3>Break and Continue in While Loops</h3>
+    <p>Both <code>break</code> and <code>continue</code> can also be used in <code>while</code> loops.</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+# Using break and continue in a while loop
+i = 0
+while i < 10:
+    if i == 5:
+        break
+    if i % 2 == 0:
+        i += 1
+        continue
+    print(i)
+    i += 1
+        </code>
+    </pre>
+    <p>In this example, the loop skips even numbers and terminates when <code>i</code> equals 5.</p>
+
+    <h3>Key Points</h3>
+    <ul>
+        <li><code>break</code> terminates the loop entirely.</li>
+        <li><code>continue</code> skips the current iteration and moves to the next one.</li>
+        <li>Use them carefully to ensure proper flow and avoid infinite loops.</li>
+    </ul>
+</div>
+
+
+
+<!-------------------Pass Statement----------------------->
+
+<div class="main" id="pass-statement">
+    <h1>Pass Statement</h1>
+    <p>The <code>pass</code> statement in Python is a placeholder. It does nothing and is used when a statement is syntactically required but no action is needed.</p>
+
+    <h3>Purpose of the Pass Statement</h3>
+    <ul>
+        <li>It allows you to write code that is syntactically correct without defining functionality yet.</li>
+        <li>Useful when stubbing out code or creating skeletons for functions, classes, or loops.</li>
+    </ul>
+
+    <h3>Example 1: Pass in a Loop</h3>
+    <p>You can use <code>pass</code> to create an empty loop without causing an error.</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+# Example of pass in a loop
+for num in range(5):
+    pass  # Placeholder for future logic
+        </code>
+    </pre>
+    <p>In this example, the loop runs, but no action is performed because of the <code>pass</code> statement.</p>
+
+    <h3>Example 2: Pass in a Function</h3>
+    <p>You can use <code>pass</code> as a placeholder when defining a function but not implementing it yet.</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+# Example of pass in a function
+def my_function():
+    pass  # Placeholder for future implementation
+        </code>
+    </pre>
+
+    <h3>Example 3: Pass in a Conditional Statement</h3>
+    <p>It is useful when you want to leave a conditional block empty temporarily.</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+# Example of pass in a conditional statement
+x = 10
+if x > 5:
+    pass  # Placeholder for future logic
+else:
+    print("x is 5 or less")
+        </code>
+    </pre>
+
+    <h3>Key Points</h3>
+    <ul>
+        <li>The <code>pass</code> statement is only a placeholder and performs no operation.</li>
+        <li>It is useful when building incomplete or temporary code structures.</li>
+        <li>It helps maintain correct syntax while developing code incrementally.</li>
+    </ul>
+</div>
+
+
+
+
+<!-------------------Defining Functions----------------------->
+
+<div class="main" id="defining-functions">
+    <h1>Defining Functions</h1>
+    <p>In Python, a function is defined using the <code>def</code> keyword followed by the function name and parameters in parentheses.</p>
+
+    <h3>Basic Function Definition</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+def greet():
+    print("Hello, World!")
+        </code>
+    </pre>
+    <p>In this example, <code>greet()</code> is a function that prints "Hello, World!" when called.</p>
+
+    <h3>Calling a Function</h3>
+    <p>Once defined, a function can be called by using its name followed by parentheses.</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+greet()  # Calls the function and prints "Hello, World!"
+        </code>
+    </pre>
+</div>
+
+
+
+<!-------------------Arguments and Parameters----------------------->
+
+<div class="main" id="arguments-and-parameters">
+    <h1>Arguments and Parameters</h1>
+    <p>Functions can accept input values called <strong>parameters</strong>, and when the function is called, specific values are passed as <strong>arguments</strong>.</p>
+
+    <h3>Function with Parameters</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+def greet(name):
+    print(f"Hello, {name}!")
+        </code>
+    </pre>
+    <p>This function takes a parameter <code>name</code> and prints a personalized greeting.</p>
+
+    <h3>Passing Arguments</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+greet("Alice")  # Output: Hello, Alice!
+        </code>
+    </pre>
+    <p>In this case, the argument "Alice" is passed to the <code>greet</code> function.</p>
+</div>
+
+
+
+
+<!-------------------Return Statement----------------------->
+
+<div class="main" id="return-statement">
+    <h1>Return Statement</h1>
+    <p>The <code>return</code> statement is used to send back a result from a function.</p>
+
+    <h3>Function with Return</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+def add(a, b):
+    return a + b
+        </code>
+    </pre>
+    <p>This function takes two arguments <code>a</code> and <code>b</code>, adds them together, and returns the result.</p>
+
+    <h3>Calling Function with Return</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+result = add(3, 4)  # result will be 7
+print(result)  # Output: 7
+        </code>
+    </pre>
+    <p>Here, the <code>add</code> function returns the sum of 3 and 4, and the result is printed.</p>
+</div>
+
+
+
+<!-------------------Lambda Functions----------------------->
+
+<div class="main" id="lambda-functions">
+    <h1>Lambda Functions</h1>
+    <p>Lambda functions are small anonymous functions defined with the <code>lambda</code> keyword. They can have any number of arguments but only one expression.</p>
+
+    <h3>Syntax</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+lambda arguments: expression
+        </code>
+    </pre>
+
+    <h3>Example of a Lambda Function</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+add = lambda x, y: x + y
+result = add(3, 5)
+print(result)  # Output: 8
+        </code>
+    </pre>
+    <p>In this example, a lambda function <code>add</code> is defined to add two numbers.</p>
+
+    <h3>Using Lambda with Functions like <code>map()</code></h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+numbers = [1, 2, 3, 4]
+squared_numbers = list(map(lambda x: x ** 2, numbers))
+print(squared_numbers)  # Output: [1, 4, 9, 16]
+        </code>
+    </pre>
+    <p>Lambda functions are often used in conjunction with functions like <code>map()</code>, <code>filter()</code>, and <code>reduce()</code>.</p>
+</div>
+
+
+
+
+<!-------------------Classes and Objects----------------------->
+
+<div class="main" id="classes-and-objects">
+    <h1>Classes and Objects</h1>
+    <p>In Object-Oriented Programming, classes are blueprints for creating objects. An object is an instance of a class, and it contains data (attributes) and methods (functions).</p>
+
+    <h3>Creating a Class</h3>
+    <p>In Python, you define a class using the <code>class</code> keyword, followed by the class name and a colon.</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+class Car:
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+    </code>
+    </pre>
+    <p>Here, we define a <code>Car</code> class with an <code>__init__()</code> method, which is the constructor for the class. It initializes the object's attributes when an instance is created.</p>
+
+    <h3>Creating an Object</h3>
+    <p>Once the class is defined, you can create an object (instance) of that class by calling the class name and passing required arguments.</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+my_car = Car("Toyota", "Corolla", 2020)
+print(my_car.make)  # Output: Toyota
+        </code>
+    </pre>
+    <p>Here, <code>my_car</code> is an instance of the <code>Car</code> class, and we print the <code>make</code> attribute of the object.</p>
+</div>
+
+
+
+<!-------------------Constructors----------------------->
+
+<div class="main" id="constructors">
+    <h1>Constructors</h1>
+    <p>A constructor is a special method used to initialize objects. In Python, the constructor method is defined using <code>__init__()</code>.</p>
+
+    <h3>Purpose of Constructors</h3>
+    <p>The constructor allows you to define the initial state of the object, setting initial values for attributes when the object is created.</p>
+
+    <h3>Constructor Example</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+person1 = Person("Alice", 30)
+print(person1.name)  # Output: Alice
+print(person1.age)   # Output: 30
+        </code>
+    </pre>
+    <p>The <code>Person</code> class has a constructor that initializes <code>name</code> and <code>age</code> attributes. When <code>person1</code> is created, the constructor assigns values to these attributes.</p>
+</div>
+
+
+
+<!-------------------Inheritance----------------------->
+
+<div class="main" id="inheritance">
+    <h1>Inheritance</h1>
+    <p>Inheritance is a feature of OOP that allows a class (child class) to inherit properties and methods from another class (parent class). This promotes code reuse and establishes a relationship between the classes.</p>
+
+    <h3>Basic Inheritance Example</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        print("Animal speaks")
+
+class Dog(Animal):
+    def __init__(self, name, breed):
+        super().__init__(name)
+        self.breed = breed
+
+    def speak(self):
+        print(f"{self.name} barks!")
+
+dog1 = Dog("Buddy", "Golden Retriever")
+dog1.speak()  # Output: Buddy barks!
+        </code>
+    </pre>
+    <p>In this example, <code>Dog</code> inherits from the <code>Animal</code> class. The <code>Dog</code> class has a constructor that uses <code>super()</code> to call the parent class constructor, and it also overrides the <code>speak()</code> method.</p>
+</div>
+
+
+
+<!-------------------Polymorphism----------------------->
+
+<div class="main" id="polymorphism">
+    <h1>Polymorphism</h1>
+    <p>Polymorphism means the ability to take many forms. In OOP, it allows methods in different classes to have the same name but behave differently depending on the class they are called from. It is achieved through method overriding and method overloading.</p>
+
+    <h3>Method Overriding</h3>
+    <p>Method overriding occurs when a subclass provides its own implementation of a method that is already defined in its superclass.</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+class Animal:
+    def speak(self):
+        print("Animal speaks")
+
+class Dog(Animal):
+    def speak(self):
+        print("Dog barks")
+
+class Cat(Animal):
+    def speak(self):
+        print("Cat meows")
+
+animals = [Dog(), Cat()]
+for animal in animals:
+    animal.speak()  # Output: Dog barks \n Cat meows
+        </code>
+    </pre>
+    <p>Here, both <code>Dog</code> and <code>Cat</code> override the <code>speak()</code> method from the <code>Animal</code> class. The correct version of <code>speak()</code> is called based on the object type.</p>
+</div>
+
+
+
+<!-------------------Encapsulation----------------------->
+
+<div class="main" id="encapsulation">
+    <h1>Encapsulation</h1>
+    <p>Encapsulation is the bundling of data and the methods that operate on that data into a single unit, or class. It also restricts direct access to some of the object's attributes, preventing unintended interference and misuse.</p>
+
+    <h3>Private Attributes</h3>
+    <p>In Python, encapsulation is implemented by prefixing attribute names with an underscore (<code>_</code>) or double underscore (<code>__</code>) to make them private. This prevents direct modification of these attributes.</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+class Person:
+    def __init__(self, name, age):
+        self._name = name  # Protected attribute
+        self.__age = age  # Private attribute
+
+    def get_age(self):
+        return self.__age  # Access private attribute using a method
+
+person = Person("Alice", 30)
+print(person.get_age())  # Output: 30
+        </code>
+    </pre>
+    <p>The <code>Person</code> class uses encapsulation to protect the <code>__age</code> attribute. It can be accessed only through the <code>get_age()</code> method.</p>
+
+    <h3>Getter and Setter Methods</h3>
+    <p>Encapsulation can also be achieved using getter and setter methods, which allow controlled access to private attributes.</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+class Person:
+    def __init__(self, name, age):
+        self.__name = name
+        self.__age = age
+
+    def get_name(self):
+        return self.__name
+
+    def set_name(self, name):
+        self.__name = name
+
+person = Person("Alice", 30)
+person.set_name("Bob")
+print(person.get_name())  # Output: Bob
+        </code>
+    </pre>
+    <p>Here, the <code>set_name()</code> method allows changing the <code>__name</code> attribute, and the <code>get_name()</code> method allows reading it.</p>
+</div>
+
+
+
+
+<!-----------------------modules---------------------->
+
+<!-------------------Modules----------------------->
+
+<div class="main" id="modules">
+    <h1>Modules</h1>
+    <p>A module in Python is a file containing Python definitions and statements. A module can define functions, classes, and variables that can be used in other Python programs. The module is essentially a .py file, and Python has a rich ecosystem of built-in modules that are available for various functionalities.</p>
+
+    <h3>What is a Module?</h3>
+    <p>A module allows you to organize your code logically. Instead of writing all your code in a single file, you can divide your code into smaller, more manageable pieces. Each piece can be placed in its own module, and you can import them when needed in other programs.</p>
+    <p>For example, you could have one module for mathematical operations, another for file handling, and another for utility functions. This modular approach makes the code easier to understand, test, and maintain.</p>
+
+    <h3>Creating a Module</h3>
+    <p>You can create a module by writing Python code in a file with the <code>.py</code> extension. Here's an example:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+def greet(name):
+    return f"Hello, {name}!"
+
+x = 5
+        </code>
+    </pre>
+    <p>This is a simple module called <code>my_module.py</code>. It contains a function <code>greet()</code> and a variable <code>x</code>. This file can now be used as a module in other programs.</p>
+
+    <h3>Using a Module</h3>
+    <p>Once you have created a module, you can use it in another Python file by importing it. The <code>import</code> statement is used for importing a module. For instance:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+import my_module
+
+print(my_module.greet("Alice"))  # Output: Hello, Alice!
+print(my_module.x)  # Output: 5
+        </code>
+    </pre>
+    <p>In the code above, we import <code>my_module</code> and use the <code>greet()</code> function and <code>x</code> variable defined in the module.</p>
+
+    <h3>Module Search Path</h3>
+    <p>When you import a module, Python looks for the module in a sequence of directories listed in <code>sys.path</code>. The directories include the current directory, standard library directories, and directories defined in environment variables.</p>
+</div>
+
+
+
+<!-------------------Packages----------------------->
+
+<div class="main" id="packages">
+    <h1>Packages</h1>
+    <p>A package is a collection of modules organized in a directory hierarchy. A package can contain multiple modules, and the modules are grouped based on their functionality. In Python, a package is simply a directory that contains an <code>__init__.py</code> file along with other modules or sub-packages.</p>
+
+    <h3>What is a Package?</h3>
+    <p>A package is a way to organize multiple modules in a single directory. This is useful when your code grows and you have a large number of related modules. Instead of keeping all the modules in a single directory, you can group them into a package to make the project more manageable.</p>
+    <p>For example, a package for mathematical operations might contain modules for arithmetic operations, algebra, statistics, etc. The directory structure might look like this:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+# Directory structure:
+# mypackage/
+# ├── __init__.py
+# ├── module1.py
+# └── module2.py
+        </code>
+    </pre>
+    <p>In the structure above, <code>mypackage</code> is a package containing two modules: <code>module1.py</code> and <code>module2.py</code>. The <code>__init__.py</code> file is required to mark the directory as a Python package.</p>
+
+    <h3>Using a Package</h3>
+    <p>To use a package in Python, you import the modules or sub-packages inside it. Here's how you can import modules from the <code>mypackage</code>:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+from mypackage import module1
+
+module1.some_function()
+        </code>
+    </pre>
+    <p>In the example above, we import <code>module1</code> from the <code>mypackage</code> package and use a function defined within it.</p>
+
+    <h3>Sub-packages</h3>
+    <p>A package can also contain sub-packages, which are themselves directories with their own <code>__init__.py</code> files and modules. Sub-packages help in organizing even larger projects into manageable sub-units.</p>
+</div>
+
+
+
+
+<!-------------------Importing Modules----------------------->
+
+<div class="main" id="importing-modules">
+    <h1>Importing Modules</h1>
+    <p>Python provides a built-in <code>import</code> statement to load a module into the current namespace. When you import a module, you gain access to the functions, classes, and variables defined within it. There are different ways to import modules depending on the level of specificity you want in your code.</p>
+
+    <h3>Importing a Whole Module</h3>
+    <p>To import a whole module, simply use the <code>import</code> statement followed by the module name:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+import math
+
+print(math.sqrt(16))  # Output: 4.0
+        </code>
+    </pre>
+    <p>This imports the entire <code>math</code> module and gives you access to all its functions and constants. To use a function, you prefix it with the module name (e.g., <code>math.sqrt(16)</code>).</p>
+
+    <h3>Importing Specific Functions or Variables</h3>
+    <p>If you only need specific elements from a module, you can import them individually using the <code>from</code> keyword:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+from math import sqrt
+
+print(sqrt(16))  # Output: 4.0
+        </code>
+    </pre>
+    <p>This imports the <code>sqrt</code> function from the <code>math</code> module directly, so you don't need to use the <code>math.</code> prefix.</p>
+
+    <h3>Importing with an Alias</h3>
+    <p>You can also import a module with an alias using the <code>as</code> keyword. This is particularly useful if the module name is long or if you want to avoid name conflicts:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+import numpy as np
+
+arr = np.array([1, 2, 3])
+print(arr)
+        </code>
+    </pre>
+    <p>Here, we import the popular <code>numpy</code> library as <code>np</code>, which is a common alias used by Python developers to make the code more concise.</p>
+</div>
+
+
+
+<!-------------------Python Standard Library----------------------->
+
+<div class="main" id="standard-library">
+    <h1>Python Standard Library</h1>
+    <p>The Python Standard Library is a collection of modules that are included with Python. These modules provide various functionalities such as file I/O, system operations, networking, and more. You don't need to install them as they come with Python.</p>
+
+    <h3>Common Modules in the Standard Library</h3>
+    <ul>
+        <li><strong>math</strong>: Provides mathematical functions such as <code>sqrt()</code>, <code>pow()</code>, etc.</li>
+        <li><strong>datetime</strong>: Provides classes for working with dates and times.</li>
+        <li><strong>os</strong>: Provides a way of interacting with the operating system (e.g., file manipulation, working with directories).</li>
+        <li><strong>sys</strong>: Provides access to system-specific parameters and functions (e.g., command-line arguments).</li>
+    </ul>
+
+    <h3>Using the Standard Library</h3>
+    <p>To use any module from the standard library, you simply import it just like any other module:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+import datetime
+
+now = datetime.datetime.now()
+print(now)  # Output: current date and time
+        </code>
+    </pre>
+    <p>Here, we use the <code>datetime</code> module to get the current date and time.</p>
+
+    <h3>Finding Modules in the Standard Library</h3>
+    <p>You can refer to the official Python documentation for a complete list of modules in the standard library: <a href="https://docs.python.org/3/library/">Python Standard Library Documentation</a>.</p>
+</div>
+
+
+
+<!----------------file handling-------------->
+
+<!-------------------Reading Files----------------------->
+
+<div class="main" id="reading-files">
+    <h1>Reading Files</h1>
+    <p>Reading files in Python is an essential part of handling data stored externally. Python provides built-in functions to read from text files, CSV files, and other formats. The most common file operations are reading the contents of a file into memory, line by line, or entirely.</p>
+
+    <h3>Opening a File for Reading</h3>
+    <p>Before reading a file, you must open it using the <code>open()</code> function. This function returns a file object that can be used to interact with the file. The basic syntax is:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+file = open("example.txt", "r")  # Open the file in read mode
+        </code>
+    </pre>
+    <p>The <code>open()</code> function requires two arguments: the file name and the mode. The default mode is <code>r</code>, which stands for read mode.</p>
+
+    <h3>Reading Entire File</h3>
+    <p>To read the entire content of a file at once, you can use the <code>read()</code> method:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+file_content = file.read()
+print(file_content)
+        </code>
+    </pre>
+    <p>This will read the entire file and return its contents as a string. After reading, it's important to close the file to free up resources.</p>
+
+    <h3>Reading Line by Line</h3>
+    <p>Instead of reading the whole file at once, you can read it line by line using the <code>readline()</code> method. This is useful if the file is large and you want to process it incrementally.</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+line = file.readline()
+while line:
+    print(line, end="")
+    line = file.readline()
+        </code>
+    </pre>
+    <p>This will read one line at a time from the file until the end is reached.</p>
+
+    <h3>Reading All Lines at Once</h3>
+    <p>Another option is to read all lines at once into a list using the <code>readlines()</code> method. Each element of the list will represent a line in the file:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+lines = file.readlines()
+for line in lines:
+    print(line, end="")
+        </code>
+    </pre>
+</div>
+
+
+
+<!-------------------Writing Files----------------------->
+
+<div class="main" id="writing-files">
+    <h1>Writing Files</h1>
+    <p>Writing files is another important task when dealing with external data. Python allows you to create new files, or overwrite existing files with new content, using the built-in <code>open()</code> function in write or append mode.</p>
+
+    <h3>Opening a File for Writing</h3>
+    <p>To write data to a file, you must open it in write mode using <code>w</code> or append mode using <code>a</code>. Here's how you open a file for writing:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+file = open("output.txt", "w")  # Open the file for writing (it overwrites the file)
+        </code>
+    </pre>
+    <p>If the file doesn't exist, Python will create it. If it does exist, it will be overwritten. To append to an existing file without overwriting it, use the <code>a</code> mode instead:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+file = open("output.txt", "a")  # Open the file for appending
+        </code>
+    </pre>
+
+    <h3>Writing to a File</h3>
+    <p>Once the file is open, you can write to it using the <code>write()</code> method:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+file.write("This is some text.\n")
+file.write("Writing to a file in Python is easy!")
+        </code>
+    </pre>
+    <p>Each call to <code>write()</code> writes the string passed to it to the file. Note that <code>write()</code> does not add a newline character automatically, so you must explicitly add <code>\n</code> if you want new lines.</p>
+
+    <h3>Writing Multiple Lines</h3>
+    <p>You can also write multiple lines at once using the <code>writelines()</code> method, which expects an iterable (like a list) containing lines to be written:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+lines = ["First line\n", "Second line\n", "Third line\n"]
+file.writelines(lines)
+        </code>
+    </pre>
+</div>
+
+
+
+<!-------------------File Modes----------------------->
+
+<div class="main" id="file-modes">
+    <h1>File Modes</h1>
+    <p>When opening a file using the <code>open()</code> function, you specify the file mode to indicate what type of operations you're going to perform on the file. Here are the most commonly used file modes:</p>
+
+    <h3>Read Mode <code>r</code></h3>
+    <p>The <code>r</code> mode is the default mode and is used to open a file for reading. The file must already exist, or a <code>FileNotFoundError</code> will be raised:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+file = open("example.txt", "r")  # Open for reading
+        </code>
+    </pre>
+
+    <h3>Write Mode <code>w</code></h3>
+    <p>The <code>w</code> mode is used to open a file for writing. It will create a new file if the file does not exist, or overwrite the file if it already exists:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+file = open("output.txt", "w")  # Open for writing (overwrite the file)
+        </code>
+    </pre>
+
+    <h3>Append Mode <code>a</code></h3>
+    <p>The <code>a</code> mode is used to open a file for appending. It does not overwrite the file but instead adds new data to the end of the file:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+file = open("output.txt", "a")  # Open for appending
+        </code>
+    </pre>
+
+    <h3>Read and Write Mode <code>r+</code></h3>
+    <p>The <code>r+</code> mode opens a file for both reading and writing. The file must exist; otherwise, it raises a <code>FileNotFoundError</code>:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+file = open("example.txt", "r+")
+        </code>
+    </pre>
+
+    <h3>Binary Mode</h3>
+    <p>If you're working with binary files (such as images, audio, etc.), you can use binary modes like <code>rb</code>, <code>wb</code>, and <code>ab</code>:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+file = open("image.jpg", "rb")  # Open in binary read mode
+        </code>
+    </pre>
+</div>
+
+
+<!-------------------Working with Files----------------------->
+
+<div class="main" id="working-with-files">
+    <h1>Working with Files</h1>
+    <p>After opening a file for reading or writing, it's important to ensure that the file is properly closed to free up system resources. You can use the <code>close()</code> method for this purpose. Alternatively, Python provides a context manager that automatically handles file closing.</p>
+
+    <h3>Closing a File</h3>
+    <p>Once you are done working with a file, always close it to ensure that changes are saved and system resources are released:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+file.close()
+        </code>
+    </pre>
+    <p>It’s a good practice to always close files after you're finished working with them to prevent memory leaks and data corruption.</p>
+
+    <h3>Using with Statement (Context Manager)</h3>
+    <p>Python's <code>with</code> statement provides a convenient way to automatically close files after you're done with them. This ensures that the file is closed even if an error occurs while processing it:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+with open("example.txt", "r") as file:
+    content = file.read()
+    print(content)
+# File is automatically closed after the block is executed
+        </code>
+    </pre>
+    <p>The <code>with</code> statement makes the code cleaner and more reliable because it handles file closing automatically.</p>
+
+    <h3>File Position</h3>
+    <p>When working with files, the current position in the file (i.e., the location of the next read or write operation) is maintained. You can use the <code>tell()</code> method to find out the current position and <code>seek()</code> to move the position:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+file = open("example.txt", "r")
+print(file.tell())  # Prints the current file position
+file.seek(0)  # Moves the position to the start of the file
+file.close()
+        </code>
+    </pre>
+</div>
+
+
+
+<!------------------------Error and Exception Handling----------------------->
+
+<!-------------------Syntax Errors----------------------->
+
+<div class="main" id="syntax-errors">
+    <h1>Syntax Errors</h1>
+    <p>A syntax error occurs when Python cannot interpret your code due to incorrect syntax. These errors are typically caused by missing punctuation, wrong indentation, or other structural issues that prevent the interpreter from reading the code properly. Syntax errors are usually caught before the program starts running, and they stop the program from executing.</p>
+
+    <h3>Common Causes of Syntax Errors</h3>
+    <ul>
+        <li>Missing or extra parentheses, brackets, or braces.</li>
+        <li>Incorrect indentation, which is critical in Python as it defines code blocks.</li>
+        <li>Missing or incorrect colons (<code>:</code>) after control structures like <code>if</code>, <code>for</code>, <code>while</code>, and <code>def</code> functions.</li>
+        <li>Unmatched or misplaced quotation marks when dealing with strings.</li>
+        <li>Improper variable naming or use of reserved keywords (e.g., using <code>and</code> or <code>if</code> as variable names).</li>
+    </ul>
+
+    <h3>Example of a Syntax Error</h3>
+    <p>Consider the following Python code:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+if x > 10  # Missing colon
+    print("x is greater than 10")
+        </code>
+    </pre>
+    <p>This will raise a <code>SyntaxError</code> because Python expects a colon at the end of the <code>if</code> statement. The corrected version should be:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+if x > 10:
+    print("x is greater than 10")
+        </code>
+    </pre>
+    <p>Always pay close attention to the syntax while writing Python code to avoid these errors.</p>
+</div>
+
+
+
+<!-------------------Exceptions----------------------->
+
+<div class="main" id="exceptions">
+    <h1>Exceptions</h1>
+    <p>Exceptions are runtime errors that occur while the program is running. These errors can occur due to a variety of reasons, such as accessing an invalid index in a list, dividing by zero, or trying to open a file that doesn’t exist. Unlike syntax errors, exceptions do not prevent the program from starting; they occur during the execution and can be handled to prevent the program from crashing.</p>
+
+    <h3>Common Types of Exceptions</h3>
+    <ul>
+        <li><code>ZeroDivisionError</code>: This error occurs when you attempt to divide a number by zero.</li>
+        <li><code>IndexError</code>: This error occurs when you try to access an index that is outside the bounds of a list, tuple, or string.</li>
+        <li><code>KeyError</code>: This error occurs when you try to access a key that does not exist in a dictionary.</li>
+        <li><code>FileNotFoundError</code>: Raised when trying to open a file that doesn't exist on the system.</li>
+        <li><code>TypeError</code>: Raised when an operation or function is applied to an object of inappropriate type.</li>
+    </ul>
+
+    <h3>Example of an Exception</h3>
+    <p>Let's look at an example of an exception raised when dividing by zero:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+x = 10
+y = 0
+result = x / y  # Raises ZeroDivisionError
+        </code>
+    </pre>
+    <p>This code will raise the following exception:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+ZeroDivisionError: division by zero
+        </code>
+    </pre>
+    <p>Exceptions can be caught using <code>try</code> and <code>except</code> blocks to handle these errors without causing the program to crash.</p>
+</div>
+
+
+
+<!-------------------Try and Except----------------------->
+
+<div class="main" id="try-and-except">
+    <h1>Try and Except</h1>
+    <p>In Python, exceptions can be handled using <code>try</code> and <code>except</code> blocks. The <code>try</code> block is used to wrap the code that might raise an exception, and the <code>except</code> block is used to catch the exception if it occurs. This allows the program to continue running even after an error has occurred, preventing abrupt crashes.</p>
+
+    <h3>Syntax of Try and Except</h3>
+    <p>The general syntax for handling exceptions is as follows:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+try:
+    # Code that might raise an exception
+except ExceptionType as e:
+    # Code that handles the exception
+        </code>
+    </pre>
+
+    <h3>Example</h3>
+    <p>Let’s modify the previous example to handle the exception using <code>try</code> and <code>except</code>:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+try:
+    x = 10
+    y = 0
+    result = x / y
+except ZeroDivisionError as e:
+    print("Error:", e)
+        </code>
+    </pre>
+    <p>Output:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+Error: division by zero
+        </code>
+    </pre>
+    <p>By catching the exception, the program continues executing even though an error occurred. This helps prevent abrupt program termination and allows for graceful error handling.</p>
+</div>
+
+
+
+
+<!-------------------Finally Block----------------------->
+
+<div class="main" id="finally">
+    <h1>Finally Block</h1>
+    <p>The <code>finally</code> block is an optional part of a <code>try-except</code> statement. Code within the <code>finally</code> block will always be executed, regardless of whether an exception was raised or not. This is useful for performing cleanup operations, such as closing files or releasing resources, that should happen regardless of the outcome of the <code>try-except</code> block.</p>
+
+    <h3>Syntax of Finally</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+try:
+    # Code that might raise an exception
+except ExceptionType as e:
+    # Code that handles the exception
+finally:
+    # Code that will always execute, regardless of exception
+        </code>
+    </pre>
+
+    <h3>Example of Finally</h3>
+    <p>Here's an example where we open a file, read from it, and ensure that the file is always closed, regardless of whether an exception occurred:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+try:
+    file = open('example.txt', 'r')
+    content = file.read()
+except FileNotFoundError:
+    print("File not found")
+finally:
+    file.close()
+    print("File closed")
+        </code>
+    </pre>
+    <p>Even if the file is not found, the <code>finally</code> block ensures that the file is properly closed.</p>
+</div>
+
+
+
+<!-------------------Raising Exceptions----------------------->
+
+<div class="main" id="raising-exceptions">
+    <h1>Raising Exceptions</h1>
+    <p>In Python, you can raise exceptions deliberately using the <code>raise</code> keyword. This is useful when you want to signal an error condition or if some specific criteria are not met during the program's execution.</p>
+
+    <h3>Syntax for Raising Exceptions</h3>
+    <p>You can raise exceptions by using the <code>raise</code> keyword followed by an exception class. You can also include a custom error message:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+raise Exception("This is a custom exception message")
+        </code>
+    </pre>
+
+    <h3>Example of Raising an Exception</h3>
+    <p>In this example, we raise a <code>ValueError</code> if the user provides an invalid input:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+def validate_age(age):
+    if age < 0:
+        raise ValueError("Age cannot be negative")
+    return age
+
+try:
+    validate_age(-5)
+except ValueError as e:
+    print(e)
+        </code>
+    </pre>
+    <p>This will raise a <code>ValueError</code> with the message <code>"Age cannot be negative"</code> and print it to the console.</p>
+</div>
+
+
+
+
+<!-------------Advanced Topics--------------->
+
+<!-------------------List Comprehensions----------------------->
+
+<div class="main" id="list-comprehensions">
+    <h1>List Comprehensions</h1>
+    <p>List comprehensions provide a concise way to create lists in Python. They allow for more readable, concise, and often more efficient code compared to traditional methods like using loops. List comprehensions consist of an expression followed by a for loop inside square brackets, and they can also include conditions.</p>
+
+    <h3>Syntax</h3>
+    <p>The syntax of a list comprehension is as follows:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>[expression for item in iterable if condition]</code>
+    </pre>
+
+    <h3>Example</h3>
+    <p>Suppose you want to create a list of squares for numbers from 1 to 5. Using a traditional for loop, you might write:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+squares = []
+for x in range(1, 6):
+    squares.append(x**2)
+print(squares)  # Output: [1, 4, 9, 16, 25]
+        </code>
+    </pre>
+    <p>With a list comprehension, you can accomplish this in a more concise way:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+squares = [x**2 for x in range(1, 6)]
+print(squares)  # Output: [1, 4, 9, 16, 25]
+        </code>
+    </pre>
+    <p>List comprehensions can also include conditions to filter the results. For example, to get the squares of even numbers from 1 to 10:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+even_squares = [x**2 for x in range(1, 11) if x % 2 == 0]
+print(even_squares)  # Output: [4, 16, 36, 64, 100]
+        </code>
+    </pre>
+    <p>List comprehensions are powerful tools for transforming and filtering data in a compact, readable manner.</p>
+</div>
+
+
+
+<!-------------------Generators----------------------->
+
+<div class="main" id="generators">
+    <h1>Generators</h1>
+    <p>Generators in Python are a way of creating iterators. Unlike regular functions that return a value, generators use the <code>yield</code> keyword to yield a series of values, one at a time, as the function is iterated over. This allows you to generate a sequence of values lazily, meaning only one value is generated at a time, reducing memory usage, especially for large datasets.</p>
+
+    <h3>Creating a Generator</h3>
+    <p>To create a generator, you can define a function with one or more <code>yield</code> statements. This function will return a generator object when called.</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+def countdown(n):
+    while n > 0:
+        yield n
+        n -= 1
+        </code>
+    </pre>
+    <p>In the example above, the <code>countdown</code> function yields values one by one from <code>n</code> down to 1. To use this generator:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+gen = countdown(5)
+for value in gen:
+    print(value)  # Output: 5, 4, 3, 2, 1
+        </code>
+    </pre>
+    <p>The generator produces values lazily, meaning it does not create the entire sequence in memory all at once, making it memory efficient.</p>
+
+    <h3>Advantages of Generators</h3>
+    <ul>
+        <li>Memory-efficient: Generators generate values on demand, one at a time, rather than storing them all in memory.</li>
+        <li>Can represent infinite sequences: Since they generate values one at a time, generators can represent infinite sequences (e.g., Fibonacci numbers).</li>
+        <li>Improves performance for large datasets: Ideal for large datasets where you don’t want to store the entire sequence in memory.</li>
+    </ul>
+</div>
+
+
+
+<!-------------------Decorators----------------------->
+
+<div class="main" id="decorators">
+    <h1>Decorators</h1>
+    <p>Decorators in Python are a way to modify the behavior of a function or method without changing its actual code. They are a type of higher-order function, meaning they take another function as an argument and return a new function that enhances or alters the original function's behavior. Decorators are commonly used for logging, authorization, and performance measurement, among other use cases.</p>
+
+    <h3>Creating a Decorator</h3>
+    <p>To create a decorator, you first define a function that takes another function as an argument, and inside that function, you modify the behavior of the passed function. Then, you can apply this decorator to other functions using the <code>@decorator_name</code> syntax.</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+def decorator_function(func):
+    def wrapper():
+        print("Before function call")
+        func()
+        print("After function call")
+    return wrapper
+        </code>
+    </pre>
+    <p>Now, you can apply this decorator to another function:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+@decorator_function
+def say_hello():
+    print("Hello!")
+
+say_hello()  # Output: Before function call
+             #         Hello!
+             #         After function call
+        </code>
+    </pre>
+    <p>In this example, the <code>decorator_function</code> adds additional behavior before and after calling the <code>say_hello</code> function. The <code>@decorator_function</code> syntax is a shortcut for wrapping the function.</p>
+
+    <h3>Common Use Cases for Decorators</h3>
+    <ul>
+        <li><strong>Logging:</strong> Automatically log function calls, inputs, and outputs.</li>
+        <li><strong>Authentication:</strong> Ensure that a user is authorized to access a particular function.</li>
+        <li><strong>Memoization:</strong> Cache the results of expensive function calls to speed up repeated calls with the same arguments.</li>
+    </ul>
+</div>
+
+
+
+
+<!-------------------Context Managers----------------------->
+
+<div class="main" id="context-managers">
+    <h1>Context Managers</h1>
+    <p>Context managers are used to manage resources such as files, network connections, or database sessions in a clean and efficient manner. They ensure that resources are properly acquired and released, even in the case of an error or exception. The most common example of a context manager in Python is the <code>with</code> statement, which is used for working with files.</p>
+
+    <h3>Using the with Statement</h3>
+    <p>The <code>with</code> statement simplifies the management of resources by automatically handling setup and teardown. For example, when working with files, the <code>with</code> statement ensures that the file is properly closed after use, even if an exception occurs.</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+with open('example.txt', 'r') as file:
+    content = file.read()
+    print(content)  # Output: Contents of the file
+        </code>
+    </pre>
+    <p>The context manager automatically handles the closing of the file, eliminating the need to explicitly call <code>file.close()</code>.</p>
+
+    <h3>Creating a Custom Context Manager</h3>
+    <p>You can create custom context managers by defining a class with <code>__enter__</code> and <code>__exit__</code> methods. The <code>__enter__</code> method is executed when entering the <code>with</code> block, and the <code>__exit__</code> method is executed when exiting the block.</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+class MyContextManager:
+    def __enter__(self):
+        print("Entering the context")
+        return self
+    
+    def __exit__(self, exc_type, exc_value, traceback):
+        print("Exiting the context")
+
+with MyContextManager():
+    print("Inside the context")
+        </code>
+    </pre>
+    <p>Output:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+Entering the context
+Inside the context
+Exiting the context
+        </code>
+    </pre>
+    <p>Custom context managers provide more flexibility when working with external resources, making code more readable and maintaining resources effectively.</p>
+</div>
+
+
+
+
+<!------------------Data Science and  Libraries--------------->
+
+
+<!-------------------NumPy Introduction----------------------->
+
+<div class="main" id="numpy-introduction">
+    <h1>NumPy Introduction</h1>
+    <p>NumPy (Numerical Python) is one of the core libraries for scientific and numerical computing in Python. It provides support for arrays, matrices, and many mathematical functions to operate on these arrays. NumPy is highly optimized for performance, especially with large datasets, and it is a foundational library for other data science libraries, including Pandas and Scikit-learn.</p>
+
+    <h3>NumPy Arrays</h3>
+    <p>At the heart of NumPy is the <code>ndarray</code>, a multi-dimensional array that allows for fast and efficient storage and manipulation of large datasets. Unlike Python’s built-in lists, NumPy arrays are homogeneous, meaning they can hold elements of only one data type.</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+import numpy as np
+arr = np.array([1, 2, 3, 4, 5])
+print(arr)  # Output: [1 2 3 4 5]
+        </code>
+    </pre>
+
+    <h3>NumPy Functions</h3>
+    <p>NumPy provides a wide array of functions for array creation, manipulation, and mathematical operations. Some common functions include:</p>
+    <ul>
+        <li><strong>np.arange()</strong>: Creates an array with a range of values.</li>
+        <li><strong>np.linspace()</strong>: Creates an array with a specified number of evenly spaced values between two points.</li>
+        <li><strong>np.reshape()</strong>: Reshapes an array without changing its data.</li>
+        <li><strong>np.dot()</strong>: Performs matrix multiplication.</li>
+    </ul>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+arr = np.arange(0, 10, 2)
+print(arr)  # Output: [0 2 4 6 8]
+        </code>
+    </pre>
+    <p>NumPy arrays are extremely powerful for numerical computations and serve as the backbone for other data science libraries.</p>
+</div>
+
+
+
+<!-------------------Pandas Introduction----------------------->
+
+<div class="main" id="pandas-introduction">
+    <h1>Pandas Introduction</h1>
+    <p>Pandas is an open-source library in Python primarily used for data manipulation and analysis. It introduces two key data structures: <code>Series</code> (1-dimensional) and <code>DataFrame</code> (2-dimensional). Pandas provides easy-to-use data structures and data analysis tools for handling structured data, making it one of the most popular libraries for data analysis tasks.</p>
+
+    <h3>Creating Pandas Data Structures</h3>
+    <p>Here’s how you can create a Pandas <code>Series</code> and <code>DataFrame</code>:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+import pandas as pd
+
+# Creating a Series
+series = pd.Series([1, 2, 3, 4])
+print(series)  # Output: 0    1
+               #         1    2
+               #         2    3
+               #         3    4
+               #         dtype: int64
+
+# Creating a DataFrame
+data = {'Name': ['Alice', 'Bob', 'Charlie'], 'Age': [25, 30, 35]}
+df = pd.DataFrame(data)
+print(df)      # Output: 
+               #      Name  Age
+               # 0    Alice   25
+               # 1      Bob   30
+               # 2  Charlie   35
+        </code>
+    </pre>
+
+    <h3>DataFrame Operations</h3>
+    <p>With Pandas, you can easily manipulate and analyze data in DataFrame format. Common operations include:</p>
+    <ul>
+        <li><strong>df.head()</strong>: Displays the first few rows of the DataFrame.</li>
+        <li><strong>df.describe()</strong>: Summarizes the statistical properties of the DataFrame.</li>
+        <li><strong>df.groupby()</strong>: Groups data for aggregation.</li>
+        <li><strong>df.drop()</strong>: Removes rows or columns.</li>
+        <li><strong>df.loc[]</strong>: Selects data by label (index/column).</li>
+    </ul>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+print(df.head())  # Output: 
+                 #      Name  Age
+                 # 0    Alice   25
+                 # 1      Bob   30
+                 # 2  Charlie   35
+        </code>
+    </pre>
+    <p>Pandas simplifies tasks like cleaning, transforming, and analyzing data, making it a crucial tool for data science.</p>
+</div>
+
+
+
+<!-------------------Matplotlib Introduction----------------------->
+
+<div class="main" id="matplotlib-introduction">
+    <h1>Matplotlib Introduction</h1>
+    <p>Matplotlib is a widely used library for data visualization in Python. It provides an object-oriented API for embedding plots into applications and is highly customizable for creating a variety of charts and graphs, from simple line plots to complex 3D plots.</p>
+
+    <h3>Creating Basic Plots</h3>
+    <p>To start using Matplotlib, the most common approach is to import the <code>pyplot</code> module. The basic plot can be created using <code>plt.plot()</code>, followed by calling <code>plt.show()</code> to display the plot.</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+import matplotlib.pyplot as plt
+
+# Basic line plot
+x = [1, 2, 3, 4, 5]
+y = [1, 4, 9, 16, 25]
+plt.plot(x, y)
+plt.title("Line Plot Example")
+plt.xlabel("X Axis")
+plt.ylabel("Y Axis")
+plt.show()
+        </code>
+    </pre>
+    <p>Matplotlib supports various plot types, including:</p>
+    <ul>
+        <li><strong>Line Plots</strong>: Used for displaying data trends over a continuous range.</li>
+        <li><strong>Bar Charts</strong>: Used for comparing different categories.</li>
+        <li><strong>Histograms</strong>: Used for displaying the distribution of data.</li>
+        <li><strong>Scatter Plots</strong>: Used for showing the relationship between two variables.</li>
+    </ul>
+
+    <h3>Customization</h3>
+    <p>Matplotlib allows extensive customization. You can modify titles, labels, colors, styles, and more. For example:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+plt.plot(x, y, color="green", linestyle="--", marker="o")
+plt.title("Customized Plot")
+plt.xlabel("X Axis")
+plt.ylabel("Y Axis")
+plt.show()
+        </code>
+    </pre>
+    <p>Matplotlib is a versatile tool for visualizing data and creating high-quality plots for presentations, reports, and analyses.</p>
+</div>
+
+
+
+<!-------------------Scikit-learn Introduction----------------------->
+
+<div class="main" id="scikit-learn-introduction">
+    <h1>Scikit-learn Introduction</h1>
+    <p>Scikit-learn is one of the most popular libraries for machine learning in Python. It provides simple and efficient tools for data mining, data analysis, and machine learning. Scikit-learn builds on NumPy, SciPy, and Matplotlib, making it easy to integrate with other libraries. It includes various machine learning algorithms for classification, regression, clustering, dimensionality reduction, and model evaluation.</p>
+
+    <h3>Basic Workflow</h3>
+    <p>Machine learning workflows in Scikit-learn typically follow these steps:</p>
+    <ol>
+        <li><strong>Data Preprocessing</strong>: Preparing data for analysis by handling missing values, scaling, and transforming data.</li>
+        <li><strong>Model Selection</strong>: Choosing an appropriate algorithm (e.g., linear regression, decision trees, support vector machines).</li>
+        <li><strong>Training the Model</strong>: Fitting the model to the training data.</li>
+        <li><strong>Model Evaluation</strong>: Evaluating the model’s performance using metrics like accuracy, precision, recall, and F1 score.</li>
+        <li><strong>Model Prediction</strong>: Using the trained model to make predictions on new data.</li>
+    </ol>
+
+    <h3>Example: Using a Classifier</h3>
+    <p>Here’s a simple example of how to use Scikit-learn for classification using the famous Iris dataset:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.svm import SVC
+from sklearn.metrics import accuracy_score
+
+# Load dataset
+data = load_iris()
+X = data.data
+y = data.target
+
+# Split data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Train a classifier
+clf = SVC(kernel='linear')
+clf.fit(X_train, y_train)
+
+# Make predictions
+y_pred = clf.predict(X_test)
+
+# Evaluate the model
+print("Accuracy:", accuracy_score(y_test, y_pred))
+        </code>
+    </pre>
+    <p>Scikit-learn simplifies the implementation of machine learning algorithms and provides a comprehensive set of tools for model evaluation and fine-tuning.</p>
+</div>
+
+
+
+
+<!-----------Mischallengious------------>
+
+<!-------------------Virtual Environments----------------------->
+
+<div class="main" id="virtual-environments">
+    <h1>Virtual Environments</h1>
+    <p>A virtual environment is a self-contained directory that contains a Python installation for a particular version of Python, as well as several additional packages. Virtual environments allow you to isolate dependencies for different projects, which helps avoid conflicts between package versions.</p>
+
+    <h3>Why Use Virtual Environments?</h3>
+    <p>When working on multiple Python projects, different projects may require different versions of libraries. If these libraries are installed globally, it can lead to conflicts and compatibility issues. Virtual environments allow you to manage project-specific dependencies, which keeps projects independent and manageable.</p>
+
+    <h3>Creating a Virtual Environment</h3>
+    <p>To create a virtual environment, you can use the <code>venv</code> module, which is included in Python 3.3 and later. Here’s how to create and activate a virtual environment:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+# Create a virtual environment
+python3 -m venv myenv
+
+# Activate the virtual environment (on Windows)
+myenv\Scripts\activate
+
+# Activate the virtual environment (on macOS/Linux)
+source myenv/bin/activate
+        </code>
+    </pre>
+
+    <h3>Deactivating a Virtual Environment</h3>
+    <p>Once you are done working with the virtual environment, you can deactivate it by running:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+# Deactivate the virtual environment
+deactivate
+        </code>
+    </pre>
+
+    <p>Using virtual environments is a best practice when working on Python projects, as it ensures that each project has its own set of dependencies without interfering with other projects.</p>
+</div>
+
+
+<!-------------------Pip and Package Management----------------------->
+
+<div class="main" id="pip-and-package-management">
+    <h1>Pip and Package Management</h1>
+    <p><code>pip</code> is the most widely used package manager for Python. It allows you to install, update, and remove Python packages, which are external libraries that extend the functionality of Python. With <code>pip</code>, you can easily install and manage packages from the Python Package Index (PyPI), a repository of Python software.</p>
+
+    <h3>Installing Packages</h3>
+    <p>To install a package with pip, use the following command:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+pip install package_name
+        </code>
+    </pre>
+    <p>For example, to install the popular <code>requests</code> package:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+pip install requests
+        </code>
+    </pre>
+
+    <h3>Listing Installed Packages</h3>
+    <p>To list all the installed packages in your current environment, use the following command:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+pip list
+        </code>
+    </pre>
+
+    <h3>Updating and Uninstalling Packages</h3>
+    <p>To update a package, use the <code>--upgrade</code> option:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+pip install --upgrade package_name
+        </code>
+    </pre>
+    <p>To uninstall a package:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+pip uninstall package_name
+        </code>
+    </pre>
+
+    <h3>Requirements File</h3>
+    <p>When working with multiple Python projects, you might want to specify the exact versions of packages used in a project. This can be done by creating a <code>requirements.txt</code> file, which lists the dependencies. To create this file:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+pip freeze > requirements.txt
+        </code>
+    </pre>
+    <p>To install all dependencies listed in a <code>requirements.txt</code> file:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+pip install -r requirements.txt
+        </code>
+    </pre>
+
+    <p><code>pip</code> makes it easy to manage libraries and dependencies, ensuring that your Python projects can be set up and maintained with minimal effort.</p>
+</div>
+
+
+
+<!-------------------Debugging Techniques----------------------->
+
+<div class="main" id="debugging-techniques">
+    <h1>Debugging Techniques</h1>
+    <p>Debugging is an essential part of software development. In Python, there are several techniques and tools available to help you identify and fix issues in your code. Whether you are working with simple scripts or large-scale applications, understanding debugging techniques is crucial for efficient development.</p>
+
+    <h3>Common Python Debugging Tools</h3>
+    <p>Here are some common tools and techniques used for debugging Python code:</p>
+    <ul>
+        <li><strong>print()</strong>: The simplest way to debug is by adding print statements at various points in your code to display values and track program flow.</li>
+        <li><strong>pdb (Python Debugger)</strong>: Python’s built-in debugger allows you to set breakpoints, step through the code line by line, and inspect variables at runtime.</li>
+        <li><strong>Logging</strong>: Instead of using print statements, logging provides a more sophisticated way to record information about your program’s execution, which can be useful for debugging and error reporting.</li>
+    </ul>
+
+    <h3>Using pdb (Python Debugger)</h3>
+    <p>To start debugging with <code>pdb</code>, you can insert the following line at the point where you want to start debugging:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+import pdb; pdb.set_trace()
+        </code>
+    </pre>
+    <p>Once the program reaches this line, the execution will pause, and you’ll be able to enter debugger commands. Some useful commands include:</p>
+    <ul>
+        <li><strong>n</strong>: Executes the next line of code.</li>
+        <li><strong>s</strong>: Steps into the function call.</li>
+        <li><strong>c</strong>: Continues the execution until the next breakpoint.</li>
+        <li><strong>q</strong>: Quits the debugger.</li>
+    </ul>
+
+    <h3>Logging</h3>
+    <p>Instead of using print statements for debugging, you can use the logging module to log detailed information about your program’s execution. Here’s how to set up logging:</p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+import logging
+
+# Set up logging
+logging.basicConfig(level=logging.DEBUG)
+
+# Example log message
+logging.debug('This is a debug message')
+        </code>
+    </pre>
+    <p>Using logging allows you to control the verbosity of the output and is a more professional and flexible approach to debugging compared to print statements.</p>
+
+    <p>Effective debugging is key to writing reliable Python programs, and learning to use tools like pdb and logging will significantly improve your development process.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <script src="script1.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuBtn = document.getElementById("menuBtn");
+            const sidebar = document.getElementById("sidebar");
+
+            menuBtn.addEventListener("click", () => {
+                sidebar.classList.toggle("active");
+            });
+
+            const sidebarLinks = document.querySelectorAll(".sidebar ul li a");
+            const contentSections = document.querySelectorAll(".content .content");
+
+            sidebarLinks.forEach(link => {
+                link.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute("href").substring(1);
+
+                    // Hide all content sections and reset sidebar links
+                    contentSections.forEach(section => {
+                        section.classList.remove("active");
+                    });
+
+                    // Show the selected content section
+                    document.getElementById(targetId).classList.add("active");
+
+                    // Set active background on sidebar links
+                    sidebarLinks.forEach(link => {
+                        link.parentElement.classList.remove("active-bg");
+                    });
+
+                    link.parentElement.classList.add("active-bg");
+                });
+            });
+
+            // Initialize the first section as active
+            if (contentSections.length > 0) {
+                contentSections[0].classList.add("active");
+                sidebarLinks[0].parentElement.classList.add("active-bg");
+            }
+        });
+
+
+
+        document.querySelector('.menu-btn2').addEventListener('click', function () {
+            const topicButtons = document.querySelector('.topic-buttons');
+            // Toggle the menu visibility by moving it on and off the screen
+            if (topicButtons.style.right === '0px') {
+                topicButtons.style.right = '-250px'; // Slide out
+            } else {
+                topicButtons.style.right = '0px'; // Slide in
+            }
+        });
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

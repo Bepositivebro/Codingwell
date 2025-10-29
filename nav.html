@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Sliding Menu</title>
+    <style>
+        /* Navbar styles */
+        .navbar {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+
+        /* Menu Button (for mobile view) */
+        .menu-btn2 {
+            font-size: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: white;
+            display: none; /* Hidden by default, only visible in mobile view */
+        }
+
+        /* Desktop View Navbar (Horizontal Navigation) */
+        .desktop-navbar {
+            display: flex;
+            gap: 20px;
+        }
+
+        .desktop-navbar button {
+            padding: 12px 20px;
+            background-color: #444;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .desktop-navbar button:hover {
+            background-color: #555;
+        }
+
+        /* Mobile View - Dropdown Menu */
+        .topic-buttons {
+            position: fixed;
+            top: 0;
+            right: -250px; /* Initially hidden off-screen */
+            width: 250px;
+            height: 100%;
+            background-color: #e7e7e7;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            transition: right 0.3s ease;
+        }
+
+        .topic-buttons a {
+            text-decoration: none;
+        }
+
+        .topic-buttons button {
+            width: 100%;
+            padding: 12px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            text-align: left;
+            font-size: 16px;
+        }
+
+        .topic-buttons button:hover {
+            background-color: #444;
+        }
+
+        /* Mobile and Tablet Responsiveness */
+        @media (max-width: 768px) {
+            .desktop-navbar {
+                display: none; /* Hide the regular navbar on mobile */
+            }
+
+            .menu-btn2 {
+                display: block; /* Show the menu button on mobile */
+            }
+
+            .topic-buttons {
+                width: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .topic-buttons {
+                width: 180px; /* Even smaller width for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <!-- Menu Button for Mobile View -->
+        <button class="menu-btn2" aria-label="Open menu">&#x27A1;</button>
+
+        <!-- Desktop Navbar -->
+        <div class="desktop-navbar">
+            <button><a href="python.html" style="color: white;">Python</a></button>
+            <button><a href="cpp.html" style="color: white;">C++</a></button>
+            <button><a href="c.html" style="color: white;">C</a></button>
+            <button><a href="html.html" style="color: white;">HTML</a></button>
+            <button><a href="css.html" style="color: white;">CSS</a></button>
+            <button><a href="javascript.html" style="color: white;">JS</a></button>
+            <button><a href="java.html" style="color: white;">Java</a></button>
+            <button><a href="php.html" style="color: white;">PHP</a></button>
+            <button><a href="dsa.html" style="color: white;">DSA</a></button>
+        </div>
+
+        <!-- Dropdown Menu for Mobile View -->
+        <div class="topic-buttons">
+            <a href="python.html"><button>Python</button></a>
+            <a href="cpp.html"><button>C++</button></a>
+            <a href="c.html"><button>C</button></a>
+            <a href="html.html"><button>HTML</button></a>
+            <a href="css.html"><button>CSS</button></a>
+            <a href="javascript.html"><button>JS</button></a>
+            <a href="java.html"><button>Java</button></a>
+            <a href="php.html"><button>PHP</button></a>
+            <a href="dsa.html"><button>DSA</button></a>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.menu-btn2').addEventListener('click', function () {
+            const topicButtons = document.querySelector('.topic-buttons');
+            // Toggle the menu visibility by moving it on and off the screen
+            if (topicButtons.style.right === '0px') {
+                topicButtons.style.right = '-250px'; // Slide out
+            } else {
+                topicButtons.style.right = '0px'; // Slide in
+            }
+        });
+    </script>
+
+</body>
+</html>

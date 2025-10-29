@@ -1,0 +1,2936 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Course</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet1.css">
+    <style>
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+
+         <!-----for desktop view------------>
+         <div class="logo">
+            <img src="logo.png" alt="Logo" style="height: 70px; width: auto; margin-left: 20px; ">
+        </div>
+        
+
+        <!--------------for mobile view---------------->
+        <div class="logo1">
+            <img src="logo1.png" alt="Logo" style="height: 30px; width: 130px; margin-left: 100px; margin-top: 14px;">
+        </div>
+
+
+        <!-- Menu Button for Mobile View -->
+        <button class="menu-btn2" aria-label="Open menu">&#x27A1;</button>
+
+        <!-- Desktop Navbar -->
+        <div class="desktop-navbar">
+            <button><a href="python.html" style="color: white;">Python</a></button>
+            <button><a href="cpp.html" style="color: white;">C++</a></button>
+            <button><a href="c.html" style="color: white;">C</a></button>
+            <button><a href="html.html" style="color: white;">HTML</a></button>
+            <button><a href="css.html" style="color: white;">CSS</a></button>
+            <button><a href="javascript.html" style="color: white;">JS</a></button>
+            <button><a href="java.html" style="color: white;">Java</a></button>
+            <button><a href="php.html" style="color: white;">PHP</a></button>
+            <button><a href="dsa.html" style="color: white;">DSA</a></button>
+        </div>
+
+        <!-- Dropdown Menu for Mobile View -->
+        <div class="topic-buttons">
+            <a href="python.html"><button>Python</button></a>
+            <a href="cpp.html"><button>C++</button></a>
+            <a href="c.html"><button>C</button></a>
+            <a href="html.html"><button>HTML</button></a>
+            <a href="css.html"><button>CSS</button></a>
+            <a href="javascript.html"><button>JS</button></a>
+            <a href="java.html"><button>Java</button></a>
+            <a href="php.html"><button>PHP</button></a>
+            <a href="dsa.html"><button>DSA</button></a>
+        </div>
+
+        
+        <!-- Mobile menu button -->
+        <div class="menu-btn" id="menuBtn">
+            &#9776;
+        </div>
+
+
+    </div>
+
+    <div class="content">
+        <!-- Sidebar Navigation -->
+        <div class="sidebar" id="sidebar">
+            <h2>Introduction to CSS</h2>
+            <ul>
+                <li><a href="#css-overview">What is CSS?</a></li>
+                <li><a href="#css-history">History and Evolution</a></li>
+                <li><a href="#css-setup">Setting Up Environment</a></li>
+            </ul>
+    
+            <h2>CSS Basics</h2>
+            <ul>
+                <li><a href="#css-syntax">CSS Syntax</a></li>
+                <li><a href="#selectors">Selectors and Combinators</a></li>
+                <li><a href="#colors">Colors and Backgrounds</a></li>
+                <li><a href="#units">Units and Measurements</a></li>
+            </ul>
+    
+            <h2>Styling Text</h2>
+            <ul>
+                <li><a href="#text-properties">Text Properties</a></li>
+                <li><a href="#font-styles">Font Styles</a></li>
+                <li><a href="#line-height">Line Height and Spacing</a></li>
+                <li><a href="#text-alignment">Text Alignment</a></li>
+            </ul>
+    
+            <h2>Box Model and Layout</h2>
+            <ul>
+                <li><a href="#box-model">CSS Box Model</a></li>
+                <li><a href="#margin-padding">Margin and Padding</a></li>
+                <li><a href="#border">Borders and Outline</a></li>
+                <li><a href="#display">Display Property</a></li>
+            </ul>
+    
+            <h2>Positioning and Layout</h2>
+            <ul>
+                <li><a href="#positioning">Positioning</a></li>
+                <li><a href="#flexbox">Flexbox</a></li>
+                <li><a href="#grid">CSS Grid</a></li>
+                <li><a href="#float-clear">Float and Clear</a></li>
+            </ul>
+    
+            <h2>Responsive Design</h2>
+            <ul>
+                <li><a href="#media-queries">Media Queries</a></li>
+                <li><a href="#responsive-units">Responsive Units</a></li>
+                <li><a href="#breakpoints">Breakpoints</a></li>
+                <li><a href="#mobile-first">Mobile-First Design</a></li>
+            </ul>
+    
+            <h2>CSS Animations and Transitions</h2>
+            <ul>
+                <li><a href="#transitions">CSS Transitions</a></li>
+                <li><a href="#animations">CSS Animations</a></li>
+                <li><a href="#keyframes">Keyframes</a></li>
+                <li><a href="#transformations">Transformations</a></li>
+            </ul>
+    
+            <h2>Advanced CSS Topics</h2>
+            <ul>
+                <li><a href="#pseudo-elements">Pseudo-classes and Pseudo-elements</a></li>
+                <li><a href="#variables">CSS Variables</a></li>
+                <li><a href="#custom-properties">Custom Properties</a></li>
+                <li><a href="#css-functions">CSS Functions (calc, clamp, etc.)</a></li>
+            </ul>
+    
+            <h2>Best Practices and Optimization</h2>
+            <ul>
+                <li><a href="#performance">CSS Performance Optimization</a></li>
+                <li><a href="#organization">Organizing CSS Code</a></li>
+                <li><a href="#css-frameworks">Introduction to CSS Frameworks</a></li>
+                <li><a href="#debugging">Debugging CSS</a></li>
+                <li><a href="#debugging">Debugging CSS</a></li>
+            </ul>
+        </div>
+    
+        <div class="main" id="css-overview">
+            <h1>What is CSS?</h1>
+    
+            <h3>Definition</h3>
+            <p>
+                CSS stands for <strong>Cascading Style Sheets</strong>. It is used to describe the look and formatting of a document written in HTML.
+            </p>
+            <p>
+                CSS separates content (HTML) from presentation (style) to create visually appealing and consistent web pages.
+            </p>
+    
+            <h3>Key Features of CSS</h3>
+            <ul>
+                <li>
+                    <strong>Styling:</strong> CSS enables you to style text, images, and other elements on a webpage.
+                </li>
+                <li>
+                    <strong>Layout:</strong> Helps in organizing content with layout techniques like Flexbox and Grid.
+                </li>
+                <li>
+                    <strong>Responsive Design:</strong> CSS makes websites adaptable to various screen sizes using media queries.
+                </li>
+                <li>
+                    <strong>Animation:</strong> CSS allows adding smooth transitions and animations to elements.
+                </li>
+            </ul>
+    
+            <h3>Applications of CSS</h3>
+            <ul>
+                <li><strong>Web Design:</strong> Styling websites to improve their aesthetics and usability.</li>
+                <li><strong>Responsive Web Development:</strong> Ensuring compatibility across devices.</li>
+                <li><strong>Creating Animations:</strong> Adding dynamic animations for enhanced user experience.</li>
+            </ul>
+        </div>
+    </div>
+    
+<!-- History and Evolution of CSS -->
+<div class="main" id="css-history">
+    <h1>History and Evolution of CSS</h1>
+
+    <h3>Definition</h3>
+    <p>
+        CSS (Cascading Style Sheets) is a stylesheet language used to describe the presentation of a document written in HTML or XML. It allows web developers to control the layout, colors, fonts, and other visual aspects of a web page.
+    </p>
+
+    <h3>Timeline of CSS Evolution</h3>
+    <ul>
+        <li><strong>1994: Concept of Stylesheets</strong> - The concept of separating content from design in web development was first introduced by Håkon Wium Lie, who proposed the idea of a "style sheet" for web pages.</li>
+        <li><strong>1996: CSS1 (CSS Level 1)</strong> - The first official version of CSS, CSS1, was released by the World Wide Web Consortium (W3C). It provided basic styling capabilities like fonts, colors, and alignment. However, its support across browsers was limited, and it was not widely adopted at first.</li>
+        <li><strong>1998: CSS2 (CSS Level 2)</strong> - CSS2 introduced more advanced features, such as positioning, media queries, and z-index. It allowed developers to create more complex layouts and was a significant step forward in the evolution of web design. It also laid the foundation for mobile-friendly designs with the introduction of media queries.</li>
+        <li><strong>2005-2009: CSS3 (CSS Level 3)</strong> - CSS3 brought significant improvements, including support for animation, transitions, box shadows, gradients, and rounded corners. CSS3 was modularized into different "modules," allowing browsers to adopt specific features over time. It revolutionized the way designers could manipulate the visual appearance of web pages, without needing heavy graphics or JavaScript.</li>
+        <li><strong>2010s: Adoption of Flexbox and Grid Layout</strong> - Flexbox and CSS Grid were developed as new layout systems, addressing the shortcomings of traditional layout methods like floats and tables. These features provided greater control over layout, making responsive design much easier.</li>
+        <li><strong>2017-Present: CSS Grid and Responsive Design</strong> - The introduction of CSS Grid has made complex layouts more accessible. Along with Flexbox, CSS Grid offers powerful tools for creating responsive designs. Web standards continue to evolve, with new features such as custom properties (CSS variables), improved media queries, and the growing influence of CSS-in-JS for styling JavaScript applications.</li>
+    </ul>
+
+    <h3>Key Milestones in CSS Evolution</h3>
+    <ul>
+        <li><strong>Separation of Content and Presentation:</strong> One of the most important milestones in CSS history was the ability to separate content (HTML) from presentation (CSS). This allowed developers to focus on structure without worrying about visual appearance.</li>
+        <li><strong>Adoption of CSS2 and Browser Compatibility:</strong> As CSS2 became more widely supported, it enabled designers to create better layouts. However, cross-browser compatibility remained a challenge until the mid-2000s.</li>
+        <li><strong>Introduction of CSS3 and WebKit:</strong> CSS3’s arrival brought about widespread changes to web design, making it possible to achieve effects that were once only possible with JavaScript or Flash.</li>
+        <li><strong>Mobile-Friendly Web Design:</strong> The rise of smartphones led to the development of mobile-first design principles, with CSS media queries playing a pivotal role in making websites responsive to different screen sizes.</li>
+        <li><strong>CSS Grid and Flexbox:</strong> These two layout systems were game-changers for web design, providing developers with a more robust and intuitive way to handle complex layouts with minimal code.</li>
+    </ul>
+
+    <h3>Why CSS Evolution Matters</h3>
+    <ul>
+        <li><strong>Better User Experience:</strong> The evolution of CSS has enabled websites to be more visually appealing, interactive, and user-friendly. Designers now have greater control over aesthetics without compromising functionality.</li>
+        <li><strong>Cross-Browser Compatibility:</strong> Over time, browsers have improved their support for CSS, reducing the inconsistencies in rendering. Modern CSS features work seamlessly across browsers, making web development smoother.</li>
+        <li><strong>Responsive and Mobile-Friendly Design:</strong> CSS has adapted to the need for mobile-friendly websites, with features like media queries and responsive layouts enabling websites to look great on any device.</li>
+        <li><strong>Efficiency in Development:</strong> The advanced features in modern CSS, like CSS Grid and Flexbox, allow for faster and more efficient development of complex layouts, improving productivity for developers.</li>
+    </ul>
+
+    <h3>Conclusion</h3>
+    <p>
+        The history and evolution of CSS demonstrate how the language has grown from a simple stylesheet system to a powerful tool for creating complex, responsive, and visually stunning websites. With continued development, CSS is poised to remain at the heart of web design for years to come.
+    </p>
+</div>
+
+<!-- Setting Up Environment -->
+<div class="main" id="css-setup">
+    <h1>Setting Up CSS Environment</h1>
+
+    <h3>Definition</h3>
+    <p>
+        Setting up the CSS environment involves preparing your development tools and resources to effectively write, test, and deploy CSS styles for web projects. This includes selecting text editors, setting up a folder structure, linking CSS files to HTML documents, and optionally incorporating pre-processors or frameworks.
+    </p>
+
+    <h3>Steps to Set Up Your CSS Environment</h3>
+    <ul>
+        <li><strong>Choose a Text Editor:</strong> You need a reliable text editor to write and manage your CSS code. Popular choices include Visual Studio Code, Sublime Text, Atom, and Brackets. These editors often have features like syntax highlighting, auto-completion, and built-in version control.</li>
+        <li><strong>Create a Project Folder:</strong> Organize your files into a folder structure. Typically, you'll have an 'index.html' file and a separate 'css' folder where you place your CSS files. For example:
+            <pre>
+                /project-folder
+                    /index.html
+                    /css
+                        /style.css
+            </pre>
+        </li>
+        <li><strong>Linking CSS to HTML:</strong> After creating a CSS file, you must link it to your HTML document to apply the styles. This is done using the <code>&lt;link&gt;</code> tag in the <code>&lt;head&gt;</code> section of your HTML file:
+            <pre>
+                &lt;link rel="stylesheet" href="css/style.css"&gt;
+            </pre>
+        </li>
+        <li><strong>CSS Preprocessors (Optional):</strong> If you're working on a more complex project, you may want to use a CSS preprocessor like Sass or LESS. These tools allow you to write CSS more efficiently by using variables, functions, and mixins. You'll need to install them and set up a build tool like Gulp or Webpack to compile the code into standard CSS.</li>
+        <li><strong>CSS Frameworks (Optional):</strong> CSS frameworks like Bootstrap, Tailwind CSS, or Foundation can speed up development by providing pre-built styles, grids, and components. To use a framework, simply include its CSS file in your project, either by downloading it or linking to a CDN.</li>
+        <li><strong>Browser Compatibility:</strong> Ensure that your CSS works consistently across various browsers by using browser developer tools and cross-browser testing platforms like BrowserStack. This is crucial for ensuring that your styles render as intended on all devices.</li>
+    </ul>
+
+    <h3>Recommended Tools for CSS Development</h3>
+    <ul>
+        <li><strong>Text Editors:</strong> Visual Studio Code, Sublime Text, Atom, Brackets.</li>
+        <li><strong>CSS Preprocessors:</strong> Sass, LESS, Stylus.</li>
+        <li><strong>CSS Frameworks:</strong> Bootstrap, Tailwind CSS, Foundation.</li>
+        <li><strong>Version Control:</strong> Git for managing changes to your CSS codebase and collaborating with others.</li>
+        <li><strong>Browser Developer Tools:</strong> Chrome DevTools, Firefox Developer Tools for inspecting and debugging CSS live in the browser.</li>
+        <li><strong>Cross-Browser Testing Tools:</strong> BrowserStack, CrossBrowserTesting to check compatibility across various browsers and devices.</li>
+    </ul>
+
+    <h3>Why Proper Environment Setup Matters</h3>
+    <ul>
+        <li><strong>Efficiency:</strong> A well-organized development environment allows for faster and more efficient coding, enabling you to focus on writing great CSS rather than worrying about setup issues.</li>
+        <li><strong>Maintainability:</strong> Using a folder structure and linking CSS properly ensures that your project is easy to maintain, especially as it grows in complexity.</li>
+        <li><strong>Consistency:</strong> Linking to CSS frameworks and using preprocessors ensures consistency in design and behavior across all pages of a website, reducing the potential for errors.</li>
+        <li><strong>Browser Compatibility:</strong> Testing and ensuring your CSS works on different browsers and devices is critical to ensure a smooth user experience for all visitors.</li>
+    </ul>
+
+    <h3>Conclusion</h3>
+    <p>
+        Setting up a proper CSS development environment is crucial for writing efficient, maintainable, and cross-compatible styles. Whether you're working on a small personal project or a large-scale web application, ensuring your setup is organized and using the right tools will make your development process much smoother.
+    </p>
+</div>
+
+<!-- CSS Syntax -->
+<div class="main" id="css-syntax">
+    <h1>CSS Syntax</h1>
+
+    <h3>Definition</h3>
+    <p>
+        CSS syntax defines how to write CSS rules that control the appearance of HTML elements on a webpage. It consists of selectors, properties, and values. A basic CSS rule is made up of these components to apply styles to HTML elements.
+    </p>
+
+    <h3>Basic Structure of CSS</h3>
+    <p>
+        A CSS rule follows the structure of:
+        <pre>
+            selector {
+                property: value;
+            }
+        </pre>
+    </p>
+
+    <h3>Components of CSS Syntax</h3>
+    <ul>
+        <li><strong>Selector:</strong> The selector specifies which HTML element(s) you want to style. It could be a tag name, class, or ID. Example:
+            <pre>
+                h1 { color: red; }
+            </pre>
+            Here, <code>h1</code> is the selector that targets all <code>&lt;h1&gt;</code> elements.
+        </li>
+        <li><strong>Property:</strong> The property defines which style will be applied to the element. Properties include things like <code>color</code>, <code>font-size</code>, <code>margin</code>, etc. Example:
+            <pre>
+                h1 { color: red; }
+            </pre>
+            Here, <code>color</code> is the property.
+        </li>
+        <li><strong>Value:</strong> The value defines the setting for the property. It could be a color, measurement, or keyword. Example:
+            <pre>
+                h1 { color: red; }
+            </pre>
+            Here, <code>red</code> is the value assigned to the <code>color</code> property.
+        </li>
+    </ul>
+
+    <h3>Example of CSS Syntax</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        h1 {
+            color: red;
+            font-size: 24px;
+        }
+    </pre>
+
+    <h3>Multiple Properties in One Rule</h3>
+    <p>
+        You can define multiple properties for the same selector. Just separate each property-value pair with a semicolon.
+    </p>
+    <pre>
+        p {
+            color: blue;
+            font-size: 16px;
+            margin: 10px;
+        }
+    </pre>
+
+    <h3>CSS Rules for Classes and IDs</h3>
+    <ul>
+        <li><strong>Class Selector:</strong> A class selector targets elements with a specific class attribute. It is preceded by a dot (<code>.</code>). Example:
+            <pre>
+                .example {
+                    background-color: yellow;
+                }
+            </pre>
+        </li>
+        <li><strong>ID Selector:</strong> An ID selector targets an element with a specific ID. It is preceded by a hash (<code>#</code>). Example:
+            <pre>
+                #unique-element {
+                    font-weight: bold;
+                }
+            </pre>
+        </li>
+    </ul>
+
+    <h3>CSS Syntax Best Practices</h3>
+    <ul>
+        <li><strong>Keep Properties Consistent:</strong> Maintain consistent property formatting (e.g., using lowercase for properties like <code>font-size</code>, <code>border-radius</code>).</li>
+        <li><strong>Use Proper Indentation:</strong> Indentation helps in making your CSS code more readable and organized.</li>
+        <li><strong>Group Similar Rules:</strong> Group similar selectors together to maintain clarity and avoid repetition.</li>
+    </ul>
+
+    <h3>Conclusion</h3>
+    <p>
+        Understanding CSS syntax is fundamental to working with stylesheets. It enables you to define how HTML elements should be presented on a webpage. Once familiar with the basic structure of CSS, you can start styling elements to create visually appealing websites.
+    </p>
+</div>
+
+<!-- Selectors and Combinators -->
+<div class="main" id="selectors">
+    <h1>Selectors and Combinators</h1>
+
+    <h3>Definition</h3>
+    <p>
+        CSS selectors are patterns used to select and style HTML elements. They allow you to target specific elements or groups of elements on a webpage. Combinators, on the other hand, define the relationship between two or more selectors, helping to target elements based on their proximity or structure in the document.
+    </p>
+
+    <h3>Types of Selectors</h3>
+    <ul>
+        <li><strong>Universal Selector (<code>*</code>):</strong> Selects all elements on the page. Example:
+            <pre>
+                * {
+                    color: black;
+                }
+            </pre>
+        </li>
+        <li><strong>Type Selector (Element Selector):</strong> Selects all elements of a specific type. Example:
+            <pre>
+                h1 {
+                    font-size: 30px;
+                }
+            </pre>
+        </li>
+        <li><strong>Class Selector (<code>.</code>):</strong> Selects all elements with a specific class. Example:
+            <pre>
+                .highlight {
+                    background-color: yellow;
+                }
+            </pre>
+        </li>
+        <li><strong>ID Selector (<code>#</code>):</strong> Selects a single element with a specific ID. Example:
+            <pre>
+                #unique-element {
+                    color: red;
+                }
+            </pre>
+        </li>
+        <li><strong>Attribute Selector:</strong> Selects elements based on an attribute or attribute value. Example:
+            <pre>
+                a[href^="https"] {
+                    color: green;
+                }
+            </pre>
+        </li>
+    </ul>
+
+    <h3>Combinators in CSS</h3>
+    <p>
+        CSS combinators define the relationship between two or more selectors and allow you to select elements based on their position or proximity to other elements.
+    </p>
+    <ul>
+        <li><strong>Descendant Combinator (<code>space</code>):</strong> Selects all elements that are descendants of a specified element.
+            Example:
+            <pre>
+                div p {
+                    color: blue;
+                }
+            </pre>
+            This will select all <code>&lt;p&gt;</code> elements inside a <code>&lt;div&gt;</code> element.
+        </li>
+        <li><strong>Child Combinator (<code>&gt;</code>):</strong> Selects direct child elements of a specified element.
+            Example:
+            <pre>
+                div > p {
+                    color: red;
+                }
+            </pre>
+            This will select only <code>&lt;p&gt;</code> elements that are direct children of <code>&lt;div&gt;</code>.
+        </li>
+        <li><strong>Adjacent Sibling Combinator (<code>+</code>):</strong> Selects an element that is immediately preceded by a specified element.
+            Example:
+            <pre>
+                h1 + p {
+                    font-weight: bold;
+                }
+            </pre>
+            This will select the first <code>&lt;p&gt;</code> element that follows an <code>&lt;h1&gt;</code> element.
+        </li>
+        <li><strong>General Sibling Combinator (<code>~</code>):</strong> Selects all sibling elements that follow a specified element.
+            Example:
+            <pre>
+                h1 ~ p {
+                    color: orange;
+                }
+            </pre>
+            This will select all <code>&lt;p&gt;</code> elements that are siblings of an <code>&lt;h1&gt;</code> element.
+        </li>
+    </ul>
+
+    <h3>Example: Using Selectors and Combinators</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        div p {
+            color: purple;
+        }
+        .button {
+            background-color: blue;
+        }
+        #header {
+            font-size: 28px;
+        }
+    </pre>
+
+    <h3>Best Practices for Using Selectors</h3>
+    <ul>
+        <li><strong>Be Specific:</strong> Use specific selectors (like classes or IDs) to avoid unnecessary styling conflicts and improve maintainability.</li>
+        <li><strong>Avoid Overuse of Universal Selector:</strong> Using the universal selector (<code>*</code>) can slow down page rendering, especially on large pages.</li>
+        <li><strong>Use Classes Over IDs for Reusability:</strong> Prefer using classes for styling elements that need to be reused across the page or site.</li>
+        <li><strong>Leverage Combinators for Structure:</strong> Use combinators to select elements based on their relationships to one another, which can create cleaner, more maintainable code.</li>
+    </ul>
+
+    <h3>Conclusion</h3>
+    <p>
+        Understanding CSS selectors and combinators is essential for effectively targeting and styling HTML elements. By leveraging the power of different selectors and combinators, you can apply styles based on element types, classes, IDs, attributes, and even their relationships to other elements, creating more dynamic and flexible web pages.
+    </p>
+</div>
+
+<!-- Colors and Backgrounds -->
+<div class="main" id="colors">
+    <h1>Colors and Backgrounds</h1>
+
+    <h3>Definition</h3>
+    <p>
+        CSS provides several ways to define colors and apply them to elements. You can change the color of text, backgrounds, borders, and other elements on the page. Backgrounds can be solid colors, images, or gradients, offering a variety of visual options for web design.
+    </p>
+
+    <h3>Color Syntax</h3>
+    <p>
+        You can define colors in CSS using several methods:
+    </p>
+    <ul>
+        <li><strong>Named Colors:</strong> Use predefined color names like <code>red</code>, <code>blue</code>, <code>green</code>, etc.
+            <pre>
+                p {
+                    color: red;
+                }
+            </pre>
+        </li>
+        <li><strong>Hexadecimal Colors:</strong> A six-digit code that represents colors in RGB format. Example:
+            <pre>
+                p {
+                    color: #ff5733;
+                }
+            </pre>
+        </li>
+        <li><strong>RGB Colors:</strong> Use the <code>rgb()</code> function to define colors using the Red, Green, and Blue channels. Example:
+            <pre>
+                p {
+                    color: rgb(255, 87, 51);
+                }
+            </pre>
+        </li>
+        <li><strong>RGBA Colors:</strong> Same as RGB but includes an alpha (opacity) value. Example:
+            <pre>
+                p {
+                    color: rgba(255, 87, 51, 0.5);
+                }
+            </pre>
+        </li>
+        <li><strong>HSL Colors:</strong> Use the <code>hsl()</code> function to define colors with Hue, Saturation, and Lightness. Example:
+            <pre>
+                p {
+                    color: hsl(12, 100%, 60%);
+                }
+            </pre>
+        </li>
+        <li><strong>HSLA Colors:</strong> Same as HSL but includes an alpha (opacity) value. Example:
+            <pre>
+                p {
+                    color: hsla(12, 100%, 60%, 0.5);
+                }
+            </pre>
+        </li>
+    </ul>
+
+    <h3>Backgrounds in CSS</h3>
+    <p>
+        CSS allows you to set different types of backgrounds on HTML elements. These backgrounds can be solid colors, images, or gradients.
+    </p>
+    <ul>
+        <li><strong>Solid Color Background:</strong> You can set a solid color as a background using the <code>background-color</code> property. Example:
+            <pre>
+                div {
+                    background-color: lightblue;
+                }
+            </pre>
+        </li>
+        <li><strong>Image Background:</strong> You can use an image as the background with the <code>background-image</code> property. Example:
+            <pre>
+                div {
+                    background-image: url('background.jpg');
+                }
+            </pre>
+        </li>
+        <li><strong>Gradient Background:</strong> CSS allows you to create gradient backgrounds using the <code>linear-gradient()</code> or <code>radial-gradient()</code> functions. Example:
+            <pre>
+                div {
+                    background: linear-gradient(to right, red, yellow);
+                }
+            </pre>
+        </li>
+    </ul>
+
+    <h3>Shorthand for Backgrounds</h3>
+    <p>
+        You can combine multiple background properties into one shorthand rule to simplify your code. Example:
+        <pre>
+            div {
+                background: url('image.jpg') no-repeat center center / cover;
+            }
+        </pre>
+        This shorthand includes:
+        <ul>
+            <li>Background image</li>
+            <li>Background repeat (no-repeat)</li>
+            <li>Background position (center center)</li>
+            <li>Background size (cover)</li>
+        </ul>
+    </p>
+
+    <h3>Example: Using Colors and Backgrounds</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        div {
+            background-color: lightgray;
+            color: #333;
+        }
+
+        h2 {
+            color: rgb(12, 47, 74);
+        }
+
+        p {
+            background-image: url('pattern.png');
+            color: white;
+        }
+    </pre>
+
+    <h3>Best Practices for Colors and Backgrounds</h3>
+    <ul>
+        <li><strong>Ensure Contrast:</strong> Make sure that there is enough contrast between text and background colors to ensure readability.</li>
+        <li><strong>Use Colors Sparingly:</strong> Avoid overwhelming users with too many colors. Stick to a defined color palette for a more cohesive design.</li>
+        <li><strong>Optimize Background Images:</strong> Compress images to reduce file size and loading times. Also, use <code>background-size: cover;</code> to ensure images cover the area properly.</li>
+        <li><strong>Test for Accessibility:</strong> Ensure color choices meet accessibility standards for users with color blindness by using high-contrast color schemes or tools like <a href="https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=141#color-contrast">WCAG color contrast guidelines</a>.</li>
+    </ul>
+
+    <h3>Conclusion</h3>
+    <p>
+        Mastering colors and backgrounds in CSS is essential for creating visually appealing and functional web designs. By understanding different color notations and background properties, you can create flexible, responsive, and user-friendly designs.
+    </p>
+</div>
+
+<!-- Units and Measurements -->
+<div class="main" id="units">
+    <h1>Units and Measurements</h1>
+
+    <h3>Definition</h3>
+    <p>
+        In CSS, units are used to define the size of elements, margins, padding, and other properties that require measurement. These units can be classified into absolute and relative types, each with specific use cases and behaviors.
+    </p>
+
+    <h3>Absolute Units</h3>
+    <p>
+        Absolute units are fixed units of measurement that do not change regardless of the context in which they are used. They are most useful for print design and when the exact size of elements is necessary.
+    </p>
+    <ul>
+        <li><strong>px (Pixels):</strong> Represents a single pixel on the screen.
+            <pre>
+                div {
+                    width: 300px;
+                }
+            </pre>
+        </li>
+        <li><strong>in (Inches):</strong> Represents physical inches, used primarily for print styling.
+            <pre>
+                div {
+                    width: 2in;
+                }
+            </pre>
+        </li>
+        <li><strong>cm (Centimeters):</strong> Represents physical centimeters.
+            <pre>
+                div {
+                    width: 5cm;
+                }
+            </pre>
+        </li>
+        <li><strong>mm (Millimeters):</strong> Represents physical millimeters.
+            <pre>
+                div {
+                    width: 50mm;
+                }
+            </pre>
+        </li>
+        <li><strong>pt (Points):</strong> Equal to 1/72 of an inch, used mainly in print.
+            <pre>
+                div {
+                    font-size: 12pt;
+                }
+            </pre>
+        </li>
+        <li><strong>pc (Picas):</strong> Equal to 12 points.
+            <pre>
+                div {
+                    font-size: 1pc;
+                }
+            </pre>
+        </li>
+    </ul>
+
+    <h3>Relative Units</h3>
+    <p>
+        Relative units adjust based on other factors like screen size, parent element size, or default font size. They are highly flexible and ideal for responsive design.
+    </p>
+    <ul>
+        <li><strong>% (Percentage):</strong> Represents a fraction of the parent element's size.
+            <pre>
+                div {
+                    width: 50%;
+                }
+            </pre>
+        </li>
+        <li><strong>em:</strong> Represents a relative unit based on the font-size of the parent element.
+            <pre>
+                div {
+                    font-size: 2em; /* 2 times the parent font size */
+                }
+            </pre>
+        </li>
+        <li><strong>rem (Root em):</strong> Similar to <code>em</code>, but based on the font-size of the root element (<code>html</code>).
+            <pre>
+                div {
+                    font-size: 1.5rem; /* 1.5 times the root font size */
+                }
+            </pre>
+        </li>
+        <li><strong>vw (Viewport Width):</strong> Represents a percentage of the viewport width. 1vw equals 1% of the width of the viewport.
+            <pre>
+                div {
+                    width: 50vw; /* 50% of the viewport width */
+                }
+            </pre>
+        </li>
+        <li><strong>vh (Viewport Height):</strong> Represents a percentage of the viewport height. 1vh equals 1% of the height of the viewport.
+            <pre>
+                div {
+                    height: 50vh; /* 50% of the viewport height */
+                }
+            </pre>
+        </li>
+        <li><strong>ch:</strong> Represents the width of the "0" character in the current font.
+            <pre>
+                div {
+                    width: 20ch; /* Width of 20 '0' characters */
+                }
+            </pre>
+        </li>
+        <li><strong>vmin and vmax:</strong> Represents a percentage of the viewport's smaller (vmin) or larger (vmax) dimension (width or height).
+            <pre>
+                div {
+                    width: 50vmin; /* 50% of the smaller dimension */
+                }
+            </pre>
+        </li>
+    </ul>
+
+    <h3>Choosing the Right Unit</h3>
+    <p>
+        The choice between absolute and relative units depends on the context and purpose of the design:
+    </p>
+    <ul>
+        <li><strong>Use absolute units</strong> for fixed-size elements like borders or when you want to preserve an exact physical size in print media.</li>
+        <li><strong>Use relative units</strong> for flexible layouts, typography, and responsive designs that adapt to different screen sizes and user preferences.</li>
+    </ul>
+
+    <h3>Example: Using Different Units</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        div {
+            width: 50%; /* Relative unit */
+            font-size: 1.5em; /* Relative to parent */
+            padding: 2rem; /* Based on root font size */
+        }
+
+        header {
+            height: 10vh; /* Relative to viewport height */
+        }
+    </pre>
+
+    <h3>Best Practices</h3>
+    <ul>
+        <li><strong>Use rem and em for scalable and responsive typography.</strong> These units adjust to user preferences (like default font size) and help create adaptable layouts.</li>
+        <li><strong>Use percentages for flexible widths and layouts.</strong> They allow elements to adjust based on the size of their parent containers.</li>
+        <li><strong>Limit the use of absolute units</strong> like px when building responsive designs, as they don't scale well on different screen sizes.</li>
+        <li><strong>Test responsiveness</strong> with relative units to ensure content adapts well to various devices and screen resolutions.</li>
+    </ul>
+</div>
+
+<!-- Text Properties -->
+<div class="main" id="text-properties">
+    <h1>Text Properties</h1>
+
+    <h3>Definition</h3>
+    <p>
+        Text properties in CSS are used to define how the text appears on a web page. These properties control aspects like font, size, color, spacing, and decoration, allowing web designers to make the text more visually appealing and readable.
+    </p>
+
+    <h3>Key Text Properties</h3>
+    <ul>
+        <li><strong>font-family:</strong> Specifies the font for the text. It can accept multiple font names as fallbacks.
+            <pre>
+                p {
+                    font-family: 'Arial', sans-serif;
+                }
+            </pre>
+        </li>
+        <li><strong>font-size:</strong> Defines the size of the text. It can be set using units like px, em, rem, etc.
+            <pre>
+                p {
+                    font-size: 16px;
+                }
+            </pre>
+        </li>
+        <li><strong>font-weight:</strong> Sets the thickness of the font. Values can be normal, bold, or numeric values like 100, 400, 700, etc.
+            <pre>
+                p {
+                    font-weight: bold;
+                }
+            </pre>
+        </li>
+        <li><strong>font-style:</strong> Defines whether the text is italic, oblique, or normal.
+            <pre>
+                p {
+                    font-style: italic;
+                }
+            </pre>
+        </li>
+        <li><strong>text-transform:</strong> Controls the capitalization of the text. It can be set to uppercase, lowercase, or capitalize.
+            <pre>
+                p {
+                    text-transform: uppercase;
+                }
+            </pre>
+        </li>
+        <li><strong>letter-spacing:</strong> Defines the spacing between characters in the text.
+            <pre>
+                p {
+                    letter-spacing: 2px;
+                }
+            </pre>
+        </li>
+        <li><strong>word-spacing:</strong> Defines the spacing between words in the text.
+            <pre>
+                p {
+                    word-spacing: 5px;
+                }
+            </pre>
+        </li>
+        <li><strong>text-indent:</strong> Adds indentation to the first line of a text block.
+            <pre>
+                p {
+                    text-indent: 30px;
+                }
+            </pre>
+        </li>
+        <li><strong>text-decoration:</strong> Applies decoration to the text, such as underline, overline, line-through, or none.
+            <pre>
+                p {
+                    text-decoration: underline;
+                }
+            </pre>
+        </li>
+        <li><strong>text-shadow:</strong> Adds a shadow effect to the text. It can accept values like horizontal and vertical offset, blur radius, and color.
+            <pre>
+                p {
+                    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+                }
+            </pre>
+        </li>
+        <li><strong>color:</strong> Sets the color of the text. It can be a named color, hex value, RGB, RGBA, or HSL.
+            <pre>
+                p {
+                    color: #333;
+                }
+            </pre>
+        </li>
+    </ul>
+
+    <h3>Example: Using Text Properties</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        p {
+            font-family: 'Arial', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: capitalize;
+            letter-spacing: 1px;
+            word-spacing: 3px;
+            color: #333;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+    </pre>
+
+    <h3>Best Practices</h3>
+    <ul>
+        <li><strong>Maintain readability:</strong> Choose legible fonts and avoid using too many text styles at once.</li>
+        <li><strong>Use contrast:</strong> Ensure high contrast between text and background colors to improve readability.</li>
+        <li><strong>Limit text decoration:</strong> Overuse of underlines or strikes can distract from the message. Use them sparingly.</li>
+        <li><strong>Consider accessibility:</strong> Make sure text is easy to read for people with visual impairments by adjusting font size, contrast, and spacing.</li>
+    </ul>
+</div>
+
+<!-- Font Styles -->
+<div class="main" id="font-styles">
+    <h1>Font Styles</h1>
+
+    <h3>Definition</h3>
+    <p>
+        Font styles in CSS control the appearance of text by changing the font family, style, weight, and variant. This allows web designers to select appropriate fonts that enhance readability and the overall design of a website.
+    </p>
+
+    <h3>Key Font Style Properties</h3>
+    <ul>
+        <li><strong>font-family:</strong> Specifies the typeface or font family for the text. It's best to list multiple fonts to ensure fallback options.
+            <pre>
+                p {
+                    font-family: 'Georgia', serif;
+                }
+            </pre>
+        </li>
+        <li><strong>font-style:</strong> Defines the style of the font, such as normal, italic, or oblique.
+            <pre>
+                p {
+                    font-style: italic;
+                }
+            </pre>
+        </li>
+        <li><strong>font-weight:</strong> Controls the thickness of the font. Common values are normal, bold, or numeric values such as 100, 400, 700.
+            <pre>
+                p {
+                    font-weight: bold;
+                }
+            </pre>
+        </li>
+        <li><strong>font-variant:</strong> Allows the use of alternative letterforms. The most common use is for small caps.
+            <pre>
+                p {
+                    font-variant: small-caps;
+                }
+            </pre>
+        </li>
+        <li><strong>font-size:</strong> Specifies the size of the font. It can be defined in px, em, rem, %, or other units.
+            <pre>
+                p {
+                    font-size: 16px;
+                }
+            </pre>
+        </li>
+        <li><strong>line-height:</strong> Adjusts the space between lines of text, improving readability.
+            <pre>
+                p {
+                    line-height: 1.5;
+                }
+            </pre>
+        </li>
+    </ul>
+
+    <h3>Example: Using Font Styles</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        p {
+            font-family: 'Verdana', sans-serif;
+            font-style: italic;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+    </pre>
+
+    <h3>Best Practices</h3>
+    <ul>
+        <li><strong>Font Pairing:</strong> Choose complementary fonts for headings and body text for a cohesive design.</li>
+        <li><strong>Limit Font Styles:</strong> Too many different font styles can clutter the design. Stick to a few key styles.</li>
+        <li><strong>Ensure Accessibility:</strong> Make sure that the font is readable for all users, including those with visual impairments.</li>
+        <li><strong>Web-Safe Fonts:</strong> Choose fonts that are commonly supported across all devices and browsers.</li>
+    </ul>
+</div>
+
+<!-- Line Height and Spacing -->
+<div class="main" id="line-height">
+    <h1>Line Height and Spacing</h1>
+
+    <h3>Definition</h3>
+    <p>
+        Line height and spacing in CSS are used to adjust the vertical spacing between lines of text, as well as the spacing between paragraphs, words, and characters. These properties improve readability and provide a more aesthetically pleasing layout.
+    </p>
+
+    <h3>Key Properties</h3>
+    <ul>
+        <li><strong>line-height:</strong> Controls the amount of space between lines of text. A higher value increases the line spacing.
+            <pre>
+                p {
+                    line-height: 1.6;
+                }
+            </pre>
+        </li>
+        <li><strong>letter-spacing:</strong> Adjusts the spacing between characters in text. Increasing the value spreads the letters farther apart.
+            <pre>
+                p {
+                    letter-spacing: 2px;
+                }
+            </pre>
+        </li>
+        <li><strong>word-spacing:</strong> Modifies the space between words in a block of text.
+            <pre>
+                p {
+                    word-spacing: 5px;
+                }
+            </pre>
+        </li>
+        <li><strong>margin:</strong> Defines the space outside of an element. This can be used to add space between paragraphs or other blocks of text.
+            <pre>
+                p {
+                    margin-bottom: 20px;
+                }
+            </pre>
+        </li>
+        <li><strong>padding:</strong> Adds space inside the border of an element, between the content and the element's border.
+            <pre>
+                p {
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
+            </pre>
+        </li>
+    </ul>
+
+    <h3>Example: Adjusting Line Height and Spacing</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        p {
+            line-height: 1.8;
+            letter-spacing: 1px;
+            word-spacing: 3px;
+            margin-bottom: 15px;
+            padding-top: 5px;
+        }
+    </pre>
+
+    <h3>Best Practices</h3>
+    <ul>
+        <li><strong>Maintain Readability:</strong> Ensure that text isn't too cramped by adjusting line height and spacing for better clarity.</li>
+        <li><strong>Consistency:</strong> Keep line height and spacing consistent across similar text elements for a uniform design.</li>
+        <li><strong>Adjust for Mobile:</strong> Be mindful of how line height and spacing appear on smaller screens and adjust them for readability.</li>
+    </ul>
+</div>
+
+<!-- Text Alignment -->
+<div class="main" id="text-alignment">
+    <h1>Text Alignment</h1>
+
+    <h3>Definition</h3>
+    <p>
+        Text alignment in CSS determines the positioning of text within a container or element. It controls how text is aligned horizontally (left, center, right) or vertically (top, middle, bottom).
+    </p>
+
+    <h3>Key Text Alignment Properties</h3>
+    <ul>
+        <li><strong>text-align:</strong> Specifies the horizontal alignment of text. Common values include left, center, right, and justify.
+            <pre>
+                p {
+                    text-align: center;
+                }
+            </pre>
+        </li>
+        <li><strong>vertical-align:</strong> Aligns inline-level content (like text) vertically within its container. It can be used with elements like images and inline-blocks.
+            <pre>
+                img {
+                    vertical-align: middle;
+                }
+            </pre>
+        </li>
+        <li><strong>text-indent:</strong> Adds space before the first line of text in a paragraph. This is commonly used for indentation in paragraphs.
+            <pre>
+                p {
+                    text-indent: 20px;
+                }
+            </pre>
+        </li>
+        <li><strong>text-transform:</strong> Controls the capitalization of text. It allows text to be displayed as uppercase, lowercase, or capitalize the first letter of each word.
+            <pre>
+                p {
+                    text-transform: uppercase;
+                }
+            </pre>
+        </li>
+    </ul>
+
+    <h3>Example: Using Text Alignment</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        p {
+            text-align: justify;
+            text-indent: 30px;
+            vertical-align: top;
+        }
+    </pre>
+
+    <h3>Best Practices</h3>
+    <ul>
+        <li><strong>Readability:</strong> Ensure that text alignment enhances readability. Left alignment is often best for body text.</li>
+        <li><strong>Use Justify for Paragraphs:</strong> Justifying text in paragraphs can create a clean, aligned look, but be cautious of uneven spacing.</li>
+        <li><strong>Avoid Overusing Centering:</strong> While centering headings or logos is common, overuse of centered text can decrease readability in body text.</li>
+    </ul>
+</div>
+
+<!-- CSS Box Model -->
+<div class="main" id="box-model">
+    <h1>CSS Box Model</h1>
+
+    <h3>Definition</h3>
+    <p>
+        The CSS Box Model is a fundamental concept for layout design in CSS. It defines the structure of elements on a web page, encompassing content, padding, border, and margin. Understanding the box model is crucial for controlling spacing, sizing, and alignment of elements.
+    </p>
+
+    <h3>Box Model Components</h3>
+    <ul>
+        <li><strong>Content:</strong> The actual content of the element, such as text or images. Its size is defined by the width and height properties.
+            <pre>
+                div {
+                    width: 200px;
+                    height: 100px;
+                }
+            </pre>
+        </li>
+        <li><strong>Padding:</strong> Space between the content and the border. Padding is added inside the element.
+            <pre>
+                div {
+                    padding: 20px;
+                }
+            </pre>
+        </li>
+        <li><strong>Border:</strong> The line that surrounds the padding (if any). Borders can be styled with different widths, colors, and types (solid, dotted, dashed).
+            <pre>
+                div {
+                    border: 2px solid #000;
+                }
+            </pre>
+        </li>
+        <li><strong>Margin:</strong> Space outside the border, separating the element from other elements. Margins create space between elements.
+            <pre>
+                div {
+                    margin: 10px;
+                }
+            </pre>
+        </li>
+    </ul>
+
+    <h3>Box Model Visualization</h3>
+    <p>
+        The box model is typically visualized as:
+        <br>
+        <strong>Content → Padding → Border → Margin</strong>
+    </p>
+
+    <h3>Example: Using the Box Model</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        div {
+            width: 300px;
+            height: 150px;
+            padding: 20px;
+            border: 5px solid #333;
+            margin: 30px;
+        }
+    </pre>
+
+    <h3>Best Practices</h3>
+    <ul>
+        <li><strong>Be Mindful of Box-Sizing:</strong> Use the <code>box-sizing</code> property to control how the width and height are calculated. The default value of <code>content-box</code> includes padding and border in the element's width and height, but you can set it to <code>border-box</code> to include padding and border in the specified size.</li>
+        <li><strong>Use Margin and Padding for Spacing:</strong> Avoid using <code>margin</code> and <code>padding</code> inconsistently. Consistent spacing leads to a more predictable layout.</li>
+        <li><strong>Use Borders Wisely:</strong> Borders can visually separate content, but too many can make a page look cluttered. Use them sparingly.</li>
+    </ul>
+</div>
+
+<!-- Margin and Padding -->
+<div class="main" id="margin-padding">
+    <h1>Margin and Padding</h1>
+
+    <h3>Definition</h3>
+    <p>
+        Margin and padding are fundamental CSS properties used to create space around elements. While they both add space, they do so in different ways. Padding is space inside the element, between the content and the border, while margin is space outside the border, separating the element from others.
+    </p>
+
+    <h3>Margin</h3>
+    <ul>
+        <li><strong>Margin:</strong> Adds space outside an element, creating distance between it and other elements. Margins can be set individually for each side of an element (top, right, bottom, left) or as a shorthand for all sides.
+            <pre>
+                div {
+                    margin: 20px;
+                }
+            </pre>
+        </li>
+        <li><strong>Shorthand Margin:</strong> You can specify values for top, right, bottom, and left margins in a single declaration.
+            <pre>
+                div {
+                    margin: 10px 20px 30px 40px;
+                }
+            </pre>
+            <p>This represents <code>margin-top</code>, <code>margin-right</code>, <code>margin-bottom</code>, and <code>margin-left</code> in that order.</p>
+        </li>
+    </ul>
+
+    <h3>Padding</h3>
+    <ul>
+        <li><strong>Padding:</strong> Creates space inside the element, between the content and its border. Like margin, padding can be set for each side or as shorthand.
+            <pre>
+                div {
+                    padding: 10px;
+                }
+            </pre>
+        </li>
+        <li><strong>Shorthand Padding:</strong> You can define padding for top, right, bottom, and left sides in a single declaration.
+            <pre>
+                div {
+                    padding: 5px 10px 15px 20px;
+                }
+            </pre>
+            <p>This represents <code>padding-top</code>, <code>padding-right</code>, <code>padding-bottom</code>, and <code>padding-left</code> in that order.</p>
+        </li>
+    </ul>
+
+    <h3>Example: Using Margin and Padding</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        div {
+            margin: 20px 30px;
+            padding: 10px 15px;
+        }
+    </pre>
+
+    <h3>Best Practices</h3>
+    <ul>
+        <li><strong>Use Consistent Spacing:</strong> Maintain uniform margin and padding across similar elements for a clean design.</li>
+        <li><strong>Avoid Overuse of Margin:</strong> While margin is useful for separating elements, excessive use can cause layout problems. Use only as needed for spacing.</li>
+        <li><strong>Responsive Design:</strong> Adjust margin and padding using media queries for better spacing across different screen sizes.</li>
+    </ul>
+</div>
+
+<!-- Borders and Outline -->
+<div class="main" id="border">
+    <h1>Borders and Outline</h1>
+
+    <h3>Definition</h3>
+    <p>
+        Borders and outlines in CSS are used to visually define the edges of an element. Borders are part of the element's box model and affect the layout of surrounding elements, while outlines do not affect the layout and are drawn outside the element's border.
+    </p>
+
+    <h3>Borders</h3>
+    <ul>
+        <li><strong>border:</strong> The border property is shorthand for setting the width, style, and color of an element's border.
+            <pre>
+                div {
+                    border: 2px solid #000;
+                }
+            </pre>
+        </li>
+        <li><strong>border-width:</strong> Defines the width of the border. You can set it to values like thin, medium, thick, or specific measurements in px, em, etc.
+            <pre>
+                div {
+                    border-width: 5px;
+                }
+            </pre>
+        </li>
+        <li><strong>border-style:</strong> Specifies the style of the border, such as solid, dashed, dotted, double, etc.
+            <pre>
+                div {
+                    border-style: dashed;
+                }
+            </pre>
+        </li>
+        <li><strong>border-color:</strong> Sets the color of the border. It can accept color names, hex values, RGB, or RGBA.
+            <pre>
+                div {
+                    border-color: #ff0000;
+                }
+            </pre>
+        </li>
+    </ul>
+
+    <h3>Outline</h3>
+    <ul>
+        <li><strong>outline:</strong> The outline property is similar to the border property but is drawn outside the element's border and does not take up space in the layout.
+            <pre>
+                div {
+                    outline: 3px solid #00f;
+                }
+            </pre>
+        </li>
+        <li><strong>outline-style:</strong> Defines the style of the outline, similar to border-style, including values like solid, dashed, and dotted.
+            <pre>
+                div {
+                    outline-style: dotted;
+                }
+            </pre>
+        </li>
+        <li><strong>outline-width:</strong> Specifies the thickness of the outline.
+            <pre>
+                div {
+                    outline-width: thick;
+                }
+            </pre>
+        </li>
+        <li><strong>outline-color:</strong> Defines the color of the outline, similar to border-color.
+            <pre>
+                div {
+                    outline-color: #00f;
+                }
+            </pre>
+        </li>
+    </ul>
+
+    <h3>Example: Using Borders and Outline</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        div {
+            border: 2px solid #000;
+            border-radius: 8px;
+            outline: 3px dotted #00f;
+        }
+    </pre>
+
+    <h3>Best Practices</h3>
+    <ul>
+        <li><strong>Border Radius:</strong> Use <code>border-radius</code> for rounded corners for a more modern look.</li>
+        <li><strong>Use Borders Sparingly:</strong> Avoid cluttering the layout with too many borders. Use them only to enhance the focus on specific elements.</li>
+        <li><strong>Outlines for Accessibility:</strong> Use outlines to highlight interactive elements like buttons and links, especially for keyboard navigation.</li>
+    </ul>
+</div>
+
+<!-- Display Property -->
+<div class="main" id="display">
+    <h1>Display Property</h1>
+
+    <h3>Definition</h3>
+    <p>
+        The <strong>display</strong> property in CSS specifies the display behavior of an element. It determines how an element is displayed in the layout and how it interacts with other elements. This property is crucial for layout control and can be used to create flexible, responsive designs.
+    </p>
+
+    <h3>Common Display Values</h3>
+    <ul>
+        <li><strong>block:</strong> The element takes up the full width of its parent container, with a line break before and after it. Examples: <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>.
+            <pre>
+                div {
+                    display: block;
+                }
+            </pre>
+        </li>
+        <li><strong>inline:</strong> The element takes up only as much width as its content, and does not cause a line break before or after it. Examples: <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>.
+            <pre>
+                span {
+                    display: inline;
+                }
+            </pre>
+        </li>
+        <li><strong>inline-block:</strong> Combines the characteristics of both inline and block. The element behaves like an inline element but allows setting width and height.
+            <pre>
+                div {
+                    display: inline-block;
+                }
+            </pre>
+        </li>
+        <li><strong>none:</strong> The element is removed from the layout flow and will not be displayed. It is not rendered and does not take up any space.
+            <pre>
+                div {
+                    display: none;
+                }
+            </pre>
+        </li>
+        <li><strong>flex:</strong> The element becomes a flex container, and its children can be arranged in flexible layouts.
+            <pre>
+                div {
+                    display: flex;
+                }
+            </pre>
+        </li>
+        <li><strong>grid:</strong> The element becomes a grid container, allowing the layout of its children in a grid-based system.
+            <pre>
+                div {
+                    display: grid;
+                }
+            </pre>
+        </li>
+    </ul>
+
+    <h3>Example: Using Display Property</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        div {
+            display: inline-block;
+            width: 200px;
+            height: 100px;
+            background-color: #f0f0f0;
+        }
+    </pre>
+
+    <h3>Best Practices</h3>
+    <ul>
+        <li><strong>Use Flexbox for Layouts:</strong> Flexbox offers a flexible way to arrange items in a container, making it ideal for building responsive layouts.</li>
+        <li><strong>Avoid Display: None:</strong> While <code>display: none;</code> is useful for hiding elements, it can lead to accessibility and SEO issues. Use it cautiously.</li>
+        <li><strong>Grid for Complex Layouts:</strong> The <code>grid</code> display value is best for creating complex layouts with rows and columns. Consider using it for structured page layouts.</li>
+    </ul>
+</div>
+
+<!-- Positioning -->
+<div class="main" id="positioning">
+    <h1>Positioning</h1>
+
+    <h3>Definition</h3>
+    <p>
+        The <strong>positioning</strong> property in CSS specifies how an element is positioned within its parent container or the entire page. The value of the positioning property defines the positioning method and determines how the element interacts with the layout.
+    </p>
+
+    <h3>Positioning Types</h3>
+    <ul>
+        <li><strong>static:</strong> This is the default positioning for all elements. Elements are positioned based on the normal document flow.
+            <pre>
+                div {
+                    position: static;
+                }
+            </pre>
+        </li>
+        <li><strong>relative:</strong> The element is positioned relative to its normal position. Using <code>top</code>, <code>left</code>, <code>right</code>, and <code>bottom</code> properties will move the element from its original position.
+            <pre>
+                div {
+                    position: relative;
+                    top: 20px;
+                    left: 30px;
+                }
+            </pre>
+        </li>
+        <li><strong>absolute:</strong> The element is positioned relative to the nearest positioned ancestor (an element with a position other than static). If no positioned ancestor exists, it is positioned relative to the initial containing block (usually the viewport).
+            <pre>
+                div {
+                    position: absolute;
+                    top: 50px;
+                    left: 50px;
+                }
+            </pre>
+        </li>
+        <li><strong>fixed:</strong> The element is positioned relative to the browser window, remaining fixed in place even when the page is scrolled.
+            <pre>
+                div {
+                    position: fixed;
+                    top: 0;
+                    right: 0;
+                }
+            </pre>
+        </li>
+        <li><strong>sticky:</strong> The element is treated as relative until it reaches a defined position in the viewport, at which point it becomes fixed.
+            <pre>
+                div {
+                    position: sticky;
+                    top: 0;
+                }
+            </pre>
+        </li>
+    </ul>
+
+    <h3>Example: Using Positioning</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        div {
+            position: absolute;
+            top: 100px;
+            left: 50px;
+            width: 200px;
+            height: 100px;
+            background-color: #f0f0f0;
+        }
+    </pre>
+
+    <h3>Best Practices</h3>
+    <ul>
+        <li><strong>Relative Positioning for Adjustments:</strong> Use <code>position: relative</code> when you want to adjust an element’s position without affecting the layout flow of other elements.</li>
+        <li><strong>Fixed Positioning for Persistent Elements:</strong> Use <code>position: fixed</code> for elements like sticky headers or navigation bars that should remain visible even when scrolling.</li>
+        <li><strong>Avoid Overuse of Absolute Positioning:</strong> Use <code>position: absolute</code> carefully as it takes elements out of the normal document flow, which can lead to layout issues.</li>
+    </ul>
+</div>
+
+<!-- Flexbox -->
+<div class="main" id="flexbox">
+    <h1>Flexbox</h1>
+
+    <h3>Definition</h3>
+    <p>
+        <strong>Flexbox</strong> (Flexible Box Layout) is a CSS layout module designed to distribute space along a single axis (either horizontally or vertically). It makes creating responsive layouts easier and more efficient. Flexbox allows elements within a container to dynamically adjust their size and positioning, providing more control than traditional layout methods.
+    </p>
+
+    <h3>Key Properties of Flexbox</h3>
+    <ul>
+        <li><strong>display: flex;</strong> This property is applied to the container element. It enables flexbox on the container and makes the child elements (flex items) flexible.
+            <pre>
+                .container {
+                    display: flex;
+                }
+            </pre>
+        </li>
+        <li><strong>flex-direction:</strong> Defines the direction of the flex container’s main axis. The default is row (left to right).
+            <ul>
+                <li><strong>row:</strong> Items are placed horizontally (default).</li>
+                <li><strong>column:</strong> Items are placed vertically.</li>
+                <li><strong>row-reverse:</strong> Items are placed horizontally but in reverse order.</li>
+                <li><strong>column-reverse:</strong> Items are placed vertically but in reverse order.</li>
+            </ul>
+            <pre>
+                .container {
+                    flex-direction: row;
+                }
+            </pre>
+        </li>
+        <li><strong>justify-content:</strong> Aligns flex items along the main axis (horizontally or vertically, depending on <code>flex-direction</code>).
+            <ul>
+                <li><strong>flex-start:</strong> Aligns items at the beginning of the container.</li>
+                <li><strong>center:</strong> Aligns items at the center of the container.</li>
+                <li><strong>flex-end:</strong> Aligns items at the end of the container.</li>
+                <li><strong>space-between:</strong> Distributes items evenly with the first item at the start and the last item at the end.</li>
+                <li><strong>space-around:</strong> Distributes items evenly with equal space around them.</li>
+                <li><strong>space-evenly:</strong> Distributes items with equal space between them, including before the first and after the last item.</li>
+            </ul>
+            <pre>
+                .container {
+                    justify-content: center;
+                }
+            </pre>
+        </li>
+        <li><strong>align-items:</strong> Aligns flex items along the cross axis (perpendicular to the main axis).
+            <ul>
+                <li><strong>stretch:</strong> Stretches items to fill the container.</li>
+                <li><strong>flex-start:</strong> Aligns items at the start of the cross axis.</li>
+                <li><strong>flex-end:</strong> Aligns items at the end of the cross axis.</li>
+                <li><strong>center:</strong> Aligns items at the center of the cross axis.</li>
+                <li><strong>baseline:</strong> Aligns items along their baseline.</li>
+            </ul>
+            <pre>
+                .container {
+                    align-items: center;
+                }
+            </pre>
+        </li>
+        <li><strong>flex-wrap:</strong> Controls whether flex items should wrap to the next line if there isn’t enough space.
+            <ul>
+                <li><strong>nowrap:</strong> All items are on one line (default).</li>
+                <li><strong>wrap:</strong> Items will wrap onto the next line if necessary.</li>
+                <li><strong>wrap-reverse:</strong> Items will wrap in the reverse order.</li>
+            </ul>
+            <pre>
+                .container {
+                    flex-wrap: wrap;
+                }
+            </pre>
+        </li>
+    </ul>
+
+    <h3>Example: Flexbox Layout</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </pre>
+
+    <h3>Best Practices</h3>
+    <ul>
+        <li><strong>Use Flexbox for One-Dimensional Layouts:</strong> Flexbox works best when arranging items in a single row or column. For two-dimensional layouts, consider using CSS Grid.</li>
+        <li><strong>Combine with Media Queries:</strong> Flexbox works well with media queries to create responsive layouts that adjust based on screen size.</li>
+        <li><strong>Use Flexbox for Vertical and Horizontal Alignment:</strong> Flexbox simplifies aligning items both vertically and horizontally within a container.</li>
+    </ul>
+</div>
+
+<!-- CSS Grid -->
+<div class="main" id="grid">
+    <h1>CSS Grid</h1>
+
+    <h3>Definition</h3>
+    <p>
+        <strong>CSS Grid Layout</strong> is a two-dimensional layout system for the web. It allows you to design complex web layouts with rows and columns, providing more flexibility and control than other layout methods like Flexbox. CSS Grid makes it easy to align items and create responsive layouts that adapt to different screen sizes.
+    </p>
+
+    <h3>Key Properties of CSS Grid</h3>
+    <ul>
+        <li><strong>display: grid;</strong> This property defines an element as a grid container and enables the grid layout for its children.
+            <pre>
+                .container {
+                    display: grid;
+                }
+            </pre>
+        </li>
+        <li><strong>grid-template-columns:</strong> Defines the number and size of columns in the grid.
+            <pre>
+                .container {
+                    grid-template-columns: 200px 1fr 200px;
+                }
+            </pre>
+        </li>
+        <li><strong>grid-template-rows:</strong> Defines the number and size of rows in the grid.
+            <pre>
+                .container {
+                    grid-template-rows: 100px auto 100px;
+                }
+            </pre>
+        </li>
+        <li><strong>grid-gap:</strong> Defines the space between grid items (both rows and columns).
+            <pre>
+                .container {
+                    grid-gap: 10px;
+                }
+            </pre>
+        </li>
+        <li><strong>grid-template-areas:</strong> Defines named grid areas for the items within the grid.
+            <pre>
+                .container {
+                    grid-template-areas:
+                        "header header header"
+                        "main main sidebar"
+                        "footer footer footer";
+                }
+            </pre>
+        </li>
+    </ul>
+
+    <h3>Grid Items</h3>
+    <ul>
+        <li><strong>grid-column:</strong> Specifies where the item starts and ends on the horizontal axis.
+            <pre>
+                .item {
+                    grid-column: 1 / 3;
+                }
+            </pre>
+        </li>
+        <li><strong>grid-row:</strong> Specifies where the item starts and ends on the vertical axis.
+            <pre>
+                .item {
+                    grid-row: 1 / 2;
+                }
+            </pre>
+        </li>
+        <li><strong>align-self:</strong> Aligns a grid item on the cross axis (vertical if the grid is in rows, horizontal if in columns).
+            <pre>
+                .item {
+                    align-self: center;
+                }
+            </pre>
+        </li>
+        <li><strong>justify-self:</strong> Aligns a grid item on the main axis (horizontal if the grid is in rows, vertical if in columns).
+            <pre>
+                .item {
+                    justify-self: center;
+                }
+            </pre>
+        </li>
+    </ul>
+
+    <h3>Example: Simple CSS Grid Layout</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: auto;
+            grid-gap: 20px;
+        }
+        .header {
+            grid-column: 1 / 3;
+        }
+        .sidebar {
+            grid-column: 1;
+        }
+        .main-content {
+            grid-column: 2;
+        }
+        .footer {
+            grid-column: 1 / 3;
+        }
+    </pre>
+
+    <h3>Best Practices</h3>
+    <ul>
+        <li><strong>Use Grid for Two-Dimensional Layouts:</strong> Grid is best used for creating both rows and columns, making it ideal for complex layouts.</li>
+        <li><strong>Combine with Media Queries:</strong> Use CSS Grid in combination with media queries to create flexible and responsive layouts.</li>
+        <li><strong>Plan the Grid Structure:</strong> Before starting, plan out your grid with the number of columns and rows you'll need to avoid unnecessary complexity.</li>
+    </ul>
+</div>
+
+<!-- Float and Clear -->
+<div class="main" id="float-clear">
+    <h1>Float and Clear</h1>
+
+    <h3>Definition</h3>
+    <p>
+        The <strong>float</strong> property allows an element to be positioned to the left or right of its container, allowing other content to wrap around it. The <strong>clear</strong> property is used to specify where elements should not float, clearing the float on a particular side of the element.
+    </p>
+
+    <h3>Using Float</h3>
+    <ul>
+        <li><strong>float: left;</strong> Positions the element to the left of its container, allowing other content to flow to the right of it.</li>
+        <li><strong>float: right;</strong> Positions the element to the right of its container, allowing other content to flow to the left of it.</li>
+        <li><strong>float: none;</strong> This is the default value, which ensures the element does not float.</li>
+    </ul>
+
+    <h3>Example: Floating an Image</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        .image {
+            float: left;
+            margin-right: 15px;
+        }
+    </pre>
+    <p>
+        <img src="image.jpg" class="image" alt="Example Image"> This text wraps around the image because the image is floated to the left.
+    </p>
+
+    <h3>Using Clear</h3>
+    <p>The <strong>clear</strong> property is used to control the behavior of elements after floated elements. It can have the following values:</p>
+    <ul>
+        <li><strong>clear: left;</strong> Ensures that the element does not appear next to any left-floating elements.</li>
+        <li><strong>clear: right;</strong> Ensures that the element does not appear next to any right-floating elements.</li>
+        <li><strong>clear: both;</strong> Ensures that the element does not appear next to any floating elements, either left or right.</li>
+        <li><strong>clear: none;</strong> The default value, which allows the element to be positioned next to floated elements.</li>
+    </ul>
+
+    <h3>Example: Clearing Floats</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        .clear {
+            clear: both;
+        }
+    </pre>
+    <p>
+        <span class="clear">This element will appear below any floated elements due to the "clear: both" rule.</span>
+    </p>
+
+    <h3>Why Use Float and Clear?</h3>
+    <ul>
+        <li><strong>Float:</strong> Used for creating layouts, like floating images or making multi-column layouts.</li>
+        <li><strong>Clear:</strong> Ensures that elements appear in the correct order, avoiding layout issues caused by floating elements.</li>
+    </ul>
+
+    <h3>Best Practices</h3>
+    <ul>
+        <li><strong>Avoid Overuse of Float:</strong> Overusing floats can cause layout issues. Consider using Flexbox or CSS Grid for complex layouts instead.</li>
+        <li><strong>Clear Elements Properly:</strong> Use the clear property to avoid content getting mixed up with floated elements.</li>
+        <li><strong>Use clearfix:</strong> When floating elements inside a container, use the clearfix hack to ensure the container height expands correctly.</li>
+    </ul>
+</div>
+
+<!-- Media Queries -->
+<div class="main" id="media-queries">
+    <h1>Media Queries</h1>
+
+    <h3>Definition</h3>
+    <p>
+        <strong>Media queries</strong> are a powerful tool in CSS that allow you to apply different styles based on the characteristics of the device or viewport. They enable responsive web design by allowing you to tailor your layout to different screen sizes, resolutions, and orientations.
+    </p>
+
+    <h3>Syntax of Media Queries</h3>
+    <p>
+        The basic syntax of a media query involves using the <code>@media</code> rule followed by a condition based on features like width, height, or resolution. Styles are applied if the condition matches the environment.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        @media (condition) {
+            /* CSS styles */
+        }
+    </pre>
+
+    <h3>Common Media Query Conditions</h3>
+    <ul>
+        <li><strong>width and height:</strong> Specifies the width or height of the viewport (or device screen).
+            <pre>
+                @media (max-width: 600px) {
+                    /* Styles for screens smaller than 600px */
+                }
+            </pre>
+        </li>
+        <li><strong>device-width and device-height:</strong> Specifies the width or height of the device screen (not just the viewport).
+            <pre>
+                @media (device-width: 768px) {
+                    /* Styles for devices with a screen width of 768px */
+                }
+            </pre>
+        </li>
+        <li><strong>orientation:</strong> Specifies whether the device is in portrait or landscape mode.
+            <pre>
+                @media (orientation: portrait) {
+                    /* Styles for portrait mode */
+                }
+            </pre>
+        </li>
+        <li><strong>resolution:</strong> Specifies the resolution of the device screen.
+            <pre>
+                @media (min-resolution: 192dpi) {
+                    /* Styles for high-resolution screens */
+                }
+            </pre>
+        </li>
+    </ul>
+
+    <h3>Example: Using Media Queries for Responsive Design</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+        @media (min-width: 769px) {
+            .container {
+                flex-direction: row;
+            }
+        }
+    </pre>
+    <p>
+        In this example, the layout of the <code>.container</code> changes based on the screen size. If the viewport is less than 768px, the layout will switch to a column direction, otherwise, it will use a row direction.
+    </p>
+
+    <h3>Why Use Media Queries?</h3>
+    <ul>
+        <li><strong>Responsive Design:</strong> Media queries allow you to make your website responsive by adjusting the layout based on the viewport size.</li>
+        <li><strong>Device Specific Styles:</strong> Tailor the appearance of your website for specific devices, such as tablets, phones, and desktops.</li>
+        <li><strong>Improved User Experience:</strong> Ensure that your website looks good and functions well on all screen sizes.</li>
+    </ul>
+
+    <h3>Best Practices for Media Queries</h3>
+    <ul>
+        <li><strong>Use Mobile-First Approach:</strong> Start with styles for smaller screens and then add media queries for larger screens.</li>
+        <li><strong>Organize Media Queries:</strong> Keep your media queries organized and consider using breakpoints that reflect common screen sizes.</li>
+        <li><strong>Test on Real Devices:</strong> Always test your website on real devices to ensure that it looks good on all screen sizes and resolutions.</li>
+    </ul>
+</div>
+
+
+<!-- Responsive Units -->
+<div class="main" id="responsive-units">
+    <h1>Responsive Units</h1>
+
+    <h3>Definition</h3>
+    <p>
+        <strong>Responsive units</strong> are units in CSS that allow elements to scale dynamically based on the size of the viewport, container, or other elements. These units help create flexible, adaptive designs that respond to different screen sizes.
+    </p>
+
+    <h3>Common Responsive Units</h3>
+    <ul>
+        <li><strong>% (Percentage):</strong> Defines the size relative to the parent element. It scales proportionally based on the container's size.
+            <pre>
+                .box {
+                    width: 50%;
+                }
+            </pre>
+        </li>
+        <li><strong>vw (Viewport Width):</strong> Defines the size relative to 1% of the viewport's width.
+            <pre>
+                .box {
+                    width: 50vw;
+                }
+            </pre>
+        </li>
+        <li><strong>vh (Viewport Height):</strong> Defines the size relative to 1% of the viewport's height.
+            <pre>
+                .box {
+                    height: 50vh;
+                }
+            </pre>
+        </li>
+        <li><strong>em:</strong> Defines the size relative to the font size of the parent element or current element.
+            <pre>
+                .box {
+                    font-size: 2em;
+                }
+            </pre>
+        </li>
+        <li><strong>rem (Root em):</strong> Defines the size relative to the font size of the root element (<code>html</code>), providing a more consistent scaling across the page.
+            <pre>
+                .box {
+                    font-size: 2rem;
+                }
+            </pre>
+        </li>
+    </ul>
+
+    <h3>Example: Using Responsive Units for a Fluid Layout</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        .container {
+            width: 80%;
+            padding: 2em;
+        }
+        .box {
+            width: 50vw;
+            height: 30vh;
+        }
+    </pre>
+    <p>
+        In this example, the container's width is set as 80% of its parent, and the box element's width and height adjust based on the viewport size.
+    </p>
+
+    <h3>Why Use Responsive Units?</h3>
+    <ul>
+        <li><strong>Flexibility:</strong> Allows elements to adjust automatically to different screen sizes, improving the responsiveness of the layout.</li>
+        <li><strong>Scalability:</strong> Helps create scalable layouts that adapt to various devices without the need for specific breakpoints.</li>
+        <li><strong>Consistency:</strong> Using units like <code>rem</code> ensures that font sizes and spacing scale consistently across the page.</li>
+    </ul>
+
+    <h3>Best Practices for Responsive Units</h3>
+    <ul>
+        <li><strong>Mix Units:</strong> Combine different responsive units (e.g., <code>vw</code>, <code>rem</code>, and <code>%</code>) to create layouts that are flexible and adaptable.</li>
+        <li><strong>Use em/rem for Typography:</strong> Use <code>rem</code> and <code>em</code> for font sizes and spacing to ensure consistency in scaling.</li>
+        <li><strong>Test Responsiveness:</strong> Always test the design on multiple screen sizes to ensure it responds correctly to different devices.</li>
+    </ul>
+</div>
+
+
+<!-- Breakpoints -->
+<div class="main" id="breakpoints">
+    <h1>Breakpoints</h1>
+
+    <h3>Definition</h3>
+    <p>
+        <strong>Breakpoints</strong> are specific screen widths where a website's layout needs to adjust for optimal viewing and usability. They are typically used in conjunction with media queries to create responsive designs that adapt to different devices.
+    </p>
+
+    <h3>Common Breakpoint Ranges</h3>
+    <p>
+        Breakpoints are defined based on the typical screen sizes of various devices. While there is no universal set of breakpoints, the following ranges are commonly used:
+    </p>
+    <ul>
+        <li><strong>Mobile (Small):</strong> Typically for screens 480px or less.</li>
+        <li><strong>Mobile (Medium):</strong> Screens between 481px and 767px (portrait mode on tablets).</li>
+        <li><strong>Tablet:</strong> Screens between 768px and 1024px (landscape mode on tablets).</li>
+        <li><strong>Laptop/Desktop:</strong> Screens 1025px and up (desktops and larger laptops).</li>
+    </ul>
+
+    <h3>Example: Defining Breakpoints in CSS</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        /* Mobile Devices */
+        @media (max-width: 480px) {
+            /* Styles for screens smaller than 480px */
+            body {
+                font-size: 14px;
+            }
+        }
+
+        /* Tablets */
+        @media (min-width: 481px) and (max-width: 767px) {
+            /* Styles for screens between 481px and 767px */
+            body {
+                font-size: 16px;
+            }
+        }
+
+        /* Desktops */
+        @media (min-width: 1025px) {
+            /* Styles for screens larger than 1025px */
+            body {
+                font-size: 18px;
+            }
+        }
+    </pre>
+
+    <h3>Why Use Breakpoints?</h3>
+    <ul>
+        <li><strong>Responsive Design:</strong> Breakpoints help ensure that your design looks great across all screen sizes.</li>
+        <li><strong>Improved User Experience:</strong> By adjusting the layout for different devices, users have a better experience on mobile, tablet, and desktop screens.</li>
+        <li><strong>Device Targeting:</strong> They allow you to target specific devices, optimizing styles for different screens.</li>
+    </ul>
+
+    <h3>Best Practices for Breakpoints</h3>
+    <ul>
+        <li><strong>Mobile-First Approach:</strong> Start by designing for mobile and add breakpoints for larger screens (progressively enhancing the design).</li>
+        <li><strong>Flexible Layouts:</strong> Instead of relying solely on breakpoints, consider using fluid layouts that adapt based on the viewport size.</li>
+        <li><strong>Minimal Breakpoints:</strong> Use as few breakpoints as necessary to maintain a simple and efficient design.</li>
+    </ul>
+</div>
+
+<!-- Mobile-First Design -->
+<div class="main" id="mobile-first">
+    <h1>Mobile-First Design</h1>
+
+    <h3>Definition</h3>
+    <p>
+        <strong>Mobile-First Design</strong> is a design strategy where you start designing the website or application for mobile devices before scaling up to larger screens (like tablets and desktops). The idea is to prioritize the mobile user experience by making sure the website functions well on smaller screens before making it responsive for larger devices.
+    </p>
+
+    <h3>Principles of Mobile-First Design</h3>
+    <ul>
+        <li><strong>Content Prioritization:</strong> Mobile-first design emphasizes the essential content and features for mobile users, ensuring clarity and usability on smaller screens.</li>
+        <li><strong>Simplicity:</strong> Mobile-first design leads to simpler interfaces with a focus on easy navigation, minimal distractions, and smaller touch targets.</li>
+        <li><strong>Performance Optimization:</strong> Mobile-first design encourages optimizing performance for mobile networks by using compressed images, faster loading techniques, and reducing resource-heavy elements.</li>
+    </ul>
+
+    <h3>Example: Mobile-First Approach in CSS</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        /* Mobile-First Styles */
+        body {
+            font-size: 14px;
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        /* Tablet and larger devices */
+        @media (min-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+
+            .container {
+                width: 75%;
+            }
+        }
+
+        /* Desktops */
+        @media (min-width: 1024px) {
+            body {
+                font-size: 18px;
+            }
+
+            .container {
+                width: 60%;
+            }
+        }
+    </pre>
+
+    <h3>Why Use Mobile-First Design?</h3>
+    <ul>
+        <li><strong>Better Mobile User Experience:</strong> Mobile-first design ensures that the most important elements are available to users on mobile devices.</li>
+        <li><strong>Optimized Performance:</strong> It prioritizes faster load times and lightweight designs, which are essential for mobile browsing, especially on slower networks.</li>
+        <li><strong>Higher Conversion Rates:</strong> Mobile-first designs lead to higher user engagement and better conversions by providing a better experience for mobile users.</li>
+    </ul>
+
+    <h3>Best Practices for Mobile-First Design</h3>
+    <ul>
+        <li><strong>Start Simple:</strong> Begin with the basic functionality and content, then progressively add features and enhancements as you scale up.</li>
+        <li><strong>Focus on Touch:</strong> Ensure that buttons and links are easily tappable on smaller screens with appropriate spacing and sizing.</li>
+        <li><strong>Test on Real Devices:</strong> Always test your design on real mobile devices to get an accurate idea of how it will appear and function in different environments.</li>
+    </ul>
+</div>
+
+<!-- CSS Transitions -->
+<div class="main" id="transitions">
+    <h1>CSS Transitions</h1>
+
+    <h3>Definition</h3>
+    <p>
+        <strong>CSS Transitions</strong> allow you to change property values smoothly (over a given duration) from one state to another when an element is interacted with, like hovering, focusing, or clicking. Transitions make web elements more interactive and dynamic by adding smooth animations between state changes.
+    </p>
+
+    <h3>Transition Properties</h3>
+    <p>
+        A transition typically involves four key properties:
+    </p>
+    <ul>
+        <li><strong>transition-property:</strong> Specifies the CSS property to be transitioned (e.g., <code>color</code>, <code>background-color</code>, etc.).</li>
+        <li><strong>transition-duration:</strong> Defines the time over which the transition will occur (e.g., <code>2s</code>, <code>500ms</code>).</li>
+        <li><strong>transition-timing-function:</strong> Determines the speed curve of the transition, such as <code>linear</code>, <code>ease</code>, or <code>ease-in-out</code>.</li>
+        <li><strong>transition-delay:</strong> Sets a delay before the transition starts (e.g., <code>1s</code>).</li>
+    </ul>
+
+    <h3>Example: CSS Transition</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        /* Initial state */
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            transition: background-color 0.5s ease;
+        }
+
+        /* State when hovered */
+        .box:hover {
+            background-color: red;
+        }
+    </pre>
+    
+    <h3>How CSS Transitions Work</h3>
+    <p>
+        In the above example, the <code>background-color</code> of the element with the <code>box</code> class will transition from blue to red over a duration of 0.5 seconds when the element is hovered. The <code>transition</code> property is shorthand for defining all the transition properties in one declaration.
+    </p>
+
+    <h3>Why Use CSS Transitions?</h3>
+    <ul>
+        <li><strong>Simplicity:</strong> CSS transitions are simple to implement and offer quick and easy animations without requiring JavaScript.</li>
+        <li><strong>Improved User Experience:</strong> Adding transitions makes interactions feel more natural and intuitive, increasing the appeal of your site.</li>
+        <li><strong>Performance:</strong> CSS transitions are hardware-accelerated by the browser, making them faster and smoother than JavaScript-based animations.</li>
+    </ul>
+
+    <h3>Best Practices for CSS Transitions</h3>
+    <ul>
+        <li><strong>Use Subtle Effects:</strong> Transitions should be used to enhance the user experience without overwhelming the interface.</li>
+        <li><strong>Limit Transitions:</strong> Avoid transitioning too many properties at once, as it may lead to performance issues and distractions.</li>
+        <li><strong>Test Across Browsers:</strong> Ensure that your transitions work consistently across different browsers and devices.</li>
+    </ul>
+</div>
+
+<!-- CSS Animations -->
+<div class="main" id="animations">
+    <h1>CSS Animations</h1>
+
+    <h3>Definition</h3>
+    <p>
+        <strong>CSS Animations</strong> allow you to create complex animations using keyframes. Unlike transitions, which change property values between two states, animations enable you to create continuous or multiple stages of animations, making elements move, transform, or change properties over time.
+    </p>
+
+    <h3>Animation Properties</h3>
+    <ul>
+        <li><strong>animation-name:</strong> Defines the name of the keyframe animation.</li>
+        <li><strong>animation-duration:</strong> Specifies how long the animation lasts (e.g., <code>2s</code>, <code>500ms</code>).</li>
+        <li><strong>animation-timing-function:</strong> Defines the timing of the animation's speed curve (e.g., <code>linear</code>, <code>ease</code>, <code>ease-in-out</code>).</li>
+        <li><strong>animation-delay:</strong> Sets the delay before the animation starts.</li>
+        <li><strong>animation-iteration-count:</strong> Defines how many times the animation will run (e.g., <code>infinite</code>, <code>1</code>). </li>
+        <li><strong>animation-direction:</strong> Defines the direction of the animation, such as <code>normal</code>, <code>reverse</code>, or <code>alternate</code>.</li>
+        <li><strong>animation-fill-mode:</strong> Specifies what styles the element will have before or after the animation (e.g., <code>forwards</code>, <code>backwards</code>).</li>
+    </ul>
+
+    <h3>Example: CSS Animation</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        /* Define Keyframes */
+        @keyframes moveBox {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(200px);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        /* Apply Animation to an Element */
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            animation: moveBox 2s ease-in-out infinite;
+        }
+    </pre>
+
+    <h3>How CSS Animations Work</h3>
+    <p>
+        In the example above, the <code>@keyframes</code> rule defines the stages of the animation. The <code>moveBox</code> animation moves the element horizontally from its original position (0%) to 200px to the right (50%), and then back to the original position (100%). The animation runs infinitely with a 2-second duration and uses an <code>ease-in-out</code> timing function.
+    </p>
+
+    <h3>Why Use CSS Animations?</h3>
+    <ul>
+        <li><strong>Complex Effects:</strong> CSS animations allow you to create more complex and dynamic visual effects compared to simple transitions.</li>
+        <li><strong>Performance:</strong> Like transitions, CSS animations are hardware-accelerated, offering smooth animations without straining browser performance.</li>
+        <li><strong>Cross-browser Support:</strong> CSS animations are well-supported across modern browsers, providing consistent experiences for users.</li>
+    </ul>
+
+    <h3>Best Practices for CSS Animations</h3>
+    <ul>
+        <li><strong>Use Animations Sparingly:</strong> Avoid overusing animations as they can overwhelm users and negatively impact performance.</li>
+        <li><strong>Keep it Simple:</strong> Focus on subtle, smooth animations that enhance user experience without being distracting.</li>
+        <li><strong>Test Across Devices:</strong> Ensure that animations perform well across different screen sizes and devices to maintain consistency.</li>
+    </ul>
+</div>
+
+<!-- Keyframes -->
+<div class="main" id="keyframes">
+    <h1>Keyframes</h1>
+
+    <h3>Definition</h3>
+    <p>
+        <strong>Keyframes</strong> are a crucial part of CSS animations, defining the specific states of an element at different points during the animation. Using keyframes, you can create animations that change styles at specific percentages during the animation cycle.
+    </p>
+
+    <h3>Keyframe Syntax</h3>
+    <ul>
+        <li><strong>@keyframes:</strong> Defines the name and the specific set of style changes over time.</li>
+        <li><strong>Percentage Values:</strong> Represents the progress of the animation (e.g., 0% for the beginning, 100% for the end).</li>
+        <li><strong>Animation Stages:</strong> Use percentages (e.g., 0%, 50%, 100%) to define the changes at various stages of the animation cycle.</li>
+    </ul>
+
+    <h3>Example: Keyframe Animation</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        /* Define Keyframes */
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(300px);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        /* Apply Keyframes Animation */
+        .slider {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation: slide 3s ease-in-out infinite;
+        }
+    </pre>
+
+    <h3>How Keyframes Work</h3>
+    <p>
+        In the example above, the <code>@keyframes</code> rule defines the animation stages. The <code>slide</code> animation moves the element from its initial position (0%) to 300px to the right (50%) and then back to the starting point (100%). The animation lasts for 3 seconds, with an <code>ease-in-out</code> timing function, running infinitely.
+    </p>
+
+    <h3>Why Use Keyframes?</h3>
+    <ul>
+        <li><strong>Control Animation Stages:</strong> Keyframes allow you to define multiple stages and changes in your animation, making it more dynamic.</li>
+        <li><strong>Complex Animations:</strong> With keyframes, you can animate multiple properties at different times, creating complex and fluid animations.</li>
+        <li><strong>Consistency:</strong> Keyframe-based animations ensure consistency across browsers and devices, improving cross-browser compatibility.</li>
+    </ul>
+
+    <h3>Best Practices for Keyframes</h3>
+    <ul>
+        <li><strong>Minimalism:</strong> Avoid overly complex animations. Focus on simple, meaningful changes to enhance user experience.</li>
+        <li><strong>Performance:</strong> Limit the number of keyframes and avoid animating heavy properties (like <code>box-shadow</code>) to ensure good performance.</li>
+        <li><strong>Timing Control:</strong> Use the <code>animation-timing-function</code> property to control the pacing of the animation and make it feel more natural.</li>
+    </ul>
+</div>
+
+<!-- Transformations -->
+<div class="main" id="transformations">
+    <h1>Transformations</h1>
+
+    <h3>Definition</h3>
+    <p>
+        <strong>CSS Transformations</strong> allow you to visually manipulate elements in 2D or 3D space. These manipulations include translating, rotating, scaling, and skewing elements.
+    </p>
+
+    <h3>Types of Transformations</h3>
+    <ul>
+        <li><strong>Translate:</strong> Moves an element from its original position.</li>
+        <li><strong>Rotate:</strong> Rotates an element by a specified degree.</li>
+        <li><strong>Scale:</strong> Changes the size of an element.</li>
+        <li><strong>Skew:</strong> Tilts an element along the X or Y axis.</li>
+        <li><strong>Matrix:</strong> Allows combining transformations in one step using a matrix.</li>
+    </ul>
+
+    <h3>Transform Syntax</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        /* Example of Transform Property */
+        .box {
+            transform: translate(50px, 100px) rotate(45deg) scale(1.5);
+        }
+    </pre>
+
+    <h3>Example: Combining Transformations</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transform: translateX(200px) rotate(45deg) scale(1.5);
+            transition: transform 0.5s ease;
+        }
+
+        .box:hover {
+            transform: translateX(0) rotate(0) scale(1);
+        }
+    </pre>
+
+    <h3>How Transformations Work</h3>
+    <p>
+        In the example above, the element with the class <code>.box</code> undergoes a translation, rotation, and scaling. When hovered, the transformations reset to their original state, creating a smooth transition.
+    </p>
+
+    <h3>Why Use Transformations?</h3>
+    <ul>
+        <li><strong>Enhanced User Interaction:</strong> Transformations can provide visual feedback on user actions like hover or click.</li>
+        <li><strong>Improved Animation:</strong> Combining transformations with CSS animations can create smooth and dynamic effects.</li>
+        <li><strong>Performance:</strong> Transforms are GPU-accelerated, making them more performance-efficient compared to other visual changes like adjusting position with <code>top</code> or <code>left</code>.</li>
+    </ul>
+
+    <h3>Best Practices for Transformations</h3>
+    <ul>
+        <li><strong>Use Transitions:</strong> Pair transformations with <code>transition</code> to create smooth effects on user interaction.</li>
+        <li><strong>Avoid Overuse:</strong> Overusing transformations can lead to performance issues, especially with large-scale animations.</li>
+        <li><strong>Test Responsiveness:</strong> Ensure that transformations don’t cause layout issues on different screen sizes or devices.</li>
+    </ul>
+</div>
+
+<!-- Pseudo-classes and Pseudo-elements -->
+<div class="main" id="pseudo-elements">
+    <h1>Pseudo-classes and Pseudo-elements</h1>
+
+    <h3>Definition</h3>
+    <p>
+        <strong>Pseudo-classes</strong> and <strong>pseudo-elements</strong> are used in CSS to style elements based on their state or parts without adding extra classes or IDs in the HTML markup.
+    </p>
+
+    <h3>Pseudo-classes</h3>
+    <p>
+        A <strong>pseudo-class</strong> is used to define the special state of an element. It allows you to apply styles to elements that are in a particular state, such as being hovered over or visited. Pseudo-classes are preceded by a colon (<code>:</code>).
+    </p>
+    <ul>
+        <li><strong>:hover:</strong> Applied when the user hovers over an element.</li>
+        <li><strong>:focus:</strong> Applied when an element receives focus, such as an input field.</li>
+        <li><strong>:nth-child():</strong> Selects elements based on their position in a parent container (e.g., <code>:nth-child(2)</code> for the second element).</li>
+        <li><strong>:first-child:</strong> Targets the first child element in a parent container.</li>
+        <li><strong>:last-child:</strong> Targets the last child element in a parent container.</li>
+    </ul>
+
+    <h3>Pseudo-elements</h3>
+    <p>
+        A <strong>pseudo-element</strong> is used to style specific parts of an element, such as the first letter, first line, or before and after the content. Pseudo-elements are preceded by two colons (<code>::</code>), though some older browsers use a single colon (<code>:</code>).
+    </p>
+    <ul>
+        <li><strong>::before:</strong> Inserts content before an element's actual content.</li>
+        <li><strong>::after:</strong> Inserts content after an element's actual content.</li>
+        <li><strong>::first-letter:</strong> Targets the first letter of an element's text.</li>
+        <li><strong>::first-line:</strong> Targets the first line of an element's text.</li>
+    </ul>
+
+    <h3>Example: Pseudo-class and Pseudo-element Usage</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        /* Pseudo-class: Hover */
+        a:hover {
+            color: red;
+        }
+
+        /* Pseudo-element: Before */
+        p::before {
+            content: "Note: ";
+            font-weight: bold;
+        }
+
+        /* Pseudo-class: nth-child */
+        ul li:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+    </pre>
+
+    <h3>How They Work</h3>
+    <p>
+        In the example above, the <code>:hover</code> pseudo-class changes the link color to red when hovered. The <code>::before</code> pseudo-element adds a "Note: " prefix to a paragraph. The <code>:nth-child(odd)</code> pseudo-class styles odd list items with a different background color.
+    </p>
+
+    <h3>Why Use Pseudo-classes and Pseudo-elements?</h3>
+    <ul>
+        <li><strong>Enhanced Styling:</strong> Allows you to apply styles to elements based on their state or part without modifying HTML markup.</li>
+        <li><strong>Improved User Interaction:</strong> Pseudo-classes like <code>:hover</code> provide interactive feedback to users.</li>
+        <li><strong>Cleaner HTML:</strong> By using pseudo-elements, you can add visual elements like icons or quotes without cluttering the HTML.</li>
+    </ul>
+
+    <h3>Best Practices for Pseudo-classes and Pseudo-elements</h3>
+    <ul>
+        <li><strong>Limit the Use of Pseudo-elements:</strong> Avoid overusing <code>::before</code> and <code>::after</code> to keep HTML and CSS clean.</li>
+        <li><strong>Use with Accessibility in Mind:</strong> Ensure pseudo-classes like <code>:focus</code> are used to enhance accessibility, especially for keyboard navigation.</li>
+        <li><strong>Use with Responsiveness:</strong> Ensure styles that depend on pseudo-classes are responsive and work across various screen sizes.</li>
+    </ul>
+</div>
+
+<!-- CSS Variables -->
+<div class="main" id="variables">
+    <h1>CSS Variables</h1>
+
+    <h3>Definition</h3>
+    <p>
+        CSS variables, also known as custom properties, allow you to define reusable values in your stylesheets. These variables can be assigned to any CSS property and are easily referenced and updated throughout your code.
+    </p>
+
+    <h3>Declaring CSS Variables</h3>
+    <p>
+        CSS variables are defined using the <code>--</code> prefix. The declaration is typically done inside a selector, and the variables are accessed with the <code>var()</code> function.
+    </p>
+    <ul>
+        <li><strong>Declaration:</strong> <code>:root { --primary-color: #3498db; }</code></li>
+        <li><strong>Usage:</strong> <code>color: var(--primary-color);</code></li>
+    </ul>
+
+    <h3>Example: Using CSS Variables</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --font-size: 16px;
+        }
+
+        body {
+            font-size: var(--font-size);
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        h1 {
+            color: var(--secondary-color);
+        }
+    </pre>
+
+    <h3>Why Use CSS Variables?</h3>
+    <ul>
+        <li><strong>Reusability:</strong> Easily reuse values throughout your stylesheet without duplicating them.</li>
+        <li><strong>Maintainability:</strong> If a value needs to be updated, you only need to change it in one place.</li>
+        <li><strong>Dynamic Changes:</strong> Variables can be changed dynamically using JavaScript, allowing for theming or user-customized styles.</li>
+    </ul>
+
+    <h3>Best Practices for CSS Variables</h3>
+    <ul>
+        <li><strong>Use Descriptive Names:</strong> Name your variables meaningfully, such as <code>--primary-color</code> or <code>--font-size</code>, to make the code readable.</li>
+        <li><strong>Define in :root for Global Scope:</strong> Place your CSS variables in the <code>:root</code> selector to make them globally available throughout your stylesheets.</li>
+        <li><strong>Combine with Media Queries:</strong> Use CSS variables inside media queries for responsive design adjustments.</li>
+    </ul>
+</div>
+
+<!-- CSS Functions -->
+<div class="main" id="css-functions">
+    <h1>CSS Functions</h1>
+
+    <h3>Definition</h3>
+    <p>
+        CSS functions allow you to perform calculations or manipulate values dynamically within your stylesheets. These functions can be used to create more flexible and responsive designs by combining various values, units, or even applying complex operations.
+    </p>
+
+    <h3>Common CSS Functions</h3>
+    <ul>
+        <li><strong>calc():</strong> Performs basic mathematical operations (addition, subtraction, multiplication, division) on values.</li>
+        <li><strong>clamp():</strong> Sets a value within a defined range, allowing for dynamic responsiveness.</li>
+        <li><strong>var():</strong> Accesses and uses custom properties (CSS variables) in your styles.</li>
+    </ul>
+
+    <h3>Using calc()</h3>
+    <p>
+        The <code>calc()</code> function allows you to perform calculations between different units. It's useful when you need to mix relative and absolute units (such as <code>%</code>, <code>px</code>, <code>em</code>, etc.).
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        width: calc(100% - 20px);
+        height: calc(50vh - 10em);
+    </pre>
+
+    <h3>Using clamp()</h3>
+    <p>
+        The <code>clamp()</code> function defines a value that is constrained between a minimum and maximum range. It's ideal for responsive design where you want a property to dynamically adjust within a set range.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        font-size: clamp(1rem, 5vw, 2rem);
+    </pre>
+    <ul>
+        <li><strong>First value:</strong> Minimum value.</li>
+        <li><strong>Second value:</strong> Preferred value (often based on viewport size).</li>
+        <li><strong>Third value:</strong> Maximum value.</li>
+    </ul>
+
+    <h3>Example: Using CSS Functions Together</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        .container {
+            width: calc(100% - 20px);
+            padding: 10px;
+            font-size: clamp(14px, 2vw, 18px);
+        }
+    </pre>
+
+    <h3>Why Use CSS Functions?</h3>
+    <ul>
+        <li><strong>Flexibility:</strong> Functions like <code>calc()</code> and <code>clamp()</code> allow for dynamic and responsive values based on different factors, such as screen size or container dimensions.</li>
+        <li><strong>Customization:</strong> Functions enable more control over layouts and design elements, making your CSS more powerful and adaptable.</li>
+        <li><strong>Simplification:</strong> With functions like <code>calc()</code>, complex calculations become part of the stylesheet, reducing the need for additional JavaScript logic.</li>
+    </ul>
+
+    <h3>Best Practices for CSS Functions</h3>
+    <ul>
+        <li><strong>Use calc() for Complex Layouts:</strong> When combining different units (such as percentages and pixels), <code>calc()</code> helps create flexible layouts.</li>
+        <li><strong>Leverage clamp() for Responsiveness:</strong> Use <code>clamp()</code> for fluid typography or other properties that need to scale dynamically between a minimum and maximum value.</li>
+        <li><strong>Combine with Media Queries:</strong> Use CSS functions in conjunction with media queries to adapt layouts and styles based on different screen sizes.</li>
+    </ul>
+</div>
+
+<!-- Custom Properties -->
+<div class="main" id="custom-properties">
+    <h1>CSS Custom Properties</h1>
+
+    <h3>Definition</h3>
+    <p>
+        CSS custom properties, also known as CSS variables, allow you to store values in CSS that can be reused throughout your stylesheet. Custom properties enable more dynamic, maintainable, and flexible styling, particularly when it comes to handling themes and complex design systems.
+    </p>
+
+    <h3>Syntax</h3>
+    <p>
+        The syntax for declaring a custom property is to prefix the variable name with two dashes (<code>--</code>), followed by the value you want to assign to it. The custom property is then accessed using the <code>var()</code> function.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        :root {
+            --primary-color: #3498db;
+            --font-size: 16px;
+        }
+
+        body {
+            font-size: var(--font-size);
+            background-color: var(--primary-color);
+        }
+    </pre>
+
+    <h3>Global Scope and Local Scope</h3>
+    <p>
+        Custom properties can be declared globally (on the <code>:root</code> selector) or locally within specific elements. When declared globally, the custom properties are accessible throughout the document. When declared locally, they are scoped to the element they are defined on.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        /* Global Scope */
+        :root {
+            --main-color: #2ecc71;
+        }
+
+        /* Local Scope */
+        .card {
+            --main-color: #e74c3c;
+            background-color: var(--main-color); /* Will use the local value */
+        }
+    </pre>
+
+    <h3>Benefits of Using Custom Properties</h3>
+    <ul>
+        <li><strong>Reusability:</strong> Custom properties enable you to reuse values throughout your CSS, reducing duplication and making your code more efficient.</li>
+        <li><strong>Maintainability:</strong> Custom properties make it easier to manage design changes. Changing a single value will automatically update all elements that use that property.</li>
+        <li><strong>Theming:</strong> Custom properties are especially useful for implementing themes. You can easily switch between different color schemes or layout styles by updating the custom property values.</li>
+    </ul>
+
+    <h3>Example: Theming with Custom Properties</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        :root {
+            --primary-bg-color: #f0f0f0;
+            --secondary-bg-color: #ffffff;
+            --text-color: #333;
+        }
+
+        body {
+            background-color: var(--primary-bg-color);
+            color: var(--text-color);
+        }
+
+        .card {
+            background-color: var(--secondary-bg-color);
+        }
+
+        /* Switch Theme */
+        .dark-theme {
+            --primary-bg-color: #333;
+            --secondary-bg-color: #444;
+            --text-color: #fff;
+        }
+    </pre>
+
+    <h3>Best Practices for Custom Properties</h3>
+    <ul>
+        <li><strong>Use Descriptive Names:</strong> Choose meaningful names for your custom properties to make your CSS more readable and maintainable.</li>
+        <li><strong>Leverage Cascading:</strong> Take advantage of the cascading nature of CSS custom properties, allowing you to easily override values in different parts of your stylesheet.</li>
+        <li><strong>Use with Media Queries:</strong> Custom properties can be updated dynamically within media queries, allowing you to adjust values based on the screen size or other conditions.</li>
+    </ul>
+</div>
+
+<!-- CSS Functions (calc, clamp, etc.) -->
+<div class="main" id="css-functions">
+    <h1>CSS Functions</h1>
+
+    <h3>Definition</h3>
+    <p>
+        CSS functions are built-in functions that allow you to perform calculations, set dynamic values, and achieve more flexible layouts. These functions can be used in various CSS properties to create responsive and adaptive designs.
+    </p>
+
+    <h3>Common CSS Functions</h3>
+    <ul>
+        <li><strong><code>calc()</code>:</strong> Allows you to perform mathematical calculations, combining different units (e.g., pixels and percentages) within a CSS property.</li>
+        <li><strong><code>clamp()</code>:</strong> Sets a value that adjusts between a minimum and maximum value depending on the viewport size or other factors.</li>
+        <li><strong><code>min()</code>:</strong> Returns the smallest value from a set of values.</li>
+        <li><strong><code>max()</code>:</strong> Returns the largest value from a set of values.</li>
+    </ul>
+
+    <h3>1. <code>calc()</code> Function</h3>
+    <p>
+        The <code>calc()</code> function allows you to perform calculations directly in CSS. This is especially useful when you need to combine units, like adding pixels to percentages or calculating responsive widths.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        .container {
+            width: calc(100% - 50px); /* 100% width minus 50px */
+        }
+
+        .element {
+            height: calc(50vh - 10px); /* 50% of the viewport height minus 10px */
+        }
+    </pre>
+
+    <h3>2. <code>clamp()</code> Function</h3>
+    <p>
+        The <code>clamp()</code> function allows you to set a value that adjusts dynamically based on a specified range. The value stays within the defined minimum and maximum limits, making it useful for responsive design.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        .element {
+            font-size: clamp(16px, 5vw, 24px); /* Font size will be between 16px and 24px, adjusting with viewport width */
+        }
+    </pre>
+
+    <h3>3. <code>min()</code> and <code>max()</code> Functions</h3>
+    <p>
+        The <code>min()</code> and <code>max()</code> functions allow you to select the smallest or largest value, respectively, from a set of values. These are useful when you need to limit or adjust property values dynamically.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        .element {
+            width: min(100%, 500px); /* Width will never exceed 500px */
+        }
+
+        .container {
+            height: max(300px, 20vh); /* Height will be at least 300px, or 20% of the viewport height, whichever is larger */
+        }
+    </pre>
+
+    <h3>Use Cases for CSS Functions</h3>
+    <ul>
+        <li><strong>Responsive Design:</strong> Functions like <code>calc()</code> and <code>clamp()</code> allow for more flexible and adaptive layouts that change according to the viewport size.</li>
+        <li><strong>Improved Readability:</strong> Using functions like <code>clamp()</code> can help you write more readable and maintainable code by reducing the need for complex media queries.</li>
+        <li><strong>Layout Adjustments:</strong> The <code>min()</code> and <code>max()</code> functions can be used to dynamically adjust layouts and ensure they work smoothly across different screen sizes.</li>
+    </ul>
+
+    <h3>Best Practices</h3>
+    <ul>
+        <li><strong>Use Functions for Flexibility:</strong> Utilize <code>calc()</code> and <code>clamp()</code> when you need more control over your layout, particularly in responsive design.</li>
+        <li><strong>Combine with Media Queries:</strong> For more dynamic adjustments, combine these functions with media queries to fine-tune layout and typography based on screen size.</li>
+        <li><strong>Avoid Overuse:</strong> While powerful, overusing CSS functions can make your code harder to debug. Use them when necessary, but keep your stylesheets simple and readable.</li>
+    </ul>
+</div>
+
+<!-- CSS Performance Optimization -->
+<div class="main" id="performance">
+    <h1>CSS Performance Optimization</h1>
+
+    <h3>Definition</h3>
+    <p>
+        CSS performance optimization refers to the practices and techniques used to improve the speed and efficiency of CSS code. Optimizing CSS is crucial for ensuring faster page loads, better rendering performance, and an overall smooth user experience.
+    </p>
+
+    <h3>Key Performance Considerations</h3>
+    <ul>
+        <li><strong>Reducing CSS File Size:</strong> Smaller CSS files lead to faster page loads. Minimizing unused CSS and removing redundant styles can significantly improve performance.</li>
+        <li><strong>Efficient Selectors:</strong> Complex selectors can slow down rendering. Using efficient, simple selectors helps browsers process styles faster.</li>
+        <li><strong>Minifying CSS:</strong> Minifying removes unnecessary spaces, comments, and line breaks, reducing the overall size of the CSS file.</li>
+    </ul>
+
+    <h3>Best Practices for CSS Performance Optimization</h3>
+    <ul>
+        <li><strong>Minimize Repaints and Reflows:</strong> Avoid properties that trigger repaints or reflows (like changing the layout or size of elements) during interactions. Use <code>transform</code> and <code>opacity</code> for animations instead of properties like <code>top</code> or <code>width</code>.</li>
+        <li><strong>Use CSS Shorthands:</strong> CSS shorthands, such as <code>margin</code>, <code>padding</code>, and <code>background</code>, help reduce the overall size of the CSS file.</li>
+        <li><strong>Avoid Using !important:</strong> Overuse of <code>!important</code> can make CSS difficult to maintain and override, negatively impacting performance.</li>
+        <li><strong>Limit the Use of Web Fonts:</strong> Using too many custom web fonts can increase load time. Stick to a small number of font families and weights to minimize impact.</li>
+    </ul>
+
+    <h3>Optimizing CSS Delivery</h3>
+    <ul>
+        <li><strong>Asynchronous Loading:</strong> Load non-critical CSS asynchronously to avoid blocking the rendering process. This can be done using the <code>rel="preload"</code> attribute for faster resource loading.</li>
+        <li><strong>Critical CSS:</strong> Inline critical CSS directly into the HTML document for above-the-fold content, while deferring the loading of non-essential styles.</li>
+        <li><strong>CSS Compression:</strong> Use CSS compressors or tools like <code>cssnano</code> to minimize file size without affecting the functionality.</li>
+    </ul>
+
+    <h3>Tools for CSS Performance Optimization</h3>
+    <ul>
+        <li><strong>Chrome DevTools:</strong> Use the <code>Performance</code> tab to profile the CSS rendering and identify areas for optimization.</li>
+        <li><strong>CSS Linting Tools:</strong> Tools like <code>stylelint</code> can help detect inefficient code patterns and promote best practices.</li>
+        <li><strong>PurifyCSS:</strong> A tool that removes unused CSS selectors from your project to reduce the size of your CSS files.</li>
+    </ul>
+
+    <h3>Why Optimize CSS?</h3>
+    <ul>
+        <li><strong>Faster Load Times:</strong> Optimizing CSS ensures that the page loads faster, which can improve user experience and SEO rankings.</li>
+        <li><strong>Better Performance:</strong> Reduced CSS processing time results in smoother rendering and better performance, especially on mobile devices with limited resources.</li>
+        <li><strong>Reduced Bandwidth:</strong> Smaller CSS files mean less bandwidth usage, which is essential for users with slower internet connections.</li>
+    </ul>
+
+    <h3>Conclusion</h3>
+    <p>
+        CSS performance optimization is key to maintaining a fast and responsive website. By following best practices, optimizing CSS delivery, and using the right tools, you can significantly improve the performance of your web pages and provide a better user experience.
+    </p>
+</div>
+
+<!-- Organizing CSS Code -->
+<div class="main" id="organization">
+    <h1>Organizing CSS Code</h1>
+
+    <h3>Definition</h3>
+    <p>
+        Organizing CSS code refers to the practices of structuring and arranging your CSS rules in a logical, efficient manner to improve maintainability, scalability, and collaboration in web development.
+    </p>
+
+    <h3>Why Organize CSS?</h3>
+    <ul>
+        <li><strong>Maintainability:</strong> Organized code is easier to maintain and update, especially as a project grows.</li>
+        <li><strong>Readability:</strong> Structured CSS improves readability, allowing developers to quickly understand the style rules.</li>
+        <li><strong>Collaboration:</strong> Well-organized code helps teams collaborate effectively, as everyone follows the same structure and conventions.</li>
+    </ul>
+
+    <h3>Best Practices for Organizing CSS Code</h3>
+    <ul>
+        <li><strong>Use Comments:</strong> Use comments to describe the purpose of different sections of CSS code, making it easier for developers to understand.</li>
+        <li><strong>Group Related Rules:</strong> Organize related rules together, such as layout, typography, or color schemes, to ensure consistency and ease of navigation.</li>
+        <li><strong>Follow a Naming Convention:</strong> Consistent naming conventions for class and ID selectors make the CSS easier to understand and avoid conflicts.</li>
+        <li><strong>Use a Modular Approach:</strong> Break CSS into separate files based on functionality (e.g., layout.css, typography.css) and use a build tool to combine them into one file for production.</li>
+    </ul>
+
+    <h3>CSS Organization Strategies</h3>
+    <ul>
+        <li><strong>OOCSS (Object-Oriented CSS):</strong> Focuses on reusable objects that are independent of the structure and context of the HTML. It separates structure from skin and containers from content.</li>
+        <li><strong>BEM (Block, Element, Modifier):</strong> A methodology that encourages the use of classes to describe a component’s structure and variations. It follows the pattern <code>block__element--modifier</code>.</li>
+        <li><strong>SMACSS (Scalable and Modular Architecture for CSS):</strong> A style guide that breaks down CSS into categories such as base, layout, module, state, and theme.</li>
+        <li><strong>Atomic CSS:</strong> A CSS architecture where classes are written for each individual style property (e.g., <code>.bg-red</code>, <code>.text-center</code>). It helps in reusing classes efficiently across elements.</li>
+    </ul>
+
+    <h3>Tools for Organizing CSS</h3>
+    <ul>
+        <li><strong>Preprocessors:</strong> Tools like Sass or LESS allow you to organize CSS code more efficiently by using features like variables, nesting, and mixins.</li>
+        <li><strong>PostCSS:</strong> A tool that processes CSS and can help enforce organization by integrating linting and other formatting rules.</li>
+        <li><strong>CSS Frameworks:</strong> Frameworks like Bootstrap or Foundation promote consistent organization by providing predefined classes and structure.</li>
+    </ul>
+
+    <h3>CSS File Structure Example</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        /css
+            /base
+                - reset.css
+                - typography.css
+            /layout
+                - grid.css
+                - header.css
+            /components
+                - button.css
+                - card.css
+            main.css
+    </pre>
+
+    <h3>Conclusion</h3>
+    <p>
+        Organizing CSS code is an essential part of creating scalable, maintainable, and efficient stylesheets. By following best practices and adopting appropriate CSS architectures, you can ensure that your styles are well-structured and easy to manage.
+    </p>
+</div>
+
+<!-- Introduction to CSS Frameworks -->
+<div class="main" id="css-frameworks">
+    <h1>Introduction to CSS Frameworks</h1>
+
+    <h3>Definition</h3>
+    <p>
+        A CSS framework is a pre-prepared library of CSS code that allows developers to quickly design and develop websites without having to write all the CSS from scratch. Frameworks provide standardized designs and reusable components, speeding up the development process.
+    </p>
+
+    <h3>Benefits of Using CSS Frameworks</h3>
+    <ul>
+        <li><strong>Speed of Development:</strong> Pre-designed components and grid systems allow developers to quickly prototype and create websites.</li>
+        <li><strong>Consistency:</strong> Frameworks enforce consistency across your designs by providing a common set of styles and components.</li>
+        <li><strong>Responsiveness:</strong> Most CSS frameworks come with built-in responsive design features, ensuring your website works across various devices.</li>
+        <li><strong>Cross-browser Compatibility:</strong> Frameworks are often tested across multiple browsers, ensuring that your website looks good everywhere.</li>
+    </ul>
+
+    <h3>Popular CSS Frameworks</h3>
+    <ul>
+        <li><strong>Bootstrap:</strong> One of the most widely used CSS frameworks, Bootstrap provides a mobile-first grid system, pre-styled components, and JavaScript plugins.</li>
+        <li><strong>Foundation:</strong> Developed by ZURB, Foundation is another responsive front-end framework that offers a wide range of customizable options.</li>
+        <li><strong>Bulma:</strong> A modern CSS framework based on Flexbox, Bulma is lightweight and easy to use, providing responsive design components.</li>
+        <li><strong>Tailwind CSS:</strong> A utility-first CSS framework that allows developers to create custom designs quickly using utility classes, giving more flexibility than traditional frameworks.</li>
+    </ul>
+
+    <h3>CSS Framework Structure</h3>
+    <ul>
+        <li><strong>Grid System:</strong> Most CSS frameworks offer a grid system to create a flexible and responsive layout. These grids are divided into columns, and you can assign different widths to elements based on screen size.</li>
+        <li><strong>Predefined Styles:</strong> Frameworks often come with a set of predefined styles for common HTML elements like buttons, tables, forms, and typography, allowing for faster design.</li>
+        <li><strong>JavaScript Components:</strong> Many frameworks include JavaScript or jQuery plugins to handle interactivity, such as modals, dropdowns, and carousels.</li>
+        <li><strong>Customizable Options:</strong> Some frameworks, like Bootstrap and Foundation, allow developers to customize the framework's settings, such as colors, spacing, and grid layout, to suit the project’s needs.</li>
+    </ul>
+
+    <h3>How to Use a CSS Framework</h3>
+    <ul>
+        <li><strong>Installation:</strong> Most frameworks can be installed via CDN (Content Delivery Network) links or by downloading the files from their official website.</li>
+        <li><strong>Include Framework Files:</strong> Once installed, include the framework’s CSS and JS files into your project, usually within the <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> sections.</li>
+        <li><strong>Customize:</strong> Modify the framework to fit your needs, whether by changing the colors, typography, or layout settings.</li>
+        <li><strong>Build Your Layout:</strong> Use the framework's grid system and components to create your webpage’s layout and design.</li>
+    </ul>
+
+    <h3>Example: Using Bootstrap</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        &lt;link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"&gt;
+        &lt;div class="container"&gt;
+            &lt;div class="row"&gt;
+                &lt;div class="col-md-6"&gt;Content 1&lt;/div&gt;
+                &lt;div class="col-md-6"&gt;Content 2&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    </pre>
+
+    <h3>Conclusion</h3>
+    <p>
+        CSS frameworks are powerful tools that can streamline the development process by providing reusable components, responsive grids, and pre-designed styles. However, it's important to choose the right framework based on the project requirements and be mindful of potential drawbacks such as increased file size or lack of flexibility.
+    </p>
+</div>
+
+<!-- Debugging CSS -->
+<div class="main" id="debugging">
+    <h1>Debugging CSS</h1>
+
+    <h3>Definition</h3>
+    <p>
+        Debugging CSS involves identifying and fixing issues related to layout, styling, and functionality of a website. This process ensures that the CSS works as intended, providing a better user experience and visual appearance.
+    </p>
+
+    <h3>Common CSS Issues</h3>
+    <ul>
+        <li><strong>Incorrect Layout:</strong> Issues such as elements not aligning properly or containers not adjusting as expected.</li>
+        <li><strong>Text and Font Problems:</strong> Incorrect font sizes, line spacing, or text alignment causing readability issues.</li>
+        <li><strong>Color and Background Errors:</strong> Background images not loading, colors appearing differently in different browsers, or text blending into backgrounds.</li>
+        <li><strong>Hover and Interaction Problems:</strong> Issues with buttons, links, and other interactive elements not showing the expected styles when hovered or clicked.</li>
+        <li><strong>Mobile Responsiveness:</strong> Problems where the layout or elements do not adjust properly on mobile devices.</li>
+    </ul>
+
+    <h3>Common Debugging Tools</h3>
+    <ul>
+        <li><strong>Browser Developer Tools:</strong> All modern browsers come with built-in developer tools that allow you to inspect HTML and CSS, modify styles on the fly, and debug issues in real-time.</li>
+        <li><strong>CSS Linting Tools:</strong> Tools like <a href="https://jigsaw.w3.org/css-validator/" target="_blank">W3C CSS Validator</a> and <a href="https://stylelint.io/" target="_blank">Stylelint</a> help find potential errors, bugs, and coding inconsistencies in your CSS.</li>
+        <li><strong>CSS Debugging Extensions:</strong> Extensions like <a href="https://github.com/jonathantneal/tachyons" target="_blank">Tachyons</a> or <a href="https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector" target="_blank">Firefox Inspector</a> make debugging CSS easier by offering tools like grids, layout visualization, and live editing of CSS.</li>
+    </ul>
+
+    <h3>Debugging Steps</h3>
+    <ul>
+        <li><strong>Inspect the Element:</strong> Use your browser's developer tools to inspect elements and check for issues with their applied styles. Look for missing or conflicting properties.</li>
+        <li><strong>Check Specificity:</strong> Ensure that there are no conflicting CSS rules with higher specificity that override your desired styles.</li>
+        <li><strong>Test Changes in Real-Time:</strong> Modify CSS directly in the browser’s developer tools to see if the issue can be fixed instantly. This saves time by not having to refresh or re-upload files.</li>
+        <li><strong>Isolate the Problem:</strong> If the issue seems complex, isolate specific parts of the code by commenting out other styles or elements. This helps narrow down the root cause of the problem.</li>
+        <li><strong>Use External Tools:</strong> Use external services like <a href="https://www.caniuse.com/" target="_blank">Can I Use</a> to check for browser compatibility and <a href="https://www.devtools.info/" target="_blank">DevTools</a> to explore layout fixes.</li>
+    </ul>
+
+    <h3>Example: Debugging Layout Issues</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        /* Before Debugging */
+        .container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .item {
+            width: 30%;
+            margin: 10px;
+        }
+
+        /* After Debugging: Fixed issue with item size */
+        .item {
+            width: calc(33.33% - 20px); /* Corrected width to fit items within container */
+        }
+    </pre>
+
+    <h3>Best Practices for Debugging CSS</h3>
+    <ul>
+        <li><strong>Keep Your CSS Organized:</strong> Use consistent indentation, naming conventions, and commenting to make it easier to spot and fix issues.</li>
+        <li><strong>Use Version Control:</strong> Version control (e.g., Git) helps you track changes to your CSS and allows you to revert to previous versions if needed.</li>
+        <li><strong>Test Responsively:</strong> Always check your design on different screen sizes and browsers to ensure it works well across all devices.</li>
+        <li><strong>Ask for Help:</strong> Don’t hesitate to use developer forums, Stack Overflow, or the official CSS documentation when you encounter an issue that’s hard to debug.</li>
+    </ul>
+
+    <h3>Conclusion</h3>
+    <p>
+        Debugging CSS can be challenging, but using the right tools and techniques can help you identify and fix issues quickly. A well-organized workflow and attention to detail are essential for efficient debugging.
+    </p>
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+        
+<script src="script1.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const menuBtn = document.getElementById("menuBtn");
+        const sidebar = document.getElementById("sidebar");
+
+        menuBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("active");
+        });
+
+        const sidebarLinks = document.querySelectorAll(".sidebar ul li a");
+        const contentSections = document.querySelectorAll(".content .content");
+
+        sidebarLinks.forEach(link => {
+            link.addEventListener("click", (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute("href").substring(1);
+
+                // Hide all content sections and reset sidebar links
+                contentSections.forEach(section => {
+                    section.classList.remove("active");
+                });
+
+                // Show the selected content section
+                document.getElementById(targetId).classList.add("active");
+
+                // Set active background on sidebar links
+                sidebarLinks.forEach(link => {
+                    link.parentElement.classList.remove("active-bg");
+                });
+
+                link.parentElement.classList.add("active-bg");
+            });
+        });
+
+        // Initialize the first section as active
+        if (contentSections.length > 0) {
+            contentSections[0].classList.add("active");
+            sidebarLinks[0].parentElement.classList.add("active-bg");
+        }
+    });
+
+
+
+    document.querySelector('.menu-btn2').addEventListener('click', function () {
+        const topicButtons = document.querySelector('.topic-buttons');
+        // Toggle the menu visibility by moving it on and off the screen
+        if (topicButtons.style.right === '0px') {
+            topicButtons.style.right = '-250px'; // Slide out
+        } else {
+            topicButtons.style.right = '0px'; // Slide in
+        }
+    });
+
+
+
+
+
+
+
+</script>
+
+</body>
+
+</html>

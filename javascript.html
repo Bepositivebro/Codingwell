@@ -1,0 +1,4157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Course</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet1.css">
+    <style>
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+
+        
+         <!-----for desktop view------------>
+         <div class="logo">
+            <img src="logo.png" alt="Logo" style="height: 70px; width: auto; margin-left: 20px; ">
+        </div>
+        
+
+        <!--------------for mobile view---------------->
+        <div class="logo1">
+            <img src="logo1.png" alt="Logo" style="height: 30px; width: 130px; margin-left: 100px; margin-top: 14px;">
+        </div>
+
+
+        <!-- Menu Button for Mobile View -->
+        <button class="menu-btn2" aria-label="Open menu">&#x27A1;</button>
+
+        <!-- Desktop Navbar -->
+        <div class="desktop-navbar">
+            <button><a href="python.html" style="color: white;">Python</a></button>
+            <button><a href="cpp.html" style="color: white;">C++</a></button>
+            <button><a href="c.html" style="color: white;">C</a></button>
+            <button><a href="html.html" style="color: white;">HTML</a></button>
+            <button><a href="css.html" style="color: white;">CSS</a></button>
+            <button><a href="javascript.html" style="color: white;">JS</a></button>
+            <button><a href="java.html" style="color: white;">Java</a></button>
+            <button><a href="php.html" style="color: white;">PHP</a></button>
+            <button><a href="dsa.html" style="color: white;">DSA</a></button>
+        </div>
+
+        <!-- Dropdown Menu for Mobile View -->
+        <div class="topic-buttons">
+            <a href="python.html"><button>Python</button></a>
+            <a href="cpp.html"><button>C++</button></a>
+            <a href="c.html"><button>C</button></a>
+            <a href="html.html"><button>HTML</button></a>
+            <a href="css.html"><button>CSS</button></a>
+            <a href="javascript.html"><button>JS</button></a>
+            <a href="java.html"><button>Java</button></a>
+            <a href="php.html"><button>PHP</button></a>
+            <a href="dsa.html"><button>DSA</button></a>
+        </div>
+
+        
+        <!-- Mobile menu button -->
+        <div class="menu-btn" id="menuBtn">
+            &#9776;
+        </div>
+
+
+    </div>
+
+    <div class="content">
+        <!-- Sidebar Navigation -->
+        <div class="sidebar" id="sidebar">
+            <h2>Introduction to JavaScript</h2>
+            <ul>
+                <li><a href="#js-overview">What is JavaScript?</a></li>
+                <li><a href="#js-history">History and Evolution</a></li>
+                <li><a href="#js-setup">Setting Up Environment</a></li>
+                <li><a href="#hello-world">Hello World</a></li>
+            </ul>
+    
+            <h2>JavaScript Basics</h2>
+            <ul>
+                <li><a href="#variables">Variables and Constants</a></li>
+                <li><a href="#data-types">Data Types</a></li>
+                <li><a href="#operators">Operators</a></li>
+                <li><a href="#type-coercion">Type Conversion and Coercion</a></li>
+            </ul>
+    
+            <h2>Control Flow</h2>
+            <ul>
+                <li><a href="#if-else">If-Else Statements</a></li>
+                <li><a href="#switch-case">Switch-Case</a></li>
+                <li><a href="#loops">Loops (For, While, Do-While)</a></li>
+                <li><a href="#break-continue">Break and Continue</a></li>
+            </ul>
+    
+            <h2>Functions and Scope</h2>
+            <ul>
+                <li><a href="#functions">Functions</a></li>
+                <li><a href="#arrow-functions">Arrow Functions</a></li>
+                <li><a href="#parameters">Default and Rest Parameters</a></li>
+                <li><a href="#scope">Scope (Global, Local, Block)</a></li>
+            </ul>
+    
+            <h2>Objects and Arrays</h2>
+            <ul>
+                <li><a href="#objects">Working with Objects</a></li>
+                <li><a href="#arrays">Arrays</a></li>
+                <li><a href="#object-methods">Object Methods</a></li>
+                <li><a href="#array-methods">Array Methods</a></li>
+            </ul>
+    
+            <h2>DOM Manipulation</h2>
+            <ul>
+                <li><a href="#dom-overview">What is DOM?</a></li>
+                <li><a href="#selectors">Selectors <br>(getElementById, querySelector)</a></li>
+                <li><a href="#events">Events and Event Listeners</a></li>
+                <li><a href="#modifying-elements">Modifying DOM Elements</a></li>
+            </ul>
+    
+            <h2>ES6 and Beyond</h2>
+            <ul>
+                <li><a href="#let-const">Let, Const, and Var</a></li>
+                <li><a href="#template-literals">Template Literals</a></li>
+                <li><a href="#destructuring">Destructuring</a></li>
+                <li><a href="#modules">Modules (Import/Export)</a></li>
+            </ul>
+    
+            <h2>Asynchronous JavaScript</h2>
+            <ul>
+                <li><a href="#callbacks">Callbacks</a></li>
+                <li><a href="#promises">Promises</a></li>
+                <li><a href="#async-await">Async and Await</a></li>
+                <li><a href="#fetch-api">Fetch API</a></li>
+            </ul>
+    
+            <h2>Advanced JavaScript</h2>
+            <ul>
+                <li><a href="#closures">Closures</a></li>
+                <li><a href="#prototypes">Prototypes</a></li>
+                <li><a href="#this-keyword">The "this" Keyword</a></li>
+                <li><a href="#event-bubbling">Event Bubbling and Delegation</a></li>
+            </ul>
+    
+            <h2>Debugging and Testing</h2>
+            <ul>
+                <li><a href="#debugging-tools">Using Debugging Tools</a></li>
+                <li><a href="#console">Console API</a></li>
+                <li><a href="#error-handling">Error Handling (Try-Catch)</a></li>
+            </ul>
+    
+            <h2>Best Practices</h2>
+            <ul>
+                <li><a href="#clean-code">Writing Clean and Readable Code</a></li>
+                <li><a href="#performance">Optimizing Performance</a></li>
+                <li><a href="#security">Security Best Practices</a></li>
+                <li><a href="#security">Security Best Practices</a></li>
+                <li><a href="#security">Security Best Practices</a></li>
+            </ul>
+        </div>
+    
+        <div class="main" id="js-overview">
+            <h1>What is JavaScript?</h1>
+    
+            <h3>Definition</h3>
+            <p>
+                JavaScript is a <strong>high-level, interpreted programming language</strong> primarily used to add interactivity to web pages. It is one of the core technologies of the web, along with HTML and CSS.
+            </p>
+    
+            <h3>Key Features of JavaScript</h3>
+            <ul>
+                <li>
+                    <strong>Dynamic:</strong> JavaScript enables dynamic content on websites, such as animations, form validations, and interactive elements.
+                </li>
+                <li>
+                    <strong>Lightweight:</strong> JavaScript is designed to execute efficiently in the browser.
+                </li>
+                <li>
+                    <strong>Platform Independent:</strong> It runs in any browser without the need for additional software.
+                </li>
+                <li>
+                    <strong>Event-Driven:</strong> It handles user interactions through events like clicks, hovers, and form submissions.
+                </li>
+            </ul>
+    
+            <h3>Applications of JavaScript</h3>
+            <ul>
+                <li><strong>Web Development:</strong> Creating interactive and dynamic websites.</li>
+                <li><strong>Web Applications:</strong> Building SPAs (Single Page Applications) using frameworks like React, Angular, and Vue.</li>
+                <li><strong>Backend Development:</strong> Using Node.js to develop server-side applications.</li>
+                <li><strong>Game Development:</strong> Developing browser-based games.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- History and Evolution of JavaScript -->
+<div class="main" id="js-history">
+    <h1>History and Evolution of JavaScript</h1>
+
+    <h3>Overview</h3>
+    <p>
+        JavaScript, initially developed as a simple scripting language to enhance web pages, has evolved over the years into one of the most powerful and widely-used programming languages in the world. This evolution has allowed JavaScript to move beyond just client-side scripting and play a major role in full-stack development, mobile apps, server-side applications, and much more.
+    </p>
+
+    <h3>The Early Days (1995)</h3>
+    <p>
+        JavaScript was created by <strong>Brendan Eich</strong> in 1995 while working at <strong>Netscape Communications Corporation</strong>. Originally called <strong>Mocha</strong>, the language was later renamed to <strong>LiveScript</strong> and finally to <strong>JavaScript</strong> to capitalize on the popularity of Java. The language was developed as a lightweight scripting language for web browsers, allowing developers to create interactive and dynamic web pages.
+    </p>
+
+    <h3>JavaScript and the Web (1996-1999)</h3>
+    <p>
+        In 1996, JavaScript was formally standardized by the <strong>European Computer Manufacturers Association (ECMA)</strong> as ECMA-262, and the first edition of <strong>ECMAScript</strong> was released. During the late 1990s, JavaScript became widely adopted by web developers, and its role as a client-side scripting language was solidified.
+    </p>
+    <p>
+        However, JavaScript's early versions were very basic, with limited functionality and inconsistent browser support. This made it challenging for developers to rely on JavaScript for complex tasks.
+    </p>
+
+    <h3>Standardization and Improvements (2000-2005)</h3>
+    <p>
+        Over the next few years, JavaScript began to evolve with new features and enhancements. In 2005, the <strong>AJAX</strong> technique, which allowed for asynchronous data loading without refreshing the entire page, was popularized. This shift in how JavaScript was used contributed greatly to the rise of dynamic, interactive web applications.
+    </p>
+
+    <h3>The Modern Era (2005-Present)</h3>
+    <p>
+        In 2009, <strong>Node.js</strong> was introduced, enabling JavaScript to be used on the server side. This opened up new possibilities for full-stack development using just one programming language. The introduction of <strong>ES6</strong> (ECMAScript 2015) brought major updates to the language, including arrow functions, template literals, modules, classes, and more.
+    </p>
+    <p>
+        Since then, JavaScript has continued to evolve with regular updates, bringing in new features, better performance, and improved syntax. Libraries and frameworks like <strong>React</strong>, <strong>Angular</strong>, and <strong>Vue.js</strong> have contributed to JavaScript’s dominance in modern web development.
+    </p>
+
+    <h3>Major Milestones in JavaScript's Evolution</h3>
+    <ul>
+        <li><strong>1995:</strong> JavaScript was created by Brendan Eich at Netscape.</li>
+        <li><strong>1997:</strong> JavaScript was standardized by ECMA as ECMAScript.</li>
+        <li><strong>2005:</strong> AJAX became popular, paving the way for dynamic web apps.</li>
+        <li><strong>2009:</strong> Node.js introduced JavaScript on the server side.</li>
+        <li><strong>2015:</strong> ECMAScript 6 (ES6) introduced major language improvements.</li>
+        <li><strong>Present:</strong> JavaScript is used for full-stack development, mobile apps, and more.</li>
+    </ul>
+
+    <h3>Conclusion</h3>
+    <p>
+        JavaScript's journey from a simple scripting language to a powerful tool for full-stack development has transformed the way we build and interact with web applications. The language's constant evolution ensures that it remains relevant and continues to meet the growing needs of modern developers.
+    </p>
+</div>
+
+<!-- Setting Up Environment -->
+<div class="main" id="js-setup">
+    <h1>Setting Up Environment for JavaScript</h1>
+
+    <h3>Overview</h3>
+    <p>
+        Before you start coding in JavaScript, it is essential to set up a proper development environment. This involves installing the necessary tools and setting up your code editor to make development easier and more efficient. JavaScript can run in the browser, so you don't need any special software for basic JavaScript programming. However, for more advanced tasks like server-side JavaScript (Node.js) or debugging, additional tools are required.
+    </p>
+
+    <h3>Basic Setup for Client-Side JavaScript</h3>
+    <p>
+        For most JavaScript programming, all you need is a web browser and a text editor. The browser interprets JavaScript directly, and you can test your code by linking your JavaScript files to an HTML document.
+    </p>
+    <ul>
+        <li><strong>1. Web Browser:</strong> Modern browsers like Google Chrome, Firefox, Safari, or Edge have built-in JavaScript engines, so you can run JavaScript code directly in the browser.</li>
+        <li><strong>2. Text Editor:</strong> A text editor (such as Visual Studio Code, Sublime Text, or Atom) is used to write your code. These editors often come with features like syntax highlighting and code suggestions to make coding easier.</li>
+        <li><strong>3. Browser Developer Tools:</strong> Browsers come with developer tools that allow you to write, inspect, and debug your JavaScript code. These tools can be accessed through the browser's menu (usually by pressing F12 or right-clicking on a webpage and selecting "Inspect").</li>
+    </ul>
+
+    <h3>Setting Up for Node.js (Server-Side JavaScript)</h3>
+    <p>
+        If you plan to use JavaScript on the server side, you need to set up Node.js. Node.js allows you to run JavaScript outside of a browser environment.
+    </p>
+    <ul>
+        <li><strong>1. Install Node.js:</strong> Go to the official Node.js website (<a href="https://nodejs.org">nodejs.org</a>) and download the latest stable version of Node.js for your operating system. This will also install npm (Node Package Manager), which is used to manage packages and libraries in JavaScript projects.</li>
+        <li><strong>2. Verify Installation:</strong> After installation, open a terminal or command prompt and type the following commands to verify Node.js and npm are installed correctly:
+            <pre>node -v</pre>
+            <pre>npm -v</pre>
+        </li>
+        <li><strong>3. Set Up a Project:</strong> Create a new folder for your project, and initialize it by running the following command inside your project directory:
+            <pre>npm init -y</pre>
+        </li>
+        <li><strong>4. Install Packages:</strong> You can install packages using npm. For example, to install Express (a web framework for Node.js), run:
+            <pre>npm install express</pre>
+        </li>
+    </ul>
+
+    <h3>Choosing the Right Code Editor</h3>
+    <p>
+        A good code editor can make a huge difference in your JavaScript development. Popular editors for JavaScript development include:
+    </p>
+    <ul>
+        <li><strong>Visual Studio Code:</strong> A highly popular, free, and open-source code editor with a wide range of extensions to support JavaScript development.</li>
+        <li><strong>Sublime Text:</strong> A fast, lightweight text editor with an elegant interface. It is extendable through plugins.</li>
+        <li><strong>Atom:</strong> An open-source editor that is customizable and has a great community of developers.</li>
+    </ul>
+
+    <h3>Setting Up for Debugging</h3>
+    <p>
+        Debugging is an essential skill for every developer. Modern browsers come with built-in debugging tools that you can use to inspect and debug your JavaScript code:
+    </p>
+    <ul>
+        <li><strong>1. Console:</strong> You can use <strong>console.log()</strong> to print values and check your code's execution flow. This is helpful in identifying errors or understanding how your code is behaving.</li>
+        <li><strong>2. Breakpoints:</strong> In the browser developer tools, you can set breakpoints to pause the code execution and inspect variables and function calls at specific points in time.</li>
+        <li><strong>3. Watch Expressions:</strong> Monitor variables and expressions in real-time during the execution of your code.</li>
+    </ul>
+
+    <h3>Conclusion</h3>
+    <p>
+        Setting up your JavaScript environment is a crucial first step to becoming a successful JavaScript developer. Whether you're working on client-side JavaScript with just a browser and text editor or using Node.js for server-side development, the right tools and environment will make your coding process smoother and more efficient.
+    </p>
+</div>
+
+<!-- Hello World -->
+<div class="main" id="hello-world">
+    <h1>Hello World in JavaScript</h1>
+
+    <h3>Overview</h3>
+    <p>
+        The "Hello, World!" program is often the first program written by a developer learning a new programming language. It’s a simple way to introduce the basic syntax of the language. In JavaScript, this is typically achieved by displaying a message in the browser using the <code>console.log()</code> method or by manipulating the web page's content through the Document Object Model (DOM).
+    </p>
+
+    <h3>Using Console</h3>
+    <p>
+        To display a message in the console, use the <code>console.log()</code> function. This method prints messages to the browser’s developer console, which is great for debugging and testing.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>console.log("Hello, World!");</code>
+    </pre>
+
+    <h3>Displaying on the Web Page</h3>
+    <p>
+        Another way to display "Hello, World!" is by modifying the web page itself. You can change the content of an HTML element using JavaScript. Here is an example that changes the content of a <code>&lt;div&gt;</code> element:
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+                &lt;head&gt;&lt;/head&gt;
+                &lt;body&gt;
+                    &lt;div id="message"&gt;&lt;/div&gt;
+                    &lt;script&gt;
+                        document.getElementById("message").innerHTML = "Hello, World!";
+                    &lt;/script&gt;
+                &lt;/body&gt;
+            &lt;/html&gt;
+        </code>
+    </pre>
+
+    <h3>What Happens Here?</h3>
+    <p>
+        In the above code:
+    </p>
+    <ul>
+        <li><strong>HTML:</strong> We create an empty <code>&lt;div&gt;</code> element with an <code>id="message"</code>.</li>
+        <li><strong>JavaScript:</strong> The <code>document.getElementById("message").innerHTML = "Hello, World!";</code> statement finds the <code>&lt;div&gt;</code> element by its ID and changes its content to "Hello, World!".</li>
+    </ul>
+
+    <h3>Conclusion</h3>
+    <p>
+        "Hello, World!" may be a simple example, but it demonstrates how JavaScript interacts with HTML and the browser. By learning how to display messages in both the console and on the web page, you gain a foundation for writing more complex JavaScript code.
+    </p>
+</div>
+
+<!-- Variables and Constants -->
+<div class="main" id="variables">
+    <h1>Variables and Constants</h1>
+
+    <h3>Overview</h3>
+    <p>
+        In JavaScript, variables and constants are used to store data that can be accessed and modified throughout the program. Variables can store any type of data, such as numbers, strings, and objects. Constants are similar but cannot be reassigned once they are initialized.
+    </p>
+
+    <h3>Declaring Variables</h3>
+    <p>
+        JavaScript provides three main ways to declare variables: <code>var</code>, <code>let</code>, and <code>const</code>.
+    </p>
+    <ul>
+        <li><strong>var:</strong> The oldest way to declare a variable. It has function-scoped or globally-scoped behavior.</li>
+        <li><strong>let:</strong> Introduced in ES6, <code>let</code> is block-scoped, meaning it only exists within the block of code it’s defined in.</li>
+        <li><strong>const:</strong> Also introduced in ES6, <code>const</code> creates a constant that must be assigned a value at the time of declaration and cannot be reassigned later.</li>
+    </ul>
+
+    <h3>Examples of Variable Declarations</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            var name = "John";  // Using var
+            let age = 30;       // Using let
+            const country = "USA";  // Using const
+        </code>
+    </pre>
+
+    <h3>Variable Scope</h3>
+    <p>
+        The scope of a variable determines where it can be accessed. Variables declared with <code>var</code> are function-scoped or globally-scoped, while those declared with <code>let</code> and <code>const</code> are block-scoped.
+    </p>
+    <ul>
+        <li><strong>Global Scope:</strong> Variables declared outside any function or block are globally scoped and can be accessed anywhere in the program.</li>
+        <li><strong>Function Scope:</strong> Variables declared within a function are only accessible within that function.</li>
+        <li><strong>Block Scope:</strong> Variables declared with <code>let</code> or <code>const</code> within a block (e.g., inside a loop or an if statement) are only accessible within that block.</li>
+    </ul>
+
+    <h3>Constants</h3>
+    <p>
+        Constants are variables whose values cannot be reassigned. They are useful when you want to ensure that the value remains constant throughout the program. However, note that constants can still hold mutable values, such as objects or arrays. You just cannot reassign the constant itself.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const pi = 3.14159;
+            // pi = 3.14; // This will throw an error because constants cannot be reassigned
+        </code>
+    </pre>
+
+    <h3>Conclusion</h3>
+    <p>
+        Understanding variables and constants is fundamental to JavaScript programming. Use <code>let</code> and <code>const</code> over <code>var</code> to ensure better scoping and avoid issues in modern JavaScript code.
+    </p>
+</div>
+
+<!-- Data Types -->
+<div class="main" id="data-types">
+    <h1>Data Types in JavaScript</h1>
+
+    <h3>Overview</h3>
+    <p>
+        JavaScript is a dynamically typed language, meaning variables can hold values of any data type, and you do not need to specify the type when declaring a variable. The language has various built-in data types that can be classified into primitive types and non-primitive types (also known as reference types).
+    </p>
+
+    <h3>Primitive Data Types</h3>
+    <p>
+        Primitive data types are immutable and are passed by value. The primitive types in JavaScript are:
+    </p>
+    <ul>
+        <li><strong>String:</strong> Represents a sequence of characters. Example: <code>"Hello World"</code></li>
+        <li><strong>Number:</strong> Represents both integer and floating-point numbers. Example: <code>42</code>, <code>3.14</code></li>
+        <li><strong>Boolean:</strong> Represents either <code>true</code> or <code>false</code>.</li>
+        <li><strong>Undefined:</strong> Represents a variable that has been declared but not assigned a value. Example: <code>let x;</code></li>
+        <li><strong>Null:</strong> Represents the intentional absence of any object value. Example: <code>let y = null;</code></li>
+        <li><strong>Symbol:</strong> A unique and immutable data type primarily used to create anonymous object properties (introduced in ES6).</li>
+        <li><strong>BigInt:</strong> Represents large integers beyond the limits of the <code>Number</code> type (introduced in ES11). Example: <code>1234567890123456789012345678901234567890n</code></li>
+    </ul>
+
+    <h3>Non-Primitive Data Types (Reference Types)</h3>
+    <p>
+        Non-primitive types are mutable and are passed by reference. They include:
+    </p>
+    <ul>
+        <li><strong>Object:</strong> A collection of key-value pairs. Example: <code>const person = { name: "John", age: 30 }</code></li>
+        <li><strong>Array:</strong> A special type of object used for storing ordered collections. Example: <code>const colors = ["red", "green", "blue"]</code></li>
+        <li><strong>Function:</strong> A block of code that can be executed. Functions in JavaScript are also objects. Example: <code>function greet() { console.log("Hello"); }</code></li>
+    </ul>
+
+    <h3>Type Conversion</h3>
+    <p>
+        JavaScript automatically converts between different data types in certain situations (type coercion). You can also explicitly convert between types using built-in methods:
+    </p>
+    <ul>
+        <li><strong>To String:</strong> Use <code>String()</code> or <code>toString()</code> to convert other types to a string.</li>
+        <li><strong>To Number:</strong> Use <code>Number()</code> or <code>parseInt()</code>/<code>parseFloat()</code> to convert a string to a number.</li>
+        <li><strong>To Boolean:</strong> Use <code>Boolean()</code> to convert any value to a boolean.</li>
+    </ul>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            let str = "123";
+            let num = Number(str); // Converts string to number
+            console.log(num); // Output: 123
+        </code>
+    </pre>
+
+    <h3>Conclusion</h3>
+    <p>
+        Understanding JavaScript data types is essential for working with variables and performing various operations on them. It is important to know the differences between primitive and non-primitive types, as well as how to perform type conversions.
+    </p>
+</div>
+
+<!-- Operators -->
+<div class="main" id="operators">
+    <h1>Operators in JavaScript</h1>
+
+    <h3>Overview</h3>
+    <p>
+        Operators are used to perform operations on variables and values. JavaScript includes various types of operators, such as arithmetic, assignment, comparison, logical, and more. Understanding operators is crucial for performing calculations, making decisions, and controlling the flow of your program.
+    </p>
+
+    <h3>Types of Operators</h3>
+
+    <h4>1. Arithmetic Operators</h4>
+    <p>
+        Arithmetic operators are used to perform mathematical operations like addition, subtraction, multiplication, etc.
+    </p>
+    <ul>
+        <li><strong>Addition (+):</strong> Adds two operands.</li>
+        <li><strong>Subtraction (-):</strong> Subtracts the second operand from the first.</li>
+        <li><strong>Multiplication (*):</strong> Multiplies two operands.</li>
+        <li><strong>Division (/):</strong> Divides the first operand by the second.</li>
+        <li><strong>Modulus (%):</strong> Returns the remainder when the first operand is divided by the second.</li>
+        <li><strong>Exponentiation (**):</strong> Raises the first operand to the power of the second.</li>
+        <li><strong>Increment (++)</strong> Increases the operand by 1.</li>
+        <li><strong>Decrement (--)</strong> Decreases the operand by 1.</li>
+    </ul>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            let a = 5;
+            let b = 2;
+            console.log(a + b); // Output: 7
+            console.log(a * b); // Output: 10
+        </code>
+    </pre>
+
+    <h4>2. Assignment Operators</h4>
+    <p>
+        Assignment operators are used to assign values to variables.
+    </p>
+    <ul>
+        <li><strong>=</strong>: Assigns the value on the right to the variable on the left.</li>
+        <li><strong>+=</strong>: Adds the right operand to the left operand and assigns the result to the left operand.</li>
+        <li><strong>-=</strong>: Subtracts the right operand from the left operand and assigns the result to the left operand.</li>
+        <li><strong>*=</strong>: Multiplies the left operand by the right operand and assigns the result to the left operand.</li>
+        <li><strong>/=</strong>: Divides the left operand by the right operand and assigns the result to the left operand.</li>
+        <li><strong>%=</strong>: Performs modulus operation and assigns the result to the left operand.</li>
+    </ul>
+
+    <h4>3. Comparison Operators</h4>
+    <p>
+        Comparison operators are used to compare two values and return a boolean result (<code>true</code> or <code>false</code>).
+    </p>
+    <ul>
+        <li><strong>==</strong>: Checks if two values are equal (loose equality).</li>
+        <li><strong>===</strong>: Checks if two values are equal and of the same type (strict equality).</li>
+        <li><strong>!=</strong>: Checks if two values are not equal (loose inequality).</li>
+        <li><strong>!==</strong>: Checks if two values are not equal and/or not of the same type (strict inequality).</li>
+        <li><strong>></strong>: Checks if the left operand is greater than the right operand.</li>
+        <li><strong><</strong>: Checks if the left operand is less than the right operand.</li>
+        <li><strong>>=</strong>: Checks if the left operand is greater than or equal to the right operand.</li>
+        <li><strong><=</strong>: Checks if the left operand is less than or equal to the right operand.</li>
+    </ul>
+
+    <h4>4. Logical Operators</h4>
+    <p>
+        Logical operators are used to combine multiple conditions and return a boolean value.
+    </p>
+    <ul>
+        <li><strong>&&</strong>: Logical AND, returns <code>true</code> if both operands are true.</li>
+        <li><strong>||</strong>: Logical OR, returns <code>true</code> if at least one operand is true.</li>
+        <li><strong>!</strong>: Logical NOT, inverts the boolean value of the operand.</li>
+    </ul>
+
+    <h4>5. Ternary Operator</h4>
+    <p>
+        The ternary operator is a shorthand way of writing an <code>if-else</code> statement.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            let age = 18;
+            let canVote = (age >= 18) ? "Yes" : "No";
+            console.log(canVote); // Output: "Yes"
+        </code>
+    </pre>
+
+    <h3>Conclusion</h3>
+    <p>
+        Operators are a fundamental concept in JavaScript and are essential for performing calculations, comparisons, and logical decisions. Familiarity with different operators will help you write more efficient and readable code.
+    </p>
+</div>
+
+<!-- Type Conversion and Coercion -->
+<div class="main" id="type-coercion">
+    <h1>Type Conversion and Coercion in JavaScript</h1>
+
+    <h3>Overview</h3>
+    <p>
+        In JavaScript, type conversion refers to the process of converting one data type to another. JavaScript provides automatic and manual ways to convert data types. Understanding type coercion and how JavaScript handles it is essential for writing efficient code and avoiding unexpected bugs.
+    </p>
+
+    <h3>Type Coercion</h3>
+    <p>
+        Type coercion is the automatic or implicit conversion of values from one data type to another, typically during operations. JavaScript automatically converts operands to the required type when necessary.
+    </p>
+    <ul>
+        <li><strong>String Coercion:</strong> If one of the operands is a string, JavaScript converts the other operand to a string.</li>
+        <li><strong>Number Coercion:</strong> If one of the operands is a number, JavaScript converts the other operand to a number.</li>
+        <li><strong>Boolean Coercion:</strong> Some values in JavaScript are considered "falsy" (e.g., <code>0</code>, <code>null</code>, <code>undefined</code>, <code>NaN</code>, and <code>""</code>), and others are "truthy" (e.g., non-empty strings, non-zero numbers, and objects).</li>
+    </ul>
+
+    <h3>Explicit Type Conversion (Type Casting)</h3>
+    <p>
+        In some cases, you might need to manually convert a value from one type to another. JavaScript provides methods for explicit type conversion, including:
+    </p>
+    <ul>
+        <li><strong>Number():</strong> Converts a value to a number.</li>
+        <li><strong>String():</strong> Converts a value to a string.</li>
+        <li><strong>Boolean():</strong> Converts a value to a boolean.</li>
+    </ul>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            let str = "123";
+            let num = Number(str); // Converts string to number
+            console.log(num); // Output: 123
+
+            let bool = Boolean(""); // Converts empty string to false
+            console.log(bool); // Output: false
+        </code>
+    </pre>
+
+    <h3>Examples of Type Coercion</h3>
+
+    <h4>1. Coercion with Addition (+)</h4>
+    <p>
+        When using the <code>+</code> operator with a string and a number, JavaScript will coerce the number to a string and concatenate the two.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            let result = "5" + 2; 
+            console.log(result); // Output: "52" (String concatenation)
+        </code>
+    </pre>
+
+    <h4>2. Coercion with Comparison (== vs ===)</h4>
+    <p>
+        JavaScript uses type coercion when performing loose equality (==) but does not coerce types with strict equality (===).
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            console.log(5 == "5");  // Output: true (type coercion occurs)
+            console.log(5 === "5"); // Output: false (no type coercion)
+        </code>
+    </pre>
+
+    <h3>Falsy and Truthy Values</h3>
+    <p>
+        JavaScript automatically converts values to booleans when needed. Some values are considered falsy (evaluating to <code>false</code>), and others are truthy (evaluating to <code>true</code>).
+    </p>
+    <ul>
+        <li><strong>Falsy Values:</strong> <code>0</code>, <code>NaN</code>, <code>""</code> (empty string), <code>false</code>, <code>null</code>, <code>undefined</code>.</li>
+        <li><strong>Truthy Values:</strong> Any value that is not falsy, such as non-zero numbers, non-empty strings, and objects.</li>
+    </ul>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            if ("") {
+                console.log("This won't run because empty string is falsy.");
+            } else {
+                console.log("This will run because empty string is falsy.");
+            }
+        </code>
+    </pre>
+
+    <h3>Conclusion</h3>
+    <p>
+        Understanding type conversion and coercion is critical for writing reliable JavaScript code. Type coercion happens automatically in some cases, but you can also explicitly convert types using methods like <code>Number()</code>, <code>String()</code>, and <code>Boolean()</code>. Knowing how and when type coercion occurs can help you avoid unexpected behavior in your programs.
+    </p>
+</div>
+
+<!-- If-Else Statements -->
+<div class="main" id="if-else">
+    <h1>If-Else Statements in JavaScript</h1>
+
+    <h3>Overview</h3>
+    <p>
+        The <code>if-else</code> statement is one of the fundamental control flow statements in JavaScript. It allows you to execute a block of code based on a condition, and if that condition is false, an alternate block of code can be executed using the <code>else</code> keyword.
+    </p>
+
+    <h3>If Statement</h3>
+    <p>
+        The <code>if</code> statement is used to check whether a condition is true. If it is true, the code inside the block will run.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            let number = 10;
+            if (number > 5) {
+                console.log("The number is greater than 5.");
+            }
+        </code>
+    </pre>
+
+    <h3>If-Else Statement</h3>
+    <p>
+        The <code>if-else</code> statement is used to execute one block of code if a condition is true, and another block if the condition is false.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            let number = 3;
+            if (number > 5) {
+                console.log("The number is greater than 5.");
+            } else {
+                console.log("The number is not greater than 5.");
+            }
+        </code>
+    </pre>
+
+    <h3>If-Else If-Else Statement</h3>
+    <p>
+        The <code>else if</code> statement is used when you have multiple conditions to check. JavaScript will evaluate each condition in sequence, and if one of them is true, it will execute the corresponding block of code.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            let number = 7;
+            if (number > 10) {
+                console.log("The number is greater than 10.");
+            } else if (number > 5) {
+                console.log("The number is greater than 5 but less than or equal to 10.");
+            } else {
+                console.log("The number is less than or equal to 5.");
+            }
+        </code>
+    </pre>
+
+    <h3>Nested If-Else Statements</h3>
+    <p>
+        You can also nest <code>if-else</code> statements inside one another to create more complex conditions.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            let number = 8;
+            if (number > 5) {
+                if (number < 10) {
+                    console.log("The number is between 5 and 10.");
+                } else {
+                    console.log("The number is 10 or greater.");
+                }
+            } else {
+                console.log("The number is 5 or less.");
+            }
+        </code>
+    </pre>
+
+    <h3>Conclusion</h3>
+    <p>
+        The <code>if-else</code> statement is a powerful tool for controlling the flow of your JavaScript code. It enables conditional execution based on the evaluation of logical expressions. Understanding how to use <code>if</code>, <code>else</code>, and <code>else if</code> statements will allow you to write more dynamic and responsive JavaScript code.
+    </p>
+</div>
+
+<!-- Switch-Case -->
+<div class="main" id="switch-case">
+    <h1>Switch-Case in JavaScript</h1>
+
+    <h3>Overview</h3>
+    <p>
+        The <code>switch</code> statement is another control flow statement used to handle multiple conditions. It's a cleaner alternative to multiple <code>if-else</code> statements when you have several conditions to check against a single value. The <code>switch</code> statement evaluates an expression and matches its value to different <code>case</code> labels.
+    </p>
+
+    <h3>Basic Syntax</h3>
+    <p>
+        The syntax of a <code>switch</code> statement is as follows:
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            switch (expression) {
+                case value1:
+                    // Block of code
+                    break;
+                case value2:
+                    // Block of code
+                    break;
+                default:
+                    // Default block of code if no case matches
+            }
+        </code>
+    </pre>
+
+    <h3>Example</h3>
+    <p>
+        The following example demonstrates a simple <code>switch</code> statement that checks a variable and executes different code based on its value.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            let day = 3;
+            switch (day) {
+                case 1:
+                    console.log("Monday");
+                    break;
+                case 2:
+                    console.log("Tuesday");
+                    break;
+                case 3:
+                    console.log("Wednesday");
+                    break;
+                case 4:
+                    console.log("Thursday");
+                    break;
+                case 5:
+                    console.log("Friday");
+                    break;
+                default:
+                    console.log("Weekend");
+            }
+        </code>
+    </pre>
+
+    <h3>Explanation</h3>
+    <p>
+        In the example above, the value of <code>day</code> is checked in the <code>switch</code> statement. If it matches any of the <code>case</code> labels (1, 2, 3, etc.), the corresponding code block will execute. The <code>break</code> statement ensures that the switch statement terminates after a matching case is found.
+    </p>
+
+    <h3>Using Default</h3>
+    <p>
+        The <code>default</code> case is optional but recommended. It is used to handle situations when no <code>case</code> matches the value of the expression. The code inside the <code>default</code> block will run if no other cases match.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            let fruit = "banana";
+            switch (fruit) {
+                case "apple":
+                    console.log("Apple");
+                    break;
+                case "orange":
+                    console.log("Orange");
+                    break;
+                default:
+                    console.log("Unknown fruit");
+            }
+        </code>
+    </pre>
+
+    <h3>Conclusion</h3>
+    <p>
+        The <code>switch-case</code> statement is a valuable tool for dealing with multiple conditions that involve a single expression. It simplifies the code and improves readability when handling numerous values for comparison. Be sure to use the <code>break</code> statement to prevent unintended fall-through and always include a <code>default</code> case to handle unexpected values.
+    </p>
+</div>
+
+<!-- Loops (For, While, Do-While) -->
+<div class="main" id="loops">
+    <h1>Loops in JavaScript</h1>
+
+    <h3>Overview</h3>
+    <p>
+        Loops are used in JavaScript to execute a block of code repeatedly until a specific condition is met. There are several types of loops, but the most commonly used are the <code>for</code> loop, the <code>while</code> loop, and the <code>do-while</code> loop.
+    </p>
+
+    <h3>For Loop</h3>
+    <p>
+        The <code>for</code> loop is the most commonly used loop in JavaScript. It allows you to specify an initialization, condition, and an increment/decrement statement in one line.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            for (let i = 0; i < 5; i++) {
+                console.log(i);
+            }
+        </code>
+    </pre>
+    <p>
+        In this example, the loop starts with <code>i = 0</code>, and continues as long as <code>i < 5</code>. After each iteration, the value of <code>i</code> is incremented by 1.
+    </p>
+
+    <h3>While Loop</h3>
+    <p>
+        The <code>while</code> loop will execute a block of code as long as the specified condition is true. It checks the condition before executing the code block.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            let i = 0;
+            while (i < 5) {
+                console.log(i);
+                i++;
+            }
+        </code>
+    </pre>
+    <p>
+        In this example, the loop runs as long as <code>i < 5</code>. The value of <code>i</code> is incremented inside the loop until the condition is false.
+    </p>
+
+    <h3>Do-While Loop</h3>
+    <p>
+        The <code>do-while</code> loop is similar to the <code>while</code> loop, but the condition is checked after executing the code block. This means the code block will run at least once, even if the condition is false from the start.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            let i = 0;
+            do {
+                console.log(i);
+                i++;
+            } while (i < 5);
+        </code>
+    </pre>
+    <p>
+        In this example, the loop runs once and then checks if <code>i < 5</code> to continue or stop.
+    </p>
+
+    <h3>Comparison of Loops</h3>
+    <p>
+        - Use the <code>for</code> loop when you know how many times you want to iterate.
+        - Use the <code>while</code> loop when the number of iterations is not known in advance, but the condition is checked before each iteration.
+        - Use the <code>do-while</code> loop when you want the code to run at least once before checking the condition.
+    </p>
+
+    <h3>Conclusion</h3>
+    <p>
+        JavaScript provides a variety of looping structures that help in executing repetitive tasks. Choose the right type of loop based on the use case to ensure clear and efficient code.
+    </p>
+</div>
+
+<!-- Break and Continue -->
+<div class="main" id="break-continue">
+    <h1>Break and Continue in JavaScript</h1>
+
+    <h3>Overview</h3>
+    <p>
+        The <code>break</code> and <code>continue</code> statements are used inside loops to control the flow of the loop execution. They provide a way to exit or skip certain iterations based on specific conditions.
+    </p>
+
+    <h3>Break Statement</h3>
+    <p>
+        The <code>break</code> statement is used to terminate the loop immediately, regardless of the loop's condition. When executed, it exits the loop and continues executing the code after the loop.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            for (let i = 0; i < 5; i++) {
+                if (i === 3) {
+                    break;
+                }
+                console.log(i);
+            }
+        </code>
+    </pre>
+    <p>
+        In this example, the loop will print numbers 0, 1, and 2. When <code>i</code> reaches 3, the <code>break</code> statement is executed, and the loop terminates.
+    </p>
+
+    <h3>Continue Statement</h3>
+    <p>
+        The <code>continue</code> statement is used to skip the current iteration of the loop and continue to the next iteration. It does not terminate the loop but skips the rest of the code for the current iteration.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            for (let i = 0; i < 5; i++) {
+                if (i === 3) {
+                    continue;
+                }
+                console.log(i);
+            }
+        </code>
+    </pre>
+    <p>
+        In this example, the loop will print numbers 0, 1, 2, and 4. When <code>i</code> equals 3, the <code>continue</code> statement skips the rest of the loop for that iteration, so 3 is not printed.
+    </p>
+
+    <h3>Comparison of Break and Continue</h3>
+    <p>
+        - The <code>break</code> statement terminates the loop completely.
+        - The <code>continue</code> statement skips the current iteration and proceeds to the next iteration.
+    </p>
+
+    <h3>When to Use Break and Continue</h3>
+    <p>
+        - Use <code>break</code> when you need to stop the loop entirely after a certain condition is met.
+        - Use <code>continue</code> when you want to skip over specific iterations without terminating the loop.
+    </p>
+
+    <h3>Conclusion</h3>
+    <p>
+        The <code>break</code> and <code>continue</code> statements give you more control over the flow of loops, allowing you to either exit early or skip unwanted iterations based on conditions.
+    </p>
+</div>
+
+<!-- Loops (For, While, Do-While) -->
+<div class="main" id="loops">
+    <h1>Loops in JavaScript</h1>
+
+    <h3>Overview</h3>
+    <p>
+        Loops are used to execute a block of code multiple times. JavaScript supports different types of loops, each serving specific needs:
+        <ul>
+            <li><strong>For loop</strong>: Ideal when the number of iterations is known in advance.</li>
+            <li><strong>While loop</strong>: Useful when the number of iterations is not known and depends on a condition.</li>
+            <li><strong>Do-While loop</strong>: Similar to the while loop but guarantees at least one iteration, as the condition is checked after the loop's body is executed.</li>
+        </ul>
+    </p>
+
+    <h3>For Loop</h3>
+    <p>
+        The <code>for</code> loop is typically used when the number of iterations is known. It consists of three parts: initialization, condition, and increment/decrement.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            for (let i = 0; i < 5; i++) {
+                console.log(i);
+            }
+        </code>
+    </pre>
+    <p>
+        In this example, the loop will print numbers from 0 to 4. The loop initializes <code>i</code> to 0, checks if <code>i</code> is less than 5, and increments <code>i</code> by 1 after each iteration.
+    </p>
+
+    <h3>While Loop</h3>
+    <p>
+        The <code>while</code> loop runs as long as the condition evaluates to <code>true</code>. It's useful when the number of iterations is not known ahead of time.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            let i = 0;
+            while (i < 5) {
+                console.log(i);
+                i++;
+            }
+        </code>
+    </pre>
+    <p>
+        In this example, the <code>while</code> loop will behave similarly to the <code>for</code> loop above, printing numbers from 0 to 4.
+    </p>
+
+    <h3>Do-While Loop</h3>
+    <p>
+        The <code>do-while</code> loop guarantees that the code inside the loop runs at least once, even if the condition is initially <code>false</code>.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            let i = 0;
+            do {
+                console.log(i);
+                i++;
+            } while (i < 5);
+        </code>
+    </pre>
+    <p>
+        In this example, the loop will print numbers from 0 to 4. The difference from the <code>while</code> loop is that the condition is checked after the body of the loop is executed.
+    </p>
+
+    <h3>Comparison of Loops</h3>
+    <p>
+        - The <code>for</code> loop is used when the number of iterations is known before the loop starts.
+        - The <code>while</code> loop is best when the number of iterations depends on a condition.
+        - The <code>do-while</code> loop is used when you want to ensure the loop executes at least once, regardless of the condition.
+    </p>
+
+    <h3>When to Use Each Loop</h3>
+    <p>
+        - Use the <code>for</code> loop when you know how many times you want to loop.
+        - Use the <code>while</code> loop when the number of iterations is determined by a condition.
+        - Use the <code>do-while</code> loop when you need to execute the loop's body at least once.
+    </p>
+
+    <h3>Conclusion</h3>
+    <p>
+        Understanding the different loop structures is crucial in JavaScript. Choosing the right loop for a particular problem can improve code efficiency and clarity.
+    </p>
+</div>
+
+<!-- Arrow Functions -->
+<div class="main" id="arrow-functions">
+    <h1>Arrow Functions in JavaScript</h1>
+
+    <h3>Overview</h3>
+    <p>
+        Arrow functions provide a shorter syntax for writing functions in JavaScript. They were introduced in ES6 (ECMAScript 2015) and are often used for their concise syntax and lexical scoping of the <code>this</code> keyword.
+    </p>
+
+    <h3>Syntax</h3>
+    <p>
+        The syntax for an arrow function is simpler compared to traditional function expressions. Here's the basic syntax:
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const functionName = (parameter1, parameter2) => {
+                // function body
+            };
+        </code>
+    </pre>
+    <p>
+        If the function has a single parameter, parentheses can be omitted:
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const square = num => num * num;
+        </code>
+    </pre>
+    <p>
+        In this example, the arrow function <code>square</code> takes one parameter <code>num</code> and returns its square.
+    </p>
+
+    <h3>Arrow Function with Multiple Parameters</h3>
+    <p>
+        When the function has multiple parameters, parentheses are required:
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const add = (a, b) => a + b;
+        </code>
+    </pre>
+    <p>
+        This example defines an arrow function <code>add</code> that takes two parameters, <code>a</code> and <code>b</code>, and returns their sum.
+    </p>
+
+    <h3>Implicit Return</h3>
+    <p>
+        If the body of the arrow function contains only a single expression, you can omit the curly braces and the <code>return</code> keyword:
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const double = x => x * 2;
+        </code>
+    </pre>
+    <p>
+        In this example, the function <code>double</code> implicitly returns the result of <code>x * 2</code> without needing the <code>return</code> statement.
+    </p>
+
+    <h3>Lexical Scoping of <code>this</code></h3>
+    <p>
+        One of the key differences between regular functions and arrow functions is how they handle the <code>this</code> keyword. In regular functions, <code>this</code> refers to the object that calls the function, but in arrow functions, <code>this</code> is lexically bound to the context in which the function is defined.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            function TraditionalFunction() {
+                this.value = 1;
+                setTimeout(function() {
+                    this.value++; // 'this' refers to global object, not the TraditionalFunction
+                    console.log(this.value);
+                }, 1000);
+            }
+
+            function ArrowFunction() {
+                this.value = 1;
+                setTimeout(() => {
+                    this.value++; // 'this' refers to the ArrowFunction instance
+                    console.log(this.value);
+                }, 1000);
+            }
+        </code>
+    </pre>
+    <p>
+        In the first example, the regular function <code>TraditionalFunction</code> has issues with <code>this</code> inside <code>setTimeout</code> because it refers to the global object. In the second example, the arrow function <code>ArrowFunction</code> correctly retains the lexical scope of <code>this</code>.
+    </p>
+
+    <h3>When to Use Arrow Functions</h3>
+    <p>
+        Arrow functions are best used when you need a simple function expression, especially when dealing with higher-order functions like <code>map</code>, <code>filter</code>, or <code>reduce</code>, or when you need to retain the context of <code>this</code> in callbacks or event listeners.
+    </p>
+
+    <h3>Conclusion</h3>
+    <p>
+        Arrow functions provide a more concise and expressive way to write functions in JavaScript. They are especially useful for small functions and callbacks, but you should be mindful of their behavior with <code>this</code> when working with object methods and event handlers.
+    </p>
+</div>
+
+<!-- Default and Rest Parameters -->
+<div class="main" id="parameters">
+    <h1>Default and Rest Parameters in JavaScript</h1>
+
+    <h3>Default Parameters</h3>
+    <p>
+        Default parameters allow you to specify default values for function parameters. If no value is provided for a parameter when the function is called, the default value is used.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            function greet(name = 'Guest') {
+                console.log('Hello, ' + name);
+            }
+            
+            greet();       // Output: Hello, Guest
+            greet('John');  // Output: Hello, John
+        </code>
+    </pre>
+    <p>
+        In this example, the <code>greet</code> function has a default value of <code>'Guest'</code> for the <code>name</code> parameter. If no argument is passed, the default is used.
+    </p>
+
+    <h3>Rest Parameters</h3>
+    <p>
+        Rest parameters allow you to collect all remaining arguments passed to a function into an array. They are denoted by three dots (<code>...</code>) followed by the parameter name.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            function sum(...numbers) {
+                return numbers.reduce((total, num) => total + num, 0);
+            }
+            
+            console.log(sum(1, 2, 3)); // Output: 6
+            console.log(sum(4, 5, 6, 7)); // Output: 22
+        </code>
+    </pre>
+    <p>
+        In the <code>sum</code> function, the <code>...numbers</code> syntax collects all arguments into an array. The function then calculates the sum of all the numbers passed.
+    </p>
+
+    <h3>Using Default and Rest Parameters Together</h3>
+    <p>
+        You can also use default and rest parameters together in a function. The default value will be used if no argument is passed for that parameter, while the rest parameter collects the remaining arguments.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            function display(name = 'Anonymous', ...details) {
+                console.log('Name:', name);
+                console.log('Details:', details);
+            }
+            
+            display('Alice', 25, 'Engineer'); // Output: Name: Alice, Details: [25, 'Engineer']
+            display(); // Output: Name: Anonymous, Details: []
+        </code>
+    </pre>
+    <p>
+        In this example, <code>name</code> has a default value of <code>'Anonymous'</code>, and the <code>...details</code> collects the remaining arguments as an array.
+    </p>
+
+    <h3>Conclusion</h3>
+    <p>
+        Default and rest parameters are useful tools for managing function arguments. Default parameters ensure that a function can run even when no value is provided, while rest parameters offer flexibility by collecting an arbitrary number of arguments into an array.
+    </p>
+</div>
+
+<!-- Scope (Global, Local, Block) -->
+<div class="main" id="scope">
+    <h1>Scope in JavaScript</h1>
+
+    <h3>What is Scope?</h3>
+    <p>
+        Scope refers to the accessibility of variables and functions in different parts of your code. JavaScript has three types of scope: global scope, local scope, and block scope.
+    </p>
+
+    <h3>Global Scope</h3>
+    <p>
+        A variable declared outside of any function or block is in the <strong>global scope</strong>, which means it can be accessed from anywhere in your code.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            var globalVar = 'I am global';
+
+            function checkGlobal() {
+                console.log(globalVar); // Output: I am global
+            }
+
+            checkGlobal();
+        </code>
+    </pre>
+    <p>
+        In the example, <code>globalVar</code> is declared in the global scope, making it accessible within the <code>checkGlobal</code> function.
+    </p>
+
+    <h3>Local Scope</h3>
+    <p>
+        A variable declared inside a function is in the <strong>local scope</strong> of that function. It can only be accessed within the function where it is declared.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            function checkLocal() {
+                var localVar = 'I am local';
+                console.log(localVar); // Output: I am local
+            }
+
+            checkLocal();
+            console.log(localVar); // Error: localVar is not defined
+        </code>
+    </pre>
+    <p>
+        In this example, <code>localVar</code> is only accessible inside the <code>checkLocal</code> function. Trying to access it outside the function results in an error.
+    </p>
+
+    <h3>Block Scope</h3>
+    <p>
+        Block scope is introduced with <code>let</code> and <code>const</code>. Variables declared with these keywords are limited to the block (e.g., inside a loop or if statement) in which they are defined.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            if (true) {
+                let blockVar = 'I am block-scoped';
+                console.log(blockVar); // Output: I am block-scoped
+            }
+
+            console.log(blockVar); // Error: blockVar is not defined
+        </code>
+    </pre>
+    <p>
+        In this example, <code>blockVar</code> is only accessible inside the <code>if</code> block, and trying to access it outside will result in an error.
+    </p>
+
+    <h3>Scope Chain</h3>
+    <p>
+        When a function is executed, it creates a new scope. JavaScript uses the scope chain to look up variable values. The scope chain starts from the local scope and moves outward, checking each enclosing scope until it reaches the global scope.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            var globalVar = 'I am global';
+
+            function outerFunction() {
+                var outerVar = 'I am outer';
+                
+                function innerFunction() {
+                    var innerVar = 'I am inner';
+                    console.log(globalVar); // Accesses globalVar
+                    console.log(outerVar);  // Accesses outerVar
+                    console.log(innerVar);  // Accesses innerVar
+                }
+
+                innerFunction();
+            }
+
+            outerFunction();
+        </code>
+    </pre>
+    <p>
+        In this example, the <code>innerFunction</code> can access <code>innerVar</code>, <code>outerVar</code>, and <code>globalVar</code> due to the scope chain.
+    </p>
+
+    <h3>Conclusion</h3>
+    <p>
+        Understanding scope is crucial for managing the visibility and lifespan of variables in JavaScript. It helps you avoid naming conflicts and ensure that variables are only accessible where they are needed.
+    </p>
+</div>
+
+<!-- Working with Objects -->
+<div class="main" id="objects">
+    <h1>Working with Objects in JavaScript</h1>
+
+    <h3>Introduction to Objects</h3>
+    <p>
+        Objects in JavaScript are collections of properties and methods. Each property consists of a key-value pair. Objects are one of the most important data types in JavaScript and are used to store multiple values in a single variable.
+    </p>
+    <p>
+        You can define an object using either object literal notation or the <code>new Object()</code> syntax.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            // Object literal notation
+            const person = {
+                name: 'Alice',
+                age: 25,
+                greet: function() {
+                    console.log('Hello, ' + this.name);
+                }
+            };
+            
+            person.greet(); // Output: Hello, Alice
+        </code>
+    </pre>
+    <p>
+        In the example above, the object <code>person</code> contains two properties: <code>name</code> and <code>age</code>, and one method: <code>greet</code>.
+    </p>
+
+    <h3>Accessing Object Properties</h3>
+    <p>
+        You can access object properties using dot notation or bracket notation. Both methods are commonly used, but dot notation is more straightforward.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            // Dot notation
+            console.log(person.name); // Output: Alice
+            
+            // Bracket notation
+            console.log(person['age']); // Output: 25
+        </code>
+    </pre>
+    <p>
+        Dot notation is easier to use, but bracket notation allows you to access properties with dynamic keys (e.g., variable property names).
+    </p>
+
+    <h3>Modifying Object Properties</h3>
+    <p>
+        You can modify the value of an object’s properties by directly assigning new values using either dot notation or bracket notation.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            person.age = 30; // Using dot notation
+            person['name'] = 'Bob'; // Using bracket notation
+
+            console.log(person.age); // Output: 30
+            console.log(person.name); // Output: Bob
+        </code>
+    </pre>
+
+    <h3>Adding New Properties</h3>
+    <p>
+        You can also add new properties to an object after it has been defined. This can be done using either dot notation or bracket notation.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            person.city = 'New York'; // Adding a new property using dot notation
+            person['country'] = 'USA'; // Adding a new property using bracket notation
+
+            console.log(person.city); // Output: New York
+            console.log(person.country); // Output: USA
+        </code>
+    </pre>
+
+    <h3>Deleting Object Properties</h3>
+    <p>
+        If you need to remove a property from an object, you can use the <code>delete</code> operator.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            delete person.city;
+
+            console.log(person.city); // Output: undefined
+        </code>
+    </pre>
+    <p>
+        After deleting the <code>city</code> property, accessing <code>person.city</code> returns <code>undefined</code>.
+    </p>
+
+    <h3>Iterating Over Object Properties</h3>
+    <p>
+        You can use a <code>for...in</code> loop to iterate over the properties of an object.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            for (const key in person) {
+                console.log(key + ': ' + person[key]);
+            }
+        </code>
+    </pre>
+    <p>
+        This loop iterates over all enumerable properties of the object and logs each property key and value.
+    </p>
+
+    <h3>Object Methods</h3>
+    <p>
+        Objects can also contain methods, which are functions associated with the object. Methods are typically used to perform actions related to the object’s data.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const car = {
+                make: 'Toyota',
+                model: 'Camry',
+                start: function() {
+                    console.log(this.make + ' ' + this.model + ' is starting');
+                }
+            };
+
+            car.start(); // Output: Toyota Camry is starting
+        </code>
+    </pre>
+    <p>
+        In this example, the <code>car</code> object contains a method called <code>start</code> that logs a message when called.
+    </p>
+
+    <h3>Conclusion</h3>
+    <p>
+        Objects are a powerful data structure in JavaScript and form the foundation for much of JavaScript's functionality. Understanding how to work with objects—whether it's adding, modifying, or deleting properties—will be essential for building complex applications.
+    </p>
+</div>
+
+<!-- Arrays -->
+<div class="main" id="arrays">
+    <h1>Working with Arrays in JavaScript</h1>
+
+    <h3>Introduction to Arrays</h3>
+    <p>
+        An array in JavaScript is a special type of object used to store multiple values in a single variable. Arrays are indexed by numbers and can store values of any type: strings, numbers, objects, and even other arrays.
+    </p>
+    <p>
+        Arrays are created using either array literal notation or the <code>new Array()</code> constructor.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            // Array literal notation
+            const fruits = ['Apple', 'Banana', 'Cherry'];
+            
+            // Using the new Array() constructor
+            const numbers = new Array(1, 2, 3, 4);
+        </code>
+    </pre>
+    <p>
+        In the example above, <code>fruits</code> is an array created using the array literal, while <code>numbers</code> is created using the <code>new Array()</code> constructor.
+    </p>
+
+    <h3>Accessing Array Elements</h3>
+    <p>
+        You can access array elements using their index, with the first element being at index 0.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const fruits = ['Apple', 'Banana', 'Cherry'];
+            
+            console.log(fruits[0]); // Output: Apple
+            console.log(fruits[1]); // Output: Banana
+            console.log(fruits[2]); // Output: Cherry
+        </code>
+    </pre>
+    <p>
+        Array indices start at 0, so <code>fruits[0]</code> accesses the first element, <code>fruits[1]</code> the second, and so on.
+    </p>
+
+    <h3>Modifying Array Elements</h3>
+    <p>
+        You can modify the values of array elements by using their index.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const fruits = ['Apple', 'Banana', 'Cherry'];
+            
+            fruits[1] = 'Blueberry'; // Modifying the second element
+            console.log(fruits[1]); // Output: Blueberry
+        </code>
+    </pre>
+    <p>
+        Here, the second element in the <code>fruits</code> array is changed from <code>Banana</code> to <code>Blueberry</code>.
+    </p>
+
+    <h3>Adding and Removing Elements</h3>
+    <p>
+        You can add elements to an array using the <code>push()</code> method to add to the end, or <code>unshift()</code> to add to the beginning. You can also remove elements using <code>pop()</code> (removes from the end) or <code>shift()</code> (removes from the beginning).
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const fruits = ['Apple', 'Banana'];
+
+            // Adding elements
+            fruits.push('Cherry'); // Adds to the end
+            fruits.unshift('Orange'); // Adds to the beginning
+            
+            console.log(fruits); // Output: ['Orange', 'Apple', 'Banana', 'Cherry']
+
+            // Removing elements
+            fruits.pop(); // Removes the last element
+            fruits.shift(); // Removes the first element
+
+            console.log(fruits); // Output: ['Apple', 'Banana']
+        </code>
+    </pre>
+
+    <h3>Array Length</h3>
+    <p>
+        The length of an array is the number of elements in the array. You can get the length using the <code>length</code> property.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const fruits = ['Apple', 'Banana', 'Cherry'];
+            console.log(fruits.length); // Output: 3
+        </code>
+    </pre>
+
+    <h3>Array Methods</h3>
+    <p>
+        Arrays in JavaScript come with many built-in methods to perform common tasks like iteration, transformation, and filtering. Here are a few examples:
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const numbers = [1, 2, 3, 4, 5];
+
+            // forEach() - Iterates over each element
+            numbers.forEach(num => {
+                console.log(num); // Outputs each number in the array
+            });
+
+            // map() - Transforms each element
+            const doubled = numbers.map(num => num * 2);
+            console.log(doubled); // Output: [2, 4, 6, 8, 10]
+
+            // filter() - Filters elements based on condition
+            const evenNumbers = numbers.filter(num => num % 2 === 0);
+            console.log(evenNumbers); // Output: [2, 4]
+
+            // reduce() - Reduces array to a single value
+            const sum = numbers.reduce((acc, num) => acc + num, 0);
+            console.log(sum); // Output: 15
+        </code>
+    </pre>
+
+    <h3>Conclusion</h3>
+    <p>
+        Arrays are an essential part of JavaScript and are used to store collections of data. They come with a variety of useful methods for working with data, making them very versatile. Understanding how to manipulate arrays will allow you to work with lists of items and perform complex operations on them.
+    </p>
+</div>
+
+<!-- Object Methods -->
+<div class="main" id="object-methods">
+    <h1>Object Methods in JavaScript</h1>
+
+    <h3>Introduction to Object Methods</h3>
+    <p>
+        Objects in JavaScript can contain both properties (values associated with keys) and methods (functions associated with objects). Methods are functions that are part of an object and can manipulate the object’s properties or perform other actions.
+    </p>
+
+    <h3>Defining Methods in an Object</h3>
+    <p>
+        Methods are defined as functions within an object. Here’s an example of an object with a method:
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const person = {
+                firstName: 'John',
+                lastName: 'Doe',
+                fullName: function() {
+                    return this.firstName + ' ' + this.lastName;
+                }
+            };
+            console.log(person.fullName()); // Output: John Doe
+        </code>
+    </pre>
+    <p>
+        In the example above, the <code>fullName</code> method combines the <code>firstName</code> and <code>lastName</code> properties of the <code>person</code> object and returns the full name.
+    </p>
+
+    <h3>Method Shorthand Syntax</h3>
+    <p>
+        In modern JavaScript, you can use shorthand syntax for defining methods within an object. This approach removes the need to use the <code>function</code> keyword.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const person = {
+                firstName: 'John',
+                lastName: 'Doe',
+                fullName() {
+                    return this.firstName + ' ' + this.lastName;
+                }
+            };
+            console.log(person.fullName()); // Output: John Doe
+        </code>
+    </pre>
+    <p>
+        This syntax simplifies the definition of methods within objects.
+    </p>
+
+    <h3>Using <code>this</code> Keyword in Object Methods</h3>
+    <p>
+        The <code>this</code> keyword refers to the object from which the method was called. It is used inside object methods to access properties and other methods of the object.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const person = {
+                firstName: 'John',
+                lastName: 'Doe',
+                greet() {
+                    return 'Hello, ' + this.firstName + ' ' + this.lastName;
+                }
+            };
+            console.log(person.greet()); // Output: Hello, John Doe
+        </code>
+    </pre>
+    <p>
+        In this example, the <code>greet</code> method uses <code>this</code> to refer to the object’s <code>firstName</code> and <code>lastName</code> properties.
+    </p>
+
+    <h3>Adding Methods to Objects After Creation</h3>
+    <p>
+        You can also add methods to an object after it’s created by directly assigning a function to a property.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const person = {
+                firstName: 'John',
+                lastName: 'Doe'
+            };
+
+            // Adding method after creation
+            person.fullName = function() {
+                return this.firstName + ' ' + this.lastName;
+            };
+
+            console.log(person.fullName()); // Output: John Doe
+        </code>
+    </pre>
+    <p>
+        Here, the <code>fullName</code> method is added to the <code>person</code> object after it’s created.
+    </p>
+
+    <h3>Built-in Object Methods</h3>
+    <p>
+        JavaScript objects come with several built-in methods that allow you to perform operations on objects. Some commonly used built-in object methods are:
+    </p>
+    <ul>
+        <li><strong><code>Object.keys()</code></strong> - Returns an array of an object's keys.</li>
+        <li><strong><code>Object.values()</code></strong> - Returns an array of an object's values.</li>
+        <li><strong><code>Object.entries()</code></strong> - Returns an array of an object's key-value pairs.</li>
+        <li><strong><code>Object.assign()</code></strong> - Copies values from one or more source objects to a target object.</li>
+    </ul>
+
+    <h4>Examples of Built-in Object Methods</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const person = {
+                firstName: 'John',
+                lastName: 'Doe'
+            };
+
+            // Object.keys()
+            console.log(Object.keys(person)); // Output: ['firstName', 'lastName']
+
+            // Object.values()
+            console.log(Object.values(person)); // Output: ['John', 'Doe']
+
+            // Object.entries()
+            console.log(Object.entries(person)); // Output: [['firstName', 'John'], ['lastName', 'Doe']]
+
+            // Object.assign()
+            const newPerson = Object.assign({}, person);
+            console.log(newPerson); // Output: { firstName: 'John', lastName: 'Doe' }
+        </code>
+    </pre>
+
+    <h3>Conclusion</h3>
+    <p>
+        Object methods allow you to define functions that can interact with an object's properties. They are a fundamental part of working with objects in JavaScript and help make your code more modular and reusable. Additionally, JavaScript provides a variety of built-in methods to manipulate and work with objects efficiently.
+    </p>
+</div>
+
+<!-- Array Methods -->
+<div class="main" id="array-methods">
+    <h1>Array Methods in JavaScript</h1>
+
+    <h3>Introduction to Array Methods</h3>
+    <p>
+        Arrays in JavaScript are used to store multiple values in a single variable. JavaScript arrays come with a variety of built-in methods that allow you to manipulate, modify, and access array elements efficiently.
+    </p>
+
+    <h3>Commonly Used Array Methods</h3>
+    <p>Here are some of the most commonly used array methods:</p>
+    <ul>
+        <li><strong><code>push()</code></strong> - Adds one or more elements to the end of an array.</li>
+        <li><strong><code>pop()</code></strong> - Removes the last element from an array.</li>
+        <li><strong><code>shift()</code></strong> - Removes the first element from an array.</li>
+        <li><strong><code>unshift()</code></strong> - Adds one or more elements to the beginning of an array.</li>
+        <li><strong><code>concat()</code></strong> - Merges two or more arrays into one.</li>
+        <li><strong><code>slice()</code></strong> - Returns a shallow copy of a portion of an array into a new array object.</li>
+        <li><strong><code>splice()</code></strong> - Adds or removes elements from an array at a specified position.</li>
+        <li><strong><code>forEach()</code></strong> - Executes a provided function once for each array element.</li>
+    </ul>
+
+    <h3>Examples of Array Methods</h3>
+
+    <h4><code>push()</code> - Adding Elements to the End of an Array</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const fruits = ['Apple', 'Banana'];
+            fruits.push('Cherry');
+            console.log(fruits); // Output: ['Apple', 'Banana', 'Cherry']
+        </code>
+    </pre>
+
+    <h4><code>pop()</code> - Removing Elements from the End of an Array</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const fruits = ['Apple', 'Banana', 'Cherry'];
+            fruits.pop();
+            console.log(fruits); // Output: ['Apple', 'Banana']
+        </code>
+    </pre>
+
+    <h4><code>shift()</code> - Removing the First Element of an Array</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const fruits = ['Apple', 'Banana', 'Cherry'];
+            fruits.shift();
+            console.log(fruits); // Output: ['Banana', 'Cherry']
+        </code>
+    </pre>
+
+    <h4><code>unshift()</code> - Adding Elements to the Beginning of an Array</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const fruits = ['Banana', 'Cherry'];
+            fruits.unshift('Apple');
+            console.log(fruits); // Output: ['Apple', 'Banana', 'Cherry']
+        </code>
+    </pre>
+
+    <h4><code>concat()</code> - Merging Arrays</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const fruits = ['Apple', 'Banana'];
+            const moreFruits = ['Cherry', 'Date'];
+            const allFruits = fruits.concat(moreFruits);
+            console.log(allFruits); // Output: ['Apple', 'Banana', 'Cherry', 'Date']
+        </code>
+    </pre>
+
+    <h4><code>slice()</code> - Extracting a Portion of an Array</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const fruits = ['Apple', 'Banana', 'Cherry', 'Date'];
+            const selectedFruits = fruits.slice(1, 3);
+            console.log(selectedFruits); // Output: ['Banana', 'Cherry']
+        </code>
+    </pre>
+
+    <h4><code>splice()</code> - Modifying an Array by Adding/Removing Elements</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const fruits = ['Apple', 'Banana', 'Cherry'];
+            fruits.splice(1, 1, 'Orange'); // Remove 1 element at index 1 and add 'Orange'
+            console.log(fruits); // Output: ['Apple', 'Orange', 'Cherry']
+        </code>
+    </pre>
+
+    <h4><code>forEach()</code> - Iterating Over Array Elements</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const fruits = ['Apple', 'Banana', 'Cherry'];
+            fruits.forEach(function(fruit) {
+                console.log(fruit);
+            });
+            // Output:
+            // Apple
+            // Banana
+            // Cherry
+        </code>
+    </pre>
+
+    <h3>Array Methods for Searching and Filtering</h3>
+    <ul>
+        <li><strong><code>indexOf()</code></strong> - Returns the first index of a given element, or -1 if not found.</li>
+        <li><strong><code>includes()</code></strong> - Checks if an array contains a specified element and returns true or false.</li>
+        <li><strong><code>filter()</code></strong> - Creates a new array with all elements that pass the test implemented by the provided function.</li>
+        <li><strong><code>find()</code></strong> - Returns the first element that satisfies the provided testing function.</li>
+    </ul>
+
+    <h4><code>indexOf()</code> - Finding the Index of an Element</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const fruits = ['Apple', 'Banana', 'Cherry'];
+            console.log(fruits.indexOf('Banana')); // Output: 1
+        </code>
+    </pre>
+
+    <h4><code>includes()</code> - Checking if an Element is in an Array</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const fruits = ['Apple', 'Banana', 'Cherry'];
+            console.log(fruits.includes('Cherry')); // Output: true
+        </code>
+    </pre>
+
+    <h4><code>filter()</code> - Filtering Array Elements</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const numbers = [1, 2, 3, 4, 5];
+            const evenNumbers = numbers.filter(num => num % 2 === 0);
+            console.log(evenNumbers); // Output: [2, 4]
+        </code>
+    </pre>
+
+    <h4><code>find()</code> - Finding the First Matching Element</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const numbers = [1, 2, 3, 4, 5];
+            const firstEven = numbers.find(num => num % 2 === 0);
+            console.log(firstEven); // Output: 2
+        </code>
+    </pre>
+
+    <h3>Conclusion</h3>
+    <p>
+        Array methods are essential tools for working with arrays in JavaScript. They allow you to modify, search, and filter arrays, making it easier to work with large sets of data. Understanding these methods is crucial for efficient coding and problem-solving.
+    </p>
+</div>
+
+<!-- What is DOM? -->
+<div class="main" id="dom-overview">
+    <h1>What is DOM? (Document Object Model)</h1>
+
+    <h3>Introduction to the DOM</h3>
+    <p>
+        The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a document as a tree of nodes, where each node is an object representing a part of the page. This model allows programs to manipulate the content, structure, and styles of web pages dynamically.
+    </p>
+    <p>
+        The DOM provides a way for JavaScript to interact with HTML and XML documents. Through the DOM, JavaScript can read, modify, and delete elements in the document, making web pages dynamic and interactive.
+    </p>
+
+    <h3>Structure of the DOM</h3>
+    <p>
+        The DOM views a web page as a tree-like structure, where the document is the root, and each element is a branch. Here's a basic representation of the structure:
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            Document (Root)
+            ├── HTML (Element)
+                ├── HEAD (Element)
+                └── BODY (Element)
+                    ├── H1 (Element)
+                    ├── P (Element)
+                    └── DIV (Element)
+        </code>
+    </pre>
+
+    <h3>Key Points About the DOM</h3>
+    <ul>
+        <li>The DOM represents the structure of a document as a tree of objects.</li>
+        <li>Each element in the page (e.g., <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;img&gt;</code>) is represented as an object in the DOM.</li>
+        <li>JavaScript can interact with the DOM to manipulate page content in real-time.</li>
+        <li>The DOM allows you to add, remove, and modify elements, change text, and even apply styles.</li>
+        <li>The DOM is an interface that works with any programming language that can manipulate documents (though it's mostly used with JavaScript in web development).</li>
+    </ul>
+
+    <h3>How JavaScript Interacts with the DOM</h3>
+    <p>
+        JavaScript interacts with the DOM through a set of built-in methods. You can access HTML elements by their ID, class, or tag name and manipulate their properties, attributes, and content. For example:
+    </p>
+
+    <h4>Accessing and Modifying Elements</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            // Access an element by its ID
+            const heading = document.getElementById('myHeading');
+            heading.textContent = 'Updated Heading Text';
+
+            // Access all <p> elements
+            const paragraphs = document.getElementsByTagName('p');
+            for (let para of paragraphs) {
+                para.style.color = 'blue';
+            }
+        </code>
+    </pre>
+
+    <h4>Adding New Elements</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            // Create a new <p> element
+            const newPara = document.createElement('p');
+            newPara.textContent = 'This is a new paragraph.';
+            document.body.appendChild(newPara); // Add the new <p> to the document body
+        </code>
+    </pre>
+
+    <h4>Removing Elements</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            // Remove an element with a specific ID
+            const elementToRemove = document.getElementById('myHeading');
+            elementToRemove.remove();
+        </code>
+    </pre>
+
+    <h3>DOM Events</h3>
+    <p>
+        One of the key features of the DOM is its ability to handle events. Events are actions that occur in the document, such as clicks, mouse movements, key presses, and more. JavaScript allows you to respond to these events by adding event listeners.
+    </p>
+
+    <h4>Example of an Event Listener</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            // Add a click event listener to a button
+            const button = document.getElementById('myButton');
+            button.addEventListener('click', function() {
+                alert('Button clicked!');
+            });
+        </code>
+    </pre>
+
+    <h3>Why is the DOM Important?</h3>
+    <p>
+        The DOM is essential because it provides a standardized way for developers to interact with and manipulate web documents. Without the DOM, it would be extremely difficult to build interactive, dynamic web applications.
+    </p>
+
+    <h3>Conclusion</h3>
+    <p>
+        In summary, the Document Object Model (DOM) is a powerful programming interface for web documents. It enables JavaScript to dynamically interact with HTML and XML content, allowing developers to create rich, interactive web applications.
+    </p>
+</div>
+
+<!-- Selectors (getElementById, querySelector) -->
+<div class="main" id="selectors">
+    <h1>Selecting DOM Elements</h1>
+
+    <h3>Introduction to Selectors</h3>
+    <p>
+        In JavaScript, selecting DOM elements is essential for manipulating content, structure, and behavior on a web page. There are various methods for selecting elements, such as <code>getElementById()</code> and <code>querySelector()</code>. These methods allow you to target elements by their IDs, classes, tag names, or other attributes, and apply changes to them dynamically.
+    </p>
+
+    <h3>getElementById()</h3>
+    <p>
+        The <code>getElementById()</code> method is used to select an element by its unique ID. Since IDs must be unique within a document, this method is perfect for selecting a single element. It returns the first element that matches the ID, or <code>null</code> if no such element exists.
+    </p>
+
+    <h4>Example</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            // Select an element by its ID
+            const heading = document.getElementById('myHeading');
+            heading.textContent = 'New Heading Text';  // Change the content of the selected element
+        </code>
+    </pre>
+
+    <h3>querySelector()</h3>
+    <p>
+        The <code>querySelector()</code> method is more flexible than <code>getElementById()</code>. It allows you to select elements using CSS selectors, including IDs, classes, attributes, and more. It returns the first element that matches the provided selector. If no element is found, it returns <code>null</code>.
+    </p>
+
+    <h4>Example</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            // Select an element using a CSS selector (ID selector)
+            const heading = document.querySelector('#myHeading');
+            heading.textContent = 'Updated Heading Text';  // Modify the content
+
+            // Select an element using a class selector
+            const firstParagraph = document.querySelector('.first-paragraph');
+            firstParagraph.style.color = 'blue';  // Change the text color of the selected paragraph
+        </code>
+    </pre>
+
+    <h3>Using querySelectorAll() for Multiple Elements</h3>
+    <p>
+        If you want to select multiple elements, you can use the <code>querySelectorAll()</code> method. It returns a static NodeList (a list of elements) that matches the provided CSS selector.
+    </p>
+
+    <h4>Example</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            // Select all elements with the class 'highlight'
+            const highlightedElements = document.querySelectorAll('.highlight');
+            highlightedElements.forEach(function(element) {
+                element.style.backgroundColor = 'yellow';  // Change background color of each selected element
+            });
+        </code>
+    </pre>
+
+    <h3>Differences Between getElementById() and querySelector()</h3>
+    <ul>
+        <li><code>getElementById()</code> is used only for selecting by ID, whereas <code>querySelector()</code> can select by any valid CSS selector.</li>
+        <li><code>querySelector()</code> is more flexible, as it allows for more complex selectors (e.g., combinations of IDs, classes, and tags).</li>
+        <li><code>getElementById()</code> returns the element directly, while <code>querySelector()</code> returns the first matching element.</li>
+        <li><code>querySelectorAll()</code> is useful when you need to select multiple elements matching a specific selector.</li>
+    </ul>
+
+    <h3>Conclusion</h3>
+    <p>
+        The <code>getElementById()</code> and <code>querySelector()</code> methods are crucial for selecting DOM elements in JavaScript. <code>getElementById()</code> is ideal for targeting elements by unique ID, while <code>querySelector()</code> provides more flexibility with CSS selectors, making it useful for more complex DOM manipulations.
+    </p>
+</div>
+
+
+<!-- Events and Event Listeners -->
+<div class="main" id="events">
+    <h1>Working with Events and Event Listeners</h1>
+
+    <h3>Introduction to Events</h3>
+    <p>
+        Events are actions or occurrences that happen in the system you are working with. These actions can be initiated by the user (like clicking a button or typing in a field) or by the browser itself (such as when a page finishes loading). JavaScript allows you to handle these events and add interactivity to your webpage.
+    </p>
+
+    <h3>Common Event Types</h3>
+    <ul>
+        <li><strong>Click:</strong> Triggered when an element is clicked.</li>
+        <li><strong>Mouseover:</strong> Triggered when the mouse pointer hovers over an element.</li>
+        <li><strong>Keydown:</strong> Triggered when a key is pressed down.</li>
+        <li><strong>Submit:</strong> Triggered when a form is submitted.</li>
+        <li><strong>Load:</strong> Triggered when a page or an image finishes loading.</li>
+    </ul>
+
+    <h3>Event Listeners</h3>
+    <p>
+        An event listener is a function that waits for a specific event to occur on an element. Once the event is triggered, the function is executed. You can add event listeners to elements using JavaScript.
+    </p>
+
+    <h4>Example</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            // Select a button element
+            const myButton = document.getElementById('myButton');
+
+            // Add an event listener to the button
+            myButton.addEventListener('click', function() {
+                alert('Button was clicked!');
+            });
+        </code>
+    </pre>
+
+    <h3>Event Listener Methods</h3>
+    <p>
+        There are two main methods for adding event listeners: <code>addEventListener()</code> and <code>removeEventListener()</code>.
+    </p>
+
+    <h4>addEventListener()</h4>
+    <p>
+        The <code>addEventListener()</code> method allows you to specify an event to listen for and the function to execute when the event is triggered. You can also specify whether the event should capture during the event phase or bubble.
+    </p>
+
+    <h4>Example</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            // Listen for a click event on a button
+            myButton.addEventListener('click', function() {
+                console.log('Button clicked!');
+            });
+        </code>
+    </pre>
+
+    <h4>removeEventListener()</h4>
+    <p>
+        The <code>removeEventListener()</code> method is used to remove an event listener that was previously attached. It requires the same parameters as <code>addEventListener()</code>, meaning that you need to reference the same function that was added.
+    </p>
+
+    <h4>Example</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            // Remove the event listener from the button
+            myButton.removeEventListener('click', myFunction);
+        </code>
+    </pre>
+
+    <h3>Event Object</h3>
+    <p>
+        When an event occurs, the event handler function receives an event object as an argument. This object contains information about the event, such as the target element, the type of event, and any other data specific to that event.
+    </p>
+
+    <h4>Example</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            // Handle the click event and access the event object
+            myButton.addEventListener('click', function(event) {
+                console.log('Clicked element:', event.target);
+                console.log('Event type:', event.type);
+            });
+        </code>
+    </pre>
+
+    <h3>Event Delegation</h3>
+    <p>
+        Event delegation is a technique where you attach a single event listener to a parent element instead of multiple listeners on individual child elements. This can improve performance and make it easier to manage events dynamically, such as when new elements are added.
+    </p>
+
+    <h4>Example</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            // Delegate click event to a parent element
+            document.getElementById('parentElement').addEventListener('click', function(event) {
+                if (event.target && event.target.matches('button.classname')) {
+                    alert('Button inside parent clicked!');
+                }
+            });
+        </code>
+    </pre>
+
+    <h3>Conclusion</h3>
+    <p>
+        JavaScript events and event listeners are powerful tools for adding interactivity to your website. Understanding how to use them effectively allows you to respond to user actions and create dynamic, responsive applications.
+    </p>
+</div>
+
+<!-- Modifying DOM Elements -->
+<div class="main" id="modifying-elements">
+    <h1>Modifying DOM Elements</h1>
+
+    <h3>Introduction</h3>
+    <p>
+        The Document Object Model (DOM) represents the structure of an HTML document in a tree-like format. You can interact with and modify this structure using JavaScript. By modifying DOM elements, you can change the content, structure, or style of your web page dynamically.
+    </p>
+
+    <h3>Accessing DOM Elements</h3>
+    <p>
+        Before modifying any DOM element, you need to access it using JavaScript. There are several ways to access DOM elements:
+    </p>
+    <ul>
+        <li><code>getElementById()</code> - Selects an element by its ID.</li>
+        <li><code>getElementsByClassName()</code> - Selects elements by their class.</li>
+        <li><code>getElementsByTagName()</code> - Selects elements by their tag name.</li>
+        <li><code>querySelector()</code> - Selects the first element matching a CSS selector.</li>
+        <li><code>querySelectorAll()</code> - Selects all elements matching a CSS selector.</li>
+    </ul>
+
+    <h4>Example</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            // Accessing an element by ID
+            var element = document.getElementById('myElement');
+        </code>
+    </pre>
+
+    <h3>Changing Element Content</h3>
+    <p>
+        You can change the content of an element using the <code>innerHTML</code> property or <code>textContent</code>.
+    </p>
+    <ul>
+        <li><code>innerHTML</code> - Allows you to change HTML content inside an element (including nested tags).</li>
+        <li><code>textContent</code> - Allows you to change the text content inside an element, excluding HTML tags.</li>
+    </ul>
+
+    <h4>Example</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            // Change the content of an element
+            var element = document.getElementById('myElement');
+            element.innerHTML = 'New content here!';
+        </code>
+    </pre>
+
+    <h3>Changing Element Attributes</h3>
+    <p>
+        You can modify the attributes of an element, such as <code>src</code>, <code>href</code>, <code>alt</code>, etc., using the <code>setAttribute()</code> method.
+    </p>
+
+    <h4>Example</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            // Change an attribute of an element
+            var image = document.getElementById('myImage');
+            image.setAttribute('src', 'new-image.jpg');
+        </code>
+    </pre>
+
+    <h3>Modifying CSS Styles</h3>
+    <p>
+        You can change the CSS styles of an element directly using the <code>style</code> property.
+    </p>
+
+    <h4>Example</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            // Change the background color of an element
+            var element = document.getElementById('myElement');
+            element.style.backgroundColor = 'blue';
+        </code>
+    </pre>
+
+    <h3>Creating and Removing Elements</h3>
+    <p>
+        You can create new elements using <code>createElement()</code>, add them to the DOM using <code>appendChild()</code>, and remove elements using <code>removeChild()</code>.
+    </p>
+
+    <h4>Example</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            // Create a new element and append it to the body
+            var newDiv = document.createElement('div');
+            newDiv.textContent = 'This is a new div!';
+            document.body.appendChild(newDiv);
+        </code>
+    </pre>
+
+    <h3>Conclusion</h3>
+    <p>
+        Modifying DOM elements is a powerful way to create dynamic, interactive webpages. By understanding how to access, modify, and remove DOM elements, you can control the content and appearance of your website in real-time.
+    </p>
+</div>
+
+<!-- Let, Const, and Var -->
+<div class="main" id="let-const">
+    <h1>Let, Const, and Var</h1>
+
+    <h3>Introduction</h3>
+    <p>
+        In JavaScript, variables can be declared using <code>var</code>, <code>let</code>, or <code>const</code>. The choice of which to use depends on the behavior you expect from the variable, such as scoping rules and whether or not the variable should be reassigned.
+    </p>
+
+    <h3><code>var</code> (ES5 and earlier)</h3>
+    <p>
+        The <code>var</code> keyword is the traditional way of declaring variables in JavaScript. Variables declared with <code>var</code> are function-scoped, meaning they are only available within the function where they are declared, or globally if declared outside of any function.
+    </p>
+    <p>
+        <code>var</code> also suffers from hoisting, where the declaration is moved to the top of the scope, but the initialization remains in place.
+    </p>
+
+    <h4>Example</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            var name = 'John';
+            console.log(name); // Outputs: John
+        </code>
+    </pre>
+
+    <h3><code>let</code> (ES6)</h3>
+    <p>
+        The <code>let</code> keyword was introduced in ES6 to address the issues with <code>var</code>. Variables declared with <code>let</code> are block-scoped, meaning they are only available within the block (e.g., within a loop or an if statement) in which they are declared. This helps avoid unexpected behavior due to variable hoisting.
+    </p>
+    <p>
+        Unlike <code>var</code>, variables declared with <code>let</code> can be reassigned but cannot be redeclared within the same scope.
+    </p>
+
+    <h4>Example</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            let name = 'John';
+            name = 'Doe'; // Reassigning value
+            console.log(name); // Outputs: Doe
+        </code>
+    </pre>
+
+    <h3><code>const</code> (ES6)</h3>
+    <p>
+        The <code>const</code> keyword was also introduced in ES6. Variables declared with <code>const</code> are block-scoped, like those declared with <code>let</code>, but they cannot be reassigned once they are initialized.
+    </p>
+    <p>
+        If you try to reassign a value to a <code>const</code> variable, you will get a runtime error.
+    </p>
+
+    <h4>Example</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const name = 'John';
+            // name = 'Doe'; // Uncommenting this will cause an error
+            console.log(name); // Outputs: John
+        </code>
+    </pre>
+
+    <h3>Comparison</h3>
+    <p>
+        - <code>var</code>: Function-scoped, can be redeclared and reassigned, hoisted.
+        <br>
+        - <code>let</code>: Block-scoped, can be reassigned but not redeclared within the same scope, not hoisted in the traditional sense.
+        <br>
+        - <code>const</code>: Block-scoped, cannot be reassigned, not hoisted in the traditional sense.
+    </p>
+
+    <h3>Conclusion</h3>
+    <p>
+        For most modern JavaScript, <code>let</code> and <code>const</code> are recommended over <code>var</code> due to their improved scoping rules and predictability. Use <code>let</code> for variables that will change and <code>const</code> for variables that should remain constant.
+    </p>
+</div>
+
+<!-- Template Literals -->
+<div class="main" id="template-literals">
+    <h1>Template Literals</h1>
+
+    <h3>Introduction</h3>
+    <p>
+        Template literals, introduced in ES6, allow you to create strings more easily. They provide a powerful way to include expressions, variables, and multiline strings without using string concatenation.
+    </p>
+
+    <h3>Basic Syntax</h3>
+    <p>
+        Template literals are enclosed in backticks (<code>`</code>), rather than single or double quotes. You can embed variables or expressions inside the string using <code>${}</code>.
+    </p>
+
+    <h4>Example</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            let name = 'John';
+            let age = 30;
+            let message = `Hello, my name is ${name} and I am ${age} years old.`;
+            console.log(message); // Outputs: Hello, my name is John and I am 30 years old.
+        </code>
+    </pre>
+
+    <h3>Multiline Strings</h3>
+    <p>
+        Template literals allow you to easily create strings that span multiple lines without using escape characters for newlines.
+    </p>
+
+    <h4>Example</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            let message = `This is a string
+            that spans multiple
+            lines using template literals.`;
+            console.log(message);
+        </code>
+    </pre>
+
+    <h3>Expression Interpolation</h3>
+    <p>
+        You can include any valid JavaScript expression inside a template literal, and it will be evaluated and inserted into the string.
+    </p>
+
+    <h4>Example</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            let a = 5;
+            let b = 10;
+            let sum = `The sum of ${a} and ${b} is ${a + b}.`;
+            console.log(sum); // Outputs: The sum of 5 and 10 is 15.
+        </code>
+    </pre>
+
+    <h3>Tagged Templates</h3>
+    <p>
+        A tagged template allows you to parse template literals with a function. This gives you more control over how the template is processed, especially for things like escaping or formatting.
+    </p>
+
+    <h4>Example</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            function tag(strings, ...values) {
+                return strings.reduce((result, str, i) => result + str + (values[i] || ''), '');
+            }
+
+            let message = tag`Hello, ${name}! You are ${age} years old.`;
+            console.log(message); // Outputs: Hello, John! You are 30 years old.
+        </code>
+    </pre>
+
+    <h3>Conclusion</h3>
+    <p>
+        Template literals provide a more readable and efficient way to work with strings in JavaScript. They make it easier to embed expressions and create multiline strings, helping to reduce the complexity of string handling.
+    </p>
+</div>
+
+<!-- Destructuring -->
+<div class="main" id="destructuring">
+    <h1>Destructuring</h1>
+
+    <h3>Introduction</h3>
+    <p>
+        Destructuring is a concise way to extract values from arrays or objects and assign them to variables in JavaScript. It can be applied to arrays, objects, or even nested structures, making your code more readable and succinct.
+    </p>
+
+    <h3>Array Destructuring</h3>
+    <p>
+        With array destructuring, you can unpack values from arrays into distinct variables.
+    </p>
+
+    <h4>Example</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const numbers = [1, 2, 3];
+            const [first, second, third] = numbers;
+            console.log(first); // Outputs: 1
+            console.log(second); // Outputs: 2
+            console.log(third); // Outputs: 3
+        </code>
+    </pre>
+
+    <h3>Object Destructuring</h3>
+    <p>
+        Object destructuring allows you to unpack values from objects and assign them to variables with the same name as the object properties.
+    </p>
+
+    <h4>Example</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const person = { name: 'John', age: 30 };
+            const { name, age } = person;
+            console.log(name); // Outputs: John
+            console.log(age); // Outputs: 30
+        </code>
+    </pre>
+
+    <h3>Renaming Variables</h3>
+    <p>
+        If you want to assign a property to a variable with a different name, you can rename it during destructuring.
+    </p>
+
+    <h4>Example</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const person = { name: 'John', age: 30 };
+            const { name: fullName, age: yearsOld } = person;
+            console.log(fullName); // Outputs: John
+            console.log(yearsOld); // Outputs: 30
+        </code>
+    </pre>
+
+    <h3>Default Values</h3>
+    <p>
+        You can assign default values to variables in case the unpacked value is <code>undefined</code>.
+    </p>
+
+    <h4>Example</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const person = { name: 'John' };
+            const { name, age = 25 } = person;
+            console.log(name); // Outputs: John
+            console.log(age); // Outputs: 25 (since age is not defined in the object)
+        </code>
+    </pre>
+
+    <h3>Nested Destructuring</h3>
+    <p>
+        Destructuring can be applied to nested objects or arrays. This allows you to unpack values at different levels of the data structure.
+    </p>
+
+    <h4>Example</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const person = { name: 'John', address: { city: 'New York', zip: 10001 } };
+            const { name, address: { city, zip } } = person;
+            console.log(name); // Outputs: John
+            console.log(city); // Outputs: New York
+            console.log(zip); // Outputs: 10001
+        </code>
+    </pre>
+
+    <h3>Conclusion</h3>
+    <p>
+        Destructuring simplifies extracting values from arrays and objects, making your code cleaner and easier to manage. It’s particularly useful when working with functions that return multiple values or when dealing with complex data structures.
+    </p>
+</div>
+
+<!-- Modules (Import/Export) -->
+<div class="main" id="modules">
+    <h1>Modules (Import/Export)</h1>
+
+    <h3>Introduction</h3>
+    <p>
+        ES6 introduced a built-in module system to JavaScript. This allows developers to split code into smaller files, making it easier to maintain and manage large applications. Modules provide a way to organize your code into reusable pieces.
+    </p>
+
+    <h3>Exporting Code</h3>
+    <p>
+        To make code available to other files, you use the <code>export</code> keyword.
+    </p>
+
+    <h4>Named Exports</h4>
+    <p>
+        Named exports allow you to export multiple values from a module. You can export variables, functions, or classes.
+    </p>
+
+    <h4>Example</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            // math.js
+            export const add = (a, b) => a + b;
+            export const subtract = (a, b) => a - b;
+        </code>
+    </pre>
+
+    <h4>Default Exports</h4>
+    <p>
+        A default export is used when you want to export a single value, function, or class from a module. You can import this default export without using curly braces.
+    </p>
+
+    <h4>Example</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            // greet.js
+            export default function greet(name) {
+                return `Hello, ${name}!`;
+            }
+        </code>
+    </pre>
+
+    <h3>Importing Code</h3>
+    <p>
+        To use exported code in another file, you use the <code>import</code> keyword.
+    </p>
+
+    <h4>Importing Named Exports</h4>
+    <p>
+        When importing named exports, you must use the exact names of the exported values and wrap them in curly braces.
+    </p>
+
+    <h4>Example</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            // app.js
+            import { add, subtract } from './math.js';
+            console.log(add(2, 3)); // Outputs: 5
+            console.log(subtract(5, 2)); // Outputs: 3
+        </code>
+    </pre>
+
+    <h4>Importing Default Exports</h4>
+    <p>
+        You can import the default export without using curly braces and can give it any name.
+    </p>
+
+    <h4>Example</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            // app.js
+            import greet from './greet.js';
+            console.log(greet('Alice')); // Outputs: Hello, Alice!
+        </code>
+    </pre>
+
+    <h3>Importing All Exports</h3>
+    <p>
+        If you want to import all the exported values from a module, you can use a wildcard and assign a name to the whole module.
+    </p>
+
+    <h4>Example</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            // app.js
+            import * as math from './math.js';
+            console.log(math.add(2, 3)); // Outputs: 5
+            console.log(math.subtract(5, 2)); // Outputs: 3
+        </code>
+    </pre>
+
+    <h3>Conclusion</h3>
+    <p>
+        Using modules is a great way to keep your JavaScript code organized and reusable. It allows for separation of concerns, easier maintenance, and the ability to scale applications more efficiently.
+    </p>
+</div>
+
+<!-- Callbacks -->
+<div class="main" id="callbacks">
+    <h1>Callbacks</h1>
+
+    <h3>Introduction</h3>
+    <p>
+        A callback is a function that is passed into another function as an argument to be executed later. Callbacks are commonly used in asynchronous programming to handle operations like data fetching, file reading, and other tasks that take time to complete.
+    </p>
+
+    <h3>Using Callbacks</h3>
+    <p>
+        In JavaScript, functions are first-class objects, meaning they can be passed as arguments to other functions. This makes callbacks an essential part of JavaScript programming.
+    </p>
+
+    <h4>Example</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            function fetchData(callback) {
+                // Simulate data fetching
+                setTimeout(() => {
+                    const data = "Data fetched successfully!";
+                    callback(data);
+                }, 1000);
+            }
+
+            // Passing a callback to handle the data
+            fetchData(function(data) {
+                console.log(data); // Outputs: Data fetched successfully!
+            });
+        </code>
+    </pre>
+
+    <h3>Common Use Cases for Callbacks</h3>
+    <p>
+        Callbacks are often used in JavaScript for handling asynchronous tasks like:
+    </p>
+    <ul>
+        <li>Handling events (e.g., button clicks, form submissions)</li>
+        <li>Reading from or writing to files</li>
+        <li>Making network requests (e.g., fetching data from an API)</li>
+        <li>Animation or time-based actions (e.g., setTimeout, setInterval)</li>
+    </ul>
+
+    <h3>Callback Hell</h3>
+    <p>
+        When using callbacks in complex applications, you might encounter "callback hell," where multiple nested callbacks can make the code hard to read and maintain. This happens when callbacks are nested within other callbacks, creating deeply indented code.
+    </p>
+
+    <h4>Example of Callback Hell</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            getUser(function(user) {
+                getPosts(user.id, function(posts) {
+                    getComments(posts[0].id, function(comments) {
+                        console.log(comments);
+                    });
+                });
+            });
+        </code>
+    </pre>
+
+    <h3>Conclusion</h3>
+    <p>
+        Callbacks are a fundamental concept in asynchronous JavaScript. They allow you to handle tasks that take time to complete without blocking the main execution thread. However, be mindful of callback hell and consider using Promises or Async/Await for better readability and maintainability of your code.
+    </p>
+</div>
+
+
+<!-- Promises -->
+<div class="main" id="promises">
+    <h1>Promises</h1>
+
+    <h3>Introduction</h3>
+    <p>
+        A Promise is an object representing the eventual completion or failure of an asynchronous operation. Promises allow for cleaner handling of asynchronous code by chaining methods like `.then()` and `.catch()`, avoiding callback hell.
+    </p>
+
+    <h3>Creating a Promise</h3>
+    <p>
+        A Promise is created using the `new Promise()` constructor, where you provide a function that will execute the asynchronous operation. This function takes two arguments: `resolve` (for successful completion) and `reject` (for failure).
+    </p>
+
+    <h4>Example</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const fetchData = new Promise((resolve, reject) => {
+                let success = true;
+
+                setTimeout(() => {
+                    if (success) {
+                        resolve("Data fetched successfully!");
+                    } else {
+                        reject("Error fetching data.");
+                    }
+                }, 1000);
+            });
+
+            fetchData
+                .then((data) => {
+                    console.log(data); // Outputs: Data fetched successfully!
+                })
+                .catch((error) => {
+                    console.log(error); // Outputs: Error fetching data.
+                });
+        </code>
+    </pre>
+
+    <h3>Promise States</h3>
+    <p>
+        A Promise can be in one of the following states:
+    </p>
+    <ul>
+        <li><strong>Pending</strong>: The promise is still being executed.</li>
+        <li><strong>Fulfilled</strong>: The promise has been successfully completed (resolved).</li>
+        <li><strong>Rejected</strong>: The promise has failed (rejected).</li>
+    </ul>
+
+    <h3>Chaining Promises</h3>
+    <p>
+        Promises can be chained to handle multiple asynchronous operations. The `.then()` method is used to handle the fulfillment, and `.catch()` is used for rejection.
+    </p>
+
+    <h4>Example</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            fetchData
+                .then((data) => {
+                    console.log(data);
+                    return "Next operation!";
+                })
+                .then((message) => {
+                    console.log(message); // Outputs: Next operation!
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+        </code>
+    </pre>
+
+    <h3>Promise.all</h3>
+    <p>
+        The `Promise.all()` method allows you to run multiple promises in parallel and wait for all of them to complete. It returns a new promise that resolves when all the promises in the array have been resolved or rejects if any of the promises are rejected.
+    </p>
+
+    <h4>Example</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const promise1 = new Promise((resolve) => setTimeout(resolve, 1000, "Data 1"));
+            const promise2 = new Promise((resolve) => setTimeout(resolve, 500, "Data 2"));
+
+            Promise.all([promise1, promise2])
+                .then((values) => {
+                    console.log(values); // Outputs: ["Data 1", "Data 2"]
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+        </code>
+    </pre>
+
+    <h3>Conclusion</h3>
+    <p>
+        Promises provide a more structured and readable way to handle asynchronous operations in JavaScript. They are particularly useful for chaining multiple asynchronous tasks and managing errors in a cleaner manner compared to traditional callbacks.
+    </p>
+</div>
+
+<!-- Async and Await -->
+<div class="main" id="async-await">
+    <h1>Async and Await</h1>
+
+    <h3>Introduction</h3>
+    <p>
+        `async` and `await` are JavaScript keywords that simplify the syntax of working with promises. They make asynchronous code easier to read and write by removing the need for chaining `.then()` and `.catch()` methods.
+    </p>
+
+    <h3>Using Async Functions</h3>
+    <p>
+        An `async` function always returns a promise. If the function returns a value, that value is automatically wrapped in a promise. If the function throws an error, it is automatically rejected with the error.
+    </p>
+
+    <h4>Example</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            async function fetchData() {
+                return "Data fetched successfully!";
+            }
+
+            fetchData()
+                .then((data) => {
+                    console.log(data); // Outputs: Data fetched successfully!
+                });
+        </code>
+    </pre>
+
+    <h3>Using Await</h3>
+    <p>
+        The `await` keyword can only be used inside `async` functions. It pauses the execution of the function until the promise is resolved or rejected, making asynchronous code appear more like synchronous code.
+    </p>
+
+    <h4>Example</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            async function fetchData() {
+                let response = await fetch('https://api.example.com/data');
+                let data = await response.json();
+                console.log(data);
+            }
+
+            fetchData();
+        </code>
+    </pre>
+
+    <h3>Handling Errors with Try-Catch</h3>
+    <p>
+        Errors in `async` functions can be caught using a `try-catch` block. If any error occurs in the `await` expression, it is caught in the `catch` block.
+    </p>
+
+    <h4>Example</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            async function fetchData() {
+                try {
+                    let response = await fetch('https://api.example.com/data');
+                    if (!response.ok) {
+                        throw new Error('Network error');
+                    }
+                    let data = await response.json();
+                    console.log(data);
+                } catch (error) {
+                    console.log('Error:', error);
+                }
+            }
+
+            fetchData();
+        </code>
+    </pre>
+
+    <h3>Async/Await vs Promises</h3>
+    <p>
+        Both `async/await` and promises allow you to handle asynchronous operations, but `async/await` provides a more readable and synchronous-looking approach compared to chaining promises.
+    </p>
+
+    <h3>Conclusion</h3>
+    <p>
+        `async` and `await` simplify asynchronous JavaScript by making it easier to write and understand. They allow you to avoid the "callback hell" and make the code look cleaner and more sequential while still handling asynchronous operations.
+    </p>
+</div>
+
+<!-- Fetch API -->
+<div class="main" id="fetch-api">
+    <h1>Fetch API</h1>
+
+    <h3>Introduction</h3>
+    <p>
+        The Fetch API provides an easy, logical way to fetch resources asynchronously across the network. It is based on promises and is used for making HTTP requests to servers, such as retrieving data from APIs or sending data to a server.
+    </p>
+
+    <h3>Basic Syntax</h3>
+    <p>
+        The basic syntax of the Fetch API involves calling the `fetch()` method with a URL and optional configurations like HTTP method, headers, and body. It returns a promise that resolves to the `Response` object representing the response to the request.
+    </p>
+
+    <h4>Example</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            fetch('https://jsonplaceholder.typicode.com/posts')
+                .then(response => response.json()) // Convert response to JSON
+                .then(data => {
+                    console.log(data); // Handle the fetched data
+                })
+                .catch(error => {
+                    console.log('Error:', error); // Handle any errors
+                });
+        </code>
+    </pre>
+
+    <h3>HTTP Methods</h3>
+    <p>
+        The `fetch()` method can use different HTTP methods like GET, POST, PUT, DELETE, etc., to send requests to the server. The default method is GET.
+    </p>
+
+    <h4>Example with POST</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            fetch('https://jsonplaceholder.typicode.com/posts', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    title: 'foo',
+                    body: 'bar',
+                    userId: 1
+                })
+            })
+            .then(response => response.json()) // Convert response to JSON
+            .then(data => {
+                console.log(data); // Handle the response data
+            })
+            .catch(error => {
+                console.log('Error:', error); // Handle errors
+            });
+        </code>
+    </pre>
+
+    <h3>Handling Responses</h3>
+    <p>
+        The response from a fetch request can be handled using methods like `response.json()`, `response.text()`, or `response.blob()` to parse the response content in different formats.
+    </p>
+
+    <h4>Example with Text Response</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            fetch('https://example.com')
+                .then(response => response.text()) // Parse the response as text
+                .then(data => {
+                    console.log(data); // Handle the text data
+                })
+                .catch(error => {
+                    console.log('Error:', error); // Handle any errors
+                });
+        </code>
+    </pre>
+
+    <h3>Handling Errors</h3>
+    <p>
+        Errors in the Fetch API are not triggered for HTTP errors (e.g., 404, 500). Instead, you must check the response status and handle errors accordingly.
+    </p>
+
+    <h4>Example with Error Handling</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            fetch('https://jsonplaceholder.typicode.com/invalid-url')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log(data); // Handle the data
+                })
+                .catch(error => {
+                    console.log('There was a problem with the fetch operation:', error); // Handle errors
+                });
+        </code>
+    </pre>
+
+    <h3>Async-Await with Fetch</h3>
+    <p>
+        You can use `async` and `await` with the Fetch API to make the syntax cleaner and more readable. The `await` keyword waits for the fetch to complete before moving to the next line of code.
+    </p>
+
+    <h4>Example with Async-Await</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            async function fetchData() {
+                try {
+                    const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    const data = await response.json();
+                    console.log(data); // Handle the fetched data
+                } catch (error) {
+                    console.log('There was a problem with the fetch operation:', error); // Handle errors
+                }
+            }
+
+            fetchData(); // Call the async function
+        </code>
+    </pre>
+
+    <h3>Conclusion</h3>
+    <p>
+        The Fetch API is a powerful tool for making asynchronous HTTP requests, handling responses, and interacting with remote resources. It simplifies working with promises and makes it easier to manage network requests in modern web applications.
+    </p>
+</div>
+
+<!-- Closures -->
+<div class="main" id="closures">
+    <h1>Closures</h1>
+
+    <h3>Introduction</h3>
+    <p>
+        A closure is a function that "remembers" its lexical environment, even when the function is executed outside of that environment. In other words, a closure allows a function to access variables from its parent function, even after the parent function has finished executing.
+    </p>
+
+    <h3>How Closures Work</h3>
+    <p>
+        Closures are created when a function is defined within another function, and the inner function refers to variables from the outer function. The inner function has access to these variables even after the outer function has returned, thus creating a closure.
+    </p>
+
+    <h4>Example of a Closure</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            function outer() {
+                let outerVar = 'I am from outer function';
+
+                // Inner function that creates a closure
+                function inner() {
+                    console.log(outerVar); // Accesses outerVar from the outer function
+                }
+
+                return inner; // Returning the inner function
+            }
+
+            const closure = outer(); // Calling outer() returns the inner() function
+            closure(); // Output: I am from outer function
+        </code>
+    </pre>
+
+    <h3>Use Cases of Closures</h3>
+    <p>
+        Closures are often used in JavaScript for:
+    </p>
+    <ul>
+        <li>Data encapsulation (hiding private data)</li>
+        <li>Creating functions with a persistent state</li>
+        <li>Handling asynchronous code (callbacks, event listeners)</li>
+    </ul>
+
+    <h4>Example: Data Encapsulation</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            function createCounter() {
+                let count = 0; // Private variable
+
+                return {
+                    increment: function() {
+                        count++;
+                        console.log(count); // Accesses and modifies count
+                    },
+                    decrement: function() {
+                        count--;
+                        console.log(count); // Accesses and modifies count
+                    }
+                };
+            }
+
+            const counter = createCounter();
+            counter.increment(); // Output: 1
+            counter.increment(); // Output: 2
+            counter.decrement(); // Output: 1
+        </code>
+    </pre>
+
+    <h3>Closures and Asynchronous Code</h3>
+    <p>
+        Closures are also useful for handling asynchronous operations such as setTimeout or event handlers. The inner function can "remember" variables even after the outer function has finished executing.
+    </p>
+
+    <h4>Example: Closure with setTimeout</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            function greeting(message) {
+                setTimeout(function() {
+                    console.log(message); // The closure remembers 'message'
+                }, 1000);
+            }
+
+            greeting('Hello, Closure!'); // Output after 1 second: Hello, Closure!
+        </code>
+    </pre>
+
+    <h3>Common Pitfalls with Closures</h3>
+    <p>
+        A common mistake when using closures is related to variable scoping in loops. If closures are created within loops, they might not work as expected due to the asynchronous nature of JavaScript.
+    </p>
+
+    <h4>Example: Common Mistake with Loops</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            function createFunctions() {
+                let functions = [];
+
+                for (let i = 0; i < 3; i++) {
+                    functions.push(function() {
+                        console.log(i); // Due to closures, 'i' will be 3 in all functions
+                    });
+                }
+
+                return functions;
+            }
+
+            const funcs = createFunctions();
+            funcs[0](); // Output: 3
+            funcs[1](); // Output: 3
+            funcs[2](); // Output: 3
+        </code>
+    </pre>
+
+    <h4>Fixing the Issue with let</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            function createFunctions() {
+                let functions = [];
+
+                for (let i = 0; i < 3; i++) {
+                    functions.push(function() {
+                        console.log(i); // 'let' ensures each closure captures the current value of 'i'
+                    });
+                }
+
+                return functions;
+            }
+
+            const funcs = createFunctions();
+            funcs[0](); // Output: 0
+            funcs[1](); // Output: 1
+            funcs[2](); // Output: 2
+        </code>
+    </pre>
+
+    <h3>Conclusion</h3>
+    <p>
+        Closures are a powerful feature in JavaScript, enabling functions to retain access to variables from their outer scope, even after the outer function has returned. Understanding closures helps improve your ability to manage data and asynchronous operations in your code.
+    </p>
+</div>
+
+<!-- Prototypes -->
+<div class="main" id="prototypes">
+    <h1>Prototypes</h1>
+
+    <h3>Introduction</h3>
+    <p>
+        In JavaScript, every object has a prototype. A prototype is an object from which other objects can inherit properties and methods. This concept is central to JavaScript's inheritance model and allows objects to share behavior and data.
+    </p>
+
+    <h3>What is a Prototype?</h3>
+    <p>
+        A prototype is an object that provides shared properties and methods to other objects. Each JavaScript object has an internal property called `[[Prototype]]`, which points to another object. The properties and methods of that prototype are inherited by the object.
+    </p>
+
+    <h4>Example: Prototype Inheritance</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            function Animal(name) {
+                this.name = name;
+            }
+
+            // Adding a method to the prototype
+            Animal.prototype.speak = function() {
+                console.log(this.name + ' makes a sound');
+            };
+
+            const dog = new Animal('Dog');
+            dog.speak(); // Output: Dog makes a sound
+        </code>
+    </pre>
+
+    <h3>Prototype Chain</h3>
+    <p>
+        Every object in JavaScript has a prototype, and this prototype may also have its own prototype. This creates a "prototype chain." When a property or method is accessed on an object, JavaScript looks up the prototype chain to find the first occurrence of that property or method.
+    </p>
+
+    <h4>Example: Prototype Chain</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            function Animal(name) {
+                this.name = name;
+            }
+
+            Animal.prototype.speak = function() {
+                console.log(this.name + ' makes a sound');
+            };
+
+            function Dog(name, breed) {
+                Animal.call(this, name); // Call the parent constructor
+                this.breed = breed;
+            }
+
+            // Set Dog's prototype to Animal's prototype
+            Dog.prototype = Object.create(Animal.prototype);
+            Dog.prototype.constructor = Dog;
+
+            Dog.prototype.bark = function() {
+                console.log(this.name + ' barks');
+            };
+
+            const dog = new Dog('Buddy', 'Golden Retriever');
+            dog.speak(); // Output: Buddy makes a sound
+            dog.bark();  // Output: Buddy barks
+        </code>
+    </pre>
+
+    <h3>Accessing and Modifying Prototypes</h3>
+    <p>
+        The prototype of an object can be accessed and modified using `Object.getPrototypeOf()` and `Object.setPrototypeOf()`, respectively.
+    </p>
+
+    <h4>Example: Accessing Prototypes</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            function Animal(name) {
+                this.name = name;
+            }
+
+            const dog = new Animal('Dog');
+            const dogPrototype = Object.getPrototypeOf(dog);
+
+            console.log(dogPrototype); // Output: Animal { speak: [Function] }
+        </code>
+    </pre>
+
+    <h3>Prototype Methods and Property Lookup</h3>
+    <p>
+        When an object accesses a method or property, JavaScript first checks the object itself. If the property is not found, it looks up the prototype chain. If the property is not found in the entire chain, `undefined` is returned.
+    </p>
+
+    <h4>Example: Property Lookup</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            function Animal(name) {
+                this.name = name;
+            }
+
+            Animal.prototype.speak = function() {
+                console.log(this.name + ' makes a sound');
+            };
+
+            const dog = new Animal('Dog');
+            console.log(dog.speak); // Output: [Function: speak]
+            console.log(dog.hasOwnProperty('speak')); // Output: false (Inherited method from prototype)
+        </code>
+    </pre>
+
+    <h3>Prototype and Constructor</h3>
+    <p>
+        Each constructor function has a `prototype` property. The `prototype` property is used to add methods to the objects created by the constructor function. It's important to note that `prototype` is different from `__proto__`, which points to the prototype of a specific object.
+    </p>
+
+    <h4>Example: Constructor and Prototype</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            function Animal(name) {
+                this.name = name;
+            }
+
+            Animal.prototype.speak = function() {
+                console.log(this.name + ' makes a sound');
+            };
+
+            const cat = new Animal('Cat');
+            console.log(cat.constructor); // Output: [Function: Animal]
+        </code>
+    </pre>
+
+    <h3>Prototype Inheritance vs. Class Inheritance</h3>
+    <p>
+        In JavaScript, inheritance works through prototypes, not through classes (though ES6 introduced a class syntax). The class syntax is essentially a syntactic sugar over the existing prototype-based inheritance.
+    </p>
+
+    <h4>Example: Class Syntax and Prototypes</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            class Animal {
+                constructor(name) {
+                    this.name = name;
+                }
+
+                speak() {
+                    console.log(this.name + ' makes a sound');
+                }
+            }
+
+            const dog = new Animal('Dog');
+            dog.speak(); // Output: Dog makes a sound
+        </code>
+    </pre>
+
+    <h3>Conclusion</h3>
+    <p>
+        Prototypes are a fundamental concept in JavaScript and enable powerful features like inheritance and shared behavior. Understanding how prototypes work is key to mastering JavaScript's object-oriented capabilities and building efficient, reusable code.
+    </p>
+</div>
+
+<!-- The "this" Keyword -->
+<div class="main" id="this-keyword">
+    <h1>The "this" Keyword</h1>
+
+    <h3>Introduction</h3>
+    <p>
+        In JavaScript, the `this` keyword refers to the current execution context. It is a special object that is used inside functions, methods, and classes to refer to the object that is currently calling the function or method. Understanding how `this` works is essential for working with objects and functions effectively in JavaScript.
+    </p>
+
+    <h3>How `this` Works</h3>
+    <p>
+        The value of `this` depends on the context in which a function is called. It can refer to different things based on how and where the function is executed.
+    </p>
+
+    <h4>Global Context</h4>
+    <p>
+        When `this` is used in the global execution context (outside of any function), it refers to the global object. In a browser, this is the `window` object.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            console.log(this); // Output: Window (in a browser)
+        </code>
+    </pre>
+
+    <h4>Object Method Context</h4>
+    <p>
+        Inside a method of an object, `this` refers to the object that is calling the method.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const person = {
+                name: 'Alice',
+                greet: function() {
+                    console.log('Hello, ' + this.name);
+                }
+            };
+            person.greet(); // Output: Hello, Alice
+        </code>
+    </pre>
+
+    <h4>Constructor Function Context</h4>
+    <p>
+        Inside a constructor function, `this` refers to the new object being created.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            function Car(make, model) {
+                this.make = make;
+                this.model = model;
+            }
+            const myCar = new Car('Toyota', 'Camry');
+            console.log(myCar.make); // Output: Toyota
+        </code>
+    </pre>
+
+    <h4>Arrow Functions</h4>
+    <p>
+        Arrow functions do not have their own `this`. Instead, they inherit `this` from the surrounding lexical scope.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const person = {
+                name: 'Alice',
+                greet: function() {
+                    setTimeout(() => {
+                        console.log('Hello, ' + this.name); // Inherits `this` from the surrounding scope
+                    }, 1000);
+                }
+            };
+            person.greet(); // Output: Hello, Alice (after 1 second)
+        </code>
+    </pre>
+
+    <h4>Event Listeners</h4>
+    <p>
+        In event listeners, `this` refers to the DOM element that triggered the event.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const button = document.querySelector('button');
+            button.addEventListener('click', function() {
+                console.log(this); // Output: the button element
+            });
+        </code>
+    </pre>
+
+    <h3>Changing the Value of `this`</h3>
+    <p>
+        You can explicitly set the value of `this` using the `call()`, `apply()`, and `bind()` methods.
+    </p>
+
+    <h4>Using `call()`</h4>
+    <p>
+        The `call()` method allows you to invoke a function with a specific value of `this`.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            function greet() {
+                console.log('Hello, ' + this.name);
+            }
+            const person = { name: 'Alice' };
+            greet.call(person); // Output: Hello, Alice
+        </code>
+    </pre>
+
+    <h4>Using `apply()`</h4>
+    <p>
+        The `apply()` method works like `call()`, but it accepts an array of arguments.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            function greet(city) {
+                console.log('Hello, ' + this.name + ' from ' + city);
+            }
+            const person = { name: 'Alice' };
+            greet.apply(person, ['New York']); // Output: Hello, Alice from New York
+        </code>
+    </pre>
+
+    <h4>Using `bind()`</h4>
+    <p>
+        The `bind()` method returns a new function with a specified value of `this`, but does not invoke the function immediately. It is useful for passing `this` to callback functions.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            function greet() {
+                console.log('Hello, ' + this.name);
+            }
+            const person = { name: 'Alice' };
+            const greetPerson = greet.bind(person);
+            greetPerson(); // Output: Hello, Alice
+        </code>
+    </pre>
+
+    <h3>Summary</h3>
+    <p>
+        The `this` keyword is a powerful tool in JavaScript, but understanding how it works is essential for writing correct and efficient code. It can refer to different values depending on the context, and you can control it using methods like `call()`, `apply()`, and `bind()`.
+    </p>
+</div>
+
+<!-- Event Bubbling and Delegation -->
+<div class="main" id="event-bubbling">
+    <h1>Event Bubbling and Delegation</h1>
+
+    <h3>Introduction</h3>
+    <p>
+        Event bubbling is a concept in JavaScript where an event triggered on an element is propagated up to its ancestors in the DOM tree. Event delegation is a technique where a single event listener is attached to a parent element, and it handles events for child elements that may not even exist when the event listener is set up.
+    </p>
+
+    <h3>Event Bubbling</h3>
+    <p>
+        In event bubbling, when an event is triggered on an element, it starts from the target element and bubbles up to the root of the document. This means that the event is handled by the target element first, then by its parent, and so on, up to the document object.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const parent = document.querySelector('.parent');
+            const child = document.querySelector('.child');
+
+            parent.addEventListener('click', function() {
+                console.log('Parent clicked');
+            });
+
+            child.addEventListener('click', function() {
+                console.log('Child clicked');
+            });
+
+            child.click(); // Output: "Child clicked" then "Parent clicked"
+        </code>
+    </pre>
+    <p>
+        In the example above, when the child element is clicked, both the child’s event listener and the parent’s event listener are triggered, demonstrating the bubbling effect.
+    </p>
+
+    <h3>Event Delegation</h3>
+    <p>
+        Event delegation involves attaching a single event listener to a parent element rather than attaching listeners to each child element individually. This allows handling events on dynamically added elements as well. The event handler can use the event object to determine which child element triggered the event.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const parent = document.querySelector('.parent');
+
+            parent.addEventListener('click', function(event) {
+                if (event.target && event.target.matches('button')) {
+                    console.log('Button clicked');
+                }
+            });
+
+            const button = document.createElement('button');
+            button.textContent = 'Click me';
+            parent.appendChild(button);
+
+            button.click(); // Output: "Button clicked"
+        </code>
+    </pre>
+    <p>
+        In this example, the event listener is attached to the parent element. The event handler checks if the clicked element is a button, ensuring that new buttons added dynamically will also trigger the event.
+    </p>
+
+    <h3>Advantages of Event Delegation</h3>
+    <ul>
+        <li>Improved performance: Reduces the number of event listeners attached to individual child elements.</li>
+        <li>Supports dynamically added elements: New child elements will automatically have event listeners attached without the need for additional code.</li>
+        <li>Cleaner and more maintainable code: Centralizes event handling logic in a parent element.</li>
+    </ul>
+
+    <h3>When to Use Event Delegation</h3>
+    <p>
+        Event delegation is particularly useful in cases where:
+    </p>
+    <ul>
+        <li>There are a large number of child elements (e.g., list items, table rows) that need event listeners.</li>
+        <li>Child elements are dynamically added or removed from the DOM.</li>
+        <li>You need to handle events on elements that are not yet present when the page loads.</li>
+    </ul>
+
+    <h3>Summary</h3>
+    <p>
+        Event bubbling allows events to propagate up the DOM tree, and event delegation leverages this behavior to handle events on dynamically added elements. By attaching event listeners to parent elements, you can improve performance and simplify your code while maintaining support for dynamic content.
+    </p>
+</div>
+
+<!-- Debugging Tools -->
+<div class="main" id="debugging-tools">
+    <h1>Debugging Tools</h1>
+
+    <h3>Introduction</h3>
+    <p>
+        Debugging is an essential skill in programming that allows developers to identify and fix issues in their code. In JavaScript, debugging tools help to inspect code, track down bugs, and optimize performance.
+    </p>
+
+    <h3>Using Browser Developer Tools</h3>
+    <p>
+        Modern web browsers come with built-in developer tools that offer various debugging features, such as inspecting elements, viewing network requests, and logging errors.
+    </p>
+
+    <h4>Steps to Open Developer Tools:</h4>
+    <ul>
+        <li>Press <kbd>F12</kbd> or right-click and select "Inspect" (Chrome, Firefox, Edge).</li>
+        <li>In Safari, press <kbd>Cmd + Option + I</kbd> on Mac, or <kbd>F12</kbd> on Windows.</li>
+    </ul>
+
+    <h4>Key Features of Browser Developer Tools:</h4>
+    <ul>
+        <li><strong>Console:</strong> Logs output, errors, and warnings.</li>
+        <li><strong>Elements/Inspector:</strong> Inspect HTML and CSS of elements.</li>
+        <li><strong>Network:</strong> View network requests and responses.</li>
+        <li><strong>Sources:</strong> Debug JavaScript code with breakpoints and step-through functionality.</li>
+        <li><strong>Performance:</strong> Analyze page load times and performance bottlenecks.</li>
+    </ul>
+
+    <h3>Console API</h3>
+    <p>
+        The <code>console</code> object in JavaScript allows developers to log messages to the browser console. Common methods include:
+    </p>
+    <ul>
+        <li><code>console.log()</code>: Logs general messages.</li>
+        <li><code>console.error()</code>: Logs error messages.</li>
+        <li><code>console.warn()</code>: Logs warnings.</li>
+        <li><code>console.table()</code>: Displays data in a table format for easier inspection.</li>
+    </ul>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            console.log('This is a log message');
+            console.error('This is an error message');
+            console.warn('This is a warning message');
+            console.table([{name: 'John', age: 30}, {name: 'Jane', age: 25}]);
+        </code>
+    </pre>
+
+    <h3>Breakpoints</h3>
+    <p>
+        Breakpoints allow you to pause the execution of your JavaScript code at a certain line, letting you inspect variables and see the call stack. This can be done through the browser's developer tools in the "Sources" tab.
+    </p>
+    <ul>
+        <li><strong>Line Breakpoint:</strong> Pause code execution when a specific line of code is reached.</li>
+        <li><strong>Conditional Breakpoint:</strong> Pause execution when a certain condition is true (e.g., a variable reaches a specific value).</li>
+    </ul>
+
+    <h3>Debugging Network Requests</h3>
+    <p>
+        The "Network" tab in developer tools helps track HTTP requests made by your JavaScript code (such as AJAX calls, API requests, etc.). You can inspect the request details like method, response, status, and timing to identify issues.
+    </p>
+
+    <h3>Using Debuggers in Code Editors</h3>
+    <p>
+        In addition to browser tools, code editors like Visual Studio Code support debugging features that allow you to set breakpoints, inspect variables, and step through your code while it’s running.
+    </p>
+
+    <h3>Common Debugging Techniques</h3>
+    <ul>
+        <li><strong>Logging:</strong> Add <code>console.log()</code> statements to track variable values and flow of execution.</li>
+        <li><strong>Step-by-Step Execution:</strong> Use breakpoints to pause and inspect code execution at specific points.</li>
+        <li><strong>Isolation:</strong> Isolate parts of the code to test individually and narrow down the source of errors.</li>
+        <li><strong>Error Handling:</strong> Implement <code>try...catch</code> blocks to catch and handle exceptions gracefully.</li>
+    </ul>
+
+    <h3>Summary</h3>
+    <p>
+        Browser developer tools and the <code>console</code> API are invaluable resources for debugging JavaScript. By leveraging breakpoints, network monitoring, and console logs, developers can efficiently identify and resolve issues in their code.
+    </p>
+</div>
+
+<!-- Console API -->
+<div class="main" id="console">
+    <h1>Console API</h1>
+
+    <h3>Introduction</h3>
+    <p>
+        The <code>console</code> API is a powerful tool in JavaScript that allows developers to log information to the browser's console. This helps in debugging and inspecting the flow of execution in your code. It provides methods for logging messages, displaying errors and warnings, and more.
+    </p>
+
+    <h3>Common Console Methods</h3>
+    <p>
+        The <code>console</code> object has several methods to log different types of messages:
+    </p>
+    <ul>
+        <li><code>console.log()</code>: Logs general messages.</li>
+        <li><code>console.error()</code>: Logs error messages, typically with a red color to highlight them.</li>
+        <li><code>console.warn()</code>: Logs warning messages with a yellow color.</li>
+        <li><code>console.info()</code>: Logs informational messages, often displayed in blue.</li>
+        <li><code>console.table()</code>: Displays an array or object in a tabular format for easier inspection.</li>
+    </ul>
+
+    <h3>Example</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            console.log('This is a log message');
+            console.error('This is an error message');
+            console.warn('This is a warning message');
+            console.info('This is an info message');
+            console.table([{name: 'John', age: 30}, {name: 'Jane', age: 25}]);
+        </code>
+    </pre>
+
+    <h3>Grouping Console Outputs</h3>
+    <p>
+        You can group related messages together using <code>console.group()</code> and <code>console.groupEnd()</code>:
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            console.group('Group 1');
+            console.log('Message 1');
+            console.log('Message 2');
+            console.groupEnd();
+        </code>
+    </pre>
+
+    <h3>Time Logging</h3>
+    <p>
+        The <code>console.time()</code> and <code>console.timeEnd()</code> methods are used to measure the time it takes to execute a block of code.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            console.time('timer');
+            for (let i = 0; i < 1000000; i++) {}
+            console.timeEnd('timer'); // Logs the time elapsed
+        </code>
+    </pre>
+
+    <h3>Counting Occurrences</h3>
+    <p>
+        The <code>console.count()</code> method can be used to count how many times a particular piece of code is executed.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            console.count('Loop count');
+            // Other code...
+            console.count('Loop count'); // Logs the number of times count() is called
+        </code>
+    </pre>
+
+    <h3>Summary</h3>
+    <p>
+        The <code>console</code> API is a versatile tool that aids in debugging by providing different methods to log messages, measure time, group outputs, and track occurrences. Mastering the <code>console</code> API helps developers inspect their code effectively and improve the debugging process.
+    </p>
+</div>
+
+
+
+<!-- Error Handling (Try-Catch) -->
+<div class="main" id="error-handling">
+    <h1>Error Handling (Try-Catch)</h1>
+
+    <h3>Introduction</h3>
+    <p>
+        In JavaScript, errors are inevitable during development. However, instead of allowing these errors to break the program, you can catch and handle them gracefully using the <code>try...catch</code> statement.
+    </p>
+
+    <h3>What is Try-Catch?</h3>
+    <p>
+        The <code>try...catch</code> statement allows you to define a block of code that will be attempted, and if an error occurs, it will be caught and handled in the <code>catch</code> block.
+    </p>
+
+    <h3>Syntax</h3>
+    <pre>
+        <code>
+            try {
+                // Code that may throw an error
+            } catch (error) {
+                // Code that runs if an error is thrown
+                console.error(error); // Handling the error
+            }
+        </code>
+    </pre>
+
+    <h3>Example</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            try {
+                let result = riskyFunction();
+                console.log(result);
+            } catch (error) {
+                console.error('An error occurred: ', error);
+            }
+        </code>
+    </pre>
+
+    <h3>Explanation</h3>
+    <p>
+        In this example, the code inside the <code>try</code> block attempts to execute the function <code>riskyFunction()</code>. If this function throws an error, the <code>catch</code> block will execute, and the error will be logged to the console.
+    </p>
+
+    <h3>Types of Errors</h3>
+    <p>
+        JavaScript errors can be of various types, including:
+    </p>
+    <ul>
+        <li><strong>SyntaxError:</strong> An error in the syntax of your code, like a missing parenthesis.</li>
+        <li><strong>ReferenceError:</strong> Trying to reference a variable that is not defined.</li>
+        <li><strong>TypeError:</strong> An operation performed on a variable of the wrong type.</li>
+        <li><strong>RangeError:</strong> Trying to use a value outside of the allowable range (e.g., negative array length).</li>
+    </ul>
+
+    <h3>Finally Block</h3>
+    <p>
+        The <code>finally</code> block is optional and will execute regardless of whether an error was thrown or not. This is useful for cleaning up resources (e.g., closing files or network connections) after code execution.
+    </p>
+    <pre>
+        <code>
+            try {
+                // Some code
+            } catch (error) {
+                console.error(error);
+            } finally {
+                console.log('This will always run');
+            }
+        </code>
+    </pre>
+
+    <h3>Example with Finally</h3>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            try {
+                let value = riskyFunction();
+                console.log(value);
+            } catch (error) {
+                console.error('Error: ', error);
+            } finally {
+                console.log('Cleanup, always executed');
+            }
+        </code>
+    </pre>
+
+    <h3>Custom Error Handling</h3>
+    <p>
+        You can throw your own errors using the <code>throw</code> statement. This can be useful for custom error messages or when certain conditions in your application are not met.
+    </p>
+    <pre>
+        <code>
+            try {
+                let age = -5;
+                if (age < 0) {
+                    throw new Error('Age cannot be negative');
+                }
+            } catch (error) {
+                console.error(error.message); // Output: "Age cannot be negative"
+            }
+        </code>
+    </pre>
+
+    <h3>Best Practices</h3>
+    <ul>
+        <li>Always handle expected errors gracefully to ensure the user experience remains smooth.</li>
+        <li>Avoid empty <code>catch</code> blocks. Always log or handle the error appropriately.</li>
+        <li>Use the <code>finally</code> block for cleanup actions, such as closing database connections or freeing resources.</li>
+        <li>Throw specific error messages for custom validation and to help identify issues quickly.</li>
+    </ul>
+
+    <h3>Summary</h3>
+    <p>
+        Error handling is an important part of JavaScript programming. Using <code>try...catch</code> allows developers to catch and handle errors effectively, providing a better user experience and making it easier to identify and resolve issues.
+    </p>
+</div>
+
+<!-- Writing Clean and Readable Code -->
+<div class="main" id="clean-code">
+    <h1>Writing Clean and Readable Code</h1>
+
+    <h3>Introduction</h3>
+    <p>
+        Writing clean and readable code is crucial for maintaining and scaling software projects. It improves collaboration, reduces errors, and simplifies debugging and updates. Clean code is easy to understand, modify, and debug.
+    </p>
+
+    <h3>Why Clean Code Matters</h3>
+    <p>
+        Clean code makes the software easier to maintain, improves readability for developers (including future collaborators), and reduces the chance of introducing bugs. It enhances productivity and helps developers work efficiently.
+    </p>
+
+    <h3>Key Principles for Writing Clean Code</h3>
+    <ul>
+        <li><strong>Use Meaningful and Descriptive Names:</strong> Variables, functions, and class names should convey their purpose clearly. Avoid generic names like `temp` or `x`.</li>
+        <li><strong>Keep Functions Small:</strong> Functions should do one thing and do it well. They should be concise, ideally under 20-30 lines of code.</li>
+        <li><strong>Consistent Formatting:</strong> Consistency in indentation, spacing, and naming conventions helps make the code more readable and predictable.</li>
+        <li><strong>Write Comments Where Necessary:</strong> Comments should explain why something is done, not what is done. Don't over-comment, let the code speak for itself.</li>
+        <li><strong>Avoid Magic Numbers:</strong> Replace hardcoded numbers with constants or configuration variables.</li>
+        <li><strong>Follow the DRY Principle:</strong> Avoid code duplication by creating reusable functions or classes.</li>
+        <li><strong>Refactor Regularly:</strong> Clean code isn’t a one-time thing. Regularly refactor code to keep it clean and efficient.</li>
+        <li><strong>Use Error Handling:</strong> Handle errors properly with appropriate messages or actions to avoid unexpected crashes.</li>
+    </ul>
+
+    <h3>Example of Clean vs. Unclean Code</h3>
+    <h4>Unclean Code:</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            function processData(data) {
+                let temp = 0;
+                for (let i = 0; i < data.length; i++) {
+                    temp += data[i].value;
+                }
+                return temp;
+            }
+        </code>
+    </pre>
+
+    <h4>Clean Code:</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            function calculateTotalValue(data) {
+                return data.reduce((total, item) => total + item.value, 0);
+            }
+        </code>
+    </pre>
+
+    <h3>Best Practices</h3>
+    <ul>
+        <li>Write descriptive and meaningful names for functions and variables.</li>
+        <li>Keep functions short and focused on a single task.</li>
+        <li>Use consistent formatting throughout your codebase.</li>
+        <li>Comment where necessary, but don't overdo it. Let the code speak for itself where possible.</li>
+        <li>Refactor your code regularly to keep it clean and free from unnecessary complexity.</li>
+    </ul>
+
+    <h3>Summary</h3>
+    <p>
+        Writing clean and readable code is essential for creating maintainable, scalable, and bug-free applications. By following principles like meaningful naming, small functions, and proper formatting, developers can create code that is both easy to understand and easy to maintain.
+    </p>
+</div>
+
+<!-- Optimizing Performance -->
+<div class="main" id="performance">
+    <h1>Optimizing Performance</h1>
+
+    <h3>Introduction</h3>
+    <p>
+        Performance optimization is an essential part of software development that aims to improve the speed and efficiency of your code. This can involve reducing load times, increasing response speeds, and reducing memory usage, all of which contribute to a better user experience.
+    </p>
+
+    <h3>Why Performance Optimization Matters</h3>
+    <p>
+        Slow performance can lead to a frustrating user experience and increase bounce rates, especially on websites and applications. Optimizing performance ensures that your application runs smoothly, efficiently, and quickly, even with high traffic or large datasets.
+    </p>
+
+    <h3>Common Techniques for Optimizing JavaScript Performance</h3>
+    <ul>
+        <li><strong>Minimize DOM Manipulations:</strong> Accessing and modifying the DOM can be slow. Batch DOM updates together, and minimize the number of times you interact with it.</li>
+        <li><strong>Debounce and Throttle Event Listeners:</strong> Use debounce or throttle techniques for events like scrolling or typing to limit the number of function calls made during rapid events.</li>
+        <li><strong>Optimize Loops:</strong> Minimize the complexity of loops. Avoid heavy computations inside loops, and reduce the number of iterations when possible.</li>
+        <li><strong>Use Lazy Loading:</strong> Lazy load images, videos, and other assets to improve initial page load times. Resources are loaded only when they are needed (e.g., when they come into view).</li>
+        <li><strong>Cache Data:</strong> Use caching strategies (localStorage, sessionStorage, IndexedDB, or service workers) to avoid repeated network requests and reduce load times.</li>
+        <li><strong>Reduce JavaScript Bundle Size:</strong> Minimize the size of your JavaScript files by using code splitting, tree-shaking, and minification tools like Webpack.</li>
+        <li><strong>Asynchronous Operations:</strong> Use asynchronous operations like Promises and async/await to prevent blocking the main thread during long-running operations.</li>
+    </ul>
+
+    <h3>Example: Reducing DOM Manipulation</h3>
+    <p>
+        Instead of repeatedly accessing the DOM within a loop, try to access it once, store it in a variable, and then perform updates.
+    </p>
+    <h4>Unoptimized Code:</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            for (let i = 0; i < items.length; i++) {
+                document.getElementById('item-' + i).innerText = items[i];
+            }
+        </code>
+    </pre>
+
+    <h4>Optimized Code:</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const container = document.getElementById('container');
+            items.forEach((item, i) => {
+                container.children[i].innerText = item;
+            });
+        </code>
+    </pre>
+
+    <h3>Using Performance API</h3>
+    <p>
+        The Performance API allows you to measure the performance of your web application. You can use it to track loading times, resource usage, and even the performance of specific functions.
+    </p>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            performance.mark('start');
+            // Some code execution...
+            performance.mark('end');
+            performance.measure('executionTime', 'start', 'end');
+            const measures = performance.getEntriesByType('measure');
+            console.log(measures);
+        </code>
+    </pre>
+
+    <h3>Best Practices for Performance Optimization</h3>
+    <ul>
+        <li>Prioritize performance early in the development process, not as an afterthought.</li>
+        <li>Minimize the number of HTTP requests by combining assets like CSS and JavaScript files.</li>
+        <li>Use lazy loading to load only the resources that are needed initially.</li>
+        <li>Optimize images and videos to reduce file sizes without sacrificing quality.</li>
+        <li>Regularly profile your application’s performance using tools like Chrome DevTools, Lighthouse, and WebPageTest.</li>
+    </ul>
+
+    <h3>Summary</h3>
+    <p>
+        Optimizing performance is crucial for providing a fast and smooth user experience. By following techniques like minimizing DOM manipulations, optimizing loops, using lazy loading, and caching data, developers can significantly improve the performance of their JavaScript applications.
+    </p>
+</div>
+
+<!-- Security Best Practices -->
+<div class="main" id="security">
+    <h1>Security Best Practices</h1>
+
+    <h3>Introduction</h3>
+    <p>
+        Security is a critical aspect of web development, and JavaScript applications are no exception. Insecure code can lead to vulnerabilities like cross-site scripting (XSS), cross-site request forgery (CSRF), and others. It is essential to follow security best practices to protect your applications and users.
+    </p>
+
+    <h3>Common Security Vulnerabilities</h3>
+    <ul>
+        <li><strong>Cross-Site Scripting (XSS):</strong> An attack where malicious scripts are injected into web pages viewed by other users, potentially allowing attackers to steal data or perform actions on behalf of others.</li>
+        <li><strong>Cross-Site Request Forgery (CSRF):</strong> An attack where a malicious user can trick an authenticated user into performing an unwanted action, like changing account settings.</li>
+        <li><strong>Insecure Data Storage:</strong> Storing sensitive data such as passwords and personal information insecurely, such as in localStorage without encryption.</li>
+        <li><strong>SQL Injection:</strong> An attack where attackers can execute arbitrary SQL commands against a database via input fields or URLs.</li>
+    </ul>
+
+    <h3>Best Practices for Securing JavaScript Applications</h3>
+    <ul>
+        <li><strong>Sanitize and Escape User Input:</strong> Always sanitize user input to prevent XSS attacks. Use libraries like DOMPurify to sanitize HTML input, and escape potentially dangerous characters like `<`, `>`, and `&`.</li>
+        <li><strong>Use HTTPS:</strong> Always use HTTPS to encrypt data sent between the client and server. This prevents attackers from intercepting sensitive information like passwords and credit card numbers.</li>
+        <li><strong>Implement CSP (Content Security Policy):</strong> Use a strong Content Security Policy (CSP) to restrict what scripts, styles, and other resources can be loaded by the browser, protecting against XSS attacks.</li>
+        <li><strong>Validate and Sanitize Server-Side Data:</strong> Never rely solely on client-side validation. Always perform input validation and sanitization on the server to prevent malicious data from reaching your backend.</li>
+        <li><strong>Use Secure Storage for Sensitive Data:</strong> Avoid storing sensitive data like passwords or tokens in localStorage. Instead, use secure cookies with the HttpOnly and Secure flags, or implement server-side storage for tokens.</li>
+        <li><strong>Use Anti-CSRF Tokens:</strong> Implement anti-CSRF tokens in forms and AJAX requests to prevent unauthorized actions from being performed on behalf of the user.</li>
+        <li><strong>Regularly Update Dependencies:</strong> Keep all JavaScript libraries and dependencies up to date to avoid known security vulnerabilities. Use tools like npm audit to check for vulnerabilities in your dependencies.</li>
+        <li><strong>Limit Permissions:</strong> Follow the principle of least privilege by only granting the minimum required permissions to users and applications. Avoid exposing sensitive functionality to the frontend unless necessary.</li>
+    </ul>
+
+    <h3>Example: Preventing XSS</h3>
+    <p>
+        Here is an example of how to sanitize user input to prevent XSS attacks.
+    </p>
+    <h4>Untrusted User Input:</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const userInput = '<img src="x" onerror="alert(\'Hacked!\')">';
+            document.getElementById('user-message').innerHTML = userInput;
+        </code>
+    </pre>
+
+    <h4>Sanitizing Input with DOMPurify:</h4>
+    <pre>
+        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+        <code>
+            const userInput = '<img src="x" onerror="alert(\'Hacked!\')">';
+            const sanitizedInput = DOMPurify.sanitize(userInput);
+            document.getElementById('user-message').innerHTML = sanitizedInput;
+        </code>
+    </pre>
+
+    <h3>Secure Authentication Practices</h3>
+    <ul>
+        <li><strong>Use Strong Passwords:</strong> Enforce strong password policies and encourage users to use unique, complex passwords. Implement two-factor authentication (2FA) for added security.</li>
+        <li><strong>Store Passwords Securely:</strong> Use strong hashing algorithms like bcrypt or Argon2 to hash passwords before storing them in the database. Never store plain-text passwords.</li>
+        <li><strong>Session Management:</strong> Use secure, HttpOnly, and SameSite cookies to store session data, and implement session expiration and renewal mechanisms.</li>
+    </ul>
+
+    <h3>Best Practices for API Security</h3>
+    <ul>
+        <li><strong>Use API Authentication:</strong> Secure APIs with authentication methods like OAuth 2.0, API keys, or JWT tokens to ensure that only authorized users can access your endpoints.</li>
+        <li><strong>Rate Limiting:</strong> Implement rate limiting to prevent abuse and mitigate the risk of denial-of-service (DoS) attacks.</li>
+        <li><strong>Use CORS (Cross-Origin Resource Sharing):</strong> Use CORS headers to control which origins can access your API and avoid exposing sensitive data to unauthorized domains.</li>
+    </ul>
+
+    <h3>Summary</h3>
+    <p>
+        Security is a fundamental part of web development. By following best practices like sanitizing user input, using HTTPS, implementing CSP, and securing authentication and data storage, you can significantly reduce the risk of security vulnerabilities and protect your applications and users.
+    </p>
+</div>
+
+
+
+
+
+</div>
+
+        
+<script src="script1.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const menuBtn = document.getElementById("menuBtn");
+        const sidebar = document.getElementById("sidebar");
+
+        menuBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("active");
+        });
+
+        const sidebarLinks = document.querySelectorAll(".sidebar ul li a");
+        const contentSections = document.querySelectorAll(".content .content");
+
+        sidebarLinks.forEach(link => {
+            link.addEventListener("click", (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute("href").substring(1);
+
+                // Hide all content sections and reset sidebar links
+                contentSections.forEach(section => {
+                    section.classList.remove("active");
+                });
+
+                // Show the selected content section
+                document.getElementById(targetId).classList.add("active");
+
+                // Set active background on sidebar links
+                sidebarLinks.forEach(link => {
+                    link.parentElement.classList.remove("active-bg");
+                });
+
+                link.parentElement.classList.add("active-bg");
+            });
+        });
+
+        // Initialize the first section as active
+        if (contentSections.length > 0) {
+            contentSections[0].classList.add("active");
+            sidebarLinks[0].parentElement.classList.add("active-bg");
+        }
+    });
+
+
+
+    document.querySelector('.menu-btn2').addEventListener('click', function () {
+        const topicButtons = document.querySelector('.topic-buttons');
+        // Toggle the menu visibility by moving it on and off the screen
+        if (topicButtons.style.right === '0px') {
+            topicButtons.style.right = '-250px'; // Slide out
+        } else {
+            topicButtons.style.right = '0px'; // Slide in
+        }
+    });
+
+
+
+
+
+
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Codingwell</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #bebecf;
+            color: #444;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 150px;
+            height: auto;
+        }
+
+        /* Menu Button Styling */
+        .menu-btn {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .menu-btn div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            border-radius: 5px;
+        }
+
+        .menu-btn.active div {
+            background-color: #007BFF;
+        }
+
+        /* Full-Screen Dropdown Menu */
+        .menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #474748;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transform: translateY(-100%);
+            transition: transform 0.5s ease-in-out;
+            z-index: 10;
+        }
+
+        .menu.active {
+            transform: translateY(0);
+        }
+
+        .menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        .menu ul li {
+            margin: 15px 0;
+        }
+
+        .menu ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .menu ul li a:hover {
+            color: #FFDDC1;
+        }
+
+        .menu .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Main Content Styling */
+        h1, h2 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: #555;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .article-box {
+            background-color: #bbb2b2;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+            box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001, inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001, inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001;
+            position: relative;
+        }
+
+        .article-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .article-thumbnail {
+            width: 100%;
+            height: auto;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .article-content {
+            padding: 20px;
+        }
+
+        .article-heading {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            color: #007BFF;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="h1 logo.png" alt="The Codingwell Logo">
+    </div>
+    <div class="menu-btn" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</header>
+
+<!-- Full-Screen Menu -->
+<div class="menu" id="menu">
+    <span class="close-btn" onclick="toggleMenu()">×</span>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#feedback">Feedback</a></li>
+    </ul>
+</div>
+
+<main>
+    <h1>The Codingwell</h1>
+    <h2>Grow with Tech</h2>
+
+    <div class="container">
+        <div class="article-box">
+            <img src="article1.jpg" alt="Thumbnail 1" class="article-thumbnail">
+            <div class="article-content">
+                <h2 class="article-heading">Why Is the Keyboard Layout QWERTY and Not in Alphabetical Order?</h2>
+                <p>The QWERTY keyboard layout was invented by Christopher Latham Sholes in the 1860s...</p>
+                <a href="article1.html" class="read-more">Read More</a>
+            </div>
+        </div>
+
+        <div class="article-box">
+            <img src="article2.jpg" alt="Thumbnail 2" class="article-thumbnail">
+            <div class="article-content">
+                <h2 class="article-heading">WhatsApp is Totally Free for Us, but How It Makes Money?</h2>
+                <p>The core way WhatsApp makes money is through its Business API...</p>
+                <a href="article2.html" class="read-more">Read More</a>
+            </div>
+        </div>
+
+        <div class="article-box">
+            <img src="article3.jpg" alt="Thumbnail 3" class="article-thumbnail">
+            <div class="article-content">
+                <h2 class="article-heading">Why You Should Cover Your Laptop Webcam</h2>
+                <p>Webcams are ubiquitous on laptops and PCs, primarily used for video conferencing...</p>
+                <a href="article3.html" class="read-more">Read More</a>
+            </div>
+        </div>
+
+        <div class="article-box">
+            <img src="article4.jpeg" alt="Thumbnail 3" class="article-thumbnail">
+            <div class="article-content">
+                <h2 class="article-heading">Why You Should Cover Your Laptop Webcam</h2>
+                <p>Webcams are ubiquitous on laptops and PCs, primarily used for video conferencing...</p>
+                <a href="article4.html" class="read-more">Read More</a>
+            </div>
+        </div>
+
+        <div class="article-box">
+            <img src="article5.png" alt="Thumbnail 3" class="article-thumbnail">
+            <div class="article-content">
+                <h2 class="article-heading">Why You Should Cover Your Laptop Webcam</h2>
+                <p>Webcams are ubiquitous on laptops and PCs, primarily used for video conferencing...</p>
+                <a href="article5.html" class="read-more">Read More</a>
+            </div>
+        </div>
+
+        <div class="article-box">
+            <img src="article6.jpg" alt="Thumbnail 3" class="article-thumbnail">
+            <div class="article-content">
+                <h2 class="article-heading">Why You Should Cover Your Laptop Webcam</h2>
+                <p>Webcams are ubiquitous on laptops and PCs, primarily used for video conferencing...</p>
+                <a href="article6.html" class="read-more">Read More</a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('menu');
+        const menuBtn = document.querySelector('.menu-btn');
+        menu.classList.toggle('active');
+        menuBtn.classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>
