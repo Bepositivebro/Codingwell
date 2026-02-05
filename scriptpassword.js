@@ -7,7 +7,7 @@ async function analyzePassword() {
     const password = document.getElementById("passwordInput").value;
 
     if (!password) {
-        alert("Please enter a password");
+        alert("Enter a password first!");
         return;
     }
 
@@ -18,19 +18,19 @@ async function analyzePassword() {
     updateStrength(score);
     updateEntropy(entropy);
     updateCrackTime(entropy);
-
-    try {
-        const breached = await checkPasswordBreach(password);
-        updateBreach(breached);
-    } catch {
-        document.getElementById("breachOutput").innerText =
-            "⚠️ Breach check unavailable (offline)";
-    }
-
     updateSuggestions(password);
     detectPatterns(password);
     showPasswordDNA(password);
     simulateHacker(score);
+
+    try {
+        const breached = await checkPasswordBreach(password);
+        document.getElementById("breachOutput").innerText =
+            breached ? "⚠️ Found in data breaches!" : "✅ No known breaches found";
+    } catch {
+        document.getElementById("breachOutput").innerText =
+            "⚠️ Breach check unavailable";
+    }
 }
 
 function getCharsetSize(pwd) {
@@ -43,106 +43,99 @@ function getCharsetSize(pwd) {
 }
 
 function updateStrength(score) {
-    const strengthText = document.getElementById("strengthText");
-    const strengthBar = document.getElementById("strengthBar");
+    const bar = document.getElementById("strengthBar");
+    const text = document.getElementById("strengthText");
 
-    let strength = "Very Weak";
+    let label = "Very Weak";
     let color = "red";
 
     if (score > 4) {
-        strength = "Strong";
-        color = "#65ff4d";
+        label = "Strong";
+        color = "#00ff66";
     } else if (score > 2.5) {
-        strength = "Moderate";
+        label = "Moderate";
         color = "#ffcc00";
     }
 
-    strengthText.innerText = `Strength: ${strength}`;
-    strengthBar.style.width = `${score * 20}%`;
-    strengthBar.style.background = color;
+    text.innerText = `Strength: ${label}`;
+    bar.style.width = `${score * 20}%`;
+    bar.style.background = color;
 }
 
 function updateEntropy(entropy) {
-    document.getElementById("entropyOutput").innerHTML =
+    document.getElementById("entropyOutput").innerText =
         `🔐 Entropy: ${entropy.toFixed(2)} bits`;
 }
 
 function updateCrackTime(entropy) {
     const seconds = Math.pow(2, entropy) / 1e9;
-    document.getElementById("timeOutput").innerHTML =
-        `⏱️ Estimated time to crack: ${formatTime(seconds)}`;
+    document.getElementById("timeOutput").innerText =
+        `⏱️ Crack time: ${formatTime(seconds)}`;
 }
 
-function formatTime(seconds) {
-    if (seconds < 60) return `${Math.floor(seconds)} seconds`;
-    if (seconds < 3600) return `${Math.floor(seconds / 60)} minutes`;
-    if (seconds < 86400) return `${Math.floor(seconds / 3600)} hours`;
-    if (seconds < 31536000) return `${Math.floor(seconds / 86400)} days`;
-    if (seconds < 3.15e7 * 100) return `${Math.floor(seconds / 31536000)} years`;
-    return "millennia (virtually uncrackable)";
+function formatTime(sec) {
+    if (sec < 60) return `${Math.floor(sec)} seconds`;
+    if (sec < 3600) return `${Math.floor(sec / 60)} minutes`;
+    if (sec < 86400) return `${Math.floor(sec / 3600)} hours`;
+    if (sec < 31536000) return `${Math.floor(sec / 86400)} days`;
+    return "years / centuries";
 }
 
 async function checkPasswordBreach(password) {
-    const encoder = new TextEncoder();
-    const data = encoder.encode(password);
-    const hashBuffer = await crypto.subtle.digest("SHA-1", data);
-    const hashArray = Array.from(new Uint8Array(hashBuffer));
-    const hashHex = hashArray.map(b => b.toString(16).padStart(2, "0")).join("").toUpperCase();
+    const enc = new TextEncoder().encode(password);
+    const hash = await crypto.subtle.digest("SHA-1", enc);
+    const hex = Array.from(new Uint8Array(hash))
+        .map(b => b.toString(16).padStart(2, "0"))
+        .join("")
+        .toUpperCase();
 
-    const prefix = hashHex.slice(0, 5);
-    const suffix = hashHex.slice(5);
+    const prefix = hex.slice(0, 5);
+    const suffix = hex.slice(5);
 
-    const response = await fetch(`https://api.pwnedpasswords.com/range/${prefix}`);
-    const text = await response.text();
+    const res = await fetch(`https://api.pwnedpasswords.com/range/${prefix}`);
+    const text = await res.text();
 
-    return text.split("\n").some(line => line.startsWith(suffix));
-}
-
-function updateBreach(breached) {
-    const breachOutput = document.getElementById("breachOutput");
-    breachOutput.innerHTML = breached
-        ? "⚠️ Found in known data breaches"
-        : "✅ No known breaches detected";
+    return text.includes(suffix);
 }
 
 function updateSuggestions(password) {
     const tips = [];
-    if (password.length < 12) tips.push("Use at least 12 characters");
+    if (password.length < 12) tips.push("Use 12+ characters");
     if (!/[A-Z]/.test(password)) tips.push("Add uppercase letters");
     if (!/[0-9]/.test(password)) tips.push("Include numbers");
-    if (!/[^A-Za-z0-9]/.test(password)) tips.push("Use special symbols");
+    if (!/[^A-Za-z0-9]/.test(password)) tips.push("Add symbols");
 
     document.getElementById("suggestions").innerHTML =
-        tips.length ? `💡 Suggestions:<br>• ${tips.join("<br>• ")}` : "✅ Strong composition";
+        tips.length ? `💡 ${tips.join(" | ")}` : "✅ Good password structure";
 }
 
 function detectPatterns(password) {
-    const patterns = ["qwerty", "asdf", "1234"];
-    const lower = password.toLowerCase();
-    document.getElementById("patternWarning").innerHTML =
-        patterns.some(p => lower.includes(p))
-            ? "⚠️ Predictable keyboard pattern detected"
-            : "";
+    const risky = ["1234", "qwerty", "asdf"];
+    const found = risky.some(p => password.toLowerCase().includes(p));
+
+    document.getElementById("patternWarning").innerText =
+        found ? "⚠️ Predictable pattern detected" : "";
 }
 
 function showPasswordDNA(password) {
     const dna = [];
-    if (/[a-z]/.test(password)) dna.push("Lowercase");
-    if (/[A-Z]/.test(password)) dna.push("Uppercase");
-    if (/[0-9]/.test(password)) dna.push("Numbers");
-    if (/[^A-Za-z0-9]/.test(password)) dna.push("Symbols");
+    if (/[a-z]/.test(password)) dna.push("lowercase");
+    if (/[A-Z]/.test(password)) dna.push("uppercase");
+    if (/[0-9]/.test(password)) dna.push("numbers");
+    if (/[^A-Za-z0-9]/.test(password)) dna.push("symbols");
 
-    document.getElementById("passwordDNA").innerHTML =
+    document.getElementById("passwordDNA").innerText =
         `🧬 Password DNA: ${dna.join(", ")}`;
 }
 
 function simulateHacker(score) {
     const canvas = document.getElementById("hackerSim");
-    if (!canvas) return; // SAFE GUARD
-
     const ctx = canvas.getContext("2d");
+
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = "lime";
+    ctx.fillStyle = "#00ff99";
     ctx.font = "14px monospace";
-    ctx.fillText(`Simulated crack attempts: ${(6 - score) * 1000}`, 10, 30);
+
+    const attempts = Math.floor((6 - score) * 1000);
+    ctx.fillText(`Simulating ${attempts} brute-force attempts…`, 10, 35);
 }
