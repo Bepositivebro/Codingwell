@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HomographWell — Homograph & IDN Phishing Detector</title>
+<meta name="description" content="Client-side tool that inspects URLs, emails and text for Unicode homograph attacks, mixed scripts, punycode abuse and hidden characters — plus a generator for phishing-awareness testing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0F1720;
+    --panel:#16212C;
+    --panel-2:#1C2A38;
+    --paper:#E9E5DB;
+    --muted:#7C8A97;
+    --muted-2:#5A6773;
+    --amber:#E8A33D;
+    --red:#E15554;
+    --teal:#4FB8A6;
+    --line:#26343F;
+    --line-soft:#1E2C38;
+    --mono:'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace;
+    --sans:'IBM Plex Sans', -apple-system, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--paper);
+    font-family:var(--sans);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--amber);color:var(--ink);}
+  a{color:var(--teal);}
+
+  .wrap{max-width:980px;margin:0 auto;padding:0 24px;}
+
+  /* NAV */
+  nav{
+    border-bottom:1px solid var(--line);
+    padding:18px 0;
+    position:sticky;top:0;
+    background:rgba(15,23,32,0.92);
+    backdrop-filter:blur(8px);
+    z-index:50;
+  }
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;}
+  .brand{display:flex;align-items:baseline;gap:10px;}
+  .brand-mark{
+    font-family:var(--mono);font-weight:700;font-size:15px;letter-spacing:0.02em;
+    background:var(--paper);color:var(--ink);padding:3px 7px;border-radius:3px;
+  }
+  .brand-name{font-family:var(--mono);font-weight:600;font-size:15px;letter-spacing:0.01em;}
+  .nav-links{display:flex;gap:22px;font-family:var(--mono);font-size:12.5px;color:var(--muted);}
+  .nav-links a{color:var(--muted);text-decoration:none;border-bottom:1px solid transparent;}
+  .nav-links a:hover{color:var(--paper);border-bottom-color:var(--amber);}
+  @media (max-width:640px){.nav-links{display:none;}}
+
+  /* HERO */
+  header.hero{padding:64px 0 40px;border-bottom:1px solid var(--line);}
+  .eyebrow{
+    font-family:var(--mono);font-size:12px;letter-spacing:0.12em;color:var(--amber);
+    text-transform:uppercase;margin:0 0 16px;display:flex;align-items:center;gap:10px;
+  }
+  .eyebrow::before{content:'';width:18px;height:1px;background:var(--amber);display:inline-block;}
+  h1{
+    font-family:var(--sans);font-weight:700;font-size:clamp(28px,4.4vw,44px);
+    line-height:1.12;margin:0 0 18px;letter-spacing:-0.01em;max-width:760px;
+  }
+  h1 .glyph-hl{
+    font-family:var(--mono);color:var(--ink);background:var(--amber);
+    padding:0 6px;border-radius:3px;font-weight:600;
+  }
+  .lede{font-size:16.5px;color:var(--muted);max-width:600px;margin:0 0 8px;}
+  .lede b{color:var(--paper);font-weight:600;}
+
+  /* PANEL / CARD */
+  .panel{
+    background:var(--panel);border:1px solid var(--line);border-radius:10px;
+    padding:22px;
+  }
+  .section{padding:56px 0;border-bottom:1px solid var(--line);}
+  .section-head{margin-bottom:28px;}
+  .section-head h2{font-size:24px;margin:6px 0 8px;font-weight:700;}
+  .section-head p{color:var(--muted);margin:0;max-width:600px;font-size:15px;}
+
+  /* INSPECTOR */
+  .inspector-input-row{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap;}
+  input[type=text]{
+    flex:1;min-width:240px;
+    background:var(--ink);border:1px solid var(--line);color:var(--paper);
+    font-family:var(--mono);font-size:14.5px;padding:13px 14px;border-radius:7px;
+    outline:none;transition:border-color .15s;
+  }
+  input[type=text]:focus{border-color:var(--teal);}
+  input[type=text]::placeholder{color:var(--muted-2);}
+  button{
+    font-family:var(--mono);font-weight:600;font-size:13.5px;letter-spacing:0.01em;
+    border-radius:7px;border:1px solid transparent;padding:13px 20px;cursor:pointer;
+    transition:transform .08s, opacity .15s, background .15s;
+  }
+  button:active{transform:scale(0.98);}
+  .btn-primary{background:var(--amber);color:var(--ink);}
+  .btn-primary:hover{opacity:0.9;}
+  .btn-ghost{background:transparent;border:1px solid var(--line);color:var(--paper);}
+  .btn-ghost:hover{border-color:var(--muted);}
+  .sample-row{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap;}
+  .sample-chip{
+    font-family:var(--mono);font-size:12px;color:var(--muted);background:var(--panel-2);
+    border:1px solid var(--line);padding:6px 10px;border-radius:20px;cursor:pointer;
+  }
+  .sample-chip:hover{color:var(--paper);border-color:var(--muted);}
+
+  /* RESULTS */
+  #results{margin-top:26px;display:none;}
+  .verdict-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:22px;}
+  .verdict-badge{
+    font-family:var(--mono);font-weight:700;font-size:13px;letter-spacing:0.04em;
+    padding:8px 14px;border-radius:6px;text-transform:uppercase;
+  }
+  .v-low{background:rgba(79,184,166,0.15);color:var(--teal);border:1px solid rgba(79,184,166,0.4);}
+  .v-medium{background:rgba(232,163,61,0.15);color:var(--amber);border:1px solid rgba(232,163,61,0.4);}
+  .v-high{background:rgba(225,85,84,0.15);color:var(--red);border:1px solid rgba(225,85,84,0.4);}
+  .v-critical{background:rgba(225,85,84,0.25);color:#ff8f8e;border:1px solid var(--red);}
+  .risk-meter{flex:1;min-width:160px;height:8px;background:var(--panel-2);border-radius:4px;overflow:hidden;}
+  .risk-fill{height:100%;border-radius:4px;transition:width .4s ease;}
+  .risk-score{font-family:var(--mono);font-size:13px;color:var(--muted);}
+
+  .subhead{font-family:var(--mono);font-size:12px;letter-spacing:0.08em;color:var(--muted);text-transform:uppercase;margin:22px 0 10px;}
+
+  .glyph-grid{display:flex;flex-wrap:wrap;gap:6px;}
+  .glyph-box{
+    background:var(--panel-2);border:1px solid var(--line);border-radius:7px;
+    padding:10px 8px;min-width:56px;text-align:center;position:relative;
+  }
+  .glyph-box.flagged{border-color:var(--red);background:rgba(225,85,84,0.08);}
+  .glyph-char{font-family:var(--mono);font-size:20px;line-height:1;display:block;margin-bottom:6px;}
+  .glyph-cp{font-family:var(--mono);font-size:9.5px;color:var(--muted-2);display:block;}
+  .glyph-script{
+    font-family:var(--mono);font-size:8.5px;letter-spacing:0.02em;text-transform:uppercase;
+    display:inline-block;margin-top:5px;padding:2px 5px;border-radius:3px;
+  }
+  .s-latin{background:rgba(79,184,166,0.18);color:var(--teal);}
+  .s-cyrillic{background:rgba(225,85,84,0.2);color:#ff8f8e;}
+  .s-greek{background:rgba(232,163,61,0.2);color:var(--amber);}
+  .s-other{background:rgba(140,120,220,0.2);color:#b8a6f0;}
+  .s-common{background:rgba(124,138,151,0.2);color:var(--muted);}
+
+  .finding{
+    display:flex;gap:12px;padding:12px 0;border-top:1px solid var(--line-soft);
+    font-size:14px;align-items:flex-start;
+  }
+  .finding:first-child{border-top:none;}
+  .finding-icon{font-family:var(--mono);font-weight:700;font-size:13px;width:20px;flex-shrink:0;text-align:center;padding-top:2px;}
+  .f-warn .finding-icon{color:var(--red);}
+  .f-note .finding-icon{color:var(--amber);}
+  .f-ok .finding-icon{color:var(--teal);}
+  .finding-body b{display:block;font-weight:600;margin-bottom:2px;}
+  .finding-body span{color:var(--muted);font-size:13.5px;}
+  code.inline{font-family:var(--mono);background:var(--ink);padding:1px 6px;border-radius:4px;font-size:13px;border:1px solid var(--line);}
+
+  /* GENERATOR */
+  .warn-box{
+    border:1px solid var(--amber);background:rgba(232,163,61,0.08);border-radius:8px;
+    padding:14px 16px;font-size:13.5px;color:var(--paper);margin-bottom:20px;
+  }
+  .warn-box b{color:var(--amber);}
+  .variant-card{
+    background:var(--panel-2);border:1px solid var(--line);border-radius:8px;
+    padding:16px;margin-top:12px;
+  }
+  .variant-label{font-family:var(--mono);font-size:11px;letter-spacing:0.08em;color:var(--muted);text-transform:uppercase;margin-bottom:10px;}
+  .variant-text{font-family:var(--mono);font-size:18px;word-break:break-all;margin-bottom:10px;}
+  .variant-meta{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;}
+  .variant-punycode{font-family:var(--mono);font-size:12px;color:var(--muted);word-break:break-all;}
+  .copy-btn{
+    font-family:var(--mono);font-size:11.5px;background:var(--ink);color:var(--paper);
+    border:1px solid var(--line);padding:6px 12px;border-radius:5px;cursor:pointer;flex-shrink:0;
+  }
+  .copy-btn:hover{border-color:var(--muted);}
+
+  /* PATTERNS */
+  .pattern{padding:20px 0;border-top:1px solid var(--line-soft);}
+  .pattern:first-child{border-top:none;padding-top:0;}
+  .pattern-eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:0.08em;color:var(--teal);text-transform:uppercase;margin-bottom:8px;}
+  .pattern h3{font-size:17px;margin:0 0 8px;font-weight:600;}
+  .pattern p{color:var(--muted);margin:0 0 10px;font-size:14.5px;max-width:640px;}
+  .pattern-example{font-family:var(--mono);font-size:14px;background:var(--panel-2);border:1px solid var(--line);padding:9px 12px;border-radius:6px;display:inline-block;}
+
+  footer{padding:36px 0 60px;}
+  footer p{color:var(--muted-2);font-size:12.5px;font-family:var(--mono);margin:0;}
+
+  @media (max-width:640px){
+    .section{padding:40px 0;}
+    header.hero{padding:44px 0 32px;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">
+      <span class="brand-mark">Aa</span>
+      <span class="brand-name">HomographWell</span>
+    </div>
+    <div class="nav-links">
+      <a href="#inspect">Inspector</a>
+      <a href="#generate">Generator</a>
+      <a href="#how">How it works</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Homograph &amp; IDN phishing detection</p>
+    <h1>Most phishing links don't misspell anything.<br>They swap the alphabet: <span class="glyph-hl">аpple.com</span> ≠ apple.com</h1>
+    <p class="lede">That first domain uses a Cyrillic <b>а</b> (U+0430), not a Latin <b>a</b>. To your eyes they're identical. To a browser they're two completely different addresses. Paste a URL, email, or block of text below and this runs it through a character-by-character forensic check — entirely in your browser, nothing is sent anywhere.</p>
+  </div>
+</header>
+
+<section class="section" id="inspect">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">01 — Inspector</p>
+      <h2>Check a URL, email, or any text</h2>
+      <p>Detects mixed Unicode scripts, known confusable characters, punycode (<code class="inline">xn--</code>) domains, invisible/zero-width characters, right-to-left override abuse, and near-matches to commonly spoofed brands.</p>
+    </div>
+
+    <div class="panel">
+      <div class="inspector-input-row">
+        <input type="text" id="inspectInput" placeholder="Paste a URL, email address, or text — e.g. https://аpple.com/login" autocomplete="off" spellcheck="false">
+        <button class="btn-primary" id="inspectBtn">Inspect</button>
+      </div>
+      <div class="sample-row">
+        <span class="sample-chip" data-sample="https://www.аpple.com/id/verify">аpple.com (Cyrillic а)</span>
+        <span class="sample-chip" data-sample="https://xn--pple-43d.com/login">xn--pple-43d.com</span>
+        <span class="sample-chip" data-sample="support@paypaI.com">paypaI.com (capital i)</span>
+        <span class="sample-chip" data-sample="https://github.com/anthropics">github.com (clean)</span>
+      </div>
+
+      <div id="results">
+        <div class="verdict-row">
+          <span class="verdict-badge" id="verdictBadge">—</span>
+          <div class="risk-meter"><div class="risk-fill" id="riskFill" style="width:0%;background:var(--teal);"></div></div>
+          <span class="risk-score" id="riskScore">0 / 100</span>
+        </div>
+
+        <div class="subhead">Findings</div>
+        <div id="findingsList"></div>
+
+        <div class="subhead">Character breakdown <span id="breakdownScope" style="color:var(--muted-2);text-transform:none;letter-spacing:0;"></span></div>
+        <div class="glyph-grid" id="glyphGrid"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="generate">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">02 — Generator</p>
+      <h2>Generate homograph text</h2>
+      <p>Turns a plain-ASCII domain or phrase into visually identical Unicode look-alikes, the same technique attackers use. Built for phishing-awareness training and testing your own filters against real homograph payloads.</p>
+    </div>
+
+    <div class="warn-box">
+      <b>For defensive testing only.</b> Use generated text to train staff, test spam/DNS filters, or demonstrate the attack in a security briefing — on domains and systems you're authorized to test. Registering or sending a homograph domain to deceive someone is fraud in most jurisdictions.
+    </div>
+
+    <div class="panel">
+      <div class="inspector-input-row">
+        <input type="text" id="generateInput" placeholder="Type plain ASCII text — e.g. paypal.com or verify your account" autocomplete="off" spellcheck="false">
+        <button class="btn-primary" id="generateBtn">Generate</button>
+      </div>
+      <div id="variants"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="how">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">03 — Reference</p>
+      <h2>Three patterns behind almost every homograph attack</h2>
+    </div>
+
+    <div class="pattern">
+      <p class="pattern-eyebrow">Pattern — Script mixing</p>
+      <h3>Borrowing a letter from another alphabet</h3>
+      <p>Cyrillic, Greek, and Armenian all share letterforms with Latin — а, е, о, р, с, х look nearly identical to a, e, o, p, c, x. Swap one letter in a trusted domain and the address resolves somewhere else entirely, while still reading correctly to a human.</p>
+      <span class="pattern-example">rnicrosoft.com <span style="color:var(--muted-2)">— that's "r" + "n", not "m"</span></span>
+    </div>
+
+    <div class="pattern">
+      <p class="pattern-eyebrow">Pattern — Punycode encoding</p>
+      <h3>The wire format gives it away — if you look</h3>
+      <p>Browsers can't route non-ASCII domains directly, so they encode them as Punycode, prefixed with <code class="inline">xn--</code>. A domain shown to the user as a normal word is really this ASCII-safe encoding underneath. Some browsers auto-decode it in the address bar; others don't, especially in emails and chat apps.</p>
+      <span class="pattern-example">xn--pple-43d.com <span style="color:var(--muted-2)">— decodes to "аpple.com"</span></span>
+    </div>
+
+    <div class="pattern">
+      <p class="pattern-eyebrow">Pattern — Invisible &amp; override characters</p>
+      <h3>Characters that render as nothing, or reverse direction</h3>
+      <p>Zero-width spaces and joiners can split a domain to dodge keyword filters. The right-to-left override character (U+202E) can flip the visual order of a filename or string, making <code class="inline">invoice_gpj.exe</code> display as <code class="inline">invoice_exe.jpg</code>. Both are invisible in most rendering and highly disproportionate red flags when found.</p>
+      <span class="pattern-example">docu​ment.pdf <span style="color:var(--muted-2)">— contains a zero-width space</span></span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>HomographWell runs entirely client-side — no input is transmitted or logged. Confusable and typosquat matching is heuristic, not exhaustive; treat results as a strong signal, not a legal verdict.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------------- Confusables map (curated, high-confidence) ---------------- */
+  // maps a look-alike Unicode char -> its ASCII look-alike
+  const CONFUSABLES = {
+    // Cyrillic lowercase
+    "а":"a","е":"e","о":"o","р":"p","с":"c","у":"y","х":"x","і":"i","ѕ":"s","ј":"j","һ":"h","ԁ":"d","ԛ":"q","ѡ":"w","ԝ":"w","ⅰ":"i",
+    // Cyrillic uppercase
+    "А":"A","В":"B","Е":"E","К":"K","М":"M","Н":"H","О":"O","Р":"P","С":"C","Т":"T","Х":"X","Ѕ":"S","І":"I","Ј":"J",
+    // Greek lowercase
+    "α":"a","ο":"o","υ":"u","ν":"v","ι":"i","κ":"k","ρ":"p","χ":"x",
+    // Greek uppercase
+    "Α":"A","Β":"B","Ε":"E","Ζ":"Z","Η":"H","Ι":"I","Κ":"K","Μ":"M","Ν":"N","Ο":"O","Ρ":"P","Τ":"T","Υ":"Y","Χ":"X",
+    // Armenian (high-confidence subset)
+    "օ":"o","ս":"u",
+    // Latin look-alikes / common ASCII confusables
+    "l":"I", "ⅼ":"l", "０":"0","１":"1","Ｉ":"I","ｌ":"l","Ｏ":"O","ο":"o"
+  };
+
+  // Reverse map: ASCII char -> preferred confusable to use in the generator
+  const REVERSE_CONFUSABLES = {};
+  for (const [glyph, ascii] of Object.entries(CONFUSABLES)) {
+    const key = ascii.toLowerCase();
+    if (!REVERSE_CONFUSABLES[key]) REVERSE_CONFUSABLES[key] = [];
+    REVERSE_CONFUSABLES[key].push(glyph);
+  }
+  // Prefer Cyrillic first for realism (most common real-world attack vector)
+  const PREFERRED_ORDER = { a:"а", e:"е", o:"о", p:"р", c:"с", x:"х", y:"у", i:"і", s:"ѕ", j:"ј", h:"һ", d:"ԁ", q:"ԛ", w:"ѡ",
+    A:"А", B:"В", E:"Е", K:"К", M:"М", H:"Н", O:"О", P:"Р", C:"С", T:"Т", X:"Х", S:"Ѕ", I:"І", J:"Ј" };
+
+  const INVISIBLES = new Set([0x200B,0x200C,0x200D,0x2060,0xFEFF,0x00AD]);
+  const RTL_OVERRIDE = 0x202E;
+  const LTR_OVERRIDE = 0x202D;
+
+  const KNOWN_BRANDS = ["google.com","paypal.com","apple.com","microsoft.com","amazon.com","facebook.com",
+    "instagram.com","netflix.com","bankofamerica.com","chase.com","wellsfargo.com","github.com","linkedin.com",
+    "outlook.com","gmail.com","twitter.com","x.com","dropbox.com","icloud.com","coinbase.com"];
+
+  /* ---------------- Script detection via Unicode property escapes ---------------- */
+  const SCRIPT_TESTS = [
+    ["Latin", /\p{Script=Latin}/u],
+    ["Cyrillic", /\p{Script=Cyrillic}/u],
+    ["Greek", /\p{Script=Greek}/u],
+    ["Armenian", /\p{Script=Armenian}/u],
+    ["Hebrew", /\p{Script=Hebrew}/u],
+    ["Arabic", /\p{Script=Arabic}/u],
+    ["Han", /\p{Script=Han}/u],
+    ["Hiragana", /\p{Script=Hiragana}/u],
+    ["Katakana", /\p{Script=Katakana}/u],
+    ["Hangul", /\p{Script=Hangul}/u],
+    ["Thai", /\p{Script=Thai}/u],
+    ["Devanagari", /\p{Script=Devanagari}/u],
+  ];
+
+  function scriptOf(ch){
+    if (/[0-9]/.test(ch)) return "Common";
+    if (/[.\-_@:/?#&=%+~,;!'"()\[\]{}\s]/.test(ch)) return "Common";
+    for (const [name, re] of SCRIPT_TESTS){
+      if (re.test(ch)) return name;
+    }
+    return "Other";
+  }
+
+  function scriptClass(name){
+    if (name === "Latin") return "s-latin";
+    if (name === "Cyrillic") return "s-cyrillic";
+    if (name === "Greek") return "s-greek";
+    if (name === "Common") return "s-common";
+    return "s-other";
+  }
+
+  /* ---------------- Punycode (RFC 3492) ---------------- */
+  const PC_BASE=36, PC_TMIN=1, PC_TMAX=26, PC_SKEW=38, PC_DAMP=700, PC_INITIAL_BIAS=72, PC_INITIAL_N=128;
+
+  function pcAdapt(delta, numPoints, firstTime){
+    delta = firstTime ? Math.floor(delta / PC_DAMP) : Math.floor(delta / 2);
+    delta += Math.floor(delta / numPoints);
+    let k = 0;
+    while (delta > ((PC_BASE - PC_TMIN) * PC_TMAX) >> 1){
+      delta = Math.floor(delta / (PC_BASE - PC_TMIN));
+      k += PC_BASE;
+    }
+    return k + Math.floor(((PC_BASE - PC_TMIN + 1) * delta) / (delta + PC_SKEW));
+  }
+
+  function pcDecodeDigit(cp){
+    if (cp - 48 < 10) return cp - 22;
+    if (cp - 65 < 26) return cp - 65;
+    if (cp - 97 < 26) return cp - 97;
+    return PC_BASE;
+  }
+
+  function punycodeDecode(input){
+    let n = PC_INITIAL_N, i = 0, bias = PC_INITIAL_BIAS;
+    const output = [];
+    let basic = input.lastIndexOf("-");
+    if (basic < 0) basic = 0;
+    for (let j = 0; j < basic; j++) output.push(input.charCodeAt(j));
+    let index = basic > 0 ? basic + 1 : 0;
+    const len = input.length;
+    while (index < len){
+      const oldi = i;
+      let w = 1, k = PC_BASE;
+      while (true){
+        if (index >= len) throw new Error("invalid punycode");
+        const digit = pcDecodeDigit(input.charCodeAt(index++));
+        if (digit >= PC_BASE) throw new Error("invalid punycode digit");
+        i += digit * w;
+        const t = k <= bias ? PC_TMIN : (k >= bias + PC_TMAX ? PC_TMAX : k - bias);
+        if (digit < t) break;
+        w *= (PC_BASE - t);
+        k += PC_BASE;
+      }
+      const outLen = output.length + 1;
+      bias = pcAdapt(i - oldi, outLen, oldi === 0);
+      n += Math.floor(i / outLen);
+      i %= outLen;
+      output.splice(i, 0, n);
+      i++;
+    }
+    return String.fromCodePoint(...output);
+  }
+
+  function pcEncodeDigit(d){
+    return d + 22 + 75 * (d < 26 ? 1 : 0);
+  }
+
+  function punycodeEncode(input){
+    const chars = Array.from(input); // handle surrogate pairs
+    const codePoints = chars.map(c => c.codePointAt(0));
+    let n = PC_INITIAL_N, delta = 0, bias = PC_INITIAL_BIAS;
+    let output = "";
+    const basicCPs = codePoints.filter(cp => cp < 0x80);
+    basicCPs.forEach(cp => output += String.fromCharCode(cp));
+    let h = basicCPs.length;
+    const b = h;
+    if (b > 0) output += "-";
+    while (h < codePoints.length){
+      let m = Infinity;
+      for (const cp of codePoints) if (cp >= n && cp < m) m = cp;
+      delta += (m - n) * (h + 1);
+      n = m;
+      for (const cp of codePoints){
+        if (cp < n) delta++;
+        if (cp === n){
+          let q = delta;
+          for (let k = PC_BASE; ; k += PC_BASE){
+            const t = k <= bias ? PC_TMIN : (k >= bias + PC_TMAX ? PC_TMAX : k - bias);
+            if (q < t) break;
+            output += String.fromCharCode(pcEncodeDigit(t + (q - t) % (PC_BASE - t)));
+            q = Math.floor((q - t) / (PC_BASE - t));
+          }
+          output += String.fromCharCode(pcEncodeDigit(q));
+          bias = pcAdapt(delta, h + 1, h === b);
+          delta = 0;
+          h++;
+        }
+      }
+      delta++;
+      n++;
+    }
+    return output;
+  }
+
+  function decodeLabelIfPunycode(label){
+    if (label.toLowerCase().startsWith("xn--")){
+      try { return punycodeDecode(label.slice(4)); }
+      catch(e){ return null; }
+    }
+    return null;
+  }
+
+  /* ---------------- Levenshtein ---------------- */
+  function levenshtein(a, b){
+    const m = a.length, n = b.length;
+    const dp = Array.from({length:m+1}, () => new Array(n+1).fill(0));
+    for (let i=0;i<=m;i++) dp[i][0]=i;
+    for (let j=0;j<=n;j++) dp[0][j]=j;
+    for (let i=1;i<=m;i++){
+      for (let j=1;j<=n;j++){
+        dp[i][j] = a[i-1]===b[j-1] ? dp[i-1][j-1] : 1+Math.min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]);
+      }
+    }
+    return dp[m][n];
+  }
+
+  /* ---------------- Extraction: pull the "domain-ish" target out of arbitrary input ---------------- */
+  function extractTarget(raw){
+    const trimmed = raw.trim();
+    // email?
+    const emailMatch = trimmed.match(/^([^\s@]+)@([^\s@]+)$/);
+    if (emailMatch) return { type: "email", full: trimmed, domain: emailMatch[2], local: emailMatch[1] };
+    // url-ish?
+    let candidate = trimmed;
+    let hasScheme = /^[a-zA-Z][a-zA-Z0-9+.\-]*:\/\//.test(candidate);
+    try {
+      const u = new URL(hasScheme ? candidate : "http://" + candidate);
+      return { type: "url", full: trimmed, domain: u.hostname, path: u.pathname + u.search };
+    } catch(e){
+      return { type: "text", full: trimmed, domain: null };
+    }
+  }
+
+  /* ---------------- Core analysis ---------------- */
+  function analyze(raw){
+    const target = extractTarget(raw);
+    const findings = [];
+    let score = 0;
+
+    const scanScope = target.domain || target.full;
+    const chars = Array.from(scanScope);
+
+    // per-char script + confusable info for the glyph grid
+    const glyphData = chars.map(ch => {
+      const cp = ch.codePointAt(0);
+      const script = scriptOf(ch);
+      const confusable = CONFUSABLES[ch] || null;
+      const invisible = INVISIBLES.has(cp);
+      const override = (cp === RTL_OVERRIDE || cp === LTR_OVERRIDE);
+      return { ch, cp, script, confusable, invisible, override };
+    });
+
+    // 1. Mixed script check (letters only, exclude Common/Other-numeric)
+    const letterScripts = new Set(glyphData.filter(g => g.script !== "Common" && /\p{L}/u.test(g.ch)).map(g => g.script));
+    if (letterScripts.size > 1){
+      score += 40;
+      findings.push({ level:"warn", title:"Mixed scripts detected",
+        detail:`Letters from ${Array.from(letterScripts).join(" + ")} appear in the same label. Legitimate domains almost never mix scripts like this.` });
+    }
+
+    // 2. Confusable characters present
+    const confusablesFound = glyphData.filter(g => g.confusable);
+    if (confusablesFound.length){
+      score += Math.min(30, confusablesFound.length * 12);
+      const normalized = glyphData.map(g => g.confusable || g.ch).join("");
+      findings.push({ level:"warn", title:`${confusablesFound.length} look-alike character${confusablesFound.length>1?"s":""} found`,
+        detail:`Reads as "${scanScope}" but normalizes to "${normalized}" when look-alikes are replaced with their plain-ASCII equivalents.` });
+    }
+
+    // 3. Fullwidth characters (offset 0xFEE0 maps into ASCII range)
+    const fullwidth = glyphData.filter(g => g.cp >= 0xFF01 && g.cp <= 0xFF5E);
+    if (fullwidth.length){
+      score += 20;
+      findings.push({ level:"warn", title:"Fullwidth characters found",
+        detail:"Fullwidth Unicode variants of ASCII letters/digits render similarly to normal text but are different code points entirely." });
+    }
+
+    // 4. Invisible / zero-width characters
+    const invisibles = glyphData.filter(g => g.invisible);
+    if (invisibles.length){
+      score += 35;
+      findings.push({ level:"warn", title:"Hidden characters detected",
+        detail:"Zero-width or soft-hyphen characters are present. These render as nothing but can split words to dodge keyword filters." });
+    }
+
+    // 5. RTL/LTR override
+    const overrides = glyphData.filter(g => g.override);
+    if (overrides.length){
+      score += 50;
+      findings.push({ level:"warn", title:"Directional override character detected",
+        detail:"U+202E (or U+202D) can reverse how surrounding text displays — commonly used to disguise a file's real extension." });
+    }
+
+    // 6. Punycode
+    let punycodeInfo = null;
+    if (target.domain){
+      const labels = target.domain.split(".");
+      const decodedLabels = labels.map(l => decodeLabelIfPunycode(l));
+      if (decodedLabels.some(d => d !== null)){
+        const decodedDomain = labels.map((l,idx) => decodedLabels[idx] !== null ? decodedLabels[idx] : l).join(".");
+        punycodeInfo = decodedDomain;
+        const decodedScripts = new Set(Array.from(decodedDomain).filter(c => /\p{L}/u.test(c)).map(scriptOf).filter(s => s !== "Common"));
+        const mixed = decodedScripts.size > 1;
+        score += mixed ? 45 : 15;
+        findings.push({ level:"warn", title:"Punycode-encoded domain",
+          detail:`"${target.domain}" decodes to "${decodedDomain}"${mixed ? " — which itself mixes scripts. This is a textbook IDN homograph pattern." : "."}` });
+      }
+    }
+
+    // 7. Typosquat / brand-proximity distance (on normalized ASCII form)
+    if (target.domain){
+      const normalizedDomain = Array.from(punycodeInfo || target.domain).map(c => CONFUSABLES[c] || c).join("").toLowerCase();
+      let closest = null, closestDist = Infinity;
+      for (const brand of KNOWN_BRANDS){
+        const d = levenshtein(normalizedDomain, brand);
+        if (d < closestDist){ closestDist = d; closest = brand; }
+      }
+      if (closest && closestDist === 0 && normalizedDomain !== target.domain.toLowerCase()){
+        score += 50;
+        findings.push({ level:"warn", title:`Normalizes exactly to "${closest}"`,
+          detail:"The visible text is not plain ASCII, but once look-alike characters are normalized, it matches a well-known brand domain exactly. This is the classic homograph impersonation pattern." });
+      } else if (closest && closestDist > 0 && closestDist <= 2 && normalizedDomain.length > 4){
+        score += 25;
+        findings.push({ level:"note", title:`Close to "${closest}" (edit distance ${closestDist})`,
+          detail:"Near-miss to a commonly targeted brand domain. Could be typosquatting, or could be an unrelated legitimate domain — verify independently." });
+      }
+    }
+
+    if (findings.length === 0){
+      findings.push({ level:"ok", title:"No homograph indicators found",
+        detail:"No mixed scripts, confusable characters, punycode, hidden characters, or brand near-matches were detected in this input." });
+    }
+
+    score = Math.min(100, score);
+    let verdict = "Low", vClass = "v-low", fillColor = "var(--teal)";
+    if (score >= 75){ verdict = "Critical"; vClass = "v-critical"; fillColor = "var(--red)"; }
+    else if (score >= 50){ verdict = "High"; vClass = "v-high"; fillColor = "var(--red)"; }
+    else if (score >= 20){ verdict = "Medium"; vClass = "v-medium"; fillColor = "var(--amber)"; }
+
+    return { target, glyphData, findings, score, verdict, vClass, fillColor, scanScope };
+  }
+
+  /* ---------------- Rendering ---------------- */
+  function renderResults(result){
+    document.getElementById("results").style.display = "block";
+    const badge = document.getElementById("verdictBadge");
+    badge.textContent = result.verdict + " risk";
+    badge.className = "verdict-badge " + result.vClass;
+
+    const fill = document.getElementById("riskFill");
+    fill.style.width = result.score + "%";
+    fill.style.background = result.fillColor;
+    document.getElementById("riskScore").textContent = result.score + " / 100";
+
+    document.getElementById("breakdownScope").textContent = "(" + result.scanScope + ")";
+
+    const findingsList = document.getElementById("findingsList");
+    findingsList.innerHTML = "";
+    result.findings.forEach(f => {
+      const icon = f.level === "warn" ? "!" : (f.level === "note" ? "•" : "✓");
+      const div = document.createElement("div");
+      div.className = "finding f-" + f.level;
+      div.innerHTML = `<span class="finding-icon">${icon}</span><div class="finding-body"><b>${escapeHtml(f.title)}</b><span>${escapeHtml(f.detail)}</span></div>`;
+      findingsList.appendChild(div);
+    });
+
+    const grid = document.getElementById("glyphGrid");
+    grid.innerHTML = "";
+    result.glyphData.forEach(g => {
+      const flagged = !!(g.confusable || g.invisible || g.override || (g.cp >= 0xFF01 && g.cp <= 0xFF5E));
+      const box = document.createElement("div");
+      box.className = "glyph-box" + (flagged ? " flagged" : "");
+      const displayChar = g.invisible ? "␀" : (g.ch === " " ? "␠" : g.ch);
+      const cpHex = "U+" + g.cp.toString(16).toUpperCase().padStart(4, "0");
+      box.innerHTML = `<span class="glyph-char">${escapeHtml(displayChar)}</span><span class="glyph-cp">${cpHex}</span><span class="glyph-script ${scriptClass(g.script)}">${g.script}</span>`;
+      grid.appendChild(box);
+    });
+  }
+
+  function escapeHtml(str){
+    const d = document.createElement("div");
+    d.textContent = str;
+    return d.innerHTML;
+  }
+
+  /* ---------------- Generator ---------------- */
+  function generateVariants(plain){
+    const chars = Array.from(plain);
+    // Full substitution
+    let fullCount = 0;
+    const full = chars.map(ch => {
+      const pref = PREFERRED_ORDER[ch];
+      if (pref){ fullCount++; return pref; }
+      return ch;
+    }).join("");
+
+    // Subtle substitution: swap only the first 1-2 eligible characters
+    let subtleSwaps = 0;
+    const subtle = chars.map(ch => {
+      if (subtleSwaps < 2 && PREFERRED_ORDER[ch]){
+        subtleSwaps++;
+        return PREFERRED_ORDER[ch];
+      }
+      return ch;
+    }).join("");
+
+    return { full, fullCount, subtle, subtleSwaps };
+  }
+
+  function punycodeFormOfDomain(text){
+    // If it looks like a domain (has a dot, no spaces), encode label by label
+    if (/\s/.test(text) || !text.includes(".")) return null;
+    try {
+      const labels = text.split(".");
+      const encoded = labels.map(l => {
+        if (/^[\x00-\x7F]*$/.test(l)) return l; // already ASCII
+        return "xn--" + punycodeEncode(l);
+      });
+      return encoded.join(".");
+    } catch(e){ return null; }
+  }
+
+  function renderVariants(plain){
+    const container = document.getElementById("variants");
+    container.innerHTML = "";
+    if (!plain.trim()){ return; }
+    if (!/^[\x00-\x7F]*$/.test(plain)){
+      container.innerHTML = `<div class="finding f-note" style="margin-top:16px;"><span class="finding-icon">•</span><div class="finding-body"><b>Input already contains non-ASCII characters</b><span>Enter plain ASCII text (e.g. "paypal.com") so a homograph version can be generated from it.</span></div></div>`;
+      return;
+    }
+    const { full, fullCount, subtle, subtleSwaps } = generateVariants(plain);
+
+    const variants = [
+      { label: "Subtle substitution", text: subtle, swaps: subtleSwaps },
+      { label: "Full substitution", text: full, swaps: fullCount },
+    ];
+
+    variants.forEach(v => {
+      const card = document.createElement("div");
+      card.className = "variant-card";
+      const puny = punycodeFormOfDomain(v.text);
+      card.innerHTML = `
+        <div class="variant-label">${v.label} — ${v.swaps} character${v.swaps===1?"":"s"} replaced</div>
+        <div class="variant-text">${escapeHtml(v.text) || "<span style=color:var(--muted-2)>(no eligible characters to replace)</span>"}</div>
+        <div class="variant-meta">
+          <span class="variant-punycode">${puny ? "Wire format: " + escapeHtml(puny) : ""}</span>
+          <button class="copy-btn" data-copy="${encodeURIComponent(v.text)}">Copy</button>
+        </div>
+      `;
+      container.appendChild(card);
+    });
+
+    container.querySelectorAll(".copy-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const text = decodeURIComponent(btn.getAttribute("data-copy"));
+        navigator.clipboard.writeText(text).then(() => {
+          const orig = btn.textContent;
+          btn.textContent = "Copied";
+          setTimeout(() => btn.textContent = orig, 1200);
+        });
+      });
+    });
+  }
+
+  /* ---------------- Wire up UI ---------------- */
+  const inspectInput = document.getElementById("inspectInput");
+  const inspectBtn = document.getElementById("inspectBtn");
+  function runInspect(){
+    const val = inspectInput.value;
+    if (!val.trim()) return;
+    const result = analyze(val);
+    renderResults(result);
+  }
+  inspectBtn.addEventListener("click", runInspect);
+  inspectInput.addEventListener("keydown", e => { if (e.key === "Enter") runInspect(); });
+
+  document.querySelectorAll(".sample-chip").forEach(chip => {
+    chip.addEventListener("click", () => {
+      inspectInput.value = chip.getAttribute("data-sample");
+      runInspect();
+      document.getElementById("inspect").scrollIntoView({ behavior:"smooth", block:"start" });
+    });
+  });
+
+  const generateInput = document.getElementById("generateInput");
+  const generateBtn = document.getElementById("generateBtn");
+  function runGenerate(){ renderVariants(generateInput.value); }
+  generateBtn.addEventListener("click", runGenerate);
+  generateInput.addEventListener("keydown", e => { if (e.key === "Enter") runGenerate(); });
+
+})();
+</script>
+</body>
+</html>
