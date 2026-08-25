@@ -96,7 +96,7 @@ section.home{
 .home .main-navbar{
 	position: absolute;
 	width: 100%;
-	max-width: 1400px;
+	max-width: none;
 	height: 12vh;
 	max-height: 80px;
 	background-color: var(--primary-clr);
@@ -227,18 +227,29 @@ section.home{
 
 
 .cyber-strip {
+    position: absolute;
+    top: 80px; /* same as navbar height */
+    left: 0;
+    width: 100%;
+    height: 42px;
+
     background: #0b1220;
-    color: white;
-    text-align: center;
-    padding: 10px 15px;
-    font-size: 15px;
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 15px;
+    font-size: 14px;
+    z-index: 99;
 }
 
 .cyber-strip a {
     color: #00ff88;
-    font-weight: bold;
+    font-weight: 700;
     text-decoration: none;
-    margin-left: 5px;
+    margin-left: 6px;
 }
 
 .cyber-strip a:hover {
