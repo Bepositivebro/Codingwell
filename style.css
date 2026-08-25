@@ -226,6 +226,24 @@ section.home{
 }
 
 
+.cyber-strip {
+    background: #0b1220;
+    color: white;
+    text-align: center;
+    padding: 10px 15px;
+    font-size: 15px;
+}
+
+.cyber-strip a {
+    color: #00ff88;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.cyber-strip a:hover {
+    text-decoration: underline;
+}
 
 
 .search-bar {
